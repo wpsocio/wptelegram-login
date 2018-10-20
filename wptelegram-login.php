@@ -9,8 +9,8 @@
  * @wordpress-plugin
  * Plugin Name:       WPTelegram Login
  * Plugin URI:        https://t.me/WPTelegram
- * Description:       Let the users login to your website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram.
- * Version:           1.3.0
+ * Description:       Let the users login to your WordPress website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram.
+ * Version:           1.2.0
  * Author:            Manzoor Wani
  * Author URI:        https://t.me/manzoorwanijk
  * License:           GPL-2.0+
@@ -66,7 +66,6 @@ require WPTELEGRAM_LOGIN_DIR . '/includes/class-wptelegram-login.php';
  * Begins execution of the plugin and acts as the main instance of WPTelegram_Login.
  *
  * Returns the main instance of WPTelegram_Login to prevent the need to use globals.
- *
  *
  * Since everything within the plugin is registered via hooks,
  * then kicking off the plugin from this point in the file does

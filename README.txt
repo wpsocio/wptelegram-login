@@ -31,7 +31,11 @@ For rules, see the pinned message. No spam please.
 
 **Translations**
 
-You can also contribute in translating this plugin into your local language. Join the Chat (above)
+Many thanks to the translators for the great job!
+
+* [Artem](https://profiles.wordpress.org/zzart/) (Russian)
+
+* Note: You can also contribute in translating this plugin into your local language. Join the Chat (above)
 
 
 == Installation ==
@@ -61,6 +65,9 @@ You can also contribute in translating this plugin into your local language. Joi
 7. User List Table (for admin)
 
 == Changelog ==
+
+= 1.3.1 =
+* Added Russian Translation. Thanks to @zzart
 
 = 1.3.0 =
 * Revamped the options to avoid the use of globals

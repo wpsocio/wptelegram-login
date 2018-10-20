@@ -32,7 +32,6 @@ class WPTelegram_Login {
 	/**
 	 * The single instance of the class.
 	 *
-	 * @var WPTelegram_Login
 	 * @since 1.0.0
 	 */
 	protected static $_instance = null;
@@ -84,13 +83,13 @@ class WPTelegram_Login {
 	protected $options;
 
 	/**
-	 * Main WPTelegram_Login Instance.
+	 * Main class Instance.
 	 *
-	 * Ensures only one instance of WPTelegram_Login is loaded or can be loaded.
+	 * Ensures only one instance of the class is loaded or can be loaded.
 	 *
 	 * @since 1.0.0
 	 * 
-	 * @return WPTelegram_Login - Main instance.
+	 * @return Main instance.
 	 */
 	public static function instance() {
 		if ( is_null( self::$_instance ) ) {

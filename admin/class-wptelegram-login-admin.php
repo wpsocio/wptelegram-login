@@ -447,11 +447,11 @@ class WPTelegram_Login_Admin {
 			$invalid_fields = get_site_transient( $transient );
 			if ( ! empty( $invalid_fields ) ) {
 				$args['type'] = 'error';
-				foreach ( (array) $invalid_fields as $field ) {
+				foreach ( (array) $invalid_fields as $field => $status ) {
 					$field_name = $cmb->get_field(
 						array(
-							'id' => $field,
-							'cmb_id' => $cmb->prop( 'id' ),
+							'id'		=> $field,
+							'cmb_id'	=> $cmb->prop( 'id' ),
 						)
 					)->args( 'name' );
 
