@@ -14,16 +14,11 @@
 
 Complete contributors list found here: [github.com/manzoorwanijk/wptelegram-login/graphs/contributors](https://github.com/manzoorwanijk/wptelegram-login/graphs/contributors)
 
+**[Download plugin on wordpress.org](https://wordpress.org/plugins/wptelegram-login/)**
+
 ## Description
 
 Let the users login to your WordPress website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram.
-
-**[Download plugin on wordpress.org](https://wordpress.org/plugins/wptelegram-login/)**
-
-You can display the login button anywhere you want using a simple shortcode `[wptelegram-login button_style="large" show_user_photo="1" corner_radius="15" show_if_user_is="logged_in"]`
-
-### Contribution
-Development occurs on Github, and all contributions welcome.
 
 ## Why Telegram Login?
 
@@ -46,6 +41,38 @@ Development occurs on Github, and all contributions welcome.
 * Users can be given any desired role on the website
 * Login button can be displayed anywhere
 * Can be extended with custom code
+
+## Widget Info
+Goto **Appearance** > **Widgets** and click/drag **WP Telegram Login** and place it where you want it to be.
+
+Alternately, you can use the below shortcode.
+
+Inside page or post content:
+
+`[wptelegram-login button_style="large" show_user_photo="1" corner_radius="15" show_if_user_is="logged_in"]`
+
+Inside the theme templates
+```php
+<?php
+if ( function_exists( 'wptelegram_login' ) ) {
+    $args = array(
+        // 'show_user_photo'    => 1,
+        // 'corner_radius'      => 15,
+        // 'button_style'       => 'large',
+        // 'show_if_user_is'    => 'logged_out',
+    );
+
+    wptelegram_login( $args );
+}
+?>
+```
+or
+```php
+<?php echo do_shortcode( '[wptelegram-login button_style="small" show_user_photo="0" show_if_user_is="logged_in"]' ); ?>
+```
+
+### Contribution
+Development occurs on Github, and all contributions welcome.
 
 ## Translation
 If you are looking to provide language translation files, Please do so via [WordPress Plugin Translations](https://translate.wordpress.org/projects/wp-plugins/wptelegram-login).
