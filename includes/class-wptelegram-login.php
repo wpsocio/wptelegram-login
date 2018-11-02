@@ -250,9 +250,7 @@ class WPTelegram_Login {
 
 		$this->loader->add_action( 'tgmpa_register', $plugin_admin, 'register_required_plugins' );
 
-		//$this->loader->add_action( 'admin_notices', $plugin_admin, 'admin_notice_for_cmb2' );
-
-		$this->loader->add_action( 'cmb2_admin_init', $plugin_admin, 'create_options_page' );
+		$this->loader->add_action( 'cmb2_admin_init', $plugin_admin, 'create_options_page', 11 );
 
 		$this->loader->add_action( 'widgets_init', $plugin_admin, 'register_widgets' );
 
@@ -283,8 +281,7 @@ class WPTelegram_Login {
 
 		$this->loader->add_shortcode( 'wptelegram-login', get_class( $plugin_public ), 'login_shortcode' );
 
-		$this->loader->add_filter( 'wptelegram_user_telegram_chat_id', $plugin_public, 'user_telegram_chat_id', 10, 2 );
-		$this->loader->add_filter( 'wptelegram_pro_notify_user_chat_id', $plugin_public, 'user_telegram_chat_id', 10, 2 );
+		$this->loader->add_filter( 'wptelegram_notify_user_chat_id', $plugin_public, 'user_telegram_chat_id', 10, 2 );
 
 		$this->loader->add_filter( 'get_avatar_url', $plugin_public, 'custom_avatar_url', 10, 2 );
 

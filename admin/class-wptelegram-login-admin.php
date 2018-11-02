@@ -146,28 +146,6 @@ class WPTelegram_Login_Admin {
 		tgmpa( $plugins, $config );
 	}
 
-	/**
-	 * Show admin notice for CMB2 requirement
-	 *
-	 * @since  1.0.0
-	 */
-	public function admin_notice_for_cmb2() {
-		if ( defined( 'CMB2_LOADED' ) ) {
-			return;
-		}
-		$url = 'https://wordpress.org/plugins/cmb2';
-		
-		if ( current_user_can( 'activate_plugins' ) ) {
-			$url = network_admin_url( 'plugin-install.php?s=cmb2&tab=search&type=term&plugin-search-input=Search+Plugins' );
-		}
-		$message = sprintf( __( '%s requires the latest version of %s installed and active.', 'wptelegram-login' ), '<b>' . $this->title . '</b>', '<a href="' . esc_url( $url ) . '">CMB2</a>' );
-		?>
-		<div class="notice notice-error">
-		  <p><?php echo $message; ?></p>
-		</div>
-		<?php
-	}
-
  	/**
 	 * Create our widget
 	 *

@@ -3,9 +3,9 @@ Contributors: manzoorwanijk
 Donate link: https://paypal.me/manzoorwanijk
 Tags: telegram, login, register, social, signup
 Requires at least: 3.8.0
-Requires PHP: 5.2
 Tested up to: 4.9.8
-Stable tag: 1.3.1
+Requires PHP: 5.2.4
+Stable tag: 1.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,7 +53,7 @@ Inside page or post content:
 `[wptelegram-login button_style="large" show_user_photo="1" corner_radius="15" show_if_user_is="logged_in"]`
 
 Inside the theme templates
-~~~
+```php
 <?php
 if ( function_exists( 'wptelegram_login' ) ) {
     $args = array(
@@ -66,13 +66,14 @@ if ( function_exists( 'wptelegram_login' ) ) {
     wptelegram_login( $args );
 }
 ?>
-~~~
+```
 or
-~~~
+
+```php
 <?php
     echo do_shortcode( '[wptelegram-login button_style="small" show_user_photo="0" show_if_user_is="logged_in"]' );
 ?>
-~~~
+```
 
 **Get in touch**
 
@@ -80,6 +81,9 @@ or
 *	Telegram [@WPTelegram](https://t.me/WPTelegram)
 *	Facebook [@WPTelegram](https://fb.com/WPTelegram)
 *	Twitter [@WPTelegram](https://twitter.com/WPTelegram)
+
+**Contribution**
+Development occurs on [Github](https://github.com/manzoorwanijk/wptelegram-login), and all contributions welcome.
 
 **Translations**
 
@@ -117,6 +121,9 @@ Many thanks to the translators for the great job!
 7. User List Table (for admin)
 
 == Changelog ==
+
+= 1.3.2 =
+* Prepare for WP Telegram 2.0.0
 
 = 1.3.1 =
 * Added Russian Translation. Thanks to @zzart
