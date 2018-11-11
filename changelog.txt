@@ -1,0 +1,39 @@
+# Changelog
+
+## 1.2.8
+* Fixed some PHP Warnings
+
+## 1.2.7
+* Added support for user avatars to be should by default
+* Minor fixes
+
+## 1.2.6
+* Added the option to disable sign ups
+* Minor fixes
+
+## 1.2.5
+* Fixed the PHP warnings created by widget visibility options
+* Fixed the Errors during widget update
+* Other fixes
+
+## 1.2.4
+* Fixed the bug related to password recovery button
+* Added efficient plugin dependency management
+
+## 1.2.3
+* Fixed the issue with integration with WP Telegram Notifications
+
+## 1.2.2
+* Fixed the issue with login button not shown to specific roles
+
+## 1.2.1
+* Fixed the issue with login button not shown by default
+
+## 1.2.0
+* Added the option whom to show the login button
+
+## 1.0.1
+* Added integration with WPTelegram Notifications for users
+
+## 1.0.0
+* Initial Release.

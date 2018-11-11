@@ -5,7 +5,7 @@ Tags: telegram, login, register, social, signup
 Requires at least: 3.8.0
 Tested up to: 4.9.8
 Requires PHP: 5.2.4
-Stable tag: 1.3.2
+Stable tag: 1.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,14 +50,14 @@ Alternately, you can use the below shortcode.
 
 Inside page or post content:
 
-`[wptelegram-login button_style="large" show_user_photo="1" corner_radius="15" show_if_user_is="logged_in"]`
+`[wptelegram-login button_style="large" show_user_photo="on" corner_radius="15" show_if_user_is="logged_in"]`
 
 Inside the theme templates
 ```php
 <?php
 if ( function_exists( 'wptelegram_login' ) ) {
     $args = array(
-        // 'show_user_photo'    => 1,
+        // 'show_user_photo'    => 'off',
         // 'corner_radius'      => 15,
         // 'button_style'       => 'large',
         // 'show_if_user_is'    => 'logged_out',
@@ -122,6 +122,11 @@ Many thanks to the translators for the great job!
 
 == Changelog ==
 
+= 1.3.3 =
+* Bundled CMB2 to handle the dependency
+* Fixed UI bugs on login page with errors
+* Fixed the shortcode instruction for "show_user_photo"
+
 = 1.3.2 =
 * Prepare for WP Telegram 2.0.0
 
@@ -135,43 +140,5 @@ Many thanks to the translators for the great job!
 * Added the option to disable the button on default WP login page
 * Fixed the PHP warnings for first time install
 * Fixed the error in user columns in older WP versions
-
-= 1.2.8 =
-* Fixed some PHP Warnings
-
-= 1.2.7 =
-* Added support for user avatars to be should by default
-* Minor fixes
-
-= 1.2.6 =
-* Added the option to disable sign ups
-* Minor fixes
-
-= 1.2.5 =
-* Fixed the PHP warnings created by widget visibility options
-* Fixed the Errors during widget update
-* Other fixes
-
-= 1.2.4 =
-* Fixed the bug related to password recovery button
-* Added efficient plugin dependency management
-
-= 1.2.3 =
-* Fixed the issue with integration with WP Telegram Notifications
-
-= 1.2.2 =
-* Fixed the issue with login button not shown to specific roles
-
-= 1.2.1 =
-* Fixed the issue with login button not shown by default
-
-= 1.2.0 =
-* Added the option whom to show the login button
-
-= 1.0.1 =
-* Added integration with WPTelegram Notifications for users
-
-= 1.0.0 =
-* Initial Release.
 
 == Upgrade Notice ==

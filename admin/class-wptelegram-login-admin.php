@@ -109,43 +109,6 @@ class WPTelegram_Login_Admin {
 		);
 	}
 
-	/**
-	 * Register required plugins
-	 * 
-	 */
-	public function register_required_plugins() {
-		$plugins = array(
-			array(
-				'name'               => 'CMB2',
-				'slug'               => 'cmb2',
-				'required'           => true,
-				'version'            => '2.3.0',
-			),
-		);
-
-		$notice_singular = $notice_plural = sprintf( '%s requires the following to be installed and active:', $this->title ) . ' %1$s';
-		$notice = _n_noop( $notice_singular, $notice_singular, 'wptelegram-login' );
-
-		$config = array(
-			'id'           => 'wptelegram',
-			'domain'       => 'wptelegram-login',
-			'default_path' => '',
-			'menu'         => 'install-required-plugins',
-			'parent_slug'  => 'wptelegram',
-			'capability'   => 'manage_options',
-			'has_notices'  => true,
-			'dismissable'  => false,
-	        'is_automatic' => true,
-			'strings'      => array(
-				'notice_can_install_required'	=> $notice,
-				'notice_can_activate_required'	=> $notice,
-				'nag_type'						=> 'notice-error',
-			)
-		);
-
-		tgmpa( $plugins, $config );
-	}
-
  	/**
 	 * Create our widget
 	 *
@@ -454,12 +417,12 @@ class WPTelegram_Login_Admin {
 			<p><?php printf( __( 'Goto %s and click/drag %s and place it where you want it to be.', 'wptelegram-login' ), '<b>' . __( 'Appearance' ) . ' &gt; <a href="' . admin_url( 'widgets.php' ) . '">' . __( 'Widgets' ) . '</a></b>', '<b>' . $this->title . '</b>' ); ?></p>
 			<p><?php echo __( 'Alternately, you can use the below shortcode.', 'wptelegram-login' ); ?></p>
 			<h4><?php echo __( 'Inside page or post content:', 'wptelegram-login' ); ?></h4>
-			<p><code><?php echo esc_html( '[wptelegram-login button_style="large" show_user_photo="1" corner_radius="15"]' ); ?></code></p>
+			<p><code><?php echo esc_html( '[wptelegram-login button_style="large" show_user_photo="on" corner_radius="15"]' ); ?></code></p>
 			<h4><?php _e( 'Inside the theme templates', 'wptelegram-login' ); ?></h4>
 			<?php $pre = "<?php\nif ( function_exists( 'wptelegram_login' ) ) {\n    wptelegram_login();\n}\n?>"; ?>
 			<p><pre><?php echo esc_html( $pre ); ?></pre></p>
 			<h5><?php _e( 'or', 'wptelegram-login' ); ?></h5>
-			<?php $code = '<?php echo do_shortcode( \'[wptelegram-login button_style="small" show_user_photo="0" show_if_user_is="logged_in"]\' ); ?>'; ?>
+			<?php $code = '<?php echo do_shortcode( \'[wptelegram-login button_style="small" show_user_photo="off" show_if_user_is="logged_in"]\' ); ?>'; ?>
 			<p><code><?php echo esc_html( $code ); ?></code></p>
 		</div>
 		<?php
@@ -548,7 +511,7 @@ class WPTelegram_Login_Admin {
 	 * @return array
 	 */
 	public function register_custom_user_column( $columns ) {
-		$columns['wptelegram_login_user_id'] = __( 'Telegram User ID', 'wptelegram-login' );
+		$columns['telegram_chat_id'] = __( 'Telegram User ID', 'wptelegram-login' );
 		return $columns;
 	}
 
@@ -565,7 +528,7 @@ class WPTelegram_Login_Admin {
 	 */
 	public function register_custom_user_column_view( $output, $column_name, $user_id ) {
 		
-		if ( $column_name == 'wptelegram_login_user_id' ) {
+		if ( $column_name == 'telegram_chat_id' ) {
 
 			$user = get_user_by( 'id', $user_id );
 

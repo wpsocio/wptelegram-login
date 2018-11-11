@@ -176,11 +176,6 @@ class WPTelegram_Login {
 		require_once WPTELEGRAM_LOGIN_DIR . '/includes/class-wptelegram-login-options.php';
 
 		/**
-		 * Require CMB2
-		 */
-		require_once WPTELEGRAM_LOGIN_DIR . '/includes/tgm-plugin-activation/class-tgm-plugin-activation.php';
-
-		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
 		require_once WPTELEGRAM_LOGIN_DIR . '/admin/class-wptelegram-login-admin.php';
@@ -195,6 +190,11 @@ class WPTelegram_Login {
 		 * Helper functions
 		 */
 		require_once WPTELEGRAM_LOGIN_DIR . '/includes/helper-functions.php';
+
+		/**
+		 * CMB2 library responsible for rendering fields
+		 */
+		require_once WPTELEGRAM_LOGIN_DIR . '/includes/cmb2/init.php';
 
 		/**
 		 * Our widget class
@@ -247,8 +247,6 @@ class WPTelegram_Login {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-
-		$this->loader->add_action( 'tgmpa_register', $plugin_admin, 'register_required_plugins' );
 
 		$this->loader->add_action( 'cmb2_admin_init', $plugin_admin, 'create_options_page', 11 );
 
