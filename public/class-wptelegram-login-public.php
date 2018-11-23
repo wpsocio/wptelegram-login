@@ -154,25 +154,29 @@ class WPTelegram_Login_Public {
 
 		$user = wp_get_current_user();
 
-		if ( ! $user->exists() ) { // is_user_logged_in()
+		if ( ! $user->exists() ) { // ! is_user_logged_in()
 
 			do_action( 'wptelegram_login_before_user_login', $wp_user_id );
 
 			// login the user
 			wp_clear_auth_cookie();
-		    wp_set_current_user( $wp_user_id );
-		    wp_set_auth_cookie( $wp_user_id );
+		    $user = wp_set_current_user( $wp_user_id );
+			wp_set_auth_cookie( $wp_user_id, true );
 
 		    do_action( 'wptelegram_login_after_user_login', $wp_user_id );
 
 		    // now get the user object
-		    $user = wp_get_current_user();
+		    // $user = wp_get_current_user();
 
-		    /**
-		     * Similar to
-		     * do_action( 'wp_login', $user->user_login, $user );
-		     * so as to use the same callback for both the hooks
-		     */
+			/**
+			 * Fires after the user has successfully logged in.
+			 *
+			 * @since 1.3.4
+			 *
+			 * @param string  $user_login Username.
+			 * @param WP_User $user       WP_User object of the logged-in user.
+			 */
+			do_action( 'wp_login', $user->user_login, $user );
 			do_action( 'wptelegram_login', $user->user_login, $user );
 		}
 
@@ -190,7 +194,7 @@ class WPTelegram_Login_Public {
 	 */
 	public function is_valid_login_request() {
 
-		if ( isset( $_GET['action'], $_GET['hash'], $_GET['auth_date'] ) && 'wptelegram_login' == $_GET['action'] ) {
+		if ( isset( $_GET['action'], $_GET['hash'], $_GET['auth_date'] ) && 'wptelegram_login' === $_GET['action'] ) {
 			return true;
 		}
 		return false;		
@@ -209,21 +213,16 @@ class WPTelegram_Login_Public {
 	public function filter_input_fields( $input ) {
 
 		$desired_fields = array(
-			'id',
-			'first_name',
-			'last_name',
-			'username',
-			'photo_url',
-			'auth_date',
-			'hash',
+			'id'			=> '',
+			'first_name'	=> '',
+			'last_name'		=> '',
+			'username'		=> '',
+			'photo_url'		=> '',
+			'auth_date'		=> '',
+			'hash'			=> '',
 		);
 
-		foreach ( (array) $input as $field => $value ) {
-			if ( ! in_array( $field, $desired_fields ) ) {
-				unset( $input[ $field ] );
-			}
-		}
-		return $input;
+		return array_intersect_key( $input, $desired_fields );
 	}
 
 	/**
@@ -446,7 +445,7 @@ class WPTelegram_Login_Public {
 	 */
 	private function redirect( $user ) {
 		
-		$redirect_to = isset( $_REQUEST['redirect_to'] ) ? $_REQUEST['redirect_to'] : '';
+		$redirect_to = isset( $_REQUEST['redirect_to'] ) ? remove_query_arg( 'reauth', $_REQUEST['redirect_to'] ) : '';
 
 		// apply default WP filter
 		$redirect_to = apply_filters( 'login_redirect', $redirect_to, $redirect_to, $user );
@@ -454,9 +453,9 @@ class WPTelegram_Login_Public {
 		// apply plugin specific filter
 		$redirect_to = apply_filters( 'wptelegram_login_user_redirect_to', $redirect_to, $user );
 
-		if ( ( empty( $redirect_to ) || $redirect_to == 'wp-admin/' || $redirect_to == admin_url() ) ) {
+		if ( ( empty( $redirect_to ) || 'wp-admin/' == $redirect_to || admin_url() == $redirect_to ) ) {
 			// If the user doesn't belong to a blog, send them to user admin. If the user can't edit posts, send them to their profile.
-			if ( is_multisite() && ! get_active_blog_for_user( $user->ID ) && !is_super_admin( $user->ID ) ) {
+			if ( is_multisite() && ! get_active_blog_for_user( $user->ID ) && ! is_super_admin( $user->ID ) ) {
 
 				$redirect_to = user_admin_url();
 
@@ -469,11 +468,9 @@ class WPTelegram_Login_Public {
 				$redirect_to = $user->has_cap( 'read' ) ? admin_url( 'profile.php' ) : home_url();
 
 			}
-
 			wp_redirect( $redirect_to );
 			exit();
 		}
-		
 	    wp_safe_redirect( $redirect_to );
 		exit();
 	}
@@ -531,7 +528,7 @@ class WPTelegram_Login_Public {
 		}
 
 		// default
-		$redirect_to = isset( $_REQUEST['redirect_to'] ) ? $_REQUEST['redirect_to'] : '';
+		$redirect_to = isset( $_REQUEST['redirect_to'] ) ? $_REQUEST['redirect_to'] : home_url();
 
 		switch ( WPTG_Login()->options()->get( 'redirect_to' ) ) {
 			case 'homepage':
@@ -542,7 +539,7 @@ class WPTelegram_Login_Public {
 				global $pagenow;
 				// prevent redirect to login page
 				if ( 'wp-login.php' != $pagenow ) {
-					$redirect_to = home_url( add_query_arg( array() ) );
+					$redirect_to = add_query_arg( array() );
 				}
 				break;
 
@@ -574,7 +571,7 @@ class WPTelegram_Login_Public {
 		/**
 	     * The actual URL to be passed to Telegram as call back
 	     */
-	    $callback_url = home_url( add_query_arg( $args ) );
+	    $callback_url = add_query_arg( $args, home_url() );
 
 		// can be used to fix the wrong URL in case
 		// the website is in subdirectory the URL is invalid

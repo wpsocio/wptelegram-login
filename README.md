@@ -4,7 +4,7 @@
 **Tags:**              telegram, login, register, social, signup  
 **Requires at least:** 3.8.0  
 **Tested up to:**      4.9.8  
-**Stable tag:**        1.3.3  
+**Stable tag:**        1.3.4  
 **License:**           GPLv2 or later  
 **License URI:**       [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)  
 
@@ -49,7 +49,7 @@ Alternately, you can use the below shortcode.
 
 Inside page or post content:
 
-`[wptelegram-login button_style="large" show_user_photo="1" corner_radius="15" show_if_user_is="logged_in"]`
+`[wptelegram-login button_style="large" show_user_photo="on" corner_radius="15" show_if_user_is="logged_in"]`
 
 Inside the theme templates
 ```php

@@ -5,7 +5,7 @@ Tags: telegram, login, register, social, signup
 Requires at least: 3.8.0
 Tested up to: 4.9.8
 Requires PHP: 5.2.4
-Stable tag: 1.3.3
+Stable tag: 1.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,7 +53,7 @@ Inside page or post content:
 `[wptelegram-login button_style="large" show_user_photo="on" corner_radius="15" show_if_user_is="logged_in"]`
 
 Inside the theme templates
-```php
+~~~
 <?php
 if ( function_exists( 'wptelegram_login' ) ) {
     $args = array(
@@ -66,14 +66,14 @@ if ( function_exists( 'wptelegram_login' ) ) {
     wptelegram_login( $args );
 }
 ?>
-```
+~~~
 or
 
-```php
+~~~
 <?php
-    echo do_shortcode( '[wptelegram-login button_style="small" show_user_photo="0" show_if_user_is="logged_in"]' );
+    echo do_shortcode( '[wptelegram-login button_style="small" show_user_photo="off" show_if_user_is="logged_in"]' );
 ?>
-```
+~~~
 
 **Get in touch**
 
@@ -121,6 +121,9 @@ Many thanks to the translators for the great job!
 7. User List Table (for admin)
 
 == Changelog ==
+
+= 1.3.4 =
+* Fixed 404 issue for WP in sub directory
 
 = 1.3.3 =
 * Bundled CMB2 to handle the dependency
