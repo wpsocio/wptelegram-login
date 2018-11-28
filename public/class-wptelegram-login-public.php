@@ -108,7 +108,7 @@ class WPTelegram_Login_Public {
 		
 		$hide_on_default = WPTG_Login()->options()->get( 'hide_on_default' );
 
-		if ( 'on' == $hide_on_default ) {
+		if ( 'on' === $hide_on_default ) {
 			return;
 		}
 
@@ -539,7 +539,7 @@ class WPTelegram_Login_Public {
 				global $pagenow;
 				// prevent redirect to login page
 				if ( 'wp-login.php' != $pagenow ) {
-					$redirect_to = add_query_arg( array() );
+					$redirect_to = wp_get_current_url();
 				}
 				break;
 

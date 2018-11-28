@@ -76,3 +76,30 @@ if ( ! function_exists( 'wptelegram_login' ) ) {
 		}
 	}
 }
+
+if ( ! function_exists( 'wp_get_current_url' ) ) {
+	/**
+	 * Get the current URL
+	 *
+	 * A fix for WordPress installed in subdirectory
+	 *
+	 * @source https://roots.io/routing-wp-requests/
+	 *
+	 * @since 1.3.5
+	 * 
+	 * @return string        The current URL
+	 */
+	function wp_get_current_url() {
+
+	    $current_uri = trim( esc_url_raw( add_query_arg( array() ) ), '/' );
+
+	    $home_path = trim( parse_url( home_url(), PHP_URL_PATH ), '/' );
+
+	    if ( $home_path && strpos( $current_uri, $home_path ) === 0 ) {
+
+	        $current_uri = trim( substr( $current_uri, strlen( $home_path ) ), '/' );
+	    }
+
+	    return home_url( $current_uri );
+	}
+}
