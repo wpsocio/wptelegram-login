@@ -27,6 +27,9 @@ module.exports = function(grunt) {
 				BUILD_DIR + 'admin/js/*.min.js',
 				BUILD_DIR + 'public/js/*.min.js'
 			],
+			i18n: [
+				BUILD_DIR + 'languages/*.{pot,po,mo}',
+			],
 			dynamic: {
 				dot: true,
 				expand: true,
@@ -49,6 +52,13 @@ module.exports = function(grunt) {
 					'!admin/blocks/**/*' // let webpack do that part
 				],
 				dest: BUILD_DIR
+			},
+			i18n: {
+				dot: true,
+				expand: true,
+				cwd: SOURCE_DIR + 'languages',
+				src: [ '*.{pot,po,mo}' ],
+				dest: BUILD_DIR + 'languages'
 			},
 			dynamic: {
 				dot: true,
@@ -428,13 +438,14 @@ module.exports = function(grunt) {
 	grunt.registerTask( 'i18n:all', [
 		'checktextdomain:core',
 		'makepot:gen',
-		'potomo:gen'
+		'potomo:gen',
+		'clean:i18n',
+		'copy:i18n',
 	] );
 
 	grunt.registerTask( 'build', function() {
 		grunt.task.run( [
 			'jshint:all',
-			'i18n:all',
 			'build:files',
 			'build:webpack',
 			'build:js',
@@ -453,6 +464,10 @@ module.exports = function(grunt) {
 	grunt.registerTask( 'precommit', [
 		'build',
 		'bundle:cmb2',
+		'i18n:all',
+	] );
+
+	grunt.registerTask( 'commit:git:trunk', [
 		'gitpush:trunk'
 	] );
 
