@@ -123,6 +123,6 @@ Many thanks to the translators for the great job!
 == Changelog ==
 
 = 1.4.0 =
-* Add Gutenberg Block for login button
+* Added Gutenberg Block for login button
 
 == Upgrade Notice ==

@@ -1,9 +1,9 @@
 # Changelog
 All notable changes to this project are documented in this file.
 
-## Unreleased
+## [1.4.0 - 2019-03-23](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.4.0)
 ### Enhancements
-* Add Gutenberg Block for login button
+* Added Gutenberg Block for login button
 
 ## 1.3.4 - 2018-11-23
 

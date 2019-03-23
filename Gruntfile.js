@@ -60,6 +60,13 @@ module.exports = function(grunt) {
 				src: [ '*.{pot,po,mo}' ],
 				dest: BUILD_DIR + 'languages'
 			},
+			changelog: {
+				dot: true,
+				expand: true,
+				cwd: SOURCE_DIR,
+				src: [ 'changelog.md' ],
+				dest: BUILD_DIR
+			},
 			dynamic: {
 				dot: true,
 				expand: true,
@@ -465,6 +472,7 @@ module.exports = function(grunt) {
 		'build',
 		'bundle:cmb2',
 		'i18n:all',
+		'copy:changelog',
 	] );
 
 	grunt.registerTask( 'commit:git:trunk', [
