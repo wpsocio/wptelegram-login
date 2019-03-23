@@ -61,11 +61,8 @@ module.exports = function(grunt) {
 				dest: BUILD_DIR + 'languages'
 			},
 			changelog: {
-				dot: true,
-				expand: true,
-				cwd: SOURCE_DIR,
-				src: [ 'changelog.md' ],
-				dest: BUILD_DIR
+				src: 'changelog.md',
+				dest: BUILD_DIR,
 			},
 			dynamic: {
 				dot: true,
@@ -442,14 +439,6 @@ module.exports = function(grunt) {
 		'copy:all'
 	] );
 
-	grunt.registerTask( 'i18n:all', [
-		'checktextdomain:core',
-		'makepot:gen',
-		'potomo:gen',
-		'clean:i18n',
-		'copy:i18n',
-	] );
-
 	grunt.registerTask( 'build', function() {
 		grunt.task.run( [
 			'jshint:all',
@@ -464,9 +453,13 @@ module.exports = function(grunt) {
 		'exec:bundle-cmb2'
 	]);
 
-	grunt.registerTask( 'gitpush:trunk', [
-		'buildcontrol'
-	]);
+	grunt.registerTask( 'i18n:all', [
+		'checktextdomain:core',
+		'makepot:gen',
+		'potomo:gen',
+		'clean:i18n',
+		'copy:i18n',
+	] );
 
 	grunt.registerTask( 'precommit', [
 		'build',
@@ -474,6 +467,10 @@ module.exports = function(grunt) {
 		'i18n:all',
 		'copy:changelog',
 	] );
+
+	grunt.registerTask( 'gitpush:trunk', [
+		'buildcontrol'
+	]);
 
 	grunt.registerTask( 'commit:git:trunk', [
 		'gitpush:trunk'
