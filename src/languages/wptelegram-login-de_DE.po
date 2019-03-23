@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wptelegram-login\n"
-"POT-Creation-Date: 2019-03-22 10:05:41+00:00\n"
+"POT-Creation-Date: 2019-03-23 13:05:57+00:00\n"
 "PO-Revision-Date: 2019-02-08 17:28+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
@@ -66,7 +66,7 @@ msgid "Use %s above to set automatically."
 msgstr "Auf %s klicken, um den Benutzernamen automatisch auszufüllen."
 
 #: admin/class-wptelegram-login-admin.php:193
-#: admin/class-wptelegram-login-admin.php:565
+#: admin/class-wptelegram-login-admin.php:570
 msgid "Test Token"
 msgstr "Token testen"
 
@@ -217,61 +217,61 @@ msgstr ""
 msgid "Widget Info"
 msgstr "Widget-Informationen"
 
-#: admin/class-wptelegram-login-admin.php:346
+#: admin/class-wptelegram-login-admin.php:351
 msgid "Any"
 msgstr "Immer anzeigen"
 
-#: admin/class-wptelegram-login-admin.php:347
+#: admin/class-wptelegram-login-admin.php:352
 msgid "Logged out"
 msgstr "ausgeloggt"
 
-#: admin/class-wptelegram-login-admin.php:348
+#: admin/class-wptelegram-login-admin.php:353
 msgid "Logged in"
 msgstr "eingeloggt"
 
-#: admin/class-wptelegram-login-admin.php:446
+#: admin/class-wptelegram-login-admin.php:451
 msgid "Settings updated"
 msgstr "Einstellungen wurden aktualisiert"
 
-#: admin/class-wptelegram-login-admin.php:463
+#: admin/class-wptelegram-login-admin.php:468
 msgid "%s is empty"
 msgstr ""
 
-#: admin/class-wptelegram-login-admin.php:465
+#: admin/class-wptelegram-login-admin.php:470
 msgid "Invalid %s"
 msgstr "%s ungültig"
 
-#: admin/class-wptelegram-login-admin.php:485
+#: admin/class-wptelegram-login-admin.php:490
 msgid "Goto %1$s and click/drag %2$s and place it where you want it to be."
 msgstr "Im Bereich %1$s das Widget %2$s an die gewünschte Position ziehen. "
 
-#: admin/class-wptelegram-login-admin.php:485
+#: admin/class-wptelegram-login-admin.php:490
 msgid "Appearance"
 msgstr "Aussehen"
 
-#: admin/class-wptelegram-login-admin.php:485
+#: admin/class-wptelegram-login-admin.php:490
 msgid "Widgets"
 msgstr "Widgets"
 
-#: admin/class-wptelegram-login-admin.php:486
+#: admin/class-wptelegram-login-admin.php:491
 msgid ""
 "Alternately, you can use the below shortcode or the block available in block "
 "editor."
 msgstr ""
 
-#: admin/class-wptelegram-login-admin.php:487
+#: admin/class-wptelegram-login-admin.php:492
 msgid "Inside page or post content:"
 msgstr "Auf einer Seite oder in einem Beitrag:"
 
-#: admin/class-wptelegram-login-admin.php:489
+#: admin/class-wptelegram-login-admin.php:494
 msgid "Inside the theme templates"
 msgstr "In Theme-Vorlagen"
 
-#: admin/class-wptelegram-login-admin.php:492
+#: admin/class-wptelegram-login-admin.php:497
 msgid "or"
 msgstr "oder"
 
-#: admin/class-wptelegram-login-admin.php:512
+#: admin/class-wptelegram-login-admin.php:517
 msgid ""
 "With this plugin, you can let the users login to your website with their "
 "Telegram and make it simple for them to get connected."
@@ -279,35 +279,35 @@ msgstr ""
 "Mit diesem Plugin können sich Benutzer ganz einfach per Telegram auf einer "
 "WordPress-Website registrieren und einloggen."
 
-#: admin/class-wptelegram-login-admin.php:526
+#: admin/class-wptelegram-login-admin.php:531
 msgid "INSTRUCTIONS!"
 msgstr "KONFIGURATIONSANLEITUNG"
 
-#: admin/class-wptelegram-login-admin.php:528
+#: admin/class-wptelegram-login-admin.php:533
 msgid "Create a Bot by sending %1$s command to %2$s."
 msgstr "Einen Bot erstellen, indem der %1$s-Befehl an %2$s gesendet wird."
 
-#: admin/class-wptelegram-login-admin.php:530
+#: admin/class-wptelegram-login-admin.php:535
 msgid "After completing the steps %s will provide you the Bot Token."
 msgstr ""
 "Nachdem die nun folgenden Schritte erledigt wurden, teilt der %s das Bot "
 "Token mit."
 
-#: admin/class-wptelegram-login-admin.php:531
+#: admin/class-wptelegram-login-admin.php:536
 msgid "Copy the token and paste into the Bot Token field below."
 msgstr "Dieses Bot Token wird nun in das Feld \"Bot Token\" eingetragen."
 
-#: admin/class-wptelegram-login-admin.php:531
+#: admin/class-wptelegram-login-admin.php:536
 msgid "For ease, use %s"
 msgstr "Zum einfacheren kopieren %s benutzen!"
 
-#: admin/class-wptelegram-login-admin.php:532
+#: admin/class-wptelegram-login-admin.php:537
 msgid "Send %1$s command to %2$s, select your bot and then send %3$s"
 msgstr ""
 "Den Befehl %1$s an den %2$s senden, dann den eigenen Bot auswählen und dann "
 "%3$s senden"
 
-#: admin/class-wptelegram-login-admin.php:534
+#: admin/class-wptelegram-login-admin.php:539
 msgid ""
 "Test your bot token below and fill in the bot username if not filled "
 "automatically."
@@ -315,27 +315,27 @@ msgstr ""
 "Den Bot-Token im Anschluss unten auf dieser Seite testen und den Bot-"
 "Benutzernamen eintragen, falls dieser nicht automatisch ausgefüllt wird."
 
-#: admin/class-wptelegram-login-admin.php:536
+#: admin/class-wptelegram-login-admin.php:541
 msgid "Hit %s below"
 msgstr "Zum Speichern der Einstellungen %s klicken"
 
-#: admin/class-wptelegram-login-admin.php:536
+#: admin/class-wptelegram-login-admin.php:541
 msgid "Save Changes"
 msgstr "Einstellungen speichern"
 
-#: admin/class-wptelegram-login-admin.php:537
+#: admin/class-wptelegram-login-admin.php:542
 msgid "That's it. You are ready to rock :)"
 msgstr "Das wars! Jetzt kanns losgehen:)"
 
-#: admin/class-wptelegram-login-admin.php:553
+#: admin/class-wptelegram-login-admin.php:558
 msgid "Invalid Bot Token"
 msgstr "Ungültiger Bot Token"
 
-#: admin/class-wptelegram-login-admin.php:556
+#: admin/class-wptelegram-login-admin.php:561
 msgid "Invalid Bot Username"
 msgstr "Ungültiger Bot Benutzername"
 
-#: admin/class-wptelegram-login-admin.php:582
+#: admin/class-wptelegram-login-admin.php:587
 msgid "Telegram User ID"
 msgstr "Telegram User ID"
 

@@ -103,7 +103,7 @@ class WPTelegram_Login_Admin {
 			'error'                => __( 'Error:', 'wptelegram-login' ),
 			'login_image_url'      => WPTELEGRAM_LOGIN_URL . '/admin/icons/telegram-login.svg',
 			'login_avatar_url'     => WPTELEGRAM_LOGIN_URL . '/admin/icons/telegram-login-avatar.svg',
-			'show_if_user_is_opts' => self::show_if_user_is_options_cb( true ),
+			'show_if_user_is_opts' => self::get_show_if_user_is_options( true ),
 		);
 		wp_localize_script(
 			$this->plugin_name,
@@ -340,8 +340,13 @@ class WPTelegram_Login_Admin {
 		return $data;
 	}
 
-	public static function show_if_user_is_options_cb( $for_block_editor = false ){
-		
+	public static function show_if_user_is_options_cb() {
+
+		return self::get_show_if_user_is_options( false );
+	}
+
+	public static function get_show_if_user_is_options( $for_block_editor = false ) {
+	
 		$data = array(
 			'0'          => __( 'Any', 'wptelegram-login' ),
 			'logged_out' => __( 'Logged out', 'wptelegram-login' ),
