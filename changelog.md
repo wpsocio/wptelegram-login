@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project are documented in this file.
 
+## [1.4.1 - 2019-03-23](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.4.1)
+### Bug Fixes
+* Fixed the PHP warning on the settings page
+
 ## [1.4.0 - 2019-03-23](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.4.0)
 ### Enhancements
 * Added Gutenberg Block for login button
