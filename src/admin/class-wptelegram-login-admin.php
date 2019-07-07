@@ -115,7 +115,7 @@ class WPTelegram_Login_Admin {
  	/**
 	 * Enqueue assets for the Gutenberg block
 	 *
-	 * @since    x.y.z
+	 * @since    1.4.1
 	 */
 	public function enqueue_block_editor_assets() {
 
