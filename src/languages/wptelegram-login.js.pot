@@ -1,0 +1,301 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: src/admin/blocks/telegram-login/block.js:42
+msgid "WP Telegram Login"
+msgstr ""
+
+#: src/admin/blocks/telegram-login/block.js:74
+msgid "Button Settings"
+msgstr ""
+
+#: src/admin/blocks/telegram-login/block.js:76
+#: src/admin/settings/fields.js:78
+msgid "Button Style"
+msgstr ""
+
+#: src/admin/blocks/telegram-login/block.js:86
+#: src/admin/settings/fields.js:79
+msgid "Show User Photo"
+msgstr ""
+
+#: src/admin/blocks/telegram-login/block.js:91
+#: src/admin/settings/fields.js:80
+msgid "Corner Radius"
+msgstr ""
+
+#: src/admin/blocks/telegram-login/block.js:99
+#: src/admin/settings/fields.js:81
+msgid "Show if user is"
+msgstr ""
+
+#: src/admin/settings/components/BotTestResult.js:8
+msgid "Test Result:"
+msgstr ""
+
+#: src/admin/settings/components/Header.js:30
+msgid ""
+"With this plugin, you can let the users login to your website with their "
+"Telegram and make it simple for them to get connected."
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:11
+msgid "INSTRUCTIONS!"
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:14
+msgid "Create a Bot by sending %1$s command to %2$s."
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:15
+msgid "After completing the steps %s will provide you the Bot Token."
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:16
+msgid "Copy the token and paste into the Bot Token field below."
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:16
+msgid "For ease, use %s"
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:17
+msgid "Send %1$s command to %2$s, select your bot and then send %3$s"
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:18
+msgid ""
+"Test your bot token below and fill in the bot username if not filled "
+"automatically."
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:19
+msgid "Hit %s below"
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:19
+#: src/admin/settings/components/SettingsForm.js:232
+msgid "Save Changes"
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:20
+msgid "That's it. You are ready to rock :)"
+msgstr ""
+
+#: src/admin/settings/components/PluginInfoCard.js:13
+msgid ""
+"Let the users login to your WordPress website with their Telegram and make "
+"it simple for them to get connected and let them receive their email "
+"notifications on Telegram."
+msgstr ""
+
+#: src/admin/settings/components/PluginInfoCard.js:18
+msgid "Do you like %s?"
+msgstr ""
+
+#: src/admin/settings/components/PluginInfoCard.js:22
+msgid "Need help?"
+msgstr ""
+
+#: src/admin/settings/components/PluginInfoCard.js:23
+msgid "Get LIVE support on Telegram"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:107
+msgid "Redirect location after login"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:109
+msgid "Default"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:110
+msgid "Homepage"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:111
+msgid "Current page"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:112
+#: src/admin/settings/fields.js:76
+msgid "Custom URL"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:134
+msgid "The user meta key to be used to save Telegram photo URL."
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:147
+msgid "Button Options"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:152
+msgid "Large"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:153
+msgid "Medium"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:154
+msgid "Small"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:163
+msgid "Display Telegram user profile photo beside button"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:189
+msgid "Who can see the login button"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:200
+msgid "Hide the button on default WordPress login/register page"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:212
+msgid "Display an error message if Telegram is blocked by user's ISP"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:22
+msgid "Could not connect"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:222
+msgid "Leave empty for default"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:234
+msgid "Changes saved successfully."
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:39
+msgid "Telegram Options"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:43
+msgid "Please read the instructions above"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:57
+msgid "Please wait..."
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:66
+msgid "Test Token"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:66
+msgid "Use %s above to set automatically."
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:81
+msgid "Login Options"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:85
+msgid "Disable Sign up"
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:86
+msgid ""
+"If checked, only the existing users who have connected their Telegram will "
+"be able to login."
+msgstr ""
+
+#: src/admin/settings/components/SettingsForm.js:95
+msgid "The default role to assign for the new users"
+msgstr ""
+
+#: src/admin/settings/components/SocialIcons.js:15
+msgid "Follow %s"
+msgstr ""
+
+#: src/admin/settings/components/SocialIcons.js:24
+msgid "Join %s"
+msgstr ""
+
+#: src/admin/settings/components/WidgetInfoCard.js:11
+msgid "Widget Info"
+msgstr ""
+
+#: src/admin/settings/components/WidgetInfoCard.js:14
+msgid "Goto %1$s and click/drag %2$s and place it where you want it to be."
+msgstr ""
+
+#: src/admin/settings/components/WidgetInfoCard.js:14
+msgid "Appearance"
+msgstr ""
+
+#: src/admin/settings/components/WidgetInfoCard.js:14
+msgid "Widgets"
+msgstr ""
+
+#: src/admin/settings/components/WidgetInfoCard.js:17
+msgid ""
+"Alternately, you can use the below shortCode or the block available in "
+"block editor."
+msgstr ""
+
+#: src/admin/settings/components/WidgetInfoCard.js:20
+msgid "Inside page or post content:"
+msgstr ""
+
+#: src/admin/settings/components/WidgetInfoCard.js:26
+msgid "Inside the theme templates"
+msgstr ""
+
+#: src/admin/settings/components/WidgetInfoCard.js:31
+msgid "or"
+msgstr ""
+
+#: src/admin/settings/fields.js:57
+msgid "Invalid %s"
+msgstr ""
+
+#: src/admin/settings/fields.js:60
+msgid "%s is required."
+msgstr ""
+
+#: src/admin/settings/fields.js:64
+msgid "Changes could not be saved."
+msgstr ""
+
+#: src/admin/settings/fields.js:71
+msgid "Bot Token"
+msgstr ""
+
+#: src/admin/settings/fields.js:72
+msgid "Bot Username"
+msgstr ""
+
+#: src/admin/settings/fields.js:73
+msgid "Sign up"
+msgstr ""
+
+#: src/admin/settings/fields.js:74
+msgid "User Role"
+msgstr ""
+
+#: src/admin/settings/fields.js:75
+msgid "Redirect to"
+msgstr ""
+
+#: src/admin/settings/fields.js:77
+msgid "Avatar URL Meta Key"
+msgstr ""
+
+#: src/admin/settings/fields.js:82
+msgid "Hide on default login"
+msgstr ""
+
+#: src/admin/settings/fields.js:83
+msgid "Show error message"
+msgstr ""
+
+#: src/admin/settings/fields.js:84
+msgid "Error message text"
+msgstr ""

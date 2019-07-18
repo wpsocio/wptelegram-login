@@ -9,7 +9,7 @@
 	"noarg": true,
 	"nonbsp": true,
 	"onevar": true,
-	"predef": ["document","window","jQuery","wptelegram_login_I18n","console"],
+	"predef": ["document","window","jQuery","wptelegram_login","wptelegram_login_blocks","console"],
 	"quotmark": "single",
 	"trailing": true,
 	"undef": true,

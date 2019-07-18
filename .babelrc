@@ -1,10 +1,13 @@
 {
 	"presets": [
-		['@babel/preset-env']
+		["@babel/preset-env", { "modules": false }]
 	],
 	"plugins": [
 		[ "@babel/plugin-transform-react-jsx", {
 			"pragma": "el"
+		} ],
+		[ "@wordpress/babel-plugin-makepot", {
+			"output": "src/languages/wptelegram-login.js.pot"
 		} ]
 	]
 }

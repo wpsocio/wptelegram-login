@@ -2,7 +2,9 @@
 All notable changes to this project are documented in this file.
 
 ## Unreleased
-### Bug Fixes
+### Enhancements
+* Removed the CMB2 dependency
+* Migrated to React for settings page
 
 ## [1.4.1 - 2019-03-23](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.4.1)
 ### Bug Fixes

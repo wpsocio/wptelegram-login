@@ -13,6 +13,8 @@ const {
 	SelectControl,
 } = wp.components;
 
+const { blocks: {assets: { login_image_url, login_avatar_url }, select_opts} } = wptelegram_login;
+
 const getFinalOutput = (attributes, className = null) => {
 	const {
 		button_style,
@@ -23,12 +25,12 @@ const getFinalOutput = (attributes, className = null) => {
 	const button_width = 'small' === button_style ? '100px' : 'medium' === button_style ? '150px' : null;
 	const avatar_width = 'small' === button_style ? '20px' : 'medium' === button_style ? '30px' : null;
 
-	const avatar = 'on' === show_user_photo ? <img src={wptelegram_login_I18n.login_avatar_url} style={{ width: avatar_width }} /> : null;
+	const avatar = 'on' === show_user_photo ? <img src={login_avatar_url} style={{ width: avatar_width }} /> : null;
 
 	return (
 		<div className={className}>
 			<img
-				src={wptelegram_login_I18n.login_image_url}
+				src={login_image_url}
 				style={{ borderRadius: corner_radius + 'px', width: button_width }}
 			/>
 			{avatar}
@@ -97,7 +99,7 @@ registerBlockType( 'wptelegram/login', {
 						label={ __( 'Show if user is' ) }
 						value={ show_if_user_is }
 						onChange={ value => setAttributes({ show_if_user_is: value }) }
-						options={ wptelegram_login_I18n.show_if_user_is_opts }
+						options={ select_opts.show_if_user_is }
 					/>
 				</PanelBody>
 			</InspectorControls>

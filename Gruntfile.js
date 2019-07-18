@@ -29,8 +29,6 @@ module.exports = function(grunt) {
 		},
 		clean: {
 			css: [
-				BUILD_DIR + 'admin/css/*.min.css',
-				BUILD_DIR + 'admin/css/*rtl*',
 				BUILD_DIR + 'public/css/*.min.css',
 				BUILD_DIR + 'public/css/*rtl*'
 			],
@@ -49,7 +47,6 @@ module.exports = function(grunt) {
 			},
 			all: [
 				BUILD_DIR + '*',
-				'!' + BUILD_DIR + 'includes/cmb2/**',
 				'!' + BUILD_DIR + '.git',
 			]
 		},
@@ -60,7 +57,9 @@ module.exports = function(grunt) {
 				cwd: SOURCE_DIR,
 				src: [
 					'**/*',
-					'!admin/blocks/**/*' // let webpack do that part
+					'!admin/blocks/**', // let webpack do that part
+					'!admin/settings/**', // let webpack do that part
+					'!languages/*.js.pot',
 				],
 				dest: BUILD_DIR
 			},
@@ -68,7 +67,7 @@ module.exports = function(grunt) {
 				dot: true,
 				expand: true,
 				cwd: SOURCE_DIR + 'languages',
-				src: [ '*.{pot,po,mo}' ],
+				src: [ '*.{pot,po,mo,php}', '!*.js.pot' ],
 				dest: BUILD_DIR + 'languages'
 			},
 			changelog: {
@@ -88,7 +87,6 @@ module.exports = function(grunt) {
 			gen: {
 				options: {
 					domainPath: 'languages/',
-					exclude: ['includes/cmb2/.*'],
 					potComments: '',
 					potFilename: '<%= pkg.name %>.pot',
 					type: 'wp-plugin',
@@ -103,7 +101,6 @@ module.exports = function(grunt) {
 						'Plural-Forms': 'nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n',
 						'X-Poedit-KeywordsList': '__;_e;_x;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n',
 						'X-Poedit-SearchPath-0': '.\n',
-						'X-Poedit-SearchPathExcluded-0': 'includes/cmb2\n'
 					},
 					processPot: function( pot ) {
 						var translation,
@@ -161,7 +158,6 @@ module.exports = function(grunt) {
 						cwd: SOURCE_DIR,
 						src: [
 							'**/*.php', // Include all files
-							'!includes/cmb2/**'
 						]
 					}
 				]
@@ -201,7 +197,6 @@ module.exports = function(grunt) {
 				dest: BUILD_DIR,
 				ext: '.min.css',
 				src: [
-					'admin/css/*.css',
 					'public/css/*.css'
 				]
 			},
@@ -214,13 +209,21 @@ module.exports = function(grunt) {
 					'admin/blocks/*.css'
 				]
 			},
+			settings: {
+				expand: true,
+				cwd: BUILD_DIR,
+				dest: BUILD_DIR,
+				ext: '.min.css',
+				src: [
+					'admin/settings/*.css'
+				]
+			},
 			rtl: {
 				expand: true,
 				cwd: BUILD_DIR,
 				dest: BUILD_DIR,
 				ext: '.min.css',
 				src: [
-					'admin/css/*-rtl.css',
 					'public/css/*-rtl.css'
 				]
 			}
@@ -253,7 +256,6 @@ module.exports = function(grunt) {
 				dest: BUILD_DIR,
 				ext: '-rtl.css',
 				src: [
-					'admin/css/*.css',
 					'public/css/*.css'
 				]
 			},
@@ -290,8 +292,6 @@ module.exports = function(grunt) {
 				expand: true,
 				cwd: SOURCE_DIR,
 				src: [
-					'admin/js/*.js',
-					'!admin/js/*.min.js',
 					'public/js/*.js',
 					'!public/js/*.min.js'
 				],
@@ -313,8 +313,8 @@ module.exports = function(grunt) {
 				dest: BUILD_DIR,
 				ext: '.min.js',
 				src: [
-					'admin/js/*.js',
 					'admin/blocks/*.js',
+					'admin/settings/*.js',
 					'public/js/*.js',
 
 					// Exceptions
@@ -330,10 +330,9 @@ module.exports = function(grunt) {
 			}
 		},
 		webpack: {
-	      prod: webpackConfig,
-	      dev: Object.assign({ watch: true }, webpackConfig)
+	      blocks: webpackConfig.blocks,
+	      settings: webpackConfig.settings,
 	    },
-		
 		_watch: {
 			options: {
 				interval: 2000
@@ -341,7 +340,8 @@ module.exports = function(grunt) {
 			all: {
 				files: [
 					SOURCE_DIR + '**/*',
-					'!' + SOURCE_DIR + 'admin/blocks/**/*'
+					'!' + SOURCE_DIR + 'admin/blocks/**/*',
+					'!' + SOURCE_DIR + 'admin/settings/**/*',
 				],
 				tasks: ['clean:dynamic', 'copy:dynamic'],
 				options: {
@@ -360,12 +360,23 @@ module.exports = function(grunt) {
 					spawn: false
 				}
 			},
-			webpack: {
+			webpackBlocks: {
 				files: [
 					SOURCE_DIR + 'admin/blocks/**/*.js',
 					SOURCE_DIR + 'admin/blocks/**/*.scss',
 				],
-				tasks: ['webpack:prod','clean:dynamic', 'uglify:dynamic'],
+				tasks: ['webpack:blocks','clean:dynamic', 'uglify:dynamic'],
+				options: {
+					dot: true,
+					spawn: false
+				}
+			},
+			webpackSettings: {
+				files: [
+					SOURCE_DIR + 'admin/settings/**/*.js',
+					SOURCE_DIR + 'admin/settings/**/*.scss',
+				],
+				tasks: ['webpack:settings','clean:dynamic', 'uglify:dynamic'],
 				options: {
 					dot: true,
 					spawn: false
@@ -418,7 +429,7 @@ module.exports = function(grunt) {
 			},
 			mainfile: {
 				files: {
-					[SOURCE_DIR]: SOURCE_DIR + 'wptelegram-login.php'
+					[SOURCE_DIR]: SOURCE_DIR + '<%= pkg.name %>.php'
 				},
 				options: {
 					replacements: [
@@ -522,8 +533,8 @@ module.exports = function(grunt) {
 		    }
 		},
 		exec: {
-			'bundle-cmb2': {
-				cmd: './tools/bundle-cmb2.sh'
+			'js-pot-to-php': {
+				cmd: 'npx pot-to-php src/languages/<%= pkg.name %>.js.pot src/languages/<%= pkg.name %>-js-translations.php <%= pkg.name %>'
 			}
 		}
 
@@ -540,6 +551,7 @@ module.exports = function(grunt) {
 		'rtl',
 		'cssmin:core',
 		'cssmin:blocks',
+		'cssmin:settings',
 		'cssmin:rtl'
 	] );
 
@@ -555,7 +567,8 @@ module.exports = function(grunt) {
 	] );
 
 	grunt.registerTask( 'build:webpack', [
-		'webpack:prod'
+		'webpack:blocks',
+		'webpack:settings',
 	] );
 
 	grunt.registerTask( 'build:js', [
@@ -579,12 +592,9 @@ module.exports = function(grunt) {
 		] );
 	} );
 
-	grunt.registerTask( 'bundle:cmb2', [
-		'exec:bundle-cmb2'
-	]);
-
 	grunt.registerTask( 'i18n:all', [
 		'checktextdomain:core',
+		'exec:js-pot-to-php',
 		'makepot:gen',
 		'potomo:gen',
 		'clean:i18n',
@@ -627,7 +637,6 @@ module.exports = function(grunt) {
 
 	grunt.registerTask( 'prerelease', [
 		'build',
-		'bundle:cmb2',
 		'i18n:all',
 		'copy:changelog',
 	] );
@@ -662,8 +671,9 @@ module.exports = function(grunt) {
 	grunt.event.on( 'watch', function( action, filepath, target ) {
 		var src;
 
+		const dynamicWatchTargets = [ 'all', 'rtl','webpackBlocks', 'webpackSettings' ];
 		// Only configure the dynamic tasks based on known targets.
-		if ( [ 'all', 'rtl','webpack' ].indexOf( target ) === -1 ) {
+		if ( dynamicWatchTargets.indexOf( target ) === -1 ) {
 			return;
 		}
 
@@ -683,12 +693,20 @@ module.exports = function(grunt) {
 			grunt.config( [ 'clean', 'dynamic', 'src' ], src );
 		} else {
 
+			// Make sure to get the excaped patterns
+			const paths = grunt.config( [ 'copy', 'all', 'src' ] );
+			paths[0] = src;
+
 			// Otherwise copy over only the changed file.
-			grunt.config( [ 'copy', 'dynamic', 'src' ], src );
+			grunt.config( [ 'copy', 'dynamic', 'src' ], paths );
 
 			// For css run the rtl task on just the changed file.
 			if ( target === 'rtl' ) {
 				grunt.config( [ 'rtlcss', 'dynamic', 'src' ], src );
+
+			} else if ( target === 'webpackSettings' ) {
+				grunt.config( [ 'webpack', 'settings', 'mode' ], 'development' );
+				// grunt.config( [ 'webpack', 'settings', 'optimization', 'minimize' ], false );
 			}
 		}
 	});
