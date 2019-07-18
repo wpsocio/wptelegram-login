@@ -135,19 +135,20 @@ class WPTelegram_Login_Options implements Iterator, ArrayAccess {
 	 * Set the option key
 	 *
 	 * @since 1.0.0
-	 * 
-	 * @param string	$option_key Option name in the database
+	 *
+	 * @param string $option_key Option name in the database
 	 */
 	public function set_option_key( $option_key ) {
 		$this->option_key = $option_key;
 		$this->set_data();
+
+		return $this;
 	}
 
 	/**
 	 * Gets all options.
 	 *
 	 * @since 1.0.0
-	 *
 	 */
 	public function get_data() {
 		return (array) $this->get();
@@ -165,6 +166,8 @@ class WPTelegram_Login_Options implements Iterator, ArrayAccess {
 		} else {
 			$this->data = (array) $options;
 		}
+
+		return $this;
 	}
 
 	/**
@@ -174,7 +177,7 @@ class WPTelegram_Login_Options implements Iterator, ArrayAccess {
 	 */
 	public function update_data() {
 
-		// make sure we have something to work upon
+		// Make sure we have something to work upon.
 		if ( ! empty( $this->option_key ) ) {
 
 			return update_option( $this->option_key, $this->get_data() );

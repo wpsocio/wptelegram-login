@@ -2,10 +2,10 @@
 Contributors: manzoorwanijk
 Donate link: https://paypal.me/manzoorwanijk
 Tags: telegram, login, register, social, signup
-Requires at least: 4.0.0
-Tested up to: 5.1.1
-Requires PHP: 5.2.4
-Stable tag: 1.4.1
+Requires at least: 4.7.0
+Tested up to: 5.2.2
+Requires PHP: 5.6
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,10 @@ Many thanks to the translators for the great job!
 7. User List Table (for admin)
 
 == Changelog ==
+
+= 1.5.0 =
+* Removed the CMB2 dependency
+* Migrated to React for settings page
 
 = 1.4.1 =
 * Fixed the PHP warning on the settings page

@@ -113,6 +113,12 @@ var _wp$components = wp.components,
     ToggleControl = _wp$components.ToggleControl,
     TextControl = _wp$components.TextControl,
     SelectControl = _wp$components.SelectControl;
+var _wptelegram_login = wptelegram_login,
+    _wptelegram_login$blo = _wptelegram_login.blocks,
+    _wptelegram_login$blo2 = _wptelegram_login$blo.assets,
+    login_image_url = _wptelegram_login$blo2.login_image_url,
+    login_avatar_url = _wptelegram_login$blo2.login_avatar_url,
+    select_opts = _wptelegram_login$blo.select_opts;
 
 var getFinalOutput = function getFinalOutput(attributes) {
   var className = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
@@ -122,7 +128,7 @@ var getFinalOutput = function getFinalOutput(attributes) {
   var button_width = 'small' === button_style ? '100px' : 'medium' === button_style ? '150px' : null;
   var avatar_width = 'small' === button_style ? '20px' : 'medium' === button_style ? '30px' : null;
   var avatar = 'on' === show_user_photo ? el("img", {
-    src: wptelegram_login_I18n.login_avatar_url,
+    src: login_avatar_url,
     style: {
       width: avatar_width
     }
@@ -130,7 +136,7 @@ var getFinalOutput = function getFinalOutput(attributes) {
   return el("div", {
     className: className
   }, el("img", {
-    src: wptelegram_login_I18n.login_image_url,
+    src: login_image_url,
     style: {
       borderRadius: corner_radius + 'px',
       width: button_width
@@ -145,19 +151,19 @@ registerBlockType('wptelegram/login', {
   attributes: {
     button_style: {
       type: 'string',
-      default: 'large'
+      "default": 'large'
     },
     show_user_photo: {
       type: 'string',
-      default: 'on'
+      "default": 'on'
     },
     corner_radius: {
       type: 'string',
-      default: '20'
+      "default": '20'
     },
     show_if_user_is: {
       type: 'string',
-      default: '0'
+      "default": '0'
     }
   },
   edit: function edit(_ref) {
@@ -215,7 +221,7 @@ registerBlockType('wptelegram/login', {
           show_if_user_is: value
         });
       },
-      options: wptelegram_login_I18n.show_if_user_is_opts
+      options: select_opts.show_if_user_is
     })))];
     return [controls, getFinalOutput(attributes, className)];
   },
