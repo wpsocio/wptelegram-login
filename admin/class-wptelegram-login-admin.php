@@ -129,8 +129,6 @@ class WPTelegram_Login_Admin {
 		// Load only on settings page.
 		if ( $this->is_settings_page( $hook_suffix ) ) {
 
-			$this->version = date( 'ymd.Gis', filemtime( WPTELEGRAM_LOGIN_DIR . '/admin/settings/settings-build' . $this->suffix . '.js' ) );
-
 			wp_enqueue_script( $this->plugin_name . '-settings', WPTELEGRAM_LOGIN_URL . '/admin/settings/settings-build' . $this->suffix . '.js', array( 'jquery' ), $this->version, true );
 
 			// Pass data to JS.
