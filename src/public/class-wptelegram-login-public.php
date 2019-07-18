@@ -478,7 +478,7 @@ class WPTelegram_Login_Public {
 	/**
 	 * Render the login block.
 	 *
-	 * @since x.y.z
+	 * @since 1.5.0
 	 */
 	public function render_login_block( $block_content, $block ) {
 

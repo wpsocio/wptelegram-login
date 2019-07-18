@@ -197,7 +197,7 @@ class WPTelegram_Login_Admin {
 	/**
 	 * Format the Twitter script.
 	 *
-	 * @since x.y.z
+	 * @since 1.5.0
 	 *
 	 * @param string $tag    The `<script>` tag for the enqueued script.
 	 * @param string $handle The script's registered handle.
@@ -215,7 +215,7 @@ class WPTelegram_Login_Admin {
 	/**
 	 * Enqueue assets for the Gutenberg block
 	 *
-	 * @since x.y.z
+	 * @since 1.5.0
 	 * @param string $hook_suffix The current admin page.
 	 */
 	public function is_settings_page( $hook_suffix ) {
@@ -248,7 +248,7 @@ class WPTelegram_Login_Admin {
 	/**
 	 * Register WP REST API routes.
 	 *
-	 * @since x.y.z
+	 * @since 1.5.0
 	 */
 	public function register_rest_routes() {
 		$controller = new WPTelegram_Login_Settings_Controller();
@@ -258,7 +258,7 @@ class WPTelegram_Login_Admin {
 	/**
 	 * Register the admin menu.
 	 *
-	 * @since x.y.z
+	 * @since 1.5.0
 	 */
 	public function add_plugin_admin_menu() {
 
@@ -286,7 +286,7 @@ class WPTelegram_Login_Admin {
 	/**
 	 * Render the settings page for this plugin.
 	 *
-	 * @since x.y.z
+	 * @since 1.5.0
 	 */
 	public function display_plugin_admin_page() {
 		?>

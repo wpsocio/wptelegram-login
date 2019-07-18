@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project are documented in this file.
 
-## Unreleased
+## [1.5.0 - 2019-07-18](https://github.com/manzoorwanijk/wptelegram/releases/tag/v1.5.0)
 ### Enhancements
 * Removed the CMB2 dependency
 * Migrated to React for settings page

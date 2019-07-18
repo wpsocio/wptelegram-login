@@ -111,7 +111,7 @@ if ( ! function_exists( 'wptelegram_get_jed_locale_data' ) ) {
 	 *
 	 * @source gutenberg_get_jed_locale_data()
 	 *
-	 * @since x.y.z
+	 * @since 1.5.0
 	 *
 	 * @param  string $domain Translation domain.
 	 *

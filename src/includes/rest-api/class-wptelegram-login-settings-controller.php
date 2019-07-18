@@ -3,7 +3,7 @@
  * Plugin settings endpoint for WordPress REST API.
  *
  * @link       https://t.me/manzoorwanijk
- * @since      x.y.z
+ * @since      1.5.0
  *
  * @package    WPTelegram_Login
  * @subpackage WPTelegram_Login/includes
@@ -12,7 +12,7 @@
 /**
  * Class to handle the settings endpoint.
  *
- * @since x.y.z
+ * @since 1.5.0
  *
  * @package    WPTelegram_Login
  * @subpackage WPTelegram_Login/includes
@@ -30,7 +30,7 @@ class WPTelegram_Login_Settings_Controller extends WPTelegram_Login_REST_Control
 	/**
 	 * Constructor
 	 *
-	 * @since x.y.z
+	 * @since 1.5.0
 	 */
 	public function __construct() {
 		$this->rest_base = 'settings';
@@ -40,7 +40,7 @@ class WPTelegram_Login_Settings_Controller extends WPTelegram_Login_REST_Control
 	/**
 	 * Register the routes for the objects of the controller.
 	 *
-	 * @since x.y.z
+	 * @since 1.5.0
 	 */
 	public function register_routes() {
 
@@ -67,7 +67,7 @@ class WPTelegram_Login_Settings_Controller extends WPTelegram_Login_REST_Control
 	/**
 	 * Check request permissions.
 	 *
-	 * @since x.y.z
+	 * @since 1.5.0
 	 *
 	 * @return bool
 	 */
@@ -102,7 +102,7 @@ class WPTelegram_Login_Settings_Controller extends WPTelegram_Login_REST_Control
 	/**
 	 * Get settings via API.
 	 *
-	 * @since x.y.z
+	 * @since 1.5.0
 	 */
 	public function get_settings() {
 		return rest_ensure_response( self::get_default_settings() );
@@ -111,7 +111,7 @@ class WPTelegram_Login_Settings_Controller extends WPTelegram_Login_REST_Control
 	/**
 	 * Update settings.
 	 *
-	 * @since x.y.z
+	 * @since 1.5.0
 	 *
 	 * @param WP_REST_Request $request WP REST API request.
 	 */
@@ -136,7 +136,7 @@ class WPTelegram_Login_Settings_Controller extends WPTelegram_Login_REST_Control
 	/**
 	 * Retrieves the query params for the settings.
 	 *
-	 * @since x.y.z
+	 * @since 1.5.0
 	 *
 	 * @param string $context The context for the values.
 	 * @return array Query parameters for the settings.
@@ -229,7 +229,7 @@ class WPTelegram_Login_Settings_Controller extends WPTelegram_Login_REST_Control
 	/**
 	 * Update settings.
 	 *
-	 * @since x.y.z
+	 * @since 1.5.0
 	 *
 	 * @param mixed           $value   Value of the param.
 	 * @param WP_REST_Request $request WP REST API request.

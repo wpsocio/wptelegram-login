@@ -3,7 +3,7 @@
  * WP REST API functionality of the plugin.
  *
  * @link       https://t.me/manzoorwanijk
- * @since      x.y.z
+ * @since      1.5.0
  *
  * @package    WPTelegram_Login
  * @subpackage WPTelegram_Login/includes
@@ -12,7 +12,7 @@
 /**
  * Base class for all the endpoints.
  *
- * @since x.y.z
+ * @since 1.5.0
  *
  * @package    WPTelegram_Login
  * @subpackage WPTelegram_Login/includes
@@ -23,7 +23,7 @@ abstract class WPTelegram_Login_REST_Controller extends WP_REST_Controller {
 	/**
 	 * The namespace of this controller's route.
 	 *
-	 * @since x.y.z
+	 * @since 1.5.0
 	 * @var string
 	 */
 	protected $namespace = 'wptelegram-login/v1';
