@@ -98,6 +98,7 @@ export const sendAjaxRequest = (options, crossDomain = false) => {
     contentType: 'application/json; charset=utf-8',
     dataType: 'json',
     crossDomain: crossDomain,
+    global: false, // Avoid the mess created by Wordfence. https://wordpress.org/support/topic/wordfence-corrupts-json-response-from-jquery-ajax-if-not-200/
   };
 
   if (!crossDomain) {
