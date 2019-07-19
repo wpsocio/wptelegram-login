@@ -82,8 +82,6 @@ class WPTelegram_Login_Admin {
 	 */
 	public function enqueue_styles( $hook_suffix ) {
 
-		wp_enqueue_style( $this->plugin_name, WPTELEGRAM_LOGIN_URL . '/admin/css/wptelegram-login-admin' . $this->suffix . '.css', array(), $this->version, 'all' );
-
 		// Load only on settings page.
 		if ( $this->is_settings_page( $hook_suffix ) ) {
 			wp_enqueue_style( $this->plugin_name . '-bootstrap', WPTELEGRAM_LOGIN_URL . '/admin/css/bootstrap/bootstrap' . $this->suffix . '.css', array(), $this->version, 'all' );
