@@ -1,12 +1,15 @@
+/* global jQuery */
 jQuery( document ).ready( function( $ ) {
-	var loginForm = $( '#loginform,#registerform' ),
-		loginWrap = $( '#wptelegram-login-wrap' ),
-		overflow  = $( '<div class="wptelegram-login-clear"></div>' );
-	if ( 0 == loginForm.length ) {
+	var loginForm = $( 'input[type="password"]' ).closest( 'form' );
+	if ( 0 === loginForm.length ) {
 		return;
 	}
-	loginForm.css({'position': 'relative','paddingBottom': '92px'});
-	loginWrap.css('display','block');
+
+	var loginWrap = $( '#wptelegram-login-wrap' );
+	var overflow = $( '<div class="wptelegram-login-clear"></div>' );
+
+	loginForm.css( { position: 'relative'/* , paddingBottom: '92px' */ } );
+	loginWrap.css( 'display', 'block' );
 
 	loginForm.append( overflow );
 	overflow.append( $( 'p.forgetmenot' ), $( 'p.submit' ) );
