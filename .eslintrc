@@ -1,0 +1,31 @@
+{
+	"rules": {
+		"curly": "warn",
+		"no-mixed-spaces-and-tabs": "warn",
+		"indent": ["error", "tab", {
+			"SwitchCase": 1,
+		}],
+		"camelcase": "off",
+		"no-console": "off",
+		"no-alert": "off",
+		"template-curly-spacing": "off",
+		"no-var": "off",
+	},
+	"env": {
+		"browser": true,
+	},
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"sourceType": "module",
+		"allowImportExportEverywhere": true,
+		"codeFrame": true,
+		"ecmaFeatures": {
+			"templateStrings": true,
+		},
+		"ecmaVersion": 2018,
+	},
+	"extends": [
+		"plugin:@wordpress/eslint-plugin/recommended",
+	],
+	"plugins": ["eslint-plugin-react"],
+}
