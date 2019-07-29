@@ -44,11 +44,6 @@ const validationSchema =  yup.object({
   custom_error_message  : yup.string(),
 });
 
-/* React Final Form mutator function */
-export const updateFieldValue = ([name, value], state, { changeValue }) => {
-  changeValue(state, name, () => value);
-};
-
 export const getErrorMessage = (fieldName, errorType = 'invalid') => {
   let message;
 

@@ -1,12 +1,17 @@
+/**
+ * External dependencies
+ */
 import React from 'react';
-import PluginInfoCard from './PluginInfoCard';
-import WidgetInfoCard from './WidgetInfoCard';
+/**
+ * Internal dependencies
+ */
+import { PluginInfoCard, WidgetInfoCard } from './';
 
 export default () => {
-  return (
-    <div>
-      <PluginInfoCard />
-      <WidgetInfoCard />
-    </div>
-  );
-}
+	return (
+		<div>
+			<PluginInfoCard />
+			<WidgetInfoCard />
+		</div>
+	);
+};
