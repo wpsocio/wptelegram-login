@@ -724,7 +724,7 @@ class WPTelegram_Login_Public {
 	/**
 	 * Do the necessary db upgrade, if needed
 	 *
-	 * @since    x.y.z
+	 * @since    1.5.1
 	 */
 	public function do_upgrade() {
 
@@ -763,7 +763,7 @@ class WPTelegram_Login_Public {
 	/**
 	 * Upgrade to a specific version
 	 *
-	 * @since x.y.z
+	 * @since 1.5.1
 	 *
 	 * @param string $version The plugin verion to upgrade to.
 	 */

@@ -317,7 +317,7 @@ class WPTelegram_Login {
 	/**
 	 * The title of the plugin.
 	 *
-	 * @since     x.y.z
+	 * @since     1.5.1
 	 * @return    string    The title of the plugin.
 	 */
 	public function title() {
@@ -328,7 +328,7 @@ class WPTelegram_Login {
 	 * The name of the plugin used to uniquely identify it within the context of
 	 * WordPress and to define internationalization functionality.
 	 *
-	 * @since     x.y.z
+	 * @since     1.5.1
 	 * @return    string    The name of the plugin.
 	 */
 	public function name() {
@@ -338,7 +338,7 @@ class WPTelegram_Login {
 	/**
 	 * Retrieve the version number of the plugin.
 	 *
-	 * @since     x.y.z
+	 * @since     1.5.1
 	 * @return    string    The version number of the plugin.
 	 */
 	public function version() {
@@ -348,7 +348,7 @@ class WPTelegram_Login {
 	/**
 	 * Retrieve directory path to the plugin.
 	 *
-	 * @since x.y.z
+	 * @since 1.5.1
 	 * @param string $path Path to append.
 	 * @return string Directory with optional path appended
 	 */
@@ -359,7 +359,7 @@ class WPTelegram_Login {
 	/**
 	 * Retrieve URL path to the plugin.
 	 *
-	 * @since x.y.z
+	 * @since 1.5.1
 	 * @param string $path Path to append.
 	 * @return string URL with optional path appended
 	 */
@@ -370,7 +370,7 @@ class WPTelegram_Login {
 	/**
 	 * The suffix to use for plugin assets.
 	 *
-	 * @since x.y.z
+	 * @since 1.5.1
 	 *
 	 * @return string The suffix to use.
 	 */
