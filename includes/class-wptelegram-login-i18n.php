@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Define the internationalization functionality
  *
@@ -24,7 +23,7 @@
  * @subpackage WPTelegram_Login/includes
  * @author     Manzoor Wani <@manzoorwanijk>
  */
-class WPTelegram_Login_i18n {
+class WPTelegram_Login_I18n {
 
 
 	/**

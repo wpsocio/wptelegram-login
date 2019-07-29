@@ -235,39 +235,39 @@ exports.__esModule = true;
 exports.addMethod = addMethod;
 exports.lazy = exports.ref = exports.boolean = void 0;
 
-var _mixed = _interopRequireDefault(__webpack_require__(9));
+var _mixed = _interopRequireDefault(__webpack_require__(8));
 
 exports.mixed = _mixed.default;
 
-var _boolean = _interopRequireDefault(__webpack_require__(119));
+var _boolean = _interopRequireDefault(__webpack_require__(116));
 
 exports.bool = _boolean.default;
 
-var _string = _interopRequireDefault(__webpack_require__(120));
+var _string = _interopRequireDefault(__webpack_require__(117));
 
 exports.string = _string.default;
 
-var _number = _interopRequireDefault(__webpack_require__(121));
+var _number = _interopRequireDefault(__webpack_require__(118));
 
 exports.number = _number.default;
 
-var _date = _interopRequireDefault(__webpack_require__(122));
+var _date = _interopRequireDefault(__webpack_require__(119));
 
 exports.date = _date.default;
 
-var _object = _interopRequireDefault(__webpack_require__(124));
+var _object = _interopRequireDefault(__webpack_require__(121));
 
 exports.object = _object.default;
 
-var _array = _interopRequireDefault(__webpack_require__(142));
+var _array = _interopRequireDefault(__webpack_require__(139));
 
 exports.array = _array.default;
 
 var _Reference = _interopRequireDefault(__webpack_require__(14));
 
-var _Lazy = _interopRequireDefault(__webpack_require__(143));
+var _Lazy = _interopRequireDefault(__webpack_require__(140));
 
-var _ValidationError = _interopRequireDefault(__webpack_require__(28));
+var _ValidationError = _interopRequireDefault(__webpack_require__(27));
 
 exports.ValidationError = _ValidationError.default;
 
@@ -279,7 +279,7 @@ var _isSchema = _interopRequireDefault(__webpack_require__(11));
 
 exports.isSchema = _isSchema.default;
 
-var _setLocale = _interopRequireDefault(__webpack_require__(144));
+var _setLocale = _interopRequireDefault(__webpack_require__(141));
 
 exports.setLocale = _setLocale.default;
 var boolean = _boolean.default;
@@ -307,30 +307,6 @@ function addMethod(schemaType, name, fn) {
 /***/ }),
 /* 7 */,
 /* 8 */
-/***/ (function(module, exports) {
-
-function _extends() {
-  module.exports = _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-module.exports = _extends;
-
-/***/ }),
-/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -341,25 +317,25 @@ var _interopRequireDefault = __webpack_require__(4);
 exports.__esModule = true;
 exports.default = SchemaType;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(8));
+var _extends2 = _interopRequireDefault(__webpack_require__(9));
 
 var _has = _interopRequireDefault(__webpack_require__(12));
 
-var _cloneDeepWith = _interopRequireDefault(__webpack_require__(67));
+var _cloneDeepWith = _interopRequireDefault(__webpack_require__(64));
 
-var _toArray2 = _interopRequireDefault(__webpack_require__(99));
+var _toArray2 = _interopRequireDefault(__webpack_require__(96));
 
 var _locale = __webpack_require__(10);
 
-var _Condition = _interopRequireDefault(__webpack_require__(114));
+var _Condition = _interopRequireDefault(__webpack_require__(111));
 
-var _runValidations = _interopRequireDefault(__webpack_require__(27));
+var _runValidations = _interopRequireDefault(__webpack_require__(25));
 
-var _prependDeep = _interopRequireDefault(__webpack_require__(115));
+var _prependDeep = _interopRequireDefault(__webpack_require__(112));
 
 var _isSchema = _interopRequireDefault(__webpack_require__(11));
 
-var _createValidation = _interopRequireDefault(__webpack_require__(116));
+var _createValidation = _interopRequireDefault(__webpack_require__(113));
 
 var _printValue = _interopRequireDefault(__webpack_require__(19));
 
@@ -919,6 +895,30 @@ proto.optional = proto.notRequired;
 module.exports = exports["default"];
 
 /***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+function _extends() {
+  module.exports = _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+module.exports = _extends;
+
+/***/ }),
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1057,7 +1057,7 @@ var _interopRequireDefault = __webpack_require__(4);
 exports.__esModule = true;
 exports.default = inherits;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(8));
+var _extends2 = _interopRequireDefault(__webpack_require__(9));
 
 function inherits(ctor, superCtor, spec) {
   ctor.prototype = Object.create(superCtor.prototype, {
@@ -1085,7 +1085,7 @@ var _interopRequireDefault = __webpack_require__(4);
 exports.__esModule = true;
 exports.default = void 0;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(8));
+var _extends2 = _interopRequireDefault(__webpack_require__(9));
 
 var _propertyExpr = __webpack_require__(20);
 
@@ -1186,7 +1186,7 @@ module.exports = assocIndexOf;
 /* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var defineProperty = __webpack_require__(76);
+var defineProperty = __webpack_require__(73);
 
 /**
  * The base implementation of `assignValue` and `assignMergeValue` without
@@ -1263,7 +1263,7 @@ module.exports = copyObject;
 /* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(25);
+var overArg = __webpack_require__(23);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeKeys = overArg(Object.keys, Object);
@@ -1609,58 +1609,6 @@ module.exports = invariant;
 /* 23 */
 /***/ (function(module, exports) {
 
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  } else {
-    var newObj = {};
-
-    if (obj != null) {
-      for (var key in obj) {
-        if (Object.prototype.hasOwnProperty.call(obj, key)) {
-          var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {};
-
-          if (desc.get || desc.set) {
-            Object.defineProperty(newObj, key, desc);
-          } else {
-            newObj[key] = obj[key];
-          }
-        }
-      }
-    }
-
-    newObj["default"] = obj;
-    return newObj;
-  }
-}
-
-module.exports = _interopRequireWildcard;
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports) {
-
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
-
-module.exports = _objectWithoutPropertiesLoose;
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports) {
-
 /**
  * Creates a unary function that invokes `func` with its argument transformed.
  *
@@ -1679,7 +1627,7 @@ module.exports = overArg;
 
 
 /***/ }),
-/* 26 */
+/* 24 */
 /***/ (function(module, exports) {
 
 /**
@@ -1716,7 +1664,7 @@ module.exports = isObject;
 
 
 /***/ }),
-/* 27 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1730,11 +1678,11 @@ exports.settled = settled;
 exports.collectErrors = collectErrors;
 exports.default = runValidations;
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(24));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(26));
 
 var _synchronousPromise = __webpack_require__(44);
 
-var _ValidationError = _interopRequireDefault(__webpack_require__(28));
+var _ValidationError = _interopRequireDefault(__webpack_require__(27));
 
 var promise = function promise(sync) {
   return sync ? _synchronousPromise.SynchronousPromise : Promise;
@@ -1830,7 +1778,28 @@ function runValidations(_ref3) {
 }
 
 /***/ }),
-/* 28 */
+/* 26 */
+/***/ (function(module, exports) {
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+module.exports = _objectWithoutPropertiesLoose;
+
+/***/ }),
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1889,6 +1858,37 @@ ValidationError.formatError = function (message, params) {
 };
 
 module.exports = exports["default"];
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports) {
+
+function _interopRequireWildcard(obj) {
+  if (obj && obj.__esModule) {
+    return obj;
+  } else {
+    var newObj = {};
+
+    if (obj != null) {
+      for (var key in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, key)) {
+          var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {};
+
+          if (desc.get || desc.set) {
+            Object.defineProperty(newObj, key, desc);
+          } else {
+            newObj[key] = obj[key];
+          }
+        }
+      }
+    }
+
+    newObj["default"] = obj;
+    return newObj;
+  }
+}
+
+module.exports = _interopRequireWildcard;
 
 /***/ }),
 /* 29 */
@@ -2205,7 +2205,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/* global window, exports, define */
 if (false) { var throwOnDirectAccess, ReactIs; } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(145)();
+  module.exports = __webpack_require__(142)();
 }
 
 
@@ -2413,7 +2413,7 @@ module.exports = assignValue;
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var freeGlobal = __webpack_require__(83);
+var freeGlobal = __webpack_require__(80);
 
 /** Detect free variable `self`. */
 var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
@@ -2542,9 +2542,9 @@ module.exports = objectToString;
 /* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var asciiToArray = __webpack_require__(109),
+var asciiToArray = __webpack_require__(106),
     hasUnicode = __webpack_require__(43),
-    unicodeToArray = __webpack_require__(110);
+    unicodeToArray = __webpack_require__(107);
 
 /**
  * Converts `string` to an array.
@@ -3013,7 +3013,7 @@ module.exports = mapValues;
 /* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFor = __webpack_require__(117),
+var baseFor = __webpack_require__(114),
     keys = __webpack_require__(18);
 
 /**
@@ -3156,9 +3156,9 @@ module.exports = _taggedTemplateLiteralLoose;
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayReduce = __webpack_require__(126),
-    deburr = __webpack_require__(127),
-    words = __webpack_require__(128);
+var arrayReduce = __webpack_require__(123),
+    deburr = __webpack_require__(124),
+    words = __webpack_require__(125);
 
 /** Used to compose unicode capture groups. */
 var rsApos = "['\u2019]";
@@ -3433,62 +3433,14 @@ module.exports = function memize( fn, options ) {
 "use strict";
 
 
-var _interopRequireWildcard = __webpack_require__(23);
-
-var _interopRequireDefault = __webpack_require__(4);
-
 exports.__esModule = true;
-exports.default = useUncontrolled;
+exports.default = camelize;
+var rHyphen = /-(.)/g;
 
-var _extends3 = _interopRequireDefault(__webpack_require__(8));
-
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(24));
-
-var _react = __webpack_require__(0);
-
-var Utils = _interopRequireWildcard(__webpack_require__(66));
-
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return typeof key === "symbol" ? key : String(key); }
-
-function _toPrimitive(input, hint) { if (typeof input !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (typeof res !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-
-function useUncontrolled(props, config) {
-  return Object.keys(config).reduce(function (result, fieldName) {
-    var _extends2;
-
-    var defaultValue = result[Utils.defaultKey(fieldName)],
-        propsValue = result[fieldName],
-        rest = (0, _objectWithoutPropertiesLoose2.default)(result, [Utils.defaultKey(fieldName), fieldName].map(_toPropertyKey));
-    var handlerName = config[fieldName];
-    var prevProps = (0, _react.useRef)({});
-
-    var _useState = (0, _react.useState)(defaultValue),
-        stateValue = _useState[0],
-        setState = _useState[1];
-
-    var isProp = Utils.isProp(props, fieldName);
-    var wasProp = Utils.isProp(prevProps.current, fieldName);
-    prevProps.current = props;
-    /**
-     * If a prop switches from controlled to Uncontrolled
-     * reset its value to the defaultValue
-     */
-
-    if (!isProp && wasProp) {
-      setState(defaultValue);
-    }
-
-    var propsHandler = props[handlerName];
-    var handler = (0, _react.useCallback)(function (value) {
-      for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-        args[_key - 1] = arguments[_key];
-      }
-
-      if (propsHandler) propsHandler.apply(void 0, [value].concat(args));
-      setState(value);
-    }, [setState, propsHandler]);
-    return (0, _extends3.default)({}, rest, (_extends2 = {}, _extends2[fieldName] = isProp ? propsValue : stateValue, _extends2[handlerName] = handler, _extends2));
-  }, props);
+function camelize(string) {
+  return string.replace(rHyphen, function (_, chr) {
+    return chr.toUpperCase();
+  });
 }
 
 module.exports = exports["default"];
@@ -3627,14 +3579,62 @@ function mapContextToProps(maybeOpts, mapToProps, Component) {
 "use strict";
 
 
-exports.__esModule = true;
-exports.default = camelize;
-var rHyphen = /-(.)/g;
+var _interopRequireWildcard = __webpack_require__(28);
 
-function camelize(string) {
-  return string.replace(rHyphen, function (_, chr) {
-    return chr.toUpperCase();
-  });
+var _interopRequireDefault = __webpack_require__(4);
+
+exports.__esModule = true;
+exports.default = useUncontrolled;
+
+var _extends3 = _interopRequireDefault(__webpack_require__(9));
+
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(26));
+
+var _react = __webpack_require__(0);
+
+var Utils = _interopRequireWildcard(__webpack_require__(146));
+
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return typeof key === "symbol" ? key : String(key); }
+
+function _toPrimitive(input, hint) { if (typeof input !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (typeof res !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+function useUncontrolled(props, config) {
+  return Object.keys(config).reduce(function (result, fieldName) {
+    var _extends2;
+
+    var defaultValue = result[Utils.defaultKey(fieldName)],
+        propsValue = result[fieldName],
+        rest = (0, _objectWithoutPropertiesLoose2.default)(result, [Utils.defaultKey(fieldName), fieldName].map(_toPropertyKey));
+    var handlerName = config[fieldName];
+    var prevProps = (0, _react.useRef)({});
+
+    var _useState = (0, _react.useState)(defaultValue),
+        stateValue = _useState[0],
+        setState = _useState[1];
+
+    var isProp = Utils.isProp(props, fieldName);
+    var wasProp = Utils.isProp(prevProps.current, fieldName);
+    prevProps.current = props;
+    /**
+     * If a prop switches from controlled to Uncontrolled
+     * reset its value to the defaultValue
+     */
+
+    if (!isProp && wasProp) {
+      setState(defaultValue);
+    }
+
+    var propsHandler = props[handlerName];
+    var handler = (0, _react.useCallback)(function (value) {
+      for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        args[_key - 1] = arguments[_key];
+      }
+
+      if (propsHandler) propsHandler.apply(void 0, [value].concat(args));
+      setState(value);
+    }, [setState, propsHandler]);
+    return (0, _extends3.default)({}, rest, (_extends2 = {}, _extends2[fieldName] = isProp ? propsValue : stateValue, _extends2[handlerName] = handler, _extends2));
+  }, props);
 }
 
 module.exports = exports["default"];
@@ -4271,165 +4271,7 @@ exports.unstable_shouldYield=function(){return!e&&(null!==d&&d.expirationTime<l|
 /* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = all;
-
-var _createChainableTypeChecker = __webpack_require__(65);
-
-var _createChainableTypeChecker2 = _interopRequireDefault(_createChainableTypeChecker);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function all() {
-  for (var _len = arguments.length, validators = Array(_len), _key = 0; _key < _len; _key++) {
-    validators[_key] = arguments[_key];
-  }
-
-  function allPropTypes() {
-    for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-      args[_key2] = arguments[_key2];
-    }
-
-    var error = null;
-
-    validators.forEach(function (validator) {
-      if (error != null) {
-        return;
-      }
-
-      var result = validator.apply(undefined, args);
-      if (result != null) {
-        error = result;
-      }
-    });
-
-    return error;
-  }
-
-  return (0, _createChainableTypeChecker2.default)(allPropTypes);
-}
-module.exports = exports['default'];
-
-/***/ }),
-/* 65 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = createChainableTypeChecker;
-/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- */
-
-// Mostly taken from ReactPropTypes.
-
-function createChainableTypeChecker(validate) {
-  function checkType(isRequired, props, propName, componentName, location, propFullName) {
-    var componentNameSafe = componentName || '<<anonymous>>';
-    var propFullNameSafe = propFullName || propName;
-
-    if (props[propName] == null) {
-      if (isRequired) {
-        return new Error('Required ' + location + ' `' + propFullNameSafe + '` was not specified ' + ('in `' + componentNameSafe + '`.'));
-      }
-
-      return null;
-    }
-
-    for (var _len = arguments.length, args = Array(_len > 6 ? _len - 6 : 0), _key = 6; _key < _len; _key++) {
-      args[_key - 6] = arguments[_key];
-    }
-
-    return validate.apply(undefined, [props, propName, componentNameSafe, location, propFullNameSafe].concat(args));
-  }
-
-  var chainedCheckType = checkType.bind(null, false);
-  chainedCheckType.isRequired = checkType.bind(null, true);
-
-  return chainedCheckType;
-}
-module.exports = exports['default'];
-
-/***/ }),
-/* 66 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(4);
-
-exports.__esModule = true;
-exports.uncontrolledPropTypes = uncontrolledPropTypes;
-exports.isProp = isProp;
-exports.defaultKey = defaultKey;
-exports.canAcceptRef = canAcceptRef;
-
-var _invariant = _interopRequireDefault(__webpack_require__(22));
-
-var noop = function noop() {};
-
-function readOnlyPropType(handler, name) {
-  return function (props, propName) {
-    if (props[propName] !== undefined) {
-      if (!props[handler]) {
-        return new Error("You have provided a `" + propName + "` prop to `" + name + "` " + ("without an `" + handler + "` handler prop. This will render a read-only field. ") + ("If the field should be mutable use `" + defaultKey(propName) + "`. ") + ("Otherwise, set `" + handler + "`."));
-      }
-    }
-  };
-}
-
-function uncontrolledPropTypes(controlledValues, displayName) {
-  var propTypes = {};
-  Object.keys(controlledValues).forEach(function (prop) {
-    // add default propTypes for folks that use runtime checks
-    propTypes[defaultKey(prop)] = noop;
-
-    if (false) { var handler; }
-  });
-  return propTypes;
-}
-
-function isProp(props, prop) {
-  return props[prop] !== undefined;
-}
-
-function defaultKey(key) {
-  return 'default' + key.charAt(0).toUpperCase() + key.substr(1);
-}
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- */
-
-
-function canAcceptRef(component) {
-  return !!component && (typeof component !== 'function' || component.prototype && component.prototype.isReactComponent);
-}
-
-/***/ }),
-/* 67 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var baseClone = __webpack_require__(68);
+var baseClone = __webpack_require__(65);
 
 /** Used to compose bitmasks for cloning. */
 var CLONE_DEEP_FLAG = 1,
@@ -4472,29 +4314,29 @@ module.exports = cloneDeepWith;
 
 
 /***/ }),
-/* 68 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Stack = __webpack_require__(69),
-    arrayEach = __webpack_require__(75),
+var Stack = __webpack_require__(66),
+    arrayEach = __webpack_require__(72),
     assignValue = __webpack_require__(36),
-    baseAssign = __webpack_require__(78),
-    baseAssignIn = __webpack_require__(79),
-    cloneBuffer = __webpack_require__(81),
+    baseAssign = __webpack_require__(75),
+    baseAssignIn = __webpack_require__(76),
+    cloneBuffer = __webpack_require__(78),
     copyArray = __webpack_require__(38),
-    copySymbols = __webpack_require__(84),
-    copySymbolsIn = __webpack_require__(86),
-    getAllKeys = __webpack_require__(88),
-    getAllKeysIn = __webpack_require__(89),
+    copySymbols = __webpack_require__(81),
+    copySymbolsIn = __webpack_require__(83),
+    getAllKeys = __webpack_require__(85),
+    getAllKeysIn = __webpack_require__(86),
     getTag = __webpack_require__(39),
-    initCloneArray = __webpack_require__(90),
-    initCloneByTag = __webpack_require__(91),
-    initCloneObject = __webpack_require__(92),
+    initCloneArray = __webpack_require__(87),
+    initCloneByTag = __webpack_require__(88),
+    initCloneObject = __webpack_require__(89),
     isArray = __webpack_require__(40),
-    isBuffer = __webpack_require__(96),
-    isMap = __webpack_require__(97),
-    isObject = __webpack_require__(26),
-    isSet = __webpack_require__(98),
+    isBuffer = __webpack_require__(93),
+    isMap = __webpack_require__(94),
+    isObject = __webpack_require__(24),
+    isSet = __webpack_require__(95),
     keys = __webpack_require__(18);
 
 /** Used to compose bitmasks for cloning. */
@@ -4649,14 +4491,14 @@ module.exports = baseClone;
 
 
 /***/ }),
-/* 69 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var listCacheClear = __webpack_require__(70),
-    listCacheDelete = __webpack_require__(71),
-    listCacheGet = __webpack_require__(72),
-    listCacheHas = __webpack_require__(73),
-    listCacheSet = __webpack_require__(74);
+var listCacheClear = __webpack_require__(67),
+    listCacheDelete = __webpack_require__(68),
+    listCacheGet = __webpack_require__(69),
+    listCacheHas = __webpack_require__(70),
+    listCacheSet = __webpack_require__(71);
 
 /**
  * Creates an list cache object.
@@ -4687,7 +4529,7 @@ module.exports = ListCache;
 
 
 /***/ }),
-/* 70 */
+/* 67 */
 /***/ (function(module, exports) {
 
 /**
@@ -4706,7 +4548,7 @@ module.exports = listCacheClear;
 
 
 /***/ }),
-/* 71 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(15);
@@ -4747,7 +4589,7 @@ module.exports = listCacheDelete;
 
 
 /***/ }),
-/* 72 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(15);
@@ -4772,7 +4614,7 @@ module.exports = listCacheGet;
 
 
 /***/ }),
-/* 73 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(15);
@@ -4794,7 +4636,7 @@ module.exports = listCacheHas;
 
 
 /***/ }),
-/* 74 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(15);
@@ -4826,7 +4668,7 @@ module.exports = listCacheSet;
 
 
 /***/ }),
-/* 75 */
+/* 72 */
 /***/ (function(module, exports) {
 
 /**
@@ -4854,10 +4696,10 @@ module.exports = arrayEach;
 
 
 /***/ }),
-/* 76 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(77);
+var getNative = __webpack_require__(74);
 
 var defineProperty = (function() {
   try {
@@ -4871,7 +4713,7 @@ module.exports = defineProperty;
 
 
 /***/ }),
-/* 77 */
+/* 74 */
 /***/ (function(module, exports) {
 
 /**
@@ -4890,7 +4732,7 @@ module.exports = getValue;
 
 
 /***/ }),
-/* 78 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(17),
@@ -4913,11 +4755,11 @@ module.exports = baseAssign;
 
 
 /***/ }),
-/* 79 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(17),
-    keysIn = __webpack_require__(80);
+    keysIn = __webpack_require__(77);
 
 /**
  * The base implementation of `_.assignIn` without support for multiple sources
@@ -4936,7 +4778,7 @@ module.exports = baseAssignIn;
 
 
 /***/ }),
-/* 80 */
+/* 77 */
 /***/ (function(module, exports) {
 
 /**
@@ -4962,7 +4804,7 @@ module.exports = nativeKeysIn;
 
 
 /***/ }),
-/* 81 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(37);
@@ -5001,10 +4843,10 @@ function cloneBuffer(buffer, isDeep) {
 
 module.exports = cloneBuffer;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(82)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(79)(module)))
 
 /***/ }),
-/* 82 */
+/* 79 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -5032,7 +4874,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 83 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
@@ -5043,11 +4885,11 @@ module.exports = freeGlobal;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(34)))
 
 /***/ }),
-/* 84 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(17),
-    getSymbols = __webpack_require__(85);
+    getSymbols = __webpack_require__(82);
 
 /**
  * Copies own symbols of `source` to `object`.
@@ -5065,7 +4907,7 @@ module.exports = copySymbols;
 
 
 /***/ }),
-/* 85 */
+/* 82 */
 /***/ (function(module, exports) {
 
 /**
@@ -5094,11 +4936,11 @@ module.exports = stubArray;
 
 
 /***/ }),
-/* 86 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(17),
-    getSymbolsIn = __webpack_require__(87);
+    getSymbolsIn = __webpack_require__(84);
 
 /**
  * Copies own and inherited symbols of `source` to `object`.
@@ -5116,7 +4958,7 @@ module.exports = copySymbolsIn;
 
 
 /***/ }),
-/* 87 */
+/* 84 */
 /***/ (function(module, exports) {
 
 /**
@@ -5145,10 +4987,10 @@ module.exports = stubArray;
 
 
 /***/ }),
-/* 88 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(25);
+var overArg = __webpack_require__(23);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeKeys = overArg(Object.keys, Object);
@@ -5157,7 +4999,7 @@ module.exports = nativeKeys;
 
 
 /***/ }),
-/* 89 */
+/* 86 */
 /***/ (function(module, exports) {
 
 /**
@@ -5183,7 +5025,7 @@ module.exports = nativeKeysIn;
 
 
 /***/ }),
-/* 90 */
+/* 87 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
@@ -5215,7 +5057,7 @@ module.exports = initCloneArray;
 
 
 /***/ }),
-/* 91 */
+/* 88 */
 /***/ (function(module, exports) {
 
 /**
@@ -5242,12 +5084,12 @@ module.exports = identity;
 
 
 /***/ }),
-/* 92 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseCreate = __webpack_require__(93),
-    getPrototype = __webpack_require__(94),
-    isPrototype = __webpack_require__(95);
+var baseCreate = __webpack_require__(90),
+    getPrototype = __webpack_require__(91),
+    isPrototype = __webpack_require__(92);
 
 /**
  * Initializes an object clone.
@@ -5266,10 +5108,10 @@ module.exports = initCloneObject;
 
 
 /***/ }),
-/* 93 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(26);
+var isObject = __webpack_require__(24);
 
 /** Built-in value references. */
 var objectCreate = Object.create;
@@ -5302,15 +5144,87 @@ module.exports = baseCreate;
 
 
 /***/ }),
-/* 94 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(25);
+var overArg = __webpack_require__(23);
 
 /** Built-in value references. */
 var getPrototype = overArg(Object.getPrototypeOf, Object);
 
 module.exports = getPrototype;
+
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports) {
+
+/**
+ * This method returns `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {boolean} Returns `false`.
+ * @example
+ *
+ * _.times(2, _.stubFalse);
+ * // => [false, false]
+ */
+function stubFalse() {
+  return false;
+}
+
+module.exports = stubFalse;
+
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports) {
+
+/**
+ * This method returns `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {boolean} Returns `false`.
+ * @example
+ *
+ * _.times(2, _.stubFalse);
+ * // => [false, false]
+ */
+function stubFalse() {
+  return false;
+}
+
+module.exports = stubFalse;
+
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports) {
+
+/**
+ * This method returns `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {boolean} Returns `false`.
+ * @example
+ *
+ * _.times(2, _.stubFalse);
+ * // => [false, false]
+ */
+function stubFalse() {
+  return false;
+}
+
+module.exports = stubFalse;
 
 
 /***/ }),
@@ -5339,90 +5253,18 @@ module.exports = stubFalse;
 
 /***/ }),
 /* 96 */
-/***/ (function(module, exports) {
-
-/**
- * This method returns `false`.
- *
- * @static
- * @memberOf _
- * @since 4.13.0
- * @category Util
- * @returns {boolean} Returns `false`.
- * @example
- *
- * _.times(2, _.stubFalse);
- * // => [false, false]
- */
-function stubFalse() {
-  return false;
-}
-
-module.exports = stubFalse;
-
-
-/***/ }),
-/* 97 */
-/***/ (function(module, exports) {
-
-/**
- * This method returns `false`.
- *
- * @static
- * @memberOf _
- * @since 4.13.0
- * @category Util
- * @returns {boolean} Returns `false`.
- * @example
- *
- * _.times(2, _.stubFalse);
- * // => [false, false]
- */
-function stubFalse() {
-  return false;
-}
-
-module.exports = stubFalse;
-
-
-/***/ }),
-/* 98 */
-/***/ (function(module, exports) {
-
-/**
- * This method returns `false`.
- *
- * @static
- * @memberOf _
- * @since 4.13.0
- * @category Util
- * @returns {boolean} Returns `false`.
- * @example
- *
- * _.times(2, _.stubFalse);
- * // => [false, false]
- */
-function stubFalse() {
-  return false;
-}
-
-module.exports = stubFalse;
-
-
-/***/ }),
-/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(100),
+var Symbol = __webpack_require__(97),
     copyArray = __webpack_require__(38),
     getTag = __webpack_require__(39),
-    isArrayLike = __webpack_require__(101),
-    isString = __webpack_require__(104),
-    iteratorToArray = __webpack_require__(106),
-    mapToArray = __webpack_require__(107),
-    setToArray = __webpack_require__(108),
+    isArrayLike = __webpack_require__(98),
+    isString = __webpack_require__(101),
+    iteratorToArray = __webpack_require__(103),
+    mapToArray = __webpack_require__(104),
+    setToArray = __webpack_require__(105),
     stringToArray = __webpack_require__(42),
-    values = __webpack_require__(111);
+    values = __webpack_require__(108);
 
 /** `Object#toString` result references. */
 var mapTag = '[object Map]',
@@ -5474,7 +5316,7 @@ module.exports = toArray;
 
 
 /***/ }),
-/* 100 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(37);
@@ -5486,11 +5328,11 @@ module.exports = Symbol;
 
 
 /***/ }),
-/* 101 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isFunction = __webpack_require__(102),
-    isLength = __webpack_require__(103);
+var isFunction = __webpack_require__(99),
+    isLength = __webpack_require__(100);
 
 /**
  * Checks if `value` is array-like. A value is considered array-like if it's
@@ -5525,11 +5367,11 @@ module.exports = isArrayLike;
 
 
 /***/ }),
-/* 102 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(41),
-    isObject = __webpack_require__(26);
+    isObject = __webpack_require__(24);
 
 /** `Object#toString` result references. */
 var asyncTag = '[object AsyncFunction]',
@@ -5568,7 +5410,7 @@ module.exports = isFunction;
 
 
 /***/ }),
-/* 103 */
+/* 100 */
 /***/ (function(module, exports) {
 
 /** Used as references for various `Number` constants. */
@@ -5609,12 +5451,12 @@ module.exports = isLength;
 
 
 /***/ }),
-/* 104 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(41),
     isArray = __webpack_require__(40),
-    isObjectLike = __webpack_require__(105);
+    isObjectLike = __webpack_require__(102);
 
 /** `Object#toString` result references. */
 var stringTag = '[object String]';
@@ -5645,7 +5487,7 @@ module.exports = isString;
 
 
 /***/ }),
-/* 105 */
+/* 102 */
 /***/ (function(module, exports) {
 
 /**
@@ -5680,7 +5522,7 @@ module.exports = isObjectLike;
 
 
 /***/ }),
-/* 106 */
+/* 103 */
 /***/ (function(module, exports) {
 
 /**
@@ -5704,7 +5546,7 @@ module.exports = iteratorToArray;
 
 
 /***/ }),
-/* 107 */
+/* 104 */
 /***/ (function(module, exports) {
 
 /**
@@ -5733,7 +5575,7 @@ module.exports = stubArray;
 
 
 /***/ }),
-/* 108 */
+/* 105 */
 /***/ (function(module, exports) {
 
 /**
@@ -5762,7 +5604,7 @@ module.exports = stubArray;
 
 
 /***/ }),
-/* 109 */
+/* 106 */
 /***/ (function(module, exports) {
 
 /**
@@ -5780,7 +5622,7 @@ module.exports = asciiToArray;
 
 
 /***/ }),
-/* 110 */
+/* 107 */
 /***/ (function(module, exports) {
 
 /** Used to compose unicode character classes. */
@@ -5826,10 +5668,10 @@ module.exports = unicodeToArray;
 
 
 /***/ }),
-/* 111 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseValues = __webpack_require__(112),
+var baseValues = __webpack_require__(109),
     keys = __webpack_require__(18);
 
 /**
@@ -5866,10 +5708,10 @@ module.exports = values;
 
 
 /***/ }),
-/* 112 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayMap = __webpack_require__(113);
+var arrayMap = __webpack_require__(110);
 
 /**
  * The base implementation of `_.values` and `_.valuesIn` which creates an
@@ -5891,7 +5733,7 @@ module.exports = baseValues;
 
 
 /***/ }),
-/* 113 */
+/* 110 */
 /***/ (function(module, exports) {
 
 /**
@@ -5918,7 +5760,7 @@ module.exports = arrayMap;
 
 
 /***/ }),
-/* 114 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5993,7 +5835,7 @@ exports.default = _default;
 module.exports = exports["default"];
 
 /***/ }),
-/* 115 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6038,7 +5880,7 @@ function prependDeep(target, source) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 116 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6050,13 +5892,13 @@ exports.__esModule = true;
 exports.createErrorFactory = createErrorFactory;
 exports.default = createValidation;
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(24));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(26));
 
-var _extends2 = _interopRequireDefault(__webpack_require__(8));
+var _extends2 = _interopRequireDefault(__webpack_require__(9));
 
 var _mapValues = _interopRequireDefault(__webpack_require__(45));
 
-var _ValidationError = _interopRequireDefault(__webpack_require__(28));
+var _ValidationError = _interopRequireDefault(__webpack_require__(27));
 
 var _Reference = _interopRequireDefault(__webpack_require__(14));
 
@@ -6163,10 +6005,10 @@ function createValidation(options) {
 }
 
 /***/ }),
-/* 117 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createBaseFor = __webpack_require__(118);
+var createBaseFor = __webpack_require__(115);
 
 /**
  * The base implementation of `baseForOwn` which iterates over `object`
@@ -6185,7 +6027,7 @@ module.exports = baseFor;
 
 
 /***/ }),
-/* 118 */
+/* 115 */
 /***/ (function(module, exports) {
 
 /**
@@ -6216,7 +6058,7 @@ module.exports = createBaseFor;
 
 
 /***/ }),
-/* 119 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6229,7 +6071,7 @@ exports.default = void 0;
 
 var _inherits = _interopRequireDefault(__webpack_require__(13));
 
-var _mixed = _interopRequireDefault(__webpack_require__(9));
+var _mixed = _interopRequireDefault(__webpack_require__(8));
 
 var _default = BooleanSchema;
 exports.default = _default;
@@ -6264,7 +6106,7 @@ function BooleanSchema() {
 module.exports = exports["default"];
 
 /***/ }),
-/* 120 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6277,7 +6119,7 @@ exports.default = StringSchema;
 
 var _inherits = _interopRequireDefault(__webpack_require__(13));
 
-var _mixed = _interopRequireDefault(__webpack_require__(9));
+var _mixed = _interopRequireDefault(__webpack_require__(8));
 
 var _locale = __webpack_require__(10);
 
@@ -6464,7 +6306,7 @@ function StringSchema() {
 module.exports = exports["default"];
 
 /***/ }),
-/* 121 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6477,7 +6319,7 @@ exports.default = NumberSchema;
 
 var _inherits = _interopRequireDefault(__webpack_require__(13));
 
-var _mixed = _interopRequireDefault(__webpack_require__(9));
+var _mixed = _interopRequireDefault(__webpack_require__(8));
 
 var _locale = __webpack_require__(10);
 
@@ -6634,7 +6476,7 @@ function NumberSchema() {
 module.exports = exports["default"];
 
 /***/ }),
-/* 122 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6645,11 +6487,11 @@ var _interopRequireDefault = __webpack_require__(4);
 exports.__esModule = true;
 exports.default = void 0;
 
-var _mixed = _interopRequireDefault(__webpack_require__(9));
+var _mixed = _interopRequireDefault(__webpack_require__(8));
 
 var _inherits = _interopRequireDefault(__webpack_require__(13));
 
-var _isodate = _interopRequireDefault(__webpack_require__(123));
+var _isodate = _interopRequireDefault(__webpack_require__(120));
 
 var _locale = __webpack_require__(10);
 
@@ -6740,7 +6582,7 @@ function DateSchema() {
 module.exports = exports["default"];
 
 /***/ }),
-/* 123 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6795,13 +6637,13 @@ function parseIsoDate(date) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 124 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _interopRequireWildcard = __webpack_require__(23);
+var _interopRequireWildcard = __webpack_require__(28);
 
 var _interopRequireDefault = __webpack_require__(4);
 
@@ -6810,33 +6652,33 @@ exports.default = ObjectSchema;
 
 var _taggedTemplateLiteralLoose2 = _interopRequireDefault(__webpack_require__(49));
 
-var _extends2 = _interopRequireDefault(__webpack_require__(8));
+var _extends2 = _interopRequireDefault(__webpack_require__(9));
 
 var _has = _interopRequireDefault(__webpack_require__(12));
 
-var _snakeCase2 = _interopRequireDefault(__webpack_require__(125));
+var _snakeCase2 = _interopRequireDefault(__webpack_require__(122));
 
-var _camelCase2 = _interopRequireDefault(__webpack_require__(132));
+var _camelCase2 = _interopRequireDefault(__webpack_require__(129));
 
-var _mapKeys = _interopRequireDefault(__webpack_require__(138));
+var _mapKeys = _interopRequireDefault(__webpack_require__(135));
 
 var _mapValues = _interopRequireDefault(__webpack_require__(45));
 
 var _propertyExpr = __webpack_require__(20);
 
-var _mixed = _interopRequireDefault(__webpack_require__(9));
+var _mixed = _interopRequireDefault(__webpack_require__(8));
 
 var _locale = __webpack_require__(10);
 
-var _sortFields = _interopRequireDefault(__webpack_require__(139));
+var _sortFields = _interopRequireDefault(__webpack_require__(136));
 
-var _sortByKeyOrder = _interopRequireDefault(__webpack_require__(141));
+var _sortByKeyOrder = _interopRequireDefault(__webpack_require__(138));
 
 var _inherits = _interopRequireDefault(__webpack_require__(13));
 
 var _makePath = _interopRequireDefault(__webpack_require__(51));
 
-var _runValidations = _interopRequireWildcard(__webpack_require__(27));
+var _runValidations = _interopRequireWildcard(__webpack_require__(25));
 
 function _templateObject2() {
   var data = (0, _taggedTemplateLiteralLoose2.default)(["", ".", ""]);
@@ -7134,7 +6976,7 @@ function ObjectSchema(spec) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 125 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var createCompounder = __webpack_require__(50);
@@ -7168,7 +7010,7 @@ module.exports = snakeCase;
 
 
 /***/ }),
-/* 126 */
+/* 123 */
 /***/ (function(module, exports) {
 
 /**
@@ -7200,7 +7042,7 @@ module.exports = arrayReduce;
 
 
 /***/ }),
-/* 127 */
+/* 124 */
 /***/ (function(module, exports) {
 
 /**
@@ -7227,13 +7069,13 @@ module.exports = identity;
 
 
 /***/ }),
-/* 128 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var asciiWords = __webpack_require__(129),
-    hasUnicodeWord = __webpack_require__(130),
+var asciiWords = __webpack_require__(126),
+    hasUnicodeWord = __webpack_require__(127),
     toString = __webpack_require__(29),
-    unicodeWords = __webpack_require__(131);
+    unicodeWords = __webpack_require__(128);
 
 /**
  * Splits `string` into an array of its words.
@@ -7268,7 +7110,7 @@ module.exports = words;
 
 
 /***/ }),
-/* 129 */
+/* 126 */
 /***/ (function(module, exports) {
 
 /** Used to match words composed of alphanumeric characters. */
@@ -7289,7 +7131,7 @@ module.exports = asciiWords;
 
 
 /***/ }),
-/* 130 */
+/* 127 */
 /***/ (function(module, exports) {
 
 /** Used to detect strings that need a more robust regexp to match words. */
@@ -7310,7 +7152,7 @@ module.exports = hasUnicodeWord;
 
 
 /***/ }),
-/* 131 */
+/* 128 */
 /***/ (function(module, exports) {
 
 /** Used to compose unicode character classes. */
@@ -7385,10 +7227,10 @@ module.exports = unicodeWords;
 
 
 /***/ }),
-/* 132 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var capitalize = __webpack_require__(133),
+var capitalize = __webpack_require__(130),
     createCompounder = __webpack_require__(50);
 
 /**
@@ -7420,11 +7262,11 @@ module.exports = camelCase;
 
 
 /***/ }),
-/* 133 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var toString = __webpack_require__(29),
-    upperFirst = __webpack_require__(134);
+    upperFirst = __webpack_require__(131);
 
 /**
  * Converts the first character of `string` to upper case and the remaining
@@ -7449,10 +7291,10 @@ module.exports = capitalize;
 
 
 /***/ }),
-/* 134 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createCaseFirst = __webpack_require__(135);
+var createCaseFirst = __webpack_require__(132);
 
 /**
  * Converts the first character of `string` to upper case.
@@ -7477,10 +7319,10 @@ module.exports = upperFirst;
 
 
 /***/ }),
-/* 135 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var castSlice = __webpack_require__(136),
+var castSlice = __webpack_require__(133),
     hasUnicode = __webpack_require__(43),
     stringToArray = __webpack_require__(42),
     toString = __webpack_require__(29);
@@ -7516,10 +7358,10 @@ module.exports = createCaseFirst;
 
 
 /***/ }),
-/* 136 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseSlice = __webpack_require__(137);
+var baseSlice = __webpack_require__(134);
 
 /**
  * Casts `array` to a slice if it's needed.
@@ -7540,7 +7382,7 @@ module.exports = castSlice;
 
 
 /***/ }),
-/* 137 */
+/* 134 */
 /***/ (function(module, exports) {
 
 /**
@@ -7577,7 +7419,7 @@ module.exports = baseSlice;
 
 
 /***/ }),
-/* 138 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseAssignValue = __webpack_require__(16),
@@ -7619,7 +7461,7 @@ module.exports = mapKeys;
 
 
 /***/ }),
-/* 139 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7632,7 +7474,7 @@ exports.default = sortFields;
 
 var _has = _interopRequireDefault(__webpack_require__(12));
 
-var _toposort = _interopRequireDefault(__webpack_require__(140));
+var _toposort = _interopRequireDefault(__webpack_require__(137));
 
 var _propertyExpr = __webpack_require__(20);
 
@@ -7670,7 +7512,7 @@ function sortFields(fields, excludes) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 140 */
+/* 137 */
 /***/ (function(module, exports) {
 
 
@@ -7774,7 +7616,7 @@ function makeNodesHash(arr){
 
 
 /***/ }),
-/* 141 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7804,20 +7646,20 @@ function sortByKeyOrder(fields) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 142 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _interopRequireWildcard = __webpack_require__(23);
+var _interopRequireWildcard = __webpack_require__(28);
 
 var _interopRequireDefault = __webpack_require__(4);
 
 exports.__esModule = true;
 exports.default = void 0;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(8));
+var _extends2 = _interopRequireDefault(__webpack_require__(9));
 
 var _taggedTemplateLiteralLoose2 = _interopRequireDefault(__webpack_require__(49));
 
@@ -7831,11 +7673,11 @@ var _makePath = _interopRequireDefault(__webpack_require__(51));
 
 var _printValue = _interopRequireDefault(__webpack_require__(19));
 
-var _mixed = _interopRequireDefault(__webpack_require__(9));
+var _mixed = _interopRequireDefault(__webpack_require__(8));
 
 var _locale = __webpack_require__(10);
 
-var _runValidations = _interopRequireWildcard(__webpack_require__(27));
+var _runValidations = _interopRequireWildcard(__webpack_require__(25));
 
 function _templateObject() {
   var data = (0, _taggedTemplateLiteralLoose2.default)(["", "[", "]"]);
@@ -8012,7 +7854,7 @@ function ArraySchema(type) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 143 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8071,7 +7913,7 @@ exports.default = _default;
 module.exports = exports["default"];
 
 /***/ }),
-/* 144 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8095,7 +7937,7 @@ function setLocale(custom) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 145 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8108,7 +7950,7 @@ module.exports = exports["default"];
 
 
 
-var ReactPropTypesSecret = __webpack_require__(146);
+var ReactPropTypesSecret = __webpack_require__(143);
 
 function emptyFunction() {}
 function emptyFunctionWithReset() {}
@@ -8166,7 +8008,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 146 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8185,11 +8027,172 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
+/* 144 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = all;
+
+var _createChainableTypeChecker = __webpack_require__(145);
+
+var _createChainableTypeChecker2 = _interopRequireDefault(_createChainableTypeChecker);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function all() {
+  for (var _len = arguments.length, validators = Array(_len), _key = 0; _key < _len; _key++) {
+    validators[_key] = arguments[_key];
+  }
+
+  function allPropTypes() {
+    for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+      args[_key2] = arguments[_key2];
+    }
+
+    var error = null;
+
+    validators.forEach(function (validator) {
+      if (error != null) {
+        return;
+      }
+
+      var result = validator.apply(undefined, args);
+      if (result != null) {
+        error = result;
+      }
+    });
+
+    return error;
+  }
+
+  return (0, _createChainableTypeChecker2.default)(allPropTypes);
+}
+module.exports = exports['default'];
+
+/***/ }),
+/* 145 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = createChainableTypeChecker;
+/**
+ * Copyright 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ */
+
+// Mostly taken from ReactPropTypes.
+
+function createChainableTypeChecker(validate) {
+  function checkType(isRequired, props, propName, componentName, location, propFullName) {
+    var componentNameSafe = componentName || '<<anonymous>>';
+    var propFullNameSafe = propFullName || propName;
+
+    if (props[propName] == null) {
+      if (isRequired) {
+        return new Error('Required ' + location + ' `' + propFullNameSafe + '` was not specified ' + ('in `' + componentNameSafe + '`.'));
+      }
+
+      return null;
+    }
+
+    for (var _len = arguments.length, args = Array(_len > 6 ? _len - 6 : 0), _key = 6; _key < _len; _key++) {
+      args[_key - 6] = arguments[_key];
+    }
+
+    return validate.apply(undefined, [props, propName, componentNameSafe, location, propFullNameSafe].concat(args));
+  }
+
+  var chainedCheckType = checkType.bind(null, false);
+  chainedCheckType.isRequired = checkType.bind(null, true);
+
+  return chainedCheckType;
+}
+module.exports = exports['default'];
+
+/***/ }),
+/* 146 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(4);
+
+exports.__esModule = true;
+exports.uncontrolledPropTypes = uncontrolledPropTypes;
+exports.isProp = isProp;
+exports.defaultKey = defaultKey;
+exports.canAcceptRef = canAcceptRef;
+
+var _invariant = _interopRequireDefault(__webpack_require__(22));
+
+var noop = function noop() {};
+
+function readOnlyPropType(handler, name) {
+  return function (props, propName) {
+    if (props[propName] !== undefined) {
+      if (!props[handler]) {
+        return new Error("You have provided a `" + propName + "` prop to `" + name + "` " + ("without an `" + handler + "` handler prop. This will render a read-only field. ") + ("If the field should be mutable use `" + defaultKey(propName) + "`. ") + ("Otherwise, set `" + handler + "`."));
+      }
+    }
+  };
+}
+
+function uncontrolledPropTypes(controlledValues, displayName) {
+  var propTypes = {};
+  Object.keys(controlledValues).forEach(function (prop) {
+    // add default propTypes for folks that use runtime checks
+    propTypes[defaultKey(prop)] = noop;
+
+    if (false) { var handler; }
+  });
+  return propTypes;
+}
+
+function isProp(props, prop) {
+  return props[prop] !== undefined;
+}
+
+function defaultKey(key) {
+  return 'default' + key.charAt(0).toUpperCase() + key.substr(1);
+}
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ */
+
+
+function canAcceptRef(component) {
+  return !!component && (typeof component !== 'function' || component.prototype && component.prototype.isReactComponent);
+}
+
+/***/ }),
 /* 147 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+var mutators_namespaceObject = {};
+__webpack_require__.r(mutators_namespaceObject);
+__webpack_require__.d(mutators_namespaceObject, "updateFieldValue", function() { return mutators_updateFieldValue; });
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(0);
@@ -8860,6 +8863,9 @@ function build_module_sprintf(format) {
 }
 //# sourceMappingURL=index.js.map
 // CONCATENATED MODULE: ./src/admin/settings/i18n.js
+/**
+ * WordPress dependencies
+ */
 
 var i18n_initI18n = function initI18n() {
   var _window = window,
@@ -8867,6 +8873,27 @@ var i18n_initI18n = function initI18n() {
   setLocaleData(locale_data);
 };
 
+// CONCATENATED MODULE: ./src/admin/settings/components/BotTestResult.js
+/**
+ * External dependencies
+ */
+
+/**
+ * Internal dependencies
+ */
+
+
+/* harmony default export */ var BotTestResult = (function (_ref) {
+  var result = _ref.result,
+      type = _ref.type;
+  return result ? react_default.a.createElement("div", {
+    className: "mt-2"
+  }, react_default.a.createElement("span", {
+    className: "text-secondary"
+  }, __('Test Result:')), ' ', react_default.a.createElement("span", {
+    className: "font-weight-bold text-".concat(type)
+  }, result)) : null;
+});
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
 var esm_extends = __webpack_require__(1);
 
@@ -8956,7 +8983,7 @@ function createBootstrapComponent(Component, opts) {
 
 /* harmony default export */ var es_ThemeProvider = (ThemeProvider_ThemeProvider);
 // EXTERNAL MODULE: ./node_modules/dom-helpers/util/camelize.js
-var camelize = __webpack_require__(58);
+var camelize = __webpack_require__(55);
 var camelize_default = /*#__PURE__*/__webpack_require__.n(camelize);
 
 // CONCATENATED MODULE: ./node_modules/react-bootstrap/es/utils/createWithBsPrefix.js
@@ -9101,16 +9128,9 @@ Card.Header = createWithBsPrefix('card-header');
 Card.Footer = createWithBsPrefix('card-footer');
 Card.ImgOverlay = createWithBsPrefix('card-img-overlay');
 /* harmony default export */ var es_Card = (Card);
-// EXTERNAL MODULE: ./node_modules/prop-types-extra/lib/all.js
-var lib_all = __webpack_require__(64);
+// EXTERNAL MODULE: ./node_modules/uncontrollable/esm/index.js + 2 modules
+var esm = __webpack_require__(59);
 
-// EXTERNAL MODULE: ./node_modules/uncontrollable/hook.js
-var hook = __webpack_require__(55);
-var hook_default = /*#__PURE__*/__webpack_require__.n(hook);
-
-// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/NavbarContext.js
-
-/* harmony default export */ var NavbarContext = (react_default.a.createContext(null));
 // EXTERNAL MODULE: ./node_modules/dom-helpers/query/querySelectorAll.js
 var querySelectorAll = __webpack_require__(56);
 var querySelectorAll_default = /*#__PURE__*/__webpack_require__.n(querySelectorAll);
@@ -9291,167 +9311,6 @@ function (_React$Component) {
     getControlledId: getControlledId
   };
 }, AbstractNav_AbstractNav));
-// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/NavItem.js
-
-
-
-
-
-var NavItem = react_default.a.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-function (_ref, ref) {
-  var bsPrefix = _ref.bsPrefix,
-      className = _ref.className,
-      children = _ref.children,
-      _ref$as = _ref.as,
-      Component = _ref$as === void 0 ? 'div' : _ref$as,
-      props = Object(objectWithoutPropertiesLoose["a" /* default */])(_ref, ["bsPrefix", "className", "children", "as"]);
-
-  bsPrefix = useBootstrapPrefix(bsPrefix, 'nav-item');
-  return react_default.a.createElement(Component, Object(esm_extends["a" /* default */])({}, props, {
-    ref: ref,
-    className: classnames_default()(className, bsPrefix)
-  }), children);
-});
-NavItem.displayName = 'NavItem';
-/* harmony default export */ var es_NavItem = (NavItem);
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/utils/createChainedFunction.js
-/**
- * Safe chained function
- *
- * Will only create a new function if needed,
- * otherwise will pass back existing functions or null.
- *
- * @param {function} functions to chain
- * @returns {function|null}
- */
-function createChainedFunction() {
-  for (var _len = arguments.length, funcs = new Array(_len), _key = 0; _key < _len; _key++) {
-    funcs[_key] = arguments[_key];
-  }
-
-  return funcs.filter(function (f) {
-    return f != null;
-  }).reduce(function (acc, f) {
-    if (typeof f !== 'function') {
-      throw new Error('Invalid Argument Type, must only provide functions, undefined, or null.');
-    }
-
-    if (acc === null) return f;
-    return function chainedFunction() {
-      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-        args[_key2] = arguments[_key2];
-      }
-
-      acc.apply(this, args);
-      f.apply(this, args);
-    };
-  }, null);
-}
-
-/* harmony default export */ var utils_createChainedFunction = (createChainedFunction);
-// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/SafeAnchor.js
-
-
-
-
-
-
-
-function isTrivialHref(href) {
-  return !href || href.trim() === '#';
-}
-/**
- * There are situations due to browser quirks or Bootstrap CSS where
- * an anchor tag is needed, when semantically a button tag is the
- * better choice. SafeAnchor ensures that when an anchor is used like a
- * button its accessible. It also emulates input `disabled` behavior for
- * links, which is usually desirable for Buttons, NavItems, DropdownItems, etc.
- */
-
-
-var SafeAnchor_SafeAnchor =
-/*#__PURE__*/
-function (_React$Component) {
-  Object(inheritsLoose["a" /* default */])(SafeAnchor, _React$Component);
-
-  function SafeAnchor(props, context) {
-    var _this;
-
-    _this = _React$Component.call(this, props, context) || this;
-    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
-    _this.handleKeyDown = _this.handleKeyDown.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  var _proto = SafeAnchor.prototype;
-
-  _proto.handleClick = function handleClick(event) {
-    var _this$props = this.props,
-        disabled = _this$props.disabled,
-        href = _this$props.href,
-        onClick = _this$props.onClick;
-
-    if (disabled || isTrivialHref(href)) {
-      event.preventDefault();
-    }
-
-    if (disabled) {
-      event.stopPropagation();
-      return;
-    }
-
-    if (onClick) {
-      onClick(event);
-    }
-  };
-
-  _proto.handleKeyDown = function handleKeyDown(event) {
-    if (event.key === ' ') {
-      event.preventDefault();
-      this.handleClick(event);
-    }
-  };
-
-  _proto.render = function render() {
-    var _this$props2 = this.props,
-        _this$props2$as = _this$props2.as,
-        Component = _this$props2$as === void 0 ? 'a' : _this$props2$as,
-        disabled = _this$props2.disabled,
-        onKeyDown = _this$props2.onKeyDown,
-        innerRef = _this$props2.innerRef,
-        props = Object(objectWithoutPropertiesLoose["a" /* default */])(_this$props2, ["as", "disabled", "onKeyDown", "innerRef"]);
-
-    if (isTrivialHref(props.href)) {
-      props.role = props.role || 'button'; // we want to make sure there is a href attribute on the node
-      // otherwise, the cursor incorrectly styled (except with role='button')
-
-      props.href = props.href || '#';
-    }
-
-    if (disabled) {
-      props.tabIndex = -1;
-      props['aria-disabled'] = true;
-    }
-
-    if (innerRef) props.ref = innerRef;
-    return react_default.a.createElement(Component, Object(esm_extends["a" /* default */])({}, props, {
-      onClick: this.handleClick,
-      onKeyDown: utils_createChainedFunction(this.handleKeyDown, onKeyDown)
-    }));
-  };
-
-  return SafeAnchor;
-}(react_default.a.Component);
-
-/* harmony default export */ var es_SafeAnchor = (SafeAnchor_SafeAnchor);
 // CONCATENATED MODULE: ./node_modules/@restart/hooks/esm/useCommittedRef.js
 
 /**
@@ -9535,43 +9394,7 @@ var AbstractNavItem = react_default.a.forwardRef(function (_ref, ref) {
 });
 AbstractNavItem.defaultProps = AbstractNavItem_defaultProps;
 /* harmony default export */ var es_AbstractNavItem = (AbstractNavItem);
-// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/NavLink.js
-
-
-
-
-
-
-
-var NavLink_defaultProps = {
-  disabled: false,
-  as: es_SafeAnchor
-};
-var NavLink = react_default.a.forwardRef(function (_ref, ref) {
-  var bsPrefix = _ref.bsPrefix,
-      disabled = _ref.disabled,
-      className = _ref.className,
-      href = _ref.href,
-      eventKey = _ref.eventKey,
-      onSelect = _ref.onSelect,
-      as = _ref.as,
-      props = Object(objectWithoutPropertiesLoose["a" /* default */])(_ref, ["bsPrefix", "disabled", "className", "href", "eventKey", "onSelect", "as"]);
-
-  bsPrefix = useBootstrapPrefix(bsPrefix, 'nav-link');
-  return react_default.a.createElement(es_AbstractNavItem, Object(esm_extends["a" /* default */])({}, props, {
-    href: href,
-    ref: ref,
-    eventKey: eventKey,
-    as: as,
-    disabled: disabled,
-    onSelect: onSelect,
-    className: classnames_default()(className, bsPrefix, disabled && 'disabled')
-  }));
-});
-NavLink.displayName = 'NavLink';
-NavLink.defaultProps = NavLink_defaultProps;
-/* harmony default export */ var es_NavLink = (NavLink);
-// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/Nav.js
+// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/ListGroupItem.js
 
 
 
@@ -9581,139 +9404,178 @@ NavLink.defaultProps = NavLink_defaultProps;
 
 
 
+var ListGroupItem_ListGroupItem =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(inheritsLoose["a" /* default */])(ListGroupItem, _React$Component);
 
+  function ListGroupItem() {
+    var _this;
 
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
 
-var Nav_defaultProps = {
-  justify: false,
-  fill: false
-};
-var Nav = react_default.a.forwardRef(function (uncontrolledProps, ref) {
-  var _classNames;
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
 
-  var _useUncontrolled = hook_default()(uncontrolledProps, {
-    activeKey: 'onSelect'
-  }),
-      _useUncontrolled$as = _useUncontrolled.as,
-      as = _useUncontrolled$as === void 0 ? 'div' : _useUncontrolled$as,
-      bsPrefix = _useUncontrolled.bsPrefix,
-      variant = _useUncontrolled.variant,
-      fill = _useUncontrolled.fill,
-      justify = _useUncontrolled.justify,
-      navbar = _useUncontrolled.navbar,
-      className = _useUncontrolled.className,
-      children = _useUncontrolled.children,
-      activeKey = _useUncontrolled.activeKey,
-      props = Object(objectWithoutPropertiesLoose["a" /* default */])(_useUncontrolled, ["as", "bsPrefix", "variant", "fill", "justify", "navbar", "className", "children", "activeKey"]);
+    _this.handleClick = function (event) {
+      var _this$props = _this.props,
+          onClick = _this$props.onClick,
+          disabled = _this$props.disabled;
 
-  bsPrefix = useBootstrapPrefix(bsPrefix, 'nav');
-  var navbarBsPrefix, cardHeaderBsPrefix;
-  var navbarContext = Object(react["useContext"])(NavbarContext);
-  var cardContext = Object(react["useContext"])(CardContext);
+      if (disabled) {
+        event.preventDefault();
+        event.stopPropagation();
+        return;
+      }
 
-  if (navbarContext) {
-    navbarBsPrefix = navbarContext.bsPrefix;
-    navbar = navbar == null ? true : navbar;
-  } else if (cardContext) {
-    cardHeaderBsPrefix = cardContext.cardHeaderBsPrefix;
+      if (onClick) onClick(event);
+    };
+
+    return _this;
   }
 
-  return react_default.a.createElement(es_AbstractNav, Object(esm_extends["a" /* default */])({
-    as: as,
-    ref: ref,
-    activeKey: activeKey,
-    className: classnames_default()(className, (_classNames = {}, _classNames[bsPrefix] = !navbar, _classNames[navbarBsPrefix + "-nav"] = navbar, _classNames[cardHeaderBsPrefix + "-" + variant] = !!cardHeaderBsPrefix, _classNames[bsPrefix + "-" + variant] = !!variant, _classNames[bsPrefix + "-fill"] = fill, _classNames[bsPrefix + "-justified"] = justify, _classNames))
-  }, props), children);
+  var _proto = ListGroupItem.prototype;
+
+  _proto.render = function render() {
+    var _this$props2 = this.props,
+        bsPrefix = _this$props2.bsPrefix,
+        active = _this$props2.active,
+        disabled = _this$props2.disabled,
+        className = _this$props2.className,
+        variant = _this$props2.variant,
+        action = _this$props2.action,
+        as = _this$props2.as,
+        eventKey = _this$props2.eventKey,
+        props = Object(objectWithoutPropertiesLoose["a" /* default */])(_this$props2, ["bsPrefix", "active", "disabled", "className", "variant", "action", "as", "eventKey"]);
+
+    return react_default.a.createElement(es_AbstractNavItem, Object(esm_extends["a" /* default */])({}, props, {
+      eventKey: makeEventKey(eventKey, props.href) // eslint-disable-next-line
+      ,
+      as: as || (action ? props.href ? 'a' : 'button' : 'div'),
+      onClick: this.handleClick,
+      className: classnames_default()(className, bsPrefix, active && 'active', disabled && 'disabled', variant && bsPrefix + "-" + variant, action && bsPrefix + "-action")
+    }));
+  };
+
+  return ListGroupItem;
+}(react_default.a.Component);
+
+ListGroupItem_ListGroupItem.defaultProps = {
+  variant: null,
+  active: false,
+  disabled: false
+};
+/* harmony default export */ var es_ListGroupItem = (createBootstrapComponent(ListGroupItem_ListGroupItem, 'list-group-item'));
+// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/ListGroup.js
+
+
+
+
+
+
+
+
+
+
+var ListGroup_ListGroup =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(inheritsLoose["a" /* default */])(ListGroup, _React$Component);
+
+  function ListGroup() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = ListGroup.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        className = _this$props.className,
+        bsPrefix = _this$props.bsPrefix,
+        variant = _this$props.variant,
+        _this$props$as = _this$props.as,
+        as = _this$props$as === void 0 ? 'div' : _this$props$as,
+        props = Object(objectWithoutPropertiesLoose["a" /* default */])(_this$props, ["className", "bsPrefix", "variant", "as"]);
+
+    return react_default.a.createElement(es_AbstractNav, Object(esm_extends["a" /* default */])({}, props, {
+      as: as,
+      className: classnames_default()(className, bsPrefix, variant && bsPrefix + "-" + variant)
+    }));
+  };
+
+  return ListGroup;
+}(react_default.a.Component);
+
+ListGroup_ListGroup.defaultProps = {
+  variant: null
+};
+var DecoratedListGroup = Object(esm["a" /* default */])(createBootstrapComponent(ListGroup_ListGroup, 'list-group'), {
+  activeKey: 'onSelect'
 });
-Nav.displayName = 'Nav';
-Nav.defaultProps = Nav_defaultProps;
-Nav.Item = es_NavItem;
-Nav.Link = es_NavLink;
-Nav._Nav = Nav; // for Testing until enzyme is working with context
-
-/* harmony default export */ var es_Nav = (Nav);
-// CONCATENATED MODULE: ./src/admin/settings/components/SocialIcons.js
+DecoratedListGroup.Item = es_ListGroupItem;
+/* harmony default export */ var es_ListGroup = (DecoratedListGroup);
+// CONCATENATED MODULE: ./src/admin/settings/components/Card.js
+/**
+ * External dependencies
+ */
 
 
-
-/* harmony default export */ var SocialIcons = (function () {
-  var _window = window,
-      assets = _window.wptelegram_login.settings.assets;
-  return react_default.a.createElement(es_Nav, {
-    variant: "pills",
-    className: "justify-content-center"
-  }, react_default.a.createElement(es_Nav.Item, {
-    className: "px-2 py-1"
-  }, react_default.a.createElement("div", {
-    className: "fb-like d-flex",
-    "data-href": "https://www.facebook.com/WPTelegram",
-    "data-layout": "button_count",
-    "data-action": "like",
-    "data-size": "small",
-    "data-show-faces": "false",
-    "data-share": "false"
-  })), react_default.a.createElement(es_Nav.Item, {
-    className: "px-2 py-1"
-  }, react_default.a.createElement("a", {
-    href: "https://twitter.com/WPTelegram",
-    className: "twitter-follow-button d-flex",
-    "data-show-count": "false"
-  }, build_module_sprintf(__('Follow %s'), '@WPTelegram'))), react_default.a.createElement(es_Nav.Item, {
-    className: "px-2 py-1"
-  }, react_default.a.createElement("a", {
-    href: "https://t.me/WPTelegram",
-    target: "_blank",
-    className: "bg-info text-white d-flex",
-    style: {
-      height: '20px',
-      paddingTop: '1px',
-      paddingRight: '8px',
-      paddingLeft: '6px',
-      paddingBottom: '1px',
-      borderRadius: '3px',
-      textDecoration: 'none'
-    }
-  }, react_default.a.createElement("img", {
-    src: assets.tg_icon,
-    className: "d-inline-block align-middle mr-1",
-    alt: ' '
-  }), react_default.a.createElement("small", null, build_module_sprintf(__('Join %s'), '@WPTelegram')))));
-});
-// CONCATENATED MODULE: ./src/admin/settings/components/Header.js
-
-
-
-
-/* harmony default export */ var Header = (function () {
-  var _window = window,
-      _window$wptelegram_lo = _window.wptelegram_login,
-      title = _window$wptelegram_lo.title,
-      version = _window$wptelegram_lo.version,
-      assets = _window$wptelegram_lo.settings.assets;
+/* harmony default export */ var components_Card = (function (_ref) {
+  var title = _ref.title,
+      children = _ref.children;
   return react_default.a.createElement(es_Card, {
-    border: "info",
     className: "mw-100 p-0"
-  }, react_default.a.createElement(es_Card.Header, {
-    className: "text-nowrap"
-  }, react_default.a.createElement("img", {
-    src: assets.logo_url,
-    width: "30",
-    height: "30",
-    className: "d-inline-block align-middle mr-2",
-    alt: title
-  }), react_default.a.createElement("div", {
-    className: "d-inline-block"
-  }, react_default.a.createElement("h6", {
-    className: "d-inline-block"
-  }, title), ' ', react_default.a.createElement("small", {
-    className: "text-secondary font-italic"
-  }, "v", version))), react_default.a.createElement(es_Card.Body, {
-    className: "pb-1"
-  }, react_default.a.createElement(es_Card.Text, {
-    className: "text-secondary font-italic text-justify"
-  }, __('With this plugin, you can let the users login to your website with their Telegram and make it simple for them to get connected.'))), react_default.a.createElement(es_Card.Body, {
-    className: "pb-1"
-  }, react_default.a.createElement(SocialIcons, null)));
+  }, title ? react_default.a.createElement(es_Card.Header, null, title) : null, react_default.a.createElement(es_ListGroup, {
+    variant: "flush"
+  }, children));
+});
+// CONCATENATED MODULE: ./src/admin/settings/components/Code.js
+/**
+ * External dependencies
+ */
+
+/* harmony default export */ var Code = (function (_ref) {
+  var children = _ref.children;
+  return react_default.a.createElement("code", {
+    style: {
+      whiteSpace: 'pre-wrap',
+      backgroundColor: '#fdfdfe'
+    }
+  }, children);
+});
+// CONCATENATED MODULE: ./src/admin/settings/components/Donate.js
+/**
+ * External dependencies
+ */
+
+/* harmony default export */ var Donate = (function () {
+  return react_default.a.createElement("form", {
+    action: "https://www.paypal.com/cgi-bin/webscr",
+    method: "post",
+    target: "_top"
+  }, react_default.a.createElement("input", {
+    type: "hidden",
+    name: "cmd",
+    value: "_s-xclick"
+  }), react_default.a.createElement("input", {
+    type: "hidden",
+    name: "hosted_button_id",
+    value: "9CK738NLFADA8"
+  }), react_default.a.createElement("input", {
+    type: "image",
+    src: "https://www.paypalobjects.com/en_GB/i/btn/btn_donateCC_LG.gif",
+    border: "0",
+    name: "submit",
+    title: "PayPal - The safer, easier way to pay online!",
+    alt: "Donate with PayPal button"
+  }), react_default.a.createElement("img", {
+    alt: "",
+    border: "0",
+    src: "https://www.paypal.com/en_IN/i/scr/pixel.gif",
+    width: "1",
+    height: "1"
+  }));
 });
 // CONCATENATED MODULE: ./node_modules/react-bootstrap/es/FormContext.js
 
@@ -10139,201 +10001,6 @@ Form.Check = es_FormCheck;
 Form.Label = es_FormLabel;
 Form.Text = es_FormText;
 /* harmony default export */ var es_Form = (Form);
-// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/Button.js
-
-
-
-
-
-
-var Button_defaultProps = {
-  variant: 'primary',
-  active: false,
-  disabled: false,
-  type: 'button'
-};
-var Button = react_default.a.forwardRef(function (_ref, ref) {
-  var bsPrefix = _ref.bsPrefix,
-      variant = _ref.variant,
-      size = _ref.size,
-      active = _ref.active,
-      className = _ref.className,
-      block = _ref.block,
-      type = _ref.type,
-      as = _ref.as,
-      props = Object(objectWithoutPropertiesLoose["a" /* default */])(_ref, ["bsPrefix", "variant", "size", "active", "className", "block", "type", "as"]);
-
-  var prefix = useBootstrapPrefix(bsPrefix, 'btn');
-  var classes = classnames_default()(className, prefix, active && 'active', prefix + "-" + variant, block && prefix + "-block", size && prefix + "-" + size);
-
-  if (props.href) {
-    return react_default.a.createElement(es_SafeAnchor, Object(esm_extends["a" /* default */])({}, props, {
-      as: as,
-      innerRef: ref,
-      className: classnames_default()(classes, props.disabled && 'disabled')
-    }));
-  }
-
-  var Component = as || 'button';
-  if (ref) props.ref = ref;
-  return react_default.a.createElement(Component, Object(esm_extends["a" /* default */])({}, props, {
-    type: type,
-    className: classes
-  }));
-});
-Button.displayName = 'Button';
-Button.defaultProps = Button_defaultProps;
-/* harmony default export */ var es_Button = (Button);
-// EXTERNAL MODULE: ./node_modules/uncontrollable/esm/index.js + 2 modules
-var esm = __webpack_require__(59);
-
-// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/ListGroupItem.js
-
-
-
-
-
-
-
-
-
-var ListGroupItem_ListGroupItem =
-/*#__PURE__*/
-function (_React$Component) {
-  Object(inheritsLoose["a" /* default */])(ListGroupItem, _React$Component);
-
-  function ListGroupItem() {
-    var _this;
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
-
-    _this.handleClick = function (event) {
-      var _this$props = _this.props,
-          onClick = _this$props.onClick,
-          disabled = _this$props.disabled;
-
-      if (disabled) {
-        event.preventDefault();
-        event.stopPropagation();
-        return;
-      }
-
-      if (onClick) onClick(event);
-    };
-
-    return _this;
-  }
-
-  var _proto = ListGroupItem.prototype;
-
-  _proto.render = function render() {
-    var _this$props2 = this.props,
-        bsPrefix = _this$props2.bsPrefix,
-        active = _this$props2.active,
-        disabled = _this$props2.disabled,
-        className = _this$props2.className,
-        variant = _this$props2.variant,
-        action = _this$props2.action,
-        as = _this$props2.as,
-        eventKey = _this$props2.eventKey,
-        props = Object(objectWithoutPropertiesLoose["a" /* default */])(_this$props2, ["bsPrefix", "active", "disabled", "className", "variant", "action", "as", "eventKey"]);
-
-    return react_default.a.createElement(es_AbstractNavItem, Object(esm_extends["a" /* default */])({}, props, {
-      eventKey: makeEventKey(eventKey, props.href) // eslint-disable-next-line
-      ,
-      as: as || (action ? props.href ? 'a' : 'button' : 'div'),
-      onClick: this.handleClick,
-      className: classnames_default()(className, bsPrefix, active && 'active', disabled && 'disabled', variant && bsPrefix + "-" + variant, action && bsPrefix + "-action")
-    }));
-  };
-
-  return ListGroupItem;
-}(react_default.a.Component);
-
-ListGroupItem_ListGroupItem.defaultProps = {
-  variant: null,
-  active: false,
-  disabled: false
-};
-/* harmony default export */ var es_ListGroupItem = (createBootstrapComponent(ListGroupItem_ListGroupItem, 'list-group-item'));
-// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/ListGroup.js
-
-
-
-
-
-
-
-
-
-
-var ListGroup_ListGroup =
-/*#__PURE__*/
-function (_React$Component) {
-  Object(inheritsLoose["a" /* default */])(ListGroup, _React$Component);
-
-  function ListGroup() {
-    return _React$Component.apply(this, arguments) || this;
-  }
-
-  var _proto = ListGroup.prototype;
-
-  _proto.render = function render() {
-    var _this$props = this.props,
-        className = _this$props.className,
-        bsPrefix = _this$props.bsPrefix,
-        variant = _this$props.variant,
-        _this$props$as = _this$props.as,
-        as = _this$props$as === void 0 ? 'div' : _this$props$as,
-        props = Object(objectWithoutPropertiesLoose["a" /* default */])(_this$props, ["className", "bsPrefix", "variant", "as"]);
-
-    return react_default.a.createElement(es_AbstractNav, Object(esm_extends["a" /* default */])({}, props, {
-      as: as,
-      className: classnames_default()(className, bsPrefix, variant && bsPrefix + "-" + variant)
-    }));
-  };
-
-  return ListGroup;
-}(react_default.a.Component);
-
-ListGroup_ListGroup.defaultProps = {
-  variant: null
-};
-var DecoratedListGroup = Object(esm["a" /* default */])(createBootstrapComponent(ListGroup_ListGroup, 'list-group'), {
-  activeKey: 'onSelect'
-});
-DecoratedListGroup.Item = es_ListGroupItem;
-/* harmony default export */ var es_ListGroup = (DecoratedListGroup);
-// CONCATENATED MODULE: ./src/admin/settings/components/Card.js
-
-
-/* harmony default export */ var components_Card = (function (_ref) {
-  var title = _ref.title,
-      children = _ref.children;
-  return react_default.a.createElement(es_Card, {
-    className: "mw-100 p-0"
-  }, title ? react_default.a.createElement(es_Card.Header, null, title) : null, react_default.a.createElement(es_ListGroup, {
-    variant: "flush"
-  }, children));
-});
-// CONCATENATED MODULE: ./src/admin/settings/components/BotTestResult.js
-
-
-/* harmony default export */ var BotTestResult = (function (_ref) {
-  var result = _ref.result,
-      type = _ref.type;
-  return result ? react_default.a.createElement("div", {
-    className: "mt-2"
-  }, react_default.a.createElement("span", {
-    className: "text-secondary"
-  }, __('Test Result:')), ' ', react_default.a.createElement("span", {
-    className: "font-weight-bold text-".concat(type)
-  }, result)) : null;
-});
 // CONCATENATED MODULE: ./node_modules/react-bootstrap/es/Row.js
 
 
@@ -10444,14 +10111,6 @@ DecoratedInputGroup.Checkbox = InputGroup_InputGroupCheckbox;
 DecoratedInputGroup.Append = InputGroupAppend;
 DecoratedInputGroup.Prepend = InputGroupPrepend;
 /* harmony default export */ var es_InputGroup = (DecoratedInputGroup);
-// CONCATENATED MODULE: ./src/admin/settings/components/HelpText.js
-
-/* harmony default export */ var HelpText = (function (_ref) {
-  var children = _ref.children;
-  return react_default.a.createElement("small", {
-    className: "form-text text-muted font-italic"
-  }, children);
-});
 // CONCATENATED MODULE: ./node_modules/final-form/dist/final-form.es.js
 
 
@@ -12434,14 +12093,6 @@ function withTypes() {
 var lib = __webpack_require__(6);
 
 // CONCATENATED MODULE: ./src/admin/settings/fields.js
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 function fields_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { if (i % 2) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { fields_defineProperty(target, key, source[key]); }); } else { Object.defineProperties(target, Object.getOwnPropertyDescriptors(arguments[i])); } } return target; }
 
 function fields_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -12536,18 +12187,6 @@ var validationSchema = lib["object"]({
   show_message_on_error: lib["bool"](),
   custom_error_message: lib["string"]()
 });
-/* React Final Form mutator function */
-
-var updateFieldValue = function updateFieldValue(_ref2, state, _ref3) {
-  var _ref4 = _slicedToArray(_ref2, 2),
-      name = _ref4[0],
-      value = _ref4[1];
-
-  var changeValue = _ref3.changeValue;
-  changeValue(state, name, function () {
-    return value;
-  });
-};
 var fields_getErrorMessage = function getErrorMessage(fieldName) {
   var errorType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'invalid';
   var message;
@@ -12655,8 +12294,15 @@ function FormField_objectSpread(target) { for (var i = 1; i < arguments.length; 
 
 function FormField_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+/**
+ * External dependencies
+ */
 
 
+
+/**
+ * Internal dependencies
+ */
 
 
 
@@ -12742,18 +12388,20 @@ var FormField_fieldComponent = function fieldComponent(props) {
     return FormField_inputGroup(field, props);
   }
 
-  return react_default.a.createElement("div", null, field, react_default.a.createElement(es_Form.Control.Feedback, {
+  return react_default.a.createElement("div", {
+    className: 'text' !== controlProps.type ? 'd-inline-block align-middle' : ''
+  }, field, react_default.a.createElement(es_Form.Control.Feedback, {
     type: "invalid"
   }, meta.error || meta.submitError));
 };
 
-var FormField_FieldWrapper = function FieldWrapper(_ref) {
-  var label = _ref.label,
-      desc = _ref.desc,
-      before = _ref.before,
-      after = _ref.after,
-      controlProps = _ref.controlProps,
-      children = _ref.children;
+var FormField_FieldWrapper = function FieldWrapper(props) {
+  var label = props.label,
+      desc = props.desc,
+      before = props.before,
+      after = props.after,
+      controlProps = props.controlProps,
+      children = props.children;
   return react_default.a.createElement(es_ListGroup.Item, null, react_default.a.createElement(es_Form.Group, {
     as: es_Row
   }, react_default.a.createElement(es_Form.Label, {
@@ -12777,27 +12425,467 @@ var FormField_inputGroup = function inputGroup(field, props) {
     type: "invalid"
   }, meta.error || meta.submitError));
 };
-// CONCATENATED MODULE: ./src/admin/settings/utils/DataUtils.js
-function DataUtils_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { if (i % 2) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { DataUtils_defineProperty(target, key, source[key]); }); } else { Object.defineProperties(target, Object.getOwnPropertyDescriptors(arguments[i])); } } return target; }
-
-function DataUtils_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function DataUtils_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function DataUtils_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { DataUtils_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { DataUtils_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+// CONCATENATED MODULE: ./src/admin/settings/components/Header.js
+/**
+ * External dependencies
+ */
 
 
-var DataUtils_window = window,
-    $ = DataUtils_window.jQuery,
-    DataUtils_rest = DataUtils_window.wptelegram_login.api.rest;
-var fetchInitialValues = function fetchInitialValues() {
+/**
+ * Internal dependencies
+ */
+
+
+
+/* harmony default export */ var Header = (function () {
+  var _window = window,
+      _window$wptelegram_lo = _window.wptelegram_login,
+      title = _window$wptelegram_lo.title,
+      version = _window$wptelegram_lo.version,
+      assets = _window$wptelegram_lo.settings.assets;
+  return react_default.a.createElement(es_Card, {
+    border: "info",
+    className: "mw-100 p-0"
+  }, react_default.a.createElement(es_Card.Header, {
+    className: "text-nowrap"
+  }, react_default.a.createElement("img", {
+    src: assets.logo_url,
+    width: "30",
+    height: "30",
+    className: "d-inline-block align-middle mr-2",
+    alt: title
+  }), react_default.a.createElement("div", {
+    className: "d-inline-block"
+  }, react_default.a.createElement("h6", {
+    className: "d-inline-block"
+  }, title), ' ', react_default.a.createElement("small", {
+    className: "text-secondary font-italic"
+  }, "v", version))), react_default.a.createElement(es_Card.Body, {
+    className: "pb-1"
+  }, react_default.a.createElement(es_Card.Text, {
+    className: "text-secondary font-italic text-justify"
+  }, __('With this plugin, you can let the users login to your website with their Telegram and make it simple for them to get connected.'))), react_default.a.createElement(es_Card.Body, {
+    className: "pb-1"
+  }, react_default.a.createElement(SocialIcons, null)));
+});
+// CONCATENATED MODULE: ./src/admin/settings/components/HelpText.js
+/**
+ * External dependencies
+ */
+
+/* harmony default export */ var HelpText = (function (_ref) {
+  var children = _ref.children;
+  return react_default.a.createElement("small", {
+    className: "form-text text-muted font-italic"
+  }, children);
+});
+// CONCATENATED MODULE: ./src/admin/settings/components/Instructions.js
+/**
+ * External dependencies
+ */
+
+
+/**
+ * Internal dependencies
+ */
+
+
+/* harmony default export */ var Instructions = (function () {
+  var _window = window,
+      host = _window.location.host;
+  return react_default.a.createElement(es_Card, {
+    border: "dark",
+    className: "mw-100 p-0"
+  }, react_default.a.createElement(es_Card.Header, {
+    className: "text-white bg-dark"
+  }, __('INSTRUCTIONS!')), react_default.a.createElement(es_Card.Body, null, react_default.a.createElement("ol", null, react_default.a.createElement("li", {
+    dangerouslySetInnerHTML: {
+      __html: build_module_sprintf(__('Create a Bot by sending %1$s command to %2$s.'), '<b><code>/newbot</code></b>', '<a href="https://t.me/BotFather"  target="_blank">@BotFather</a>')
+    }
+  }), react_default.a.createElement("li", null, build_module_sprintf(__('After completing the steps %s will provide you the Bot Token.'), '@BotFather')), react_default.a.createElement("li", {
+    dangerouslySetInnerHTML: {
+      __html: __('Copy the token and paste into the Bot Token field below.') + ' ' + build_module_sprintf(__('For ease, use %s'), '<a href="https://desktop.telegram.org" target="_blank">Telegram Desktop</a>')
+    }
+  }), react_default.a.createElement("li", {
+    dangerouslySetInnerHTML: {
+      __html: build_module_sprintf(__('Send %1$s command to %2$s, select your bot and then send %3$s'), '<b><code>/setdomain</code></b>', '<a href="https://t.me/BotFather"  target="_blank">@BotFather</a>', '<b><code>' + host + '</code></b>')
+    }
+  }), react_default.a.createElement("li", null, __('Test your bot token below and fill in the bot username if not filled automatically.')), react_default.a.createElement("li", null, build_module_sprintf(__('Hit %s below'), __('Save Changes'))), react_default.a.createElement("li", null, __('That\'s it. You are ready to rock :)')))));
+});
+// CONCATENATED MODULE: ./src/admin/settings/components/PluginInfoCard.js
+/**
+ * External dependencies
+ */
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+/* harmony default export */ var PluginInfoCard = (function () {
+  var _window = window,
+      title = _window.wptelegram_login.title;
+  return react_default.a.createElement(es_Card, {
+    border: "info",
+    className: "mw-100 p-0 text-center"
+  }, react_default.a.createElement(es_Card.Header, {
+    as: "h6",
+    className: "text-center"
+  }, title), react_default.a.createElement(es_Card.Body, null, react_default.a.createElement(es_Card.Text, {
+    className: "text-justify"
+  }, __('Let the users login to your WordPress website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram.'))), react_default.a.createElement(es_ListGroup, {
+    variant: "flush"
+  }, react_default.a.createElement(es_ListGroup.Item, null, react_default.a.createElement("div", null, react_default.a.createElement("span", null, build_module_sprintf(__('Do you like %s?'), title))), react_default.a.createElement("div", null, react_default.a.createElement("a", {
+    href: "https://wordpress.org/support/plugin/wptelegram-login/reviews/#new-post",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    className: "text-center text-info ml-1",
+    style: {
+      textDecoration: 'none'
+    }
+  }, react_default.a.createElement("span", {
+    style: {
+      color: 'orange',
+      fontSize: '1.5rem'
+    }
+  }, "\u2605\u2605\u2605\u2605\u2605")))), react_default.a.createElement(es_ListGroup.Item, null, react_default.a.createElement(Donate, null)), react_default.a.createElement(es_ListGroup.Item, null, react_default.a.createElement("div", null, react_default.a.createElement("span", null, __('Need help?'))), react_default.a.createElement("div", null, react_default.a.createElement("span", {
+    style: {
+      fontWeight: '600'
+    }
+  }, __('Get LIVE support on Telegram')))), react_default.a.createElement(es_ListGroup.Item, {
+    action: true,
+    href: "https://t.me/WPTelegramChat",
+    target: "_blank",
+    variant: "primary"
+  }, react_default.a.createElement("span", {
+    className: "font-weight-bold font-italic"
+  }, "@WPTelegramChat"))), react_default.a.createElement(es_Card.Footer, null, react_default.a.createElement("span", {
+    role: "img",
+    "aria-label": "Smile"
+  }, "\uD83D\uDE42")));
+});
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/utils/createChainedFunction.js
+/**
+ * Safe chained function
+ *
+ * Will only create a new function if needed,
+ * otherwise will pass back existing functions or null.
+ *
+ * @param {function} functions to chain
+ * @returns {function|null}
+ */
+function createChainedFunction() {
+  for (var _len = arguments.length, funcs = new Array(_len), _key = 0; _key < _len; _key++) {
+    funcs[_key] = arguments[_key];
+  }
+
+  return funcs.filter(function (f) {
+    return f != null;
+  }).reduce(function (acc, f) {
+    if (typeof f !== 'function') {
+      throw new Error('Invalid Argument Type, must only provide functions, undefined, or null.');
+    }
+
+    if (acc === null) return f;
+    return function chainedFunction() {
+      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+        args[_key2] = arguments[_key2];
+      }
+
+      acc.apply(this, args);
+      f.apply(this, args);
+    };
+  }, null);
+}
+
+/* harmony default export */ var utils_createChainedFunction = (createChainedFunction);
+// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/SafeAnchor.js
+
+
+
+
+
+
+
+function isTrivialHref(href) {
+  return !href || href.trim() === '#';
+}
+/**
+ * There are situations due to browser quirks or Bootstrap CSS where
+ * an anchor tag is needed, when semantically a button tag is the
+ * better choice. SafeAnchor ensures that when an anchor is used like a
+ * button its accessible. It also emulates input `disabled` behavior for
+ * links, which is usually desirable for Buttons, NavItems, DropdownItems, etc.
+ */
+
+
+var SafeAnchor_SafeAnchor =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(inheritsLoose["a" /* default */])(SafeAnchor, _React$Component);
+
+  function SafeAnchor(props, context) {
+    var _this;
+
+    _this = _React$Component.call(this, props, context) || this;
+    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
+    _this.handleKeyDown = _this.handleKeyDown.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  var _proto = SafeAnchor.prototype;
+
+  _proto.handleClick = function handleClick(event) {
+    var _this$props = this.props,
+        disabled = _this$props.disabled,
+        href = _this$props.href,
+        onClick = _this$props.onClick;
+
+    if (disabled || isTrivialHref(href)) {
+      event.preventDefault();
+    }
+
+    if (disabled) {
+      event.stopPropagation();
+      return;
+    }
+
+    if (onClick) {
+      onClick(event);
+    }
+  };
+
+  _proto.handleKeyDown = function handleKeyDown(event) {
+    if (event.key === ' ') {
+      event.preventDefault();
+      this.handleClick(event);
+    }
+  };
+
+  _proto.render = function render() {
+    var _this$props2 = this.props,
+        _this$props2$as = _this$props2.as,
+        Component = _this$props2$as === void 0 ? 'a' : _this$props2$as,
+        disabled = _this$props2.disabled,
+        onKeyDown = _this$props2.onKeyDown,
+        innerRef = _this$props2.innerRef,
+        props = Object(objectWithoutPropertiesLoose["a" /* default */])(_this$props2, ["as", "disabled", "onKeyDown", "innerRef"]);
+
+    if (isTrivialHref(props.href)) {
+      props.role = props.role || 'button'; // we want to make sure there is a href attribute on the node
+      // otherwise, the cursor incorrectly styled (except with role='button')
+
+      props.href = props.href || '#';
+    }
+
+    if (disabled) {
+      props.tabIndex = -1;
+      props['aria-disabled'] = true;
+    }
+
+    if (innerRef) props.ref = innerRef;
+    return react_default.a.createElement(Component, Object(esm_extends["a" /* default */])({}, props, {
+      onClick: this.handleClick,
+      onKeyDown: utils_createChainedFunction(this.handleKeyDown, onKeyDown)
+    }));
+  };
+
+  return SafeAnchor;
+}(react_default.a.Component);
+
+/* harmony default export */ var es_SafeAnchor = (SafeAnchor_SafeAnchor);
+// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/Button.js
+
+
+
+
+
+
+var Button_defaultProps = {
+  variant: 'primary',
+  active: false,
+  disabled: false,
+  type: 'button'
+};
+var Button = react_default.a.forwardRef(function (_ref, ref) {
+  var bsPrefix = _ref.bsPrefix,
+      variant = _ref.variant,
+      size = _ref.size,
+      active = _ref.active,
+      className = _ref.className,
+      block = _ref.block,
+      type = _ref.type,
+      as = _ref.as,
+      props = Object(objectWithoutPropertiesLoose["a" /* default */])(_ref, ["bsPrefix", "variant", "size", "active", "className", "block", "type", "as"]);
+
+  var prefix = useBootstrapPrefix(bsPrefix, 'btn');
+  var classes = classnames_default()(className, prefix, active && 'active', prefix + "-" + variant, block && prefix + "-block", size && prefix + "-" + size);
+
+  if (props.href) {
+    return react_default.a.createElement(es_SafeAnchor, Object(esm_extends["a" /* default */])({}, props, {
+      as: as,
+      innerRef: ref,
+      className: classnames_default()(classes, props.disabled && 'disabled')
+    }));
+  }
+
+  var Component = as || 'button';
+  if (ref) props.ref = ref;
+  return react_default.a.createElement(Component, Object(esm_extends["a" /* default */])({}, props, {
+    type: type,
+    className: classes
+  }));
+});
+Button.displayName = 'Button';
+Button.defaultProps = Button_defaultProps;
+/* harmony default export */ var es_Button = (Button);
+// CONCATENATED MODULE: ./src/admin/settings/mutators.js
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+/* React Final Form mutator function */
+var mutators_updateFieldValue = function updateFieldValue(_ref, state, _ref2) {
+  var _ref3 = _slicedToArray(_ref, 2),
+      name = _ref3[0],
+      value = _ref3[1];
+
+  var changeValue = _ref2.changeValue;
+  changeValue(state, name, function () {
+    return value;
+  });
+};
+// CONCATENATED MODULE: ./src/admin/settings/utils/ajax.js
+function ajax_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { if (i % 2) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { ajax_defineProperty(target, key, source[key]); }); } else { Object.defineProperties(target, Object.getOwnPropertyDescriptors(arguments[i])); } } return target; }
+
+function ajax_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var ajax_window = window,
+    $ = ajax_window.jQuery,
+    ajax_rest = ajax_window.wptelegram_login.api.rest;
+var sendAjaxRequest = function sendAjaxRequest(options) {
+  var defaults = {
+    type: 'POST',
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json',
+    global: false // Avoid the mess created by Wordfence. https://wordpress.org/support/topic/wordfence-corrupts-json-response-from-jquery-ajax-if-not-200/
+
+  };
+
+  var settings = ajax_objectSpread({}, defaults, {}, options);
+
+  var crossDomain = settings.crossDomain;
+
+  if (!crossDomain) {
+    // set WP Nonce Header
+    settings.beforeSend = function (xhr) {
+      xhr.setRequestHeader('X-WP-Nonce', ajax_rest.nonce);
+    };
+  }
+
+  return $.ajax(settings);
+};
+// CONCATENATED MODULE: ./src/admin/settings/utils/FormUtils.js
+function FormUtils_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function FormUtils_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { FormUtils_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { FormUtils_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+/**
+ * Internal dependencies
+ */
+
+
+var FormUtils_window = window,
+    FormUtils_rest = FormUtils_window.wptelegram_login.api.rest;
+var FormUtils_fetchInitialValues = function fetchInitialValues() {
   var options = {
     type: 'GET',
-    url: "".concat(DataUtils_rest.url, "/settings")
+    url: "".concat(FormUtils_rest.url, "/settings")
   };
   return sendAjaxRequest(options);
 };
-var handleTestToken = function handleTestToken(args) {
+var submitForm =
+/*#__PURE__*/
+function () {
+  var _ref = FormUtils_asyncToGenerator(
+  /*#__PURE__*/
+  regeneratorRuntime.mark(function _callee(values) {
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return new Promise(function (resolve) {
+              var options = {
+                url: "".concat(FormUtils_rest.url, "/settings"),
+                data: JSON.stringify(values),
+                error: function error(jqXHR) {
+                  console.log('ERROR', jqXHR);
+
+                  var _JSON$parse = JSON.parse(jqXHR.responseText),
+                      code = _JSON$parse.code,
+                      data = _JSON$parse.data;
+
+                  var errors = {};
+
+                  if (code) {
+                    if ('rest_invalid_param' === code) {
+                      Object.keys(data.params).forEach(function (key) {
+                        errors[key] = fields_getErrorMessage(key);
+                      });
+                    } else if ('rest_missing_callback_param' === code) {
+                      Object.keys(data.params).forEach(function (key) {
+                        errors[key] = fields_getErrorMessage(key, 'required');
+                      });
+                    }
+                  }
+
+                  Object.assign(errors, fields_getErrorMessage('form', 'unknown'));
+                  resolve(errors);
+                },
+                success: function success() {
+                  window.wptelegram_login.settings.saved_opts = values;
+                  resolve({});
+                }
+              };
+              return sendAjaxRequest(options);
+            });
+
+          case 2:
+            return _context.abrupt("return", _context.sent);
+
+          case 3:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function submitForm(_x) {
+    return _ref.apply(this, arguments);
+  };
+}();
+// CONCATENATED MODULE: ./src/admin/settings/utils/TelegramUtils.js
+/**
+ * Internal dependencies
+ */
+
+var TelegramUtils_testBotToken = function testBotToken(args) {
   var bot_token = args.bot_token,
       setTestingBotToken = args.setTestingBotToken,
       setBotTokenTestResult = args.setBotTokenTestResult,
@@ -12835,110 +12923,6 @@ var handleTestToken = function handleTestToken(args) {
   };
   return sendAjaxRequest(options);
 };
-var submitForm =
-/*#__PURE__*/
-function () {
-  var _ref2 = DataUtils_asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee(values) {
-    return regeneratorRuntime.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            _context.next = 2;
-            return new Promise(function (resolve) {
-              var options = {
-                url: "".concat(DataUtils_rest.url, "/settings"),
-                data: JSON.stringify(values),
-                error: function error(jqXHR) {
-                  var _JSON$parse2 = JSON.parse(jqXHR.responseText),
-                      code = _JSON$parse2.code,
-                      data = _JSON$parse2.data;
-
-                  var errors = {};
-
-                  if (code) {
-                    if ('rest_invalid_param' === code) {
-                      Object.keys(data.params).map(function (key) {
-                        errors[key] = fields_getErrorMessage(key);
-                      });
-                    } else if ('rest_missing_callback_param' === code) {
-                      Object.keys(data.params).map(function (key) {
-                        errors[key] = fields_getErrorMessage(key, 'required');
-                      });
-                    }
-                  }
-
-                  Object.assign(errors, fields_getErrorMessage('form', 'unknown'));
-                  console.log('ERROR', jqXHR);
-                  resolve(errors);
-                },
-                success: function success() {
-                  window.wptelegram_login.settings.saved_opts = values;
-                  resolve({});
-                }
-              };
-              return sendAjaxRequest(options);
-            });
-
-          case 2:
-            return _context.abrupt("return", _context.sent);
-
-          case 3:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
-
-  return function submitForm(_x) {
-    return _ref2.apply(this, arguments);
-  };
-}();
-var sendAjaxRequest = function sendAjaxRequest(options) {
-  var crossDomain = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-  var defaults = {
-    type: 'POST',
-    contentType: 'application/json; charset=utf-8',
-    dataType: 'json',
-    crossDomain: crossDomain
-  };
-
-  if (!crossDomain) {
-    defaults.beforeSend = function (xhr) {
-      xhr.setRequestHeader('X-WP-Nonce', DataUtils_rest.nonce);
-    };
-  }
-
-  return $.ajax(DataUtils_objectSpread({}, defaults, {}, options));
-};
-// CONCATENATED MODULE: ./src/admin/settings/components/Instructions.js
-
-
-
-/* harmony default export */ var Instructions = (function () {
-  var _window = window,
-      host = _window.location.host;
-  return react_default.a.createElement(es_Card, {
-    border: "dark",
-    className: "mw-100 p-0"
-  }, react_default.a.createElement(es_Card.Header, {
-    className: "text-white bg-dark"
-  }, __('INSTRUCTIONS!')), react_default.a.createElement(es_Card.Body, null, react_default.a.createElement("ol", null, react_default.a.createElement("li", {
-    dangerouslySetInnerHTML: {
-      __html: build_module_sprintf(__('Create a Bot by sending %1$s command to %2$s.'), '<b><code>/newbot</code></b>', '<a href="https://t.me/BotFather"  target="_blank">@BotFather</a>')
-    }
-  }), react_default.a.createElement("li", null, build_module_sprintf(__('After completing the steps %s will provide you the Bot Token.'), '@BotFather')), react_default.a.createElement("li", {
-    dangerouslySetInnerHTML: {
-      __html: __('Copy the token and paste into the Bot Token field below.') + ' ' + build_module_sprintf(__('For ease, use %s'), '<a href="https://desktop.telegram.org" target="_blank">Telegram Desktop</a>')
-    }
-  }), react_default.a.createElement("li", {
-    dangerouslySetInnerHTML: {
-      __html: build_module_sprintf(__('Send %1$s command to %2$s, select your bot and then send %3$s'), '<b><code>/setdomain</code></b>', '<a href="https://t.me/BotFather"  target="_blank">@BotFather</a>', '<b><code>' + host + '</code></b>')
-    }
-  }), react_default.a.createElement("li", null, __('Test your bot token below and fill in the bot username if not filled automatically.')), react_default.a.createElement("li", null, build_module_sprintf(__('Hit %s below'), __('Save Changes'))), react_default.a.createElement("li", null, __('That\'s it. You are ready to rock :)')))));
-});
 // CONCATENATED MODULE: ./src/admin/settings/components/SettingsForm.js
 function SettingsForm_slicedToArray(arr, i) { return SettingsForm_arrayWithHoles(arr) || SettingsForm_iterableToArrayLimit(arr, i) || SettingsForm_nonIterableRest(); }
 
@@ -12948,8 +12932,14 @@ function SettingsForm_iterableToArrayLimit(arr, i) { var _arr = []; var _n = tru
 
 function SettingsForm_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+/**
+ * External dependencies
+ */
 
 
+/**
+ * Internal dependencies
+ */
 
 
 
@@ -12959,7 +12949,7 @@ function SettingsForm_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
 
 
 /* harmony default export */ var SettingsForm = (function (_ref) {
-  var setValues = _ref.setValues;
+  var setFormState = _ref.setFormState;
 
   var _useState = Object(react["useState"])(true),
       _useState2 = SettingsForm_slicedToArray(_useState, 2),
@@ -13000,9 +12990,7 @@ function SettingsForm_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
     initialValues: initialValues,
     onSubmit: submitForm,
     validate: fields_validate,
-    mutators: {
-      updateFieldValue: updateFieldValue
-    },
+    mutators: mutators_namespaceObject,
     render: function render(props) {
       var handleSubmit = props.handleSubmit,
           submitting = props.submitting,
@@ -13013,11 +13001,16 @@ function SettingsForm_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
           values = props.values,
           errors = props.errors,
           _props$form = props.form,
-          mutators = _props$form.mutators,
+          _mutators = _props$form.mutators,
           getState = _props$form.getState;
+
+      if (setFormState) {
+        setFormState(getState());
+      }
+
       return react_default.a.createElement(es_Form, {
         onSubmit: handleSubmit
-      }, setValues(getState()), react_default.a.createElement(Instructions, null), react_default.a.createElement(components_Card, {
+      }, react_default.a.createElement(Instructions, null), react_default.a.createElement(components_Card, {
         title: __('Telegram Options')
       }, react_default.a.createElement(FormField, {
         name: "bot_token",
@@ -13038,12 +13031,12 @@ function SettingsForm_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
               size: "sm",
               disabled: testingBotToken || errors.bot_token,
               onClick: function onClick() {
-                return handleTestToken({
+                return TelegramUtils_testBotToken({
                   bot_token: values.bot_token,
                   setTestingBotToken: setTestingBotToken,
                   setBotTokenTestResult: setBotTokenTestResult,
                   setBotTokenTestResultType: setBotTokenTestResultType,
-                  mutators: mutators
+                  mutators: _mutators
                 });
               }
             }, testingBotToken ? __('Please wait...') : __('Test Token'));
@@ -13171,7 +13164,10 @@ function SettingsForm_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
         label: getFieldLabel('corner_radius'),
         desc: __('Leave empty for default'),
         parse: function parse(val) {
-          if (!parseInt(val)) return '';
+          if (!parseInt(val)) {
+            return '';
+          }
+
           return Math.min(Math.round(val), 20);
         },
         controlProps: {
@@ -13243,61 +13239,213 @@ function SettingsForm_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
     }
   });
 });
-// CONCATENATED MODULE: ./src/admin/settings/components/PluginInfoCard.js
+// CONCATENATED MODULE: ./src/admin/settings/components/Sidebar.js
+/**
+ * External dependencies
+ */
+
+/**
+ * Internal dependencies
+ */
+
+
+/* harmony default export */ var Sidebar = (function () {
+  return react_default.a.createElement("div", null, react_default.a.createElement(PluginInfoCard, null), react_default.a.createElement(WidgetInfoCard, null));
+});
+// EXTERNAL MODULE: ./node_modules/prop-types-extra/lib/all.js
+var lib_all = __webpack_require__(144);
+
+// EXTERNAL MODULE: ./node_modules/uncontrollable/hook.js
+var hook = __webpack_require__(58);
+var hook_default = /*#__PURE__*/__webpack_require__.n(hook);
+
+// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/NavbarContext.js
+
+/* harmony default export */ var NavbarContext = (react_default.a.createContext(null));
+// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/NavItem.js
 
 
 
-/* harmony default export */ var PluginInfoCard = (function () {
+
+
+var NavItem = react_default.a.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+function (_ref, ref) {
+  var bsPrefix = _ref.bsPrefix,
+      className = _ref.className,
+      children = _ref.children,
+      _ref$as = _ref.as,
+      Component = _ref$as === void 0 ? 'div' : _ref$as,
+      props = Object(objectWithoutPropertiesLoose["a" /* default */])(_ref, ["bsPrefix", "className", "children", "as"]);
+
+  bsPrefix = useBootstrapPrefix(bsPrefix, 'nav-item');
+  return react_default.a.createElement(Component, Object(esm_extends["a" /* default */])({}, props, {
+    ref: ref,
+    className: classnames_default()(className, bsPrefix)
+  }), children);
+});
+NavItem.displayName = 'NavItem';
+/* harmony default export */ var es_NavItem = (NavItem);
+// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/NavLink.js
+
+
+
+
+
+
+
+var NavLink_defaultProps = {
+  disabled: false,
+  as: es_SafeAnchor
+};
+var NavLink = react_default.a.forwardRef(function (_ref, ref) {
+  var bsPrefix = _ref.bsPrefix,
+      disabled = _ref.disabled,
+      className = _ref.className,
+      href = _ref.href,
+      eventKey = _ref.eventKey,
+      onSelect = _ref.onSelect,
+      as = _ref.as,
+      props = Object(objectWithoutPropertiesLoose["a" /* default */])(_ref, ["bsPrefix", "disabled", "className", "href", "eventKey", "onSelect", "as"]);
+
+  bsPrefix = useBootstrapPrefix(bsPrefix, 'nav-link');
+  return react_default.a.createElement(es_AbstractNavItem, Object(esm_extends["a" /* default */])({}, props, {
+    href: href,
+    ref: ref,
+    eventKey: eventKey,
+    as: as,
+    disabled: disabled,
+    onSelect: onSelect,
+    className: classnames_default()(className, bsPrefix, disabled && 'disabled')
+  }));
+});
+NavLink.displayName = 'NavLink';
+NavLink.defaultProps = NavLink_defaultProps;
+/* harmony default export */ var es_NavLink = (NavLink);
+// CONCATENATED MODULE: ./node_modules/react-bootstrap/es/Nav.js
+
+
+
+
+
+
+
+
+
+
+
+
+var Nav_defaultProps = {
+  justify: false,
+  fill: false
+};
+var Nav = react_default.a.forwardRef(function (uncontrolledProps, ref) {
+  var _classNames;
+
+  var _useUncontrolled = hook_default()(uncontrolledProps, {
+    activeKey: 'onSelect'
+  }),
+      _useUncontrolled$as = _useUncontrolled.as,
+      as = _useUncontrolled$as === void 0 ? 'div' : _useUncontrolled$as,
+      bsPrefix = _useUncontrolled.bsPrefix,
+      variant = _useUncontrolled.variant,
+      fill = _useUncontrolled.fill,
+      justify = _useUncontrolled.justify,
+      navbar = _useUncontrolled.navbar,
+      className = _useUncontrolled.className,
+      children = _useUncontrolled.children,
+      activeKey = _useUncontrolled.activeKey,
+      props = Object(objectWithoutPropertiesLoose["a" /* default */])(_useUncontrolled, ["as", "bsPrefix", "variant", "fill", "justify", "navbar", "className", "children", "activeKey"]);
+
+  bsPrefix = useBootstrapPrefix(bsPrefix, 'nav');
+  var navbarBsPrefix, cardHeaderBsPrefix;
+  var navbarContext = Object(react["useContext"])(NavbarContext);
+  var cardContext = Object(react["useContext"])(CardContext);
+
+  if (navbarContext) {
+    navbarBsPrefix = navbarContext.bsPrefix;
+    navbar = navbar == null ? true : navbar;
+  } else if (cardContext) {
+    cardHeaderBsPrefix = cardContext.cardHeaderBsPrefix;
+  }
+
+  return react_default.a.createElement(es_AbstractNav, Object(esm_extends["a" /* default */])({
+    as: as,
+    ref: ref,
+    activeKey: activeKey,
+    className: classnames_default()(className, (_classNames = {}, _classNames[bsPrefix] = !navbar, _classNames[navbarBsPrefix + "-nav"] = navbar, _classNames[cardHeaderBsPrefix + "-" + variant] = !!cardHeaderBsPrefix, _classNames[bsPrefix + "-" + variant] = !!variant, _classNames[bsPrefix + "-fill"] = fill, _classNames[bsPrefix + "-justified"] = justify, _classNames))
+  }, props), children);
+});
+Nav.displayName = 'Nav';
+Nav.defaultProps = Nav_defaultProps;
+Nav.Item = es_NavItem;
+Nav.Link = es_NavLink;
+Nav._Nav = Nav; // for Testing until enzyme is working with context
+
+/* harmony default export */ var es_Nav = (Nav);
+// CONCATENATED MODULE: ./src/admin/settings/components/SocialIcons.js
+/**
+ * External dependencies
+ */
+
+
+/**
+ * Internal dependencies
+ */
+
+
+/* harmony default export */ var SocialIcons = (function () {
   var _window = window,
-      title = _window.wptelegram_login.title;
-  return react_default.a.createElement(es_Card, {
-    border: "info",
-    className: "mw-100 p-0 text-center"
-  }, react_default.a.createElement(es_Card.Header, {
-    as: "h6",
-    className: "text-center"
-  }, title), react_default.a.createElement(es_Card.Body, null, react_default.a.createElement(es_Card.Text, {
-    className: "text-justify"
-  }, __('Let the users login to your WordPress website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram.'))), react_default.a.createElement(es_ListGroup, {
-    variant: "flush"
-  }, react_default.a.createElement(es_ListGroup.Item, null, react_default.a.createElement("div", null, react_default.a.createElement("span", null, build_module_sprintf(__('Do you like %s?'), title))), react_default.a.createElement("div", null, react_default.a.createElement("a", {
-    href: "https://wordpress.org/support/plugin/wptelegram-login/reviews/#new-post",
+      assets = _window.wptelegram_login.settings.assets;
+  return react_default.a.createElement(es_Nav, {
+    variant: "pills",
+    className: "justify-content-center"
+  }, react_default.a.createElement(es_Nav.Item, {
+    className: "px-2 py-1"
+  }, react_default.a.createElement("div", {
+    className: "fb-like d-flex",
+    "data-href": "https://www.facebook.com/WPTelegram",
+    "data-layout": "button_count",
+    "data-action": "like",
+    "data-size": "small",
+    "data-show-faces": "false",
+    "data-share": "false"
+  })), react_default.a.createElement(es_Nav.Item, {
+    className: "px-2 py-1"
+  }, react_default.a.createElement("a", {
+    href: "https://twitter.com/WPTelegram",
+    className: "twitter-follow-button d-flex",
+    "data-show-count": "false"
+  }, build_module_sprintf(__('Follow %s'), '@WPTelegram'))), react_default.a.createElement(es_Nav.Item, {
+    className: "px-2 py-1"
+  }, react_default.a.createElement("a", {
+    href: "https://t.me/WPTelegram",
     target: "_blank",
-    className: "text-center text-info ml-1",
+    rel: "noopener noreferrer",
+    className: "bg-info text-white d-flex",
     style: {
+      height: '20px',
+      paddingTop: '1px',
+      paddingRight: '8px',
+      paddingLeft: '6px',
+      paddingBottom: '1px',
+      borderRadius: '3px',
       textDecoration: 'none'
     }
-  }, react_default.a.createElement("span", {
-    style: {
-      color: 'orange',
-      fontSize: '1.5rem'
-    }
-  }, "\u2605\u2605\u2605\u2605\u2605")))), react_default.a.createElement(es_ListGroup.Item, null, react_default.a.createElement("div", null, react_default.a.createElement("span", null, __('Need help?'))), react_default.a.createElement("div", null, react_default.a.createElement("span", {
-    style: {
-      fontWeight: '600'
-    }
-  }, __('Get LIVE support on Telegram')))), react_default.a.createElement(es_ListGroup.Item, {
-    action: true,
-    href: "https://t.me/WPTelegramChat",
-    target: "_blank",
-    variant: "primary"
-  }, react_default.a.createElement("span", {
-    className: "font-weight-bold font-italic"
-  }, "@WPTelegramChat"))), react_default.a.createElement(es_Card.Footer, null, "\uD83D\uDE42"));
-});
-// CONCATENATED MODULE: ./src/admin/settings/components/Code.js
-
-/* harmony default export */ var Code = (function (_ref) {
-  var children = _ref.children;
-  return react_default.a.createElement("code", {
-    style: {
-      whiteSpace: 'pre-wrap',
-      backgroundColor: '#fdfdfe'
-    }
-  }, children);
+  }, react_default.a.createElement("img", {
+    src: assets.tg_icon,
+    className: "d-inline-block align-middle mr-1",
+    alt: ' '
+  }), react_default.a.createElement("small", null, build_module_sprintf(__('Join %s'), '@WPTelegram')))));
 });
 // CONCATENATED MODULE: ./src/admin/settings/components/WidgetInfoCard.js
+/**
+ * External dependencies
+ */
 
+
+/**
+ * Internal dependencies
+ */
 
 
 
@@ -13321,56 +13469,67 @@ function SettingsForm_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
   }, __('Inside page or post content:')), react_default.a.createElement(es_ListGroup.Item, {
     variant: "light",
     className: "text-monospace text-left"
-  }, react_default.a.createElement(Code, null, "[wptelegram-login button_style=\"large\" show_user_photo=\"on\" corner_radius=\"15\"]")), react_default.a.createElement(es_ListGroup.Item, {
+  }, react_default.a.createElement(Code, null, '[wptelegram-login button_style="large" show_user_photo="on" corner_radius="15"]')), react_default.a.createElement(es_ListGroup.Item, {
     className: "font-weight-bold text-secondary"
   }, __('Inside the theme templates')), react_default.a.createElement(es_ListGroup.Item, {
     variant: "light",
     className: "text-monospace text-left"
   }, react_default.a.createElement(Code, null, "<?php\nif ( function_exists( 'wptelegram_login' ) ) {\n    wptelegram_login();\n}\n?>"), react_default.a.createElement("br", null), react_default.a.createElement("span", {
     className: "font-weight-bold text-secondary"
-  }, __('or')), react_default.a.createElement("br", null), react_default.a.createElement(Code, null, "<?php\necho do_shortCode( '[wptelegram-login button_style=\"small\" show_user_photo=\"off\" show_if_user_is=\"logged_in\"]' );\n?>"))), react_default.a.createElement(es_Card.Footer, null, "\uD83D\uDE42"));
+  }, __('or')), react_default.a.createElement("br", null), react_default.a.createElement(Code, null, "<?php\necho do_shortCode( '[wptelegram-login button_style=\"small\" show_user_photo=\"off\" show_if_user_is=\"logged_in\"]' );\n?>"))), react_default.a.createElement(es_Card.Footer, null, react_default.a.createElement("span", {
+    role: "img",
+    "aria-label": "Smile"
+  }, "\uD83D\uDE42")));
 });
-// CONCATENATED MODULE: ./src/admin/settings/components/Sidebar.js
+// CONCATENATED MODULE: ./src/admin/settings/components/index.js
 
 
 
-/* harmony default export */ var Sidebar = (function () {
-  return react_default.a.createElement("div", null, react_default.a.createElement(PluginInfoCard, null), react_default.a.createElement(WidgetInfoCard, null));
-});
+
+
+
+
+
+
+
+
+
+
 // CONCATENATED MODULE: ./src/admin/settings/App.js
-function App_slicedToArray(arr, i) { return App_arrayWithHoles(arr) || App_iterableToArrayLimit(arr, i) || App_nonIterableRest(); }
+/**
+ * External dependencies
+ */
+ // import { useState } from 'react';
 
-function App_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function App_iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function App_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
+/**
+ * Internal dependencies
+ */
 
 
 
 var App_App = function App() {
-  var _useState = Object(react["useState"])({}),
-      _useState2 = App_slicedToArray(_useState, 2),
-      values = _useState2[0],
-      setValues = _useState2[1];
-
+  // const [formState, setFormState] = useState({});
   return react_default.a.createElement("div", {
     className: "wrapper"
   }, react_default.a.createElement("div", {
     className: "content col-lg-9 col-md-9"
-  }, react_default.a.createElement(Header, null), react_default.a.createElement(SettingsForm, {
-    setValues: setValues
-  })), react_default.a.createElement("div", {
+  }, react_default.a.createElement(Header, null), react_default.a.createElement(SettingsForm
+  /* setFormState={setFormState} */
+  , null)), react_default.a.createElement("div", {
     className: "sidebar col-lg-3 col-md-3"
   }, react_default.a.createElement(Sidebar, null)));
 };
 
 /* harmony default export */ var settings_App = (App_App);
 // CONCATENATED MODULE: ./src/admin/settings/index.js
+/**
+ * External dependencies
+ */
 
+
+/**
+ * Internal dependencies
+ */
 
 
 

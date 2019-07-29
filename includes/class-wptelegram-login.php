@@ -88,8 +88,8 @@ class WPTelegram_Login {
 	 * Ensures only one instance of the class is loaded or can be loaded.
 	 *
 	 * @since 1.0.0
-	 * 
-	 * @return Main instance.
+	 *
+	 * @return WPTelegram_Login instance.
 	 */
 	public static function instance() {
 		if ( is_null( self::$instance ) ) {
@@ -125,7 +125,7 @@ class WPTelegram_Login {
 
 		$this->version = WPTELEGRAM_LOGIN_VER;
 
-		$this->title =  __( 'WP Telegram Login', 'wptelegram-login' );
+		$this->title = __( 'WP Telegram Login', 'wptelegram-login' );
 
 		$this->plugin_name = strtolower( __CLASS__ );
 
@@ -162,45 +162,45 @@ class WPTelegram_Login {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once WPTELEGRAM_LOGIN_DIR . '/includes/class-wptelegram-login-loader.php';
+		require_once $this->dir( '/includes/class-wptelegram-login-loader.php' );
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once WPTELEGRAM_LOGIN_DIR . '/includes/class-wptelegram-login-i18n.php';
+		require_once $this->dir( '/includes/class-wptelegram-login-i18n.php' );
 
 		/**
 		 * The class responsible for plugin options
 		 */
-		require_once WPTELEGRAM_LOGIN_DIR . '/includes/class-wptelegram-login-options.php';
+		require_once $this->dir( '/includes/class-wptelegram-login-options.php' );
 
 		/**
 		 * The classes responsible for WP REST API of the plugin.
 		 */
-		require_once WPTELEGRAM_LOGIN_DIR . '/includes/rest-api/class-wptelegram-login-rest-controller.php';
-		require_once WPTELEGRAM_LOGIN_DIR . '/includes/rest-api/class-wptelegram-login-settings-controller.php';
+		require_once $this->dir( '/includes/rest-api/class-wptelegram-login-rest-controller.php' );
+		require_once $this->dir( '/includes/rest-api/class-wptelegram-login-settings-controller.php' );
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once WPTELEGRAM_LOGIN_DIR . '/admin/class-wptelegram-login-admin.php';
+		require_once $this->dir( '/admin/class-wptelegram-login-admin.php' );
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once WPTELEGRAM_LOGIN_DIR . '/public/class-wptelegram-login-public.php';
+		require_once $this->dir( '/public/class-wptelegram-login-public.php' );
 
 		/**
 		 * Helper functions
 		 */
-		require_once WPTELEGRAM_LOGIN_DIR . '/includes/helper-functions.php';
+		require_once $this->dir( '/includes/helper-functions.php' );
 
 		/**
 		 * Our widget class
 		 */
-		require_once WPTELEGRAM_LOGIN_DIR . '/public/widgets/class-wptelegram-login-widget-primary.php';
+		require_once $this->dir( '/public/widgets/class-wptelegram-login-widget-primary.php' );
 
 		$this->loader = new WPTelegram_Login_Loader();
 
@@ -229,7 +229,7 @@ class WPTelegram_Login {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new WPTelegram_Login_i18n();
+		$plugin_i18n = new WPTelegram_Login_I18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -244,7 +244,7 @@ class WPTelegram_Login {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new WPTelegram_Login_Admin( $this->get_plugin_title(), $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new WPTelegram_Login_Admin( $this );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -273,7 +273,9 @@ class WPTelegram_Login {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new WPTelegram_Login_Public( $this->get_plugin_title(), $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new WPTelegram_Login_Public( $this );
+
+		$this->loader->add_action( 'after_setup_theme', $plugin_public, 'do_upgrade' );
 
 		$this->loader->add_action( 'login_enqueue_scripts', $plugin_public, 'login_enqueue_scripts' );
 
@@ -315,10 +317,10 @@ class WPTelegram_Login {
 	/**
 	 * The title of the plugin.
 	 *
-	 * @since     1.0.0
+	 * @since     1.5.1
 	 * @return    string    The title of the plugin.
 	 */
-	public function get_plugin_title() {
+	public function title() {
 		return $this->title;
 	}
 
@@ -326,11 +328,54 @@ class WPTelegram_Login {
 	 * The name of the plugin used to uniquely identify it within the context of
 	 * WordPress and to define internationalization functionality.
 	 *
-	 * @since     1.0.0
+	 * @since     1.5.1
 	 * @return    string    The name of the plugin.
 	 */
-	public function get_plugin_name() {
+	public function name() {
 		return $this->plugin_name;
+	}
+
+	/**
+	 * Retrieve the version number of the plugin.
+	 *
+	 * @since     1.5.1
+	 * @return    string    The version number of the plugin.
+	 */
+	public function version() {
+		return $this->version;
+	}
+
+	/**
+	 * Retrieve directory path to the plugin.
+	 *
+	 * @since 1.5.1
+	 * @param string $path Path to append.
+	 * @return string Directory with optional path appended
+	 */
+	public function dir( $path = '' ) {
+		return WPTELEGRAM_LOGIN_DIR . $path;
+	}
+
+	/**
+	 * Retrieve URL path to the plugin.
+	 *
+	 * @since 1.5.1
+	 * @param string $path Path to append.
+	 * @return string URL with optional path appended
+	 */
+	public function url( $path = '' ) {
+		return WPTELEGRAM_LOGIN_URL . $path;
+	}
+
+	/**
+	 * The suffix to use for plugin assets.
+	 *
+	 * @since 1.5.1
+	 *
+	 * @return string The suffix to use.
+	 */
+	public function suffix() {
+		return ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 	}
 
 	/**
@@ -341,15 +386,5 @@ class WPTelegram_Login {
 	 */
 	public function get_loader() {
 		return $this->loader;
-	}
-
-	/**
-	 * Retrieve the version number of the plugin.
-	 *
-	 * @since     1.0.0
-	 * @return    string    The version number of the plugin.
-	 */
-	public function get_version() {
-		return $this->version;
 	}
 }

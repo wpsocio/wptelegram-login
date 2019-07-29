@@ -6,7 +6,7 @@
 }
 #wptelegram-login-wrap {
     display: none;
-    position: absolute;
+    /* position: absolute; */
     padding: 0 24px;
     text-align: center;
 }
