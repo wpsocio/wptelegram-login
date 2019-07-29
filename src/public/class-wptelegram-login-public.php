@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The public-facing functionality of the plugin.
  *
@@ -23,58 +22,23 @@
 class WPTelegram_Login_Public {
 
 	/**
-	 * Title of the plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   protected
-	 * @var      string    $title    Title of the plugin
-	 */
-	protected $title;
-
-	/**
-	 * The ID of this plugin.
+	 * The plugin class instance.
 	 *
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string    $plugin_name    The ID of this plugin.
+	 * @var      WPTelegram_Login $plugin The plugin class instance.
 	 */
-	private $plugin_name;
-
-	/**
-	 * The version of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $version    The current version of this plugin.
-	 */
-	private $version;
-
-	/**
-	 * The suffix to be used for JS and CSS files
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $suffix    The suffix to be used for JS and CSS files
-	 */
-	private $suffix;
+	private $plugin;
 
 	/**
 	 * Initialize the class and set its properties.
 	 *
-	 * @since	1.0.0
-	 * 
-	 * @param 	string    $title		Title of the plugin
-	 * @param	string    $plugin_name	The name of the plugin.
-	 * @param	string    $version		The version of this plugin.
+	 * @since 1.0.0
+	 * @param WPTelegram_Login $plugin The plugin class instance.
 	 */
-	public function __construct( $title, $plugin_name, $version ) {
+	public function __construct( $plugin ) {
 
-		$this->title		= $title;
-		$this->plugin_name	= $plugin_name;
-		$this->version		= $version;
-
-		// Use minified libraries if SCRIPT_DEBUG is turned off
-		$this->suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+		$this->plugin = $plugin;
 	}
 
 	/**
@@ -86,17 +50,17 @@ class WPTelegram_Login_Public {
 
 		$hide_on_default = WPTG_Login()->options()->get( 'hide_on_default' );
 
-		if ( 'on' === $hide_on_default ) {
+		if ( $hide_on_default ) {
 			return;
 		}
 
 		if ( is_rtl() ) {
-			wp_enqueue_style( $this->plugin_name . '-login', WPTELEGRAM_LOGIN_URL . '/public/css/wptelegram-login-public-login-rtl' . $this->suffix . '.css', array(), $this->version );
+			wp_enqueue_style( $this->plugin->name() . '-login', $this->plugin->url( '/public/css/wptelegram-login-public-login-rtl' ) . $this->plugin->suffix() . '.css', array(), $this->plugin->version() );
 		} else {
-			wp_enqueue_style( $this->plugin_name . '-login', WPTELEGRAM_LOGIN_URL . '/public/css/wptelegram-login-public-login' . $this->suffix . '.css', array(), $this->version );
+			wp_enqueue_style( $this->plugin->name() . '-login', $this->plugin->url( '/public/css/wptelegram-login-public-login' ) . $this->plugin->suffix() . '.css', array(), $this->plugin->version() );
 		}
 
-		wp_enqueue_script( $this->plugin_name . '-login', WPTELEGRAM_LOGIN_URL . '/public/js/wptelegram-login-public-login' . $this->suffix . '.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin->name() . '-login', $this->plugin->url( '/public/js/wptelegram-login-public-login' ) . $this->plugin->suffix() . '.js', array( 'jquery' ), $this->plugin->version(), false );
 	}
 
 	/**
@@ -114,7 +78,7 @@ class WPTelegram_Login_Public {
 
 		do_action( 'wptelegram_login_init' );
 
-		$input = $_GET;
+		$input = $_GET; // phpcs:disable WordPress.Security.NonceVerification.Recommended
 
 		// Remove any unwanted fields.
 		$input = $this->filter_input_fields( $input );
@@ -127,12 +91,13 @@ class WPTelegram_Login_Public {
 			$wp_user_id = $this->save_telegram_user_data( $auth_data );
 
 		} catch ( Exception $e ) {
+			// phpcs:ignore WordPress.Security.EscapeOutput
 			wp_die( $e->getMessage(), __( 'Error:', 'wptelegram-login' ), array( 'back_link' => true ) );
 		}
 
 		$user = wp_get_current_user();
 
-		if ( ! $user->exists() ) { // ! is_user_logged_in()
+		if ( ! $user->exists() ) { // ! is user logge in
 
 			do_action( 'wptelegram_login_before_user_login', $wp_user_id );
 
@@ -142,9 +107,6 @@ class WPTelegram_Login_Public {
 			wp_set_auth_cookie( $wp_user_id, true );
 
 			do_action( 'wptelegram_login_after_user_login', $wp_user_id );
-
-			// now get the user object
-			// $user = wp_get_current_user();
 
 			/**
 			 * Fires after the user has successfully logged in.
@@ -184,7 +146,7 @@ class WPTelegram_Login_Public {
 	 *
 	 * @since    1.0.0
 	 *
-	 * @param  array $input
+	 * @param array $input The data passed.
 	 *
 	 * @return array
 	 */
@@ -210,7 +172,7 @@ class WPTelegram_Login_Public {
 	 *
 	 * @param array $auth_data The input data.
 	 *
-	 *@throws Exception
+	 * @throws Exception The exception.
 	 *
 	 * @return array
 	 */
@@ -248,6 +210,7 @@ class WPTelegram_Login_Public {
 	 * @since 1.0.0
 	 *
 	 * @param array $data The user data received from Telegram.
+	 * @throws Exception The exception.
 	 */
 	public function save_telegram_user_data( $data ) {
 
@@ -259,7 +222,6 @@ class WPTelegram_Login_Public {
 		// Check if the user is signing in again.
 		$ret_user = $this->is_returning_user( $data['id'] );
 
-		// If is_user_logged_in().
 		if ( $cur_user->exists() ) { // Logged in user.
 
 			// Signed in user and the Telegram user not same.
@@ -277,7 +239,6 @@ class WPTelegram_Login_Public {
 
 			// Whether to allow create new account.
 			$disable_signup = WPTG_Login()->options()->get( 'disable_signup' );
-			$disable_signup = ( 'on' === $disable_signup ) ? true : false;
 
 			$disable_signup = (bool) apply_filters( 'wptelegram_login_disable_signup', $disable_signup, $data );
 
@@ -297,14 +258,14 @@ class WPTelegram_Login_Public {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @para int $tg_user_id	Telegram User ID.
+	 * @param int $tg_user_id Telegram User ID.
 	 *
-	 * @return boolean|WP_User	User object or false
+	 * @return boolean|WP_User User object or false
 	 */
 	public function is_returning_user( $tg_user_id ) {
 		$args  = array(
-			'meta_key'   => "{$this->plugin_name}_user_id",
-			'meta_value' => $tg_user_id,
+			'meta_key'   => "{$this->plugin->name()}_user_id", // phpcs:ignore
+			'meta_value' => $tg_user_id, // phpcs:ignore
 			'number'     => 1,
 		);
 		$users = get_users( $args );
@@ -322,7 +283,7 @@ class WPTelegram_Login_Public {
 	 * @param  array    $data          The user details.
 	 * @param  int|NULL $ex_wp_user_id Existing WP User ID.
 	 *
-	 * @throws Exception
+	 * @throws Exception The exception.
 	 *
 	 * @return int|WP_Error The newly created user's ID or a WP_Error object if the user could not be created
 	 */
@@ -360,7 +321,7 @@ class WPTelegram_Login_Public {
 
 		} else { // Update.
 
-			$ID = $ex_wp_user_id;
+			$ID = $ex_wp_user_id; // phpcs:ignore WordPress.NamingConventions.ValidVariableName -- Ignore  snake_case
 
 			$userdata = compact( 'ID', 'first_name', 'last_name' );
 
@@ -374,7 +335,7 @@ class WPTelegram_Login_Public {
 		}
 
 		// Save the telegram user ID.
-		update_user_meta( $wp_user_id, "{$this->plugin_name}_user_id", $id );
+		update_user_meta( $wp_user_id, "{$this->plugin->name()}_user_id", $id );
 
 		if ( ! empty( $photo_url ) ) {
 			$meta_key = WPTG_Login()->options()->get( 'avatar_meta_key' );
@@ -415,15 +376,14 @@ class WPTelegram_Login_Public {
 	}
 
 	/**
-	 * Redirect the user to a proper location
+	 * Redirect the user to a proper location.
 	 *
-	 * @since    1.0.0
+	 * @since 1.0.0
 	 *
-	 * @param  WP_User $user The logged in user
+	 * @param WP_User $user The logged in user.
 	 */
 	private function redirect( $user ) {
-
-		$redirect_to = isset( $_REQUEST['redirect_to'] ) ? remove_query_arg( 'reauth', $_REQUEST['redirect_to'] ) : '';
+		$redirect_to = isset( $_REQUEST['redirect_to'] ) ? remove_query_arg( 'reauth', wp_unslash( $_REQUEST['redirect_to'] ) ) : ''; // phpcs:ignore
 
 		// Apply default WP filter.
 		$redirect_to = apply_filters( 'login_redirect', $redirect_to, $redirect_to, $user );
@@ -462,7 +422,7 @@ class WPTelegram_Login_Public {
 	public function add_telegram_login_button() {
 		$hide_on_default = WPTG_Login()->options()->get( 'hide_on_default' );
 		$show_if_user_is = WPTG_Login()->options()->get( 'show_if_user_is' );
-		if ( 'on' === $hide_on_default || ! self::is_to_be_displayed( $show_if_user_is ) ) {
+		if ( $hide_on_default || ! self::is_to_be_displayed( $show_if_user_is ) ) {
 			return;
 		}
 		?>
@@ -470,7 +430,7 @@ class WPTelegram_Login_Public {
 			<div class="wptelegram-login-or">
 				<span><?php esc_html_e( 'Or', 'wptelegram-login' ); ?></span>
 			</div>
-			<?php echo self::login_shortcode(); ?>
+			<?php echo self::login_shortcode(); // phpcs:ignore WordPress.Security.EscapeOutput ?>
 		</div>
 		<?php
 	}
@@ -479,6 +439,10 @@ class WPTelegram_Login_Public {
 	 * Render the login block.
 	 *
 	 * @since 1.5.0
+	 *
+	 * @param string $block_content The block HTML.
+	 * @param array  $block         The block data.
+	 * @return string The HTML.
 	 */
 	public function render_login_block( $block_content, $block ) {
 
@@ -501,7 +465,7 @@ class WPTelegram_Login_Public {
 
 		$defaults = array(
 			'button_style'    => 'large',
-			'show_user_photo' => 'on',
+			'show_user_photo' => '1',
 			'corner_radius'   => '',
 			'show_if_user_is' => 'logged_out',
 			'bot_username'    => '',
@@ -521,7 +485,7 @@ class WPTelegram_Login_Public {
 		}
 
 		// Default.
-		$redirect_to = isset( $_REQUEST['redirect_to'] ) ? $_REQUEST['redirect_to'] : home_url();
+		$redirect_to = isset( $_REQUEST['redirect_to'] ) ? $_REQUEST['redirect_to'] : home_url(); // phpcs:ignore
 
 		switch ( WPTG_Login()->options()->get( 'redirect_to' ) ) {
 			case 'homepage':
@@ -531,7 +495,7 @@ class WPTelegram_Login_Public {
 			case 'current_page':
 				global $pagenow;
 				// Prevent redirect to login page.
-				if ( 'wp-login.php' != $pagenow ) {
+				if ( 'wp-login.php' !== $pagenow ) {
 					$redirect_to = wp_get_current_url();
 				}
 				break;
@@ -550,7 +514,7 @@ class WPTelegram_Login_Public {
 
 		$button_style = $args['button_style'];
 
-		$show_user_photo = ( 'on' !== $args['show_user_photo'] ) ? false : true;
+		$show_user_photo = (bool) $args['show_user_photo'];
 
 		$corner_radius = $args['corner_radius'];
 
@@ -666,7 +630,7 @@ class WPTelegram_Login_Public {
 
 			// Check if user has one of the roles.
 			foreach ( $show_if_user_is as $role ) {
-				if ( in_array( $role, (array) $user->roles ) ) {
+				if ( in_array( $role, (array) $user->roles, true ) ) {
 					$display = true;
 					break;
 				}
@@ -755,6 +719,88 @@ class WPTelegram_Login_Public {
 			}
 		}
 		return $url;
+	}
+
+	/**
+	 * Do the necessary db upgrade, if needed
+	 *
+	 * @since    x.y.z
+	 */
+	public function do_upgrade() {
+
+		$current_version = get_option( 'wptelegram_login_ver', '1.5.0' );
+
+		if ( ! version_compare( $current_version, $this->plugin->version(), '<' ) ) {
+			return;
+		}
+
+		do_action( 'wptelegram_login_before_do_upgrade', $current_version );
+
+		// the sequential upgrades
+		// subsequent upgrade depends upon the previous one.
+		$version_upgrades = array(
+			'1.5.1', // first upgrade.
+		);
+
+		// always.
+		if ( ! in_array( $this->plugin->version(), $version_upgrades, true ) ) {
+			$version_upgrades[] = $this->plugin->version();
+		}
+
+		foreach ( $version_upgrades as $target_version ) {
+
+			if ( version_compare( $current_version, $target_version, '<' ) ) {
+
+				$this->upgrade_to( $target_version );
+
+				$current_version = $target_version;
+			}
+		}
+
+		do_action( 'wptelegram_login_after_do_upgrade', $current_version );
+	}
+
+	/**
+	 * Upgrade to a specific version
+	 *
+	 * @since x.y.z
+	 *
+	 * @param string $version The plugin verion to upgrade to.
+	 */
+	private function upgrade_to( $version ) {
+
+		// 2.0.1 becomes 201
+		$_version = str_replace( '.', '', $version );
+
+		$method = array( $this, "upgrade_to_{$_version}" );
+
+		if ( is_callable( $method ) ) {
+
+			call_user_func( $method );
+		}
+
+		update_option( 'wptelegram_login_ver', $version );
+	}
+
+	/**
+	 * Upgrade to version 1.5.1
+	 *
+	 * @since    1.5.1
+	 */
+	private function upgrade_to_151() {
+
+		$options = array(
+			'disable_signup',
+			'show_user_photo',
+			'hide_on_default',
+			'show_message_on_error',
+		);
+
+		// Convert checkboxes to boolean.
+		foreach ( $options as $key ) {
+			$value = WPTG_Login()->options()->get( $key );
+			WPTG_Login()->options()->set( $key, 'on' === $value );
+		}
 	}
 
 	/**

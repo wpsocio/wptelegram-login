@@ -1,6 +1,6 @@
 <?php
-
 /**
+ * The main plugin file.
  *
  * @link              https://t.me/manzoorwanijk
  * @since             1.0.0
@@ -73,12 +73,12 @@ require WPTELEGRAM_LOGIN_DIR . '/includes/class-wptelegram-login.php';
  *
  * @since    1.0.0
  */
-function WPTG_Login() {
+function WPTG_Login() { // phpcs:ignore WordPress.NamingConventions.ValidFunctionName -- Ignore  snake_case
 
 	return WPTelegram_Login::instance();
 }
 
-// Fire
+// Fire.
 WPTG_Login();
 
 define( 'WPTELEGRAM_LOGIN_LOADED', true );

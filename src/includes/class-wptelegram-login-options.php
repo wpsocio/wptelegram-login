@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Handles the options access of the plugin
  *
@@ -40,11 +39,11 @@ class WPTelegram_Login_Options implements Iterator, ArrayAccess {
 	 * Constructor.
 	 *
 	 * @since 1.0.0
-	 * 
-	 * @param	string	$option_key
+	 *
+	 * @param string $option_key The option key name.
 	 */
 	public function __construct( $option_key = '' ) {
-		// make sure we have an array to avoid adding values to null
+		// Make sure we have an array to avoid adding values to null.
 		$this->data = array();
 
 		if ( ! empty( $option_key ) ) {
@@ -53,11 +52,11 @@ class WPTelegram_Login_Options implements Iterator, ArrayAccess {
 	}
 
 	/**
-	 * Checks if an option key exists
+	 * Checks if an option key exists.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string $key Option key
+	 * @param string $key Option key.
 	 *
 	 * @return bool Whether the option key exists.
 	 */
@@ -66,14 +65,14 @@ class WPTelegram_Login_Options implements Iterator, ArrayAccess {
 	}
 
 	/**
-	 * Retrieves an option by key
+	 * Retrieves an option by key.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $key	 Options array key
-	 * @param  mixed  $default Optional default value
+	 * @param string $key     Options array key.
+	 * @param mixed  $default Optional default value.
 	 *
-	 * @return mixed		   Option value
+	 * @return mixed Option value
 	 */
 	public function get( $key = '', $default = false ) {
 		if ( 'all' === $key || empty( $key ) ) {
@@ -86,14 +85,14 @@ class WPTelegram_Login_Options implements Iterator, ArrayAccess {
 	}
 
 	/**
-	 * Sets an option by key
+	 * Sets an option by key.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $key	 Options array key
-	 * @param  mixed  $value Option value
+	 * @param string $key   Options array key.
+	 * @param mixed  $value Option value.
 	 *
-	 * @return mixed		   Option value
+	 * @return mixed Option value
 	 */
 	public function set( $key, $value = '' ) {
 
@@ -107,15 +106,13 @@ class WPTelegram_Login_Options implements Iterator, ArrayAccess {
 	}
 
 	/**
-	 * Unset/remove an option by key
+	 * Remove an option by key.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $key	 Options array key
-	 *
-	 * @return mixed		   Option value
+	 * @param string $key Options array key.
 	 */
-	public function _unset( $key ) {
+	public function remove( $key ) {
 
 		unset( $this->data[ $offset ] );
 
@@ -132,11 +129,11 @@ class WPTelegram_Login_Options implements Iterator, ArrayAccess {
 	}
 
 	/**
-	 * Set the option key
+	 * Set the option key.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string $option_key Option name in the database
+	 * @param string $option_key Option name in the database.
 	 */
 	public function set_option_key( $option_key ) {
 		$this->option_key = $option_key;
@@ -159,6 +156,7 @@ class WPTelegram_Login_Options implements Iterator, ArrayAccess {
 	 *
 	 * @since 1.0.0
 	 *
+	 * @param array $options The options array.
 	 */
 	public function set_data( array $options = array() ) {
 		if ( empty( $options ) && ! empty( $this->option_key ) ) {
@@ -171,7 +169,7 @@ class WPTelegram_Login_Options implements Iterator, ArrayAccess {
 	}
 
 	/**
-	 * Updates the options in the database
+	 * Updates the options in the database.
 	 *
 	 * @since 1.0.0
 	 */
@@ -186,11 +184,11 @@ class WPTelegram_Login_Options implements Iterator, ArrayAccess {
 	}
 
 	/**
-	 * Magic method for accessing options as object props
+	 * Magic method for accessing options as object props.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string $key Options array key
+	 * @param string $key Options array key.
 	 *
 	 * @return mixed Value of the option
 	 */
@@ -199,34 +197,34 @@ class WPTelegram_Login_Options implements Iterator, ArrayAccess {
 	}
 
 	/**
-	 * Magic method for setting options as object props
+	 * Magic method for setting options as object props.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string $key	Options array key
-	 * @param string $value	Option value
+	 * @param string $key   Options array key.
+	 * @param string $value Option value.
 	 */
 	public function __set( $key, $value ) {
 		return $this->set( $key, $value );
 	}
 
 	/**
-	 * Magic method for un-setting options as object props
+	 * Magic method for un-setting options as object props.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string $key	Options array key
+	 * @param string $key Options array key.
 	 */
 	public function __unset( $key ) {
 		return $this->_unset( $key );
 	}
 
 	/**
-	 * Magic method to check for existence of a key
+	 * Magic method to check for existence of a key.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string $key	Options array key
+	 * @param string $key Options array key.
 	 */
 	public function __isset( $key ) {
 		return $this->exists( $key );
@@ -234,13 +232,13 @@ class WPTelegram_Login_Options implements Iterator, ArrayAccess {
 
 	/**
 	 * Allows the object being called as a function
-	 * to retrieve an option
+	 * to retrieve an option.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $key	 Options array key
+	 * @param string $key Options array key.
 	 *
-	 * @return mixed		 Option value
+	 * @return mixed Option value.
 	 */
 	public function __invoke( $key ) {
 		return $this->get( $key );
@@ -251,12 +249,12 @@ class WPTelegram_Login_Options implements Iterator, ArrayAccess {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @return string		   json encoded
+	 * @return string json encoded.
 	 */
 	public function __toString() {
-		return json_encode( $this->get_data() );
+		return json_encode( $this->get_data() ); // phpcs:ignore WordPress.WP.AlternativeFunctions
 	}
- 
+
 	/**
 	 * Determines whether an offset value exists.
 	 *

@@ -22,56 +22,23 @@
 class WPTelegram_Login_Admin {
 
 	/**
-	 * Title of the plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   protected
-	 * @var      string    $title    Title of the plugin
-	 */
-	protected $title;
-
-	/**
-	 * The ID of this plugin.
+	 * The plugin class instance.
 	 *
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string    $plugin_name    The ID of this plugin.
+	 * @var      WPTelegram_Login $plugin The plugin class instance.
 	 */
-	private $plugin_name;
-
-	/**
-	 * The version of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $version    The current version of this plugin.
-	 */
-	private $version;
-
-	/**
-	 * The suffix to be used for JS and CSS files
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $suffix    The suffix to be used for JS and CSS files
-	 */
-	private $suffix;
+	private $plugin;
 
 	/**
 	 * Initialize the class and set its properties.
 	 *
 	 * @since 1.0.0
-	 * @param string $title       Title of the plugin.
-	 * @param string $plugin_name The name of the plugin.
-	 * @param string $version     The version of this plugin.
+	 * @param WPTelegram_Login $plugin The plugin class instance.
 	 */
-	public function __construct( $title, $plugin_name, $version ) {
-		$this->title       = $title;
-		$this->plugin_name = $plugin_name;
-		$this->version     = $version;
+	public function __construct( $plugin ) {
 
-		// Use minified libraries if SCRIPT_DEBUG is turned off.
-		$this->suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+		$this->plugin = $plugin;
 	}
 
 	/**
@@ -84,9 +51,7 @@ class WPTelegram_Login_Admin {
 
 		// Load only on settings page.
 		if ( $this->is_settings_page( $hook_suffix ) ) {
-			wp_enqueue_style( $this->plugin_name . '-bootstrap', WPTELEGRAM_LOGIN_URL . '/admin/css/bootstrap/bootstrap' . $this->suffix . '.css', array(), $this->version, 'all' );
-
-			wp_dequeue_style( 'forms-css' );
+			wp_enqueue_style( $this->plugin->name() . '-bootstrap', $this->plugin->url( '/admin/css/bootstrap/bootstrap' ) . $this->plugin->suffix() . '.css', array(), $this->plugin->version(), 'all' );
 		}
 	}
 
@@ -98,13 +63,13 @@ class WPTelegram_Login_Admin {
 	 */
 	public function enqueue_scripts( $hook_suffix ) {
 
-		wp_enqueue_script( $this->plugin_name, WPTELEGRAM_LOGIN_URL . '/admin/js/wptelegram-login-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin->name(), $this->plugin->url( '/admin/js/wptelegram-login-admin' ) . $this->plugin->suffix() . '.js', array( 'jquery' ), $this->plugin->version(), false );
 
 		// script localization.
 		$translation_array = array(
-			'title'   => $this->title,
-			'name'    => $this->plugin_name,
-			'version' => $this->version,
+			'title'   => $this->plugin->title(),
+			'name'    => $this->plugin->name(),
+			'version' => $this->plugin->version(),
 			'api'     => array(
 				'ajax' => array(
 					'nonce' => wp_create_nonce( 'wptelegram-login' ),
@@ -119,7 +84,7 @@ class WPTelegram_Login_Admin {
 		);
 
 		wp_localize_script(
-			$this->plugin_name,
+			$this->plugin->name(),
 			'wptelegram_login',
 			$translation_array
 		);
@@ -127,15 +92,18 @@ class WPTelegram_Login_Admin {
 		// Load only on settings page.
 		if ( $this->is_settings_page( $hook_suffix ) ) {
 
-			wp_enqueue_script( $this->plugin_name . '-settings', WPTELEGRAM_LOGIN_URL . '/admin/settings/settings-build' . $this->suffix . '.js', array( 'jquery' ), $this->version, true );
+			// Avoid caching for development.
+			$version = defined( 'WPTELEGRAM_DEV' ) && WPTELEGRAM_DEV ? date( 'y.m.d-is', filemtime( $this->plugin->dir( '/admin/settings/settings-build.js' ) ) ) : $this->plugin->version();
+
+			wp_enqueue_script( $this->plugin->name() . '-settings', $this->plugin->url( '/admin/settings/settings-build' ) . $this->plugin->suffix() . '.js', array( 'jquery' ), $version, true );
 
 			// Pass data to JS.
 			$data = array(
 				'settings' => array(
 					'saved_opts'  => current_user_can( 'manage_options' ) ? WPTelegram_Login_Settings_Controller::get_default_settings() : array(), // Not to expose bot token to non-admins.
 					'assets'      => array(
-						'logo_url' => WPTELEGRAM_LOGIN_URL . '/admin/icons/icon-100x100.svg',
-						'tg_icon'  => WPTELEGRAM_LOGIN_URL . '/admin/icons/tg-icon.svg',
+						'logo_url' => $this->plugin->url( '/admin/icons/icon-100x100.svg' ),
+						'tg_icon'  => $this->plugin->url( '/admin/icons/tg-icon.svg' ),
 					),
 					'select_opts' => array(
 						'user_role'       => self::user_role_options_cb(),
@@ -146,14 +114,14 @@ class WPTelegram_Login_Admin {
 			);
 
 			wp_add_inline_script(
-				$this->plugin_name,
-				sprintf( 'Object.assign(wptelegram_login, %s);', json_encode( $data ) ),
+				$this->plugin->name(),
+				sprintf( 'Object.assign(wptelegram_login, %s);', json_encode( $data ) ), // phpcs:ignore WordPress.WP.AlternativeFunctions
 				'before'
 			);
 
 			// For Facebook like button.
 			wp_add_inline_script(
-				$this->plugin_name . '-settings',
+				$this->plugin->name() . '-settings',
 				'(function(d, s, id) {'
 				. '  var js, fjs = d.getElementsByTagName(s)[0];'
 				. '  if (d.getElementById(id)) return;'
@@ -165,7 +133,7 @@ class WPTelegram_Login_Admin {
 			);
 
 			// For Twitter Follow button.
-			wp_enqueue_script( $this->plugin_name . '-twitter', 'https://platform.twitter.com/widgets.js', array(), $this->version, true );
+			wp_enqueue_script( $this->plugin->name() . '-twitter', 'https://platform.twitter.com/widgets.js', array(), $this->plugin->version(), true );
 		}
 
 		// If the block editor assets are loaded.
@@ -173,8 +141,8 @@ class WPTelegram_Login_Admin {
 			$data = array(
 				'blocks' => array(
 					'assets'      => array(
-						'login_image_url'  => WPTELEGRAM_LOGIN_URL . '/admin/icons/telegram-login.svg',
-						'login_avatar_url' => WPTELEGRAM_LOGIN_URL . '/admin/icons/telegram-login-avatar.svg',
+						'login_image_url'  => $this->plugin->url( '/admin/icons/telegram-login.svg' ),
+						'login_avatar_url' => $this->plugin->url( '/admin/icons/telegram-login-avatar.svg' ),
 					),
 					'select_opts' => array(
 						'show_if_user_is' => self::get_show_if_user_is_options( true ),
@@ -183,8 +151,8 @@ class WPTelegram_Login_Admin {
 			);
 
 			wp_add_inline_script(
-				$this->plugin_name,
-				sprintf( 'Object.assign(wptelegram_login, %s);', json_encode( $data ) ),
+				$this->plugin->name(),
+				sprintf( 'Object.assign(wptelegram_login, %s);', json_encode( $data ) ), // phpcs:ignore WordPress.WP.AlternativeFunctions
 				'before'
 			);
 		}
@@ -202,9 +170,10 @@ class WPTelegram_Login_Admin {
 	 * @return string
 	 */
 	public function format_twitter_script_tag( $tag, $handle, $src ) {
-		if ( $this->plugin_name . '-twitter' !== $handle ) {
+		if ( $this->plugin->name() . '-twitter' !== $handle ) {
 			return $tag;
 		}
+		// phpcs:ignore WordPress.WP.EnqueuedResources
 		return '<script async src="' . $src . '" charset="utf-8"></script>' . PHP_EOL;
 	}
 
@@ -215,7 +184,7 @@ class WPTelegram_Login_Admin {
 	 * @param string $hook_suffix The current admin page.
 	 */
 	public function is_settings_page( $hook_suffix ) {
-		return ( false !== strpos( $hook_suffix, '_page_' . $this->plugin_name ) );
+		return ( false !== strpos( $hook_suffix, '_page_' . $this->plugin->name() ) );
 	}
 
 	/**
@@ -226,17 +195,17 @@ class WPTelegram_Login_Admin {
 	public function enqueue_block_editor_assets() {
 
 		wp_enqueue_style(
-			$this->plugin_name . '-block',
-			WPTELEGRAM_LOGIN_URL . '/admin/blocks/blocks-build' . $this->suffix . '.css',
+			$this->plugin->name() . '-block',
+			$this->plugin->url( '/admin/blocks/blocks-build' ) . $this->plugin->suffix() . '.css',
 			array( 'wp-edit-blocks' ),
-			$this->version
+			$this->plugin->version()
 		);
 
 		wp_enqueue_script(
-			$this->plugin_name . '-block',
-			WPTELEGRAM_LOGIN_URL . '/admin/blocks/blocks-build' . $this->suffix . '.js',
+			$this->plugin->name() . '-block',
+			$this->plugin->url( '/admin/blocks/blocks-build' ) . $this->plugin->suffix() . '.js',
 			array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor' ),
-			$this->version,
+			$this->plugin->version(),
 			true
 		);
 	}
@@ -261,20 +230,20 @@ class WPTelegram_Login_Admin {
 		if ( defined( 'WPTELEGRAM_LOADED' ) && WPTELEGRAM_LOADED ) {
 			add_submenu_page(
 				'wptelegram',
-				esc_html( $this->title ),
+				esc_html( $this->plugin->title() ),
 				esc_html__( 'Telegram Login', 'wptelegram-login' ),
 				'manage_options',
-				$this->plugin_name,
+				$this->plugin->name(),
 				array( $this, 'display_plugin_admin_page' )
 			);
 		} else {
 			add_menu_page(
-				esc_html( $this->title ),
-				esc_html( $this->title ),
+				esc_html( $this->plugin->title() ),
+				esc_html( $this->plugin->title() ),
 				'manage_options',
-				$this->plugin_name,
+				$this->plugin->name(),
 				array( $this, 'display_plugin_admin_page' ),
-				WPTELEGRAM_LOGIN_URL . '/admin/icons/icon-16x16-white.svg'
+				$this->plugin->url( '/admin/icons/icon-16x16-white.svg' )
 			);
 		}
 	}
