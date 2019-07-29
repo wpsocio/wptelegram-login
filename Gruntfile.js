@@ -271,7 +271,7 @@ module.exports = function(grunt) {
 			options: {
 				phpCmd: '/usr/bin/php5.6',
 	            phpArgs: {
-					'-d': ['display_errors', 'display_startup_errors']
+								'-d': ['display_errors', 'display_startup_errors']
 	            }
 	        },
 	        all: {
@@ -292,8 +292,10 @@ module.exports = function(grunt) {
 				expand: true,
 				cwd: SOURCE_DIR,
 				src: [
+					'admin/js/*.js',
+					'!admin/js/*.min.js',
 					'public/js/*.js',
-					'!public/js/*.min.js'
+					'!public/js/*.min.js',
 				],
 				// Remove once other JSHint errors are resolved
 				options: {
@@ -315,6 +317,7 @@ module.exports = function(grunt) {
 				src: [
 					'admin/blocks/*.js',
 					'admin/settings/*.js',
+					'admin/js/*.js',
 					'public/js/*.js',
 
 					// Exceptions
@@ -330,9 +333,9 @@ module.exports = function(grunt) {
 			}
 		},
 		webpack: {
-	      blocks: webpackConfig.blocks,
-	      settings: webpackConfig.settings,
-	    },
+			blocks: webpackConfig.blocks,
+			settings: webpackConfig.settings,
+		},
 		_watch: {
 			options: {
 				interval: 2000
@@ -351,7 +354,6 @@ module.exports = function(grunt) {
 			},
 			js: {
 				files: [
-					SOURCE_DIR + 'admin/js/*.js',
 					SOURCE_DIR + 'public/js/*.js'
 				],
 				tasks: ['clean:dynamic', 'copy:dynamic', 'uglify:dynamic'],
