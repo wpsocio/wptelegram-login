@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project are documented in this file.
 
+## Unreleased
+### Bug Fixes
+* Fixed the wrong shortcode atts
+
 ## [1.5.1 - 2019-07-29](https://github.com/manzoorwanijk/wptelegram/releases/tag/v1.5.1)
 ### Bug Fixes
 * Fixed the 404 for for admin css

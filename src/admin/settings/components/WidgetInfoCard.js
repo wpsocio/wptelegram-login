@@ -26,7 +26,7 @@ export default () => {
 					{ __( 'Inside page or post content:' ) }
 				</ListGroup.Item>
 				<ListGroup.Item variant="light" className="text-monospace text-left">
-					<Code>{ '[wptelegram-login button_style="large" show_user_photo="on" corner_radius="15"]' }</Code>
+					<Code>{ '[wptelegram-login button_style="large" show_user_photo="1" corner_radius="15"]' }</Code>
 				</ListGroup.Item>
 				<ListGroup.Item className="font-weight-bold text-secondary">
 					{ __( 'Inside the theme templates' ) }
@@ -36,7 +36,7 @@ export default () => {
 					<br />
 					<span className="font-weight-bold text-secondary">{ __( 'or' ) }</span>
 					<br />
-					<Code>{ `<?php\necho do_shortCode( \'[wptelegram-login button_style="small" show_user_photo="off" show_if_user_is="logged_in"]\' );\n?>` }</Code>
+					<Code>{ `<?php\necho do_shortCode( \'[wptelegram-login button_style="small" show_user_photo="0" show_if_user_is="logged_in"]\' );\n?>` }</Code>
 				</ListGroup.Item>
 			</ListGroup>
 			<Card.Footer><span role="img" aria-label="Smile">🙂</span></Card.Footer>

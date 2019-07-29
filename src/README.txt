@@ -50,7 +50,7 @@ Alternately, you can use the below shortcode.
 
 Inside page or post content:
 
-`[wptelegram-login button_style="large" show_user_photo="on" corner_radius="15" show_if_user_is="logged_in"]`
+`[wptelegram-login button_style="large" show_user_photo="1" corner_radius="15" show_if_user_is="logged_in"]`
 
 Inside the theme templates
 ~~~
@@ -71,7 +71,7 @@ or
 
 ~~~
 <?php
-    echo do_shortcode( '[wptelegram-login button_style="small" show_user_photo="off" show_if_user_is="logged_in"]' );
+    echo do_shortcode( '[wptelegram-login button_style="small" show_user_photo="0" show_if_user_is="logged_in"]' );
 ?>
 ~~~
 
