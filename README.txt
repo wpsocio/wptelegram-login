@@ -5,7 +5,7 @@ Tags: telegram, login, register, social, signup
 Requires at least: 4.7.0
 Tested up to: 5.2.2
 Requires PHP: 5.6
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,17 +50,17 @@ Alternately, you can use the below shortcode.
 
 Inside page or post content:
 
-`[wptelegram-login button_style="large" show_user_photo="on" corner_radius="15" show_if_user_is="logged_in"]`
+`[wptelegram-login button_style="large" show_user_photo="1" corner_radius="15" show_if_user_is="logged_in"]`
 
 Inside the theme templates
 ~~~
 <?php
 if ( function_exists( 'wptelegram_login' ) ) {
     $args = array(
-        // 'show_user_photo'    => 'off',
-        // 'corner_radius'      => 15,
-        // 'button_style'       => 'large',
-        // 'show_if_user_is'    => 'logged_out',
+        // 'show_user_photo' => false,
+        // 'corner_radius'   => 15,
+        // 'button_style'    => 'large',
+        // 'show_if_user_is' => 'logged_out',
     );
 
     wptelegram_login( $args );
@@ -71,7 +71,7 @@ or
 
 ~~~
 <?php
-    echo do_shortcode( '[wptelegram-login button_style="small" show_user_photo="off" show_if_user_is="logged_in"]' );
+    echo do_shortcode( '[wptelegram-login button_style="small" show_user_photo="0" show_if_user_is="logged_in"]' );
 ?>
 ~~~
 
@@ -121,6 +121,10 @@ Many thanks to the translators for the great job!
 7. User List Table (for admin)
 
 == Changelog ==
+
+= 1.5.2 =
+* Fixed the wrong shortcode atts
+* Fixed the regenerator-runtime issue
 
 = 1.5.1 =
 * Fixed the 404 for for admin css
