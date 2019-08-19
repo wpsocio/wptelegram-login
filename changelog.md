@@ -1,9 +1,10 @@
 # Changelog
 All notable changes to this project are documented in this file.
 
-## Unreleased
+## [1.5.2 - 2019-08-19](https://github.com/manzoorwanijk/wptelegram/releases/tag/v1.5.2)
 ### Bug Fixes
 * Fixed the wrong shortcode atts
+* Fixed the regenerator-runtime issue
 
 ## [1.5.1 - 2019-07-29](https://github.com/manzoorwanijk/wptelegram/releases/tag/v1.5.1)
 ### Bug Fixes

@@ -19,4 +19,4 @@
 	};
 
 	$( app1.init );
-}( jQuery ) );
+}( jQuery ) ); /* global jQuery */

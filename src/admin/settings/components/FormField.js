@@ -24,8 +24,9 @@ export default ( props ) => {
 	}
 
 	return (
-		<FieldWrapper { ...{ label, desc, after, controlProps } }>
+		<FieldWrapper { ...{ label, after, controlProps } }>
 			{ field }
+			{ desc ? <HelpText>{ desc }</HelpText> : null }
 		</FieldWrapper>
 	);
 };
@@ -92,7 +93,7 @@ const fieldComponent = ( props ) => {
 };
 
 const FieldWrapper = ( props ) => {
-	const { label, desc, before, after, controlProps, children } = props;
+	const { label, before, after, controlProps, children } = props;
 	return (
 		<ListGroup.Item>
 			<Form.Group as={ Row }>
@@ -102,7 +103,6 @@ const FieldWrapper = ( props ) => {
 				<Col sm={ 9 }>
 					{ before }
 					{ children }
-					{ desc ? <HelpText>{ desc }</HelpText> : null }
 					{ after }
 				</Col>
 			</Form.Group>
