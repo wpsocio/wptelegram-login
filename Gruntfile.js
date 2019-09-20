@@ -503,8 +503,9 @@ module.exports = function( grunt ) {
 								if ( ! version ) {
 									grunt.warn( 'No version number set!' );
 								}
+								const { config } = grunt;
 								var today = new Date();
-								var replace = '[' + version + ' - ' + today.getFullYear() + '-' + ( '0' + ( today.getMonth() + 1 ) ).slice( -2 ) + '-' + today.getDate() + '](https://github.com/manzoorwanijk/wptelegram/releases/tag/v' + version + ')';
+								var replace = '[' + version + ' - ' + today.getFullYear() + '-' + ( '0' + ( today.getMonth() + 1 ) ).slice( -2 ) + '-' + today.getDate() + '](https://github.com/manzoorwanijk/' + config( [ 'pkg', 'name' ] ) + '/releases/tag/v' + version + ')';
 								return match.replace( p1, replace );
 							},
 						},
