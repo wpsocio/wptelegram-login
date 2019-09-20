@@ -32,7 +32,7 @@ export const submitForm = async ( values ) => {
 							errors[ key ] = getErrorMessage( key );
 						} );
 					} else if ( 'rest_missing_callback_param' === code ) {
-						Object.keys( data.params ).forEach( ( key ) => {
+						data.params.forEach( ( key ) => {
 							errors[ key ] = getErrorMessage( key, 'required' );
 						} );
 					}
