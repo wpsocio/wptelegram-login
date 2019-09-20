@@ -789,6 +789,10 @@ class WPTelegram_Login_Public {
 	 */
 	private function upgrade_to_151() {
 
+		if ( empty( WPTG_Login()->options()->get_data() ) ) {
+			return;
+		}
+
 		$options = array(
 			'disable_signup',
 			'show_user_photo',

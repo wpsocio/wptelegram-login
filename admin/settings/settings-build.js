@@ -13586,7 +13586,7 @@ function () {
                         errors[key] = fields_getErrorMessage(key);
                       });
                     } else if ('rest_missing_callback_param' === code) {
-                      Object.keys(data.params).forEach(function (key) {
+                      data.params.forEach(function (key) {
                         errors[key] = fields_getErrorMessage(key, 'required');
                       });
                     }

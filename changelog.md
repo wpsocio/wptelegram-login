@@ -1,12 +1,16 @@
 # Changelog
 All notable changes to this project are documented in this file.
 
-## [1.5.2 - 2019-08-19](https://github.com/manzoorwanijk/wptelegram/releases/tag/v1.5.2)
+## [1.5.3 - 2019-09-20](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.5.3)
+### Bug Fixes
+* Fixed the issue with default values not shown for fresh installs
+
+## [1.5.2 - 2019-08-19](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.5.2)
 ### Bug Fixes
 * Fixed the wrong shortcode atts
 * Fixed the regenerator-runtime issue
 
-## [1.5.1 - 2019-07-29](https://github.com/manzoorwanijk/wptelegram/releases/tag/v1.5.1)
+## [1.5.1 - 2019-07-29](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.5.1)
 ### Bug Fixes
 * Fixed the 404 for for admin css
 * Fixed the ajax error caused by WordFence
@@ -16,7 +20,7 @@ All notable changes to this project are documented in this file.
 ### Enhancements
 * Switched to WPCS in JS.
 
-## [1.5.0 - 2019-07-18](https://github.com/manzoorwanijk/wptelegram/releases/tag/v1.5.0)
+## [1.5.0 - 2019-07-18](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.5.0)
 ### Enhancements
 * Removed the CMB2 dependency
 * Migrated to React for settings page
