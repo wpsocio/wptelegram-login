@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project are documented in this file.
 
+## [1.5.4 - 2019-10-23](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.5.4)
+### Enhancements
+* Added some more hooks to login flow
+* Updated bot token pattern
+
 ## [1.5.3 - 2019-09-20](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.5.3)
 ### Bug Fixes
 * Fixed the issue with default values not shown for fresh installs

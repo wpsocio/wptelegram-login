@@ -238,7 +238,7 @@ class WPTelegram_Login_Settings_Controller extends WPTelegram_Login_REST_Control
 	public static function validate_param( $value, WP_REST_Request $request, $key ) {
 		switch ( $key ) {
 			case 'bot_token':
-				$pattern = '/\A\d{9}:[\w-]{35}\Z/';
+				$pattern = '/\A\d{9,11}:[\w-]{35}\Z/';
 				break;
 			case 'bot_username':
 				$pattern = '/\A[a-z]\w{3,30}[^\W_]\Z/i';

@@ -90,6 +90,8 @@ class WPTelegram_Login_Public {
 
 			$wp_user_id = $this->save_telegram_user_data( $auth_data );
 
+			do_action( 'wptelegram_login_after_save_user_data', $wp_user_id, $auth_data );
+
 		} catch ( Exception $e ) {
 			// phpcs:ignore WordPress.Security.EscapeOutput
 			wp_die( $e->getMessage(), __( 'Error:', 'wptelegram-login' ), array( 'back_link' => true ) );
@@ -319,6 +321,8 @@ class WPTelegram_Login_Public {
 
 			$wp_user_id = wp_insert_user( $userdata );
 
+			do_action( 'wptelegram_login_after_insert_user', $wp_user_id, $userdata );
+
 		} else { // Update.
 
 			$ID = $ex_wp_user_id; // phpcs:ignore WordPress.NamingConventions.ValidVariableName -- Ignore  snake_case
@@ -328,6 +332,8 @@ class WPTelegram_Login_Public {
 			$userdata = apply_filters( 'wptelegram_login_update_user_data', $userdata );
 
 			$wp_user_id = wp_update_user( $userdata );
+
+			do_action( 'wptelegram_login_after_update_user', $wp_user_id, $userdata );
 		}
 
 		if ( is_wp_error( $wp_user_id ) ) {
@@ -343,6 +349,9 @@ class WPTelegram_Login_Public {
 				update_user_meta( $wp_user_id, $meta_key, esc_url_raw( $photo_url ) );
 			}
 		}
+
+		do_action( 'wptelegram_login_after_update_user_meta', $wp_user_id );
+
 		return $wp_user_id;
 	}
 

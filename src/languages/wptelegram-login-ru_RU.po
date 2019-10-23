@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wptelegram-login\n"
-"POT-Creation-Date: 2019-07-29 09:45:09+00:00\n"
+"POT-Creation-Date: 2019-10-23 06:01:11+00:00\n"
 "PO-Revision-Date: 2019-02-08 22:46+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
@@ -348,19 +348,19 @@ msgstr "Выводить сообщение об ошибке"
 msgid "Error message text"
 msgstr "Текст ошибки"
 
-#: public/class-wptelegram-login-public.php:95
+#: public/class-wptelegram-login-public.php:97
 msgid "Error:"
 msgstr "Ошибка:"
 
-#: public/class-wptelegram-login-public.php:198
+#: public/class-wptelegram-login-public.php:200
 msgid "Unauthorized! Data is NOT from Telegram"
 msgstr "Несанкционированный! Данные НЕ из Telegram"
 
-#: public/class-wptelegram-login-public.php:202
+#: public/class-wptelegram-login-public.php:204
 msgid "Invalid! The data is outdated"
 msgstr "Ошибка! Данные устарели"
 
-#: public/class-wptelegram-login-public.php:229
+#: public/class-wptelegram-login-public.php:231
 msgid ""
 "The Telegram User ID is already associated with another existing user. "
 "Please contact the admin"
@@ -368,7 +368,7 @@ msgstr ""
 "Идентификатор пользователя Telegram уже связан с другой существующей учетной "
 "записью. Пожалуйста, свяжитесь с администратором"
 
-#: public/class-wptelegram-login-public.php:247
+#: public/class-wptelegram-login-public.php:249
 msgid ""
 "Sign up via Telegram is disabled. You must first create an account and "
 "connect it to Telegram to be able to use Telegram Login"
@@ -377,11 +377,11 @@ msgstr ""
 "запись и подключить к ней Telegram, чтобы иметь возможность входа через "
 "Telegram"
 
-#: public/class-wptelegram-login-public.php:334
+#: public/class-wptelegram-login-public.php:340
 msgid "Telegram sign in could not be completed."
 msgstr "Не удалось выполнить вход через Telegram."
 
-#: public/class-wptelegram-login-public.php:431
+#: public/class-wptelegram-login-public.php:440
 msgid "Or"
 msgstr "ИЛИ"
 
