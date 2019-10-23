@@ -12,22 +12,22 @@ msgid "Button Settings"
 msgstr ""
 
 #: src/admin/blocks/telegram-login/block.js:76
-#: src/admin/settings/fields.js:73
+#: src/admin/settings/fields.js:79
 msgid "Button Style"
 msgstr ""
 
 #: src/admin/blocks/telegram-login/block.js:86
-#: src/admin/settings/fields.js:74
+#: src/admin/settings/fields.js:80
 msgid "Show User Photo"
 msgstr ""
 
 #: src/admin/blocks/telegram-login/block.js:91
-#: src/admin/settings/fields.js:75
+#: src/admin/settings/fields.js:81
 msgid "Corner Radius"
 msgstr ""
 
 #: src/admin/blocks/telegram-login/block.js:99
-#: src/admin/settings/fields.js:76
+#: src/admin/settings/fields.js:82
 msgid "Show if user is"
 msgstr ""
 
@@ -138,7 +138,7 @@ msgid "Current page"
 msgstr ""
 
 #: src/admin/settings/components/SettingsForm.js:132
-#: src/admin/settings/fields.js:71
+#: src/admin/settings/fields.js:77
 msgid "Custom URL"
 msgstr ""
 
@@ -252,50 +252,50 @@ msgstr ""
 msgid "or"
 msgstr ""
 
-#: src/admin/settings/fields.js:52
+#: src/admin/settings/fields.js:58
 msgid "Invalid %s"
 msgstr ""
 
-#: src/admin/settings/fields.js:55
+#: src/admin/settings/fields.js:61
 msgid "%s is required."
 msgstr ""
 
-#: src/admin/settings/fields.js:59
+#: src/admin/settings/fields.js:65
 msgid "Changes could not be saved."
 msgstr ""
 
-#: src/admin/settings/fields.js:66
+#: src/admin/settings/fields.js:72
 msgid "Bot Token"
 msgstr ""
 
-#: src/admin/settings/fields.js:67
+#: src/admin/settings/fields.js:73
 msgid "Bot Username"
 msgstr ""
 
-#: src/admin/settings/fields.js:68
+#: src/admin/settings/fields.js:74
 msgid "Sign up"
 msgstr ""
 
-#: src/admin/settings/fields.js:69
+#: src/admin/settings/fields.js:75
 msgid "User Role"
 msgstr ""
 
-#: src/admin/settings/fields.js:70
+#: src/admin/settings/fields.js:76
 msgid "Redirect to"
 msgstr ""
 
-#: src/admin/settings/fields.js:72
+#: src/admin/settings/fields.js:78
 msgid "Avatar URL Meta Key"
 msgstr ""
 
-#: src/admin/settings/fields.js:77
+#: src/admin/settings/fields.js:83
 msgid "Hide on default login"
 msgstr ""
 
-#: src/admin/settings/fields.js:78
+#: src/admin/settings/fields.js:84
 msgid "Show error message"
 msgstr ""
 
-#: src/admin/settings/fields.js:79
+#: src/admin/settings/fields.js:85
 msgid "Error message text"
 msgstr ""
