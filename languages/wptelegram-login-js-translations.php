@@ -8,19 +8,19 @@ $generated_i18n_strings = array(
 	__( 'Button Settings', 'wptelegram-login' ),
 
 	// Reference: src/admin/blocks/telegram-login/block.js:76
-	// Reference: src/admin/settings/fields.js:73
+	// Reference: src/admin/settings/fields.js:79
 	__( 'Button Style', 'wptelegram-login' ),
 
 	// Reference: src/admin/blocks/telegram-login/block.js:86
-	// Reference: src/admin/settings/fields.js:74
+	// Reference: src/admin/settings/fields.js:80
 	__( 'Show User Photo', 'wptelegram-login' ),
 
 	// Reference: src/admin/blocks/telegram-login/block.js:91
-	// Reference: src/admin/settings/fields.js:75
+	// Reference: src/admin/settings/fields.js:81
 	__( 'Corner Radius', 'wptelegram-login' ),
 
 	// Reference: src/admin/blocks/telegram-login/block.js:99
-	// Reference: src/admin/settings/fields.js:76
+	// Reference: src/admin/settings/fields.js:82
 	__( 'Show if user is', 'wptelegram-login' ),
 
 	// Reference: src/admin/settings/components/BotTestResult.js:13
@@ -97,7 +97,7 @@ $generated_i18n_strings = array(
 	__( 'Current page', 'wptelegram-login' ),
 
 	// Reference: src/admin/settings/components/SettingsForm.js:132
-	// Reference: src/admin/settings/fields.js:71
+	// Reference: src/admin/settings/fields.js:77
 	__( 'Custom URL', 'wptelegram-login' ),
 
 	// Reference: src/admin/settings/components/SettingsForm.js:154
@@ -181,40 +181,40 @@ $generated_i18n_strings = array(
 	// Reference: src/admin/settings/components/WidgetInfoCard.js:37
 	__( 'or', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/fields.js:52
+	// Reference: src/admin/settings/fields.js:58
 	__( 'Invalid %s', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/fields.js:55
+	// Reference: src/admin/settings/fields.js:61
 	__( '%s is required.', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/fields.js:59
+	// Reference: src/admin/settings/fields.js:65
 	__( 'Changes could not be saved.', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/fields.js:66
+	// Reference: src/admin/settings/fields.js:72
 	__( 'Bot Token', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/fields.js:67
+	// Reference: src/admin/settings/fields.js:73
 	__( 'Bot Username', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/fields.js:68
+	// Reference: src/admin/settings/fields.js:74
 	__( 'Sign up', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/fields.js:69
+	// Reference: src/admin/settings/fields.js:75
 	__( 'User Role', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/fields.js:70
+	// Reference: src/admin/settings/fields.js:76
 	__( 'Redirect to', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/fields.js:72
+	// Reference: src/admin/settings/fields.js:78
 	__( 'Avatar URL Meta Key', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/fields.js:77
+	// Reference: src/admin/settings/fields.js:83
 	__( 'Hide on default login', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/fields.js:78
+	// Reference: src/admin/settings/fields.js:84
 	__( 'Show error message', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/fields.js:79
+	// Reference: src/admin/settings/fields.js:85
 	__( 'Error message text', 'wptelegram-login' )
 );
 /* THIS IS THE END OF THE GENERATED FILE */

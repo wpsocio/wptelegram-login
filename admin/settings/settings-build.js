@@ -12841,6 +12841,13 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+/**
+ * External dependencies
+ */
+
+/**
+ * Internal dependencies
+ */
 
 
 
@@ -12886,7 +12893,7 @@ function () {
   };
 }();
 var validationSchema = lib["object"]({
-  bot_token: lib["string"]().matches(/^\d{9}:[a-z0-9_-]{35}$/i, {
+  bot_token: lib["string"]().matches(/^\d{9,11}:[a-z0-9_-]{35}$/i, {
     message: function message() {
       return fields_getErrorMessage('bot_token', 'invalid');
     },
