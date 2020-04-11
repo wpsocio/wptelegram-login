@@ -20,7 +20,7 @@ const WidgetInfoCard = () => {
 					)}
 				</ListGroup.Item>
 				<ListGroup.Item className="text-justify">
-					{__('Alternately, you can use the below shortCode or the block available in block editor.')}
+					{__('Alternately, you can use the below shortcode or the block available in block editor.')}
 				</ListGroup.Item>
 				<ListGroup.Item className="font-weight-bold text-secondary">
 					{__('Inside page or post content:')}
