@@ -70,7 +70,8 @@ class WPTelegram_Login_Public {
 	 */
 	public function telegram_login() {
 
-		$bot_token = WPTG_Login()->options()->get( 'bot_token' );
+		$bot_token    = WPTG_Login()->options()->get( 'bot_token' );
+		$random_email = WPTG_Login()->options()->get( 'random_email' );
 
 		if ( ! $this->is_valid_login_request() || ! $bot_token ) {
 			return;
@@ -99,7 +100,7 @@ class WPTelegram_Login_Public {
 
 		$user = wp_get_current_user();
 
-		if ( ! $user->exists() ) { // ! is user logge in
+		if ( ! $user->exists() ) { // ! is user logged in
 
 			do_action( 'wptelegram_login_before_user_login', $wp_user_id );
 
@@ -120,6 +121,10 @@ class WPTelegram_Login_Public {
 			 */
 			do_action( 'wp_login', $user->user_login, $user );
 			do_action( 'wptelegram_login', $user->user_login, $user );
+		}
+
+		if ( $random_email ) {
+			$this->may_be_generate_email( $user );
 		}
 
 		do_action( 'wptelegram_login_before_redirect', $user );
@@ -204,6 +209,63 @@ class WPTelegram_Login_Public {
 			throw new Exception( __( 'Invalid! The data is outdated', 'wptelegram-login' ) );
 		}
 		return $auth_data;
+	}
+
+	/**
+	 * Generate a random email address for the user if needed.
+	 *
+	 * @since x.y.z
+	 *
+	 * @param WP_User $user Current user.
+	 */
+	public function may_be_generate_email( $user ) {
+
+		if ( $user->exists() && ! $user->user_email ) {
+			$host = wp_parse_url( get_site_url(), PHP_URL_HOST );
+			$host = apply_filters( 'wptelegram_login_random_email_host', $host, $user );
+
+			$random_user = apply_filters( 'wptelegram_login_random_email_user', 'auto-generated', $user );
+
+			$random_email = $this->unique_email( $random_user, $host );
+			$random_email = apply_filters( 'wptelegram_login_random_email', $random_email, $user, $random_user, $host );
+
+			wp_update_user(
+				[
+					'ID'         => $user->ID,
+					'user_email' => $random_email,
+				]
+			);
+		}
+	}
+
+	/**
+	 * Recursive function to generate a unique email.
+	 *
+	 * @since 1.0.0
+	 *
+	 * If the email already exists, will add a numerical suffix which will increase until a unique email is found.
+	 *
+	 * @param string $user Initial username for email.
+	 * @param string $host Email host.
+	 *
+	 * @return string The unique email.
+	 */
+	public function unique_email( $user, $host ) {
+		static $i;
+		if ( is_null( $i ) ) {
+			$i = 1;
+		} else {
+			$i++;
+		}
+		$email = sprintf( '%1$s@%2$s', $user, $host );
+		if ( ! email_exists( $email ) ) {
+			return $email;
+		}
+		$new_email = sprintf( '%1$s%2$s@%3$s', $user, $i, $host );
+		if ( ! email_exists( $new_email ) ) {
+			return $new_email;
+		}
+		return call_user_func( array( $this, __FUNCTION__ ), $email, $host );
 	}
 
 	/**
@@ -379,9 +441,8 @@ class WPTelegram_Login_Public {
 		$new_username = sprintf( '%s%s', $username, $i );
 		if ( ! username_exists( $new_username ) ) {
 			return $new_username;
-		} else {
-			return call_user_func( array( $this, __FUNCTION__ ), $username );
 		}
+		return call_user_func( array( $this, __FUNCTION__ ), $username );
 	}
 
 	/**
