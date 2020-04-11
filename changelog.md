@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project are documented in this file.
 
+## Unreleased
+### Enhancements
+* Added support for random email generation
+* Simplified the build process
+
 ## [1.5.4 - 2019-10-23](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.5.4)
 ### Enhancements
 * Added some more hooks to login flow

@@ -2,6 +2,7 @@ import gulp from 'gulp';
 
 import fs from 'fs';
 import { exec } from 'child_process';
+import autoprefixer from 'gulp-autoprefixer';
 import path from 'path';
 import babel from 'gulp-babel';
 import plumber from 'gulp-plumber';
@@ -17,6 +18,8 @@ import potomo from 'gulp-potomo';
 import through2 from 'through2';
 import gulpIgnore from 'gulp-ignore';
 import webpackStream from 'webpack-stream';
+import minifycss from 'gulp-uglifycss';
+import rtlcss from 'gulp-rtlcss';
 
 import webpackConfig from './webpack.config.babel';
 import config from './gulp.config';
@@ -314,7 +317,7 @@ export const updateChangelog = (done) => {
 			// remove all files from the stream
 			.pipe(gulpIgnore.exclude('**/*'))
 
-			// add all php files
+			// add changelog.md
 			.pipe(gulp.src('changelog.md', srcOptions))
 			.pipe(
 				through2.obj(function(file, _, cb) {
@@ -322,13 +325,21 @@ export const updateChangelog = (done) => {
 						const regex = /## (Unreleased)/i;
 						const contents = file.contents.toString().replace(regex, (match, p1) => {
 							const today = new Date();
-							const replace = `[${version} - ${today.getFullYear()}-${(
-								'0' +
-								(today.getMonth() + 1)
-							).slice(-2)}-${today.getDate()}](https://github.com/manzoorwanijk/${
-								pkg.name
-							}/releases/tag/v${version})`;
-							return match.replace(p1, replace);
+							const url = sprintf(
+								'https://github.com/manzoorwanijk/%1$s/releases/tag/v%2$s',
+								pkg.name,
+								version
+							);
+							const replace = sprintf(
+								'[%1$s - %2$s-%3$s-%4$s](%5$s)',
+								version,
+								today.getFullYear(),
+								('0' + (today.getMonth() + 1)).slice(-2),
+								today.getDate(),
+								url
+							);
+
+							return match.replace(p1, `Unreleased\n\n## ${replace}`);
 						});
 						file.contents = Buffer.from(contents);
 					}
@@ -337,6 +348,34 @@ export const updateChangelog = (done) => {
 			)
 			.pipe(gulp.dest('./'))
 	);
+};
+
+export const styles = () => {
+	return gulp
+		.src(config.styleSRC, { allowEmpty: true })
+		.pipe(plumber(errorHandler))
+		.pipe(lineec())
+		.pipe(gulp.dest('./'))
+		.pipe(rename({ suffix: '.min' }))
+		.pipe(minifycss({ maxLineLen: 10 }))
+		.pipe(lineec())
+		.pipe(gulp.dest('./'))
+		.pipe(notify({ message: '\n\n✅  ===> STYLES — completed!\n', onLast: true }));
+};
+
+export const stylesRTL = () => {
+	return gulp
+		.src(config.styleSRC, { allowEmpty: true, cwd: config.srcDir, base: './' })
+		.pipe(plumber(errorHandler))
+		.pipe(autoprefixer(config.BROWSERS_LIST))
+		.pipe(rename({ suffix: '-rtl' })) // Append "-rtl" to the filename.
+		.pipe(rtlcss()) // Convert to RTL.
+		.pipe(gulp.dest('./'))
+		.pipe(rename({ suffix: '.min' }))
+		.pipe(minifycss({ maxLineLen: 10 }))
+		.pipe(lineec()) // Consistent Line Endings for non UNIX systems.
+		.pipe(gulp.dest('./'))
+		.pipe(notify({ message: '\n\n✅  ===> STYLES RTL — completed!\n', onLast: true }));
 };
 
 const copyChangelog = () => {

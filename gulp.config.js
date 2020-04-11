@@ -11,16 +11,17 @@ const name = pkg.name;
 
 const config = {
 	srcDir,
-	buildDir: './build',
 	watchPhp: srcDir + '/**/*.php',
 	vendorBin: './vendor/bin',
 	PhpStandard: 'WordPress',
 	ESNextJS: srcDir + '/**/*.esnext.js',
+	styleSRC: 'public/css/*.css',
+	styleDest: srcDir,
 
 	// Translation options.
 	textDomain: name,
-	potFilename: `${ name }.pot`,
-	JSPotFilename: `${ name }.js.pot`,
+	potFilename: `${name}.pot`,
+	JSPotFilename: `${name}.js.pot`,
 	domainPath: srcDir + '/languages',
 	packageName: 'WP Telegram Comments',
 	bugReport: 'http://wordpress.org/support/plugin/' + name,
@@ -37,8 +38,8 @@ const config = {
 		'last 2 Safari versions',
 		'last 2 iOS versions',
 		'last 2 Edge versions',
-		'last 2 Opera versions'
-	]
+		'last 2 Opera versions',
+	],
 };
 
 export default config;
