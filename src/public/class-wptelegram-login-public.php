@@ -214,7 +214,7 @@ class WPTelegram_Login_Public {
 	/**
 	 * Generate a random email address for the user if needed.
 	 *
-	 * @since x.y.z
+	 * @since 1.6.0
 	 *
 	 * @param WP_User $user Current user.
 	 */
