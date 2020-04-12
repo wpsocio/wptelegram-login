@@ -1,37 +1,68 @@
-# Editors
-project.xml
-project.properties
-/nbproject/private/
-.buildpath
-.project
-.settings*
-.idea
-.vscode
-*.sublime-project
-*.sublime-workspace
-.sublimelinterrc
-
-# Grunt
-build/
+# NPM #
+##########
+# Ignore all directories called node_modules in current folder and any subfolders.
 node_modules/
-temp/
-none
+/node_modules/
 
-# Sass
-.sass-cache/
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+*.map
 
-# OS X metadata
-.DS_Store
+# Logs and databases #
+######################
+*.log
+*.sql
+*.env
 
-# Windows junk
+# OS generated files #
+######################
+**.DS_Store*
+ehthumbs.db
+Icon?
 Thumbs.db
+._*
 
-# Logs
-/logs
+# Vim generated files #
+######################
+*.un~
 
-# Composer
+# SASS #
+##########
+**/.sass-cache
+**/.sass-cache/*
+**/.map
+
+# Composer #
+##########
+!assets/js/vendor/
+wpcs/
 /vendor/
-contributors.md
 
-# Screenshots for e2e tests failures
-/screenshots/
+# Bower #
+##########
+assets/bower_components/*
+
+# Codekit #
+##########
+/codekit-config.json
+*.codekit
+**.codekit-cache/*
+
+# Compiled Files and Build Dirs #
+##########
+/README.html
+
+# PhpStrom Project Files #
+.idea/
+library/vendors/composer
+assets/img/.DS_Store

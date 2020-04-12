@@ -3,18 +3,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wptelegram-login\n"
-"POT-Creation-Date: 2019-10-23 06:01:11+00:00\n"
-"PO-Revision-Date: 2019-02-08 17:28+0530\n"
+"POT-Creation-Date: 2020-04-11 13:47:48+00:00\n"
+"PO-Revision-Date: 2020-04-11 19:14+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"Language: de\n"
+"X-Generator: Poedit 2.3\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Poedit-KeywordsList: __;_e;_x;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: includes/cmb2\n"
@@ -40,10 +40,15 @@ msgstr "eingeloggt"
 msgid "Telegram User ID"
 msgstr "Telegram User ID"
 
+#: includes/class-wptelegram-login.php:128
+#: languages/wptelegram-login-js-translations.php:5
+#: public/widgets/class-wptelegram-login-widget-primary.php:24
+msgid "WP Telegram Login"
+msgstr "WP Telegram Einloggen"
+
 #: languages/wptelegram-login-js-translations.php:8
-#, fuzzy
 msgid "Button Settings"
-msgstr "Login-Button Optionen"
+msgstr "Button-Einstellungen"
 
 #: languages/wptelegram-login-js-translations.php:12
 #: public/widgets/class-wptelegram-login-widget-primary.php:145
@@ -67,7 +72,7 @@ msgstr "Anzeigen wenn Benutzer ist"
 
 #: languages/wptelegram-login-js-translations.php:27
 msgid "Test Result:"
-msgstr ""
+msgstr "Testresultat:"
 
 #: languages/wptelegram-login-js-translations.php:30
 msgid ""
@@ -83,7 +88,7 @@ msgstr "KONFIGURATIONSANLEITUNG"
 
 #: languages/wptelegram-login-js-translations.php:36
 msgid "Create a Bot by sending %1$s command to %2$s."
-msgstr "Einen Bot erstellen, indem der %1$s-Befehl an %2$s gesendet wird."
+msgstr "Einen Bot erstellen, indem der Befehl %1$s an den %2$s geschickt wird"
 
 #: languages/wptelegram-login-js-translations.php:39
 msgid "After completing the steps %s will provide you the Bot Token."
@@ -97,13 +102,13 @@ msgstr "Dieses Bot Token wird nun in das Feld \"Bot Token\" eingetragen."
 
 #: languages/wptelegram-login-js-translations.php:45
 msgid "For ease, use %s"
-msgstr "Zum einfacheren kopieren %s benutzen!"
+msgstr "Zum einfacheren Kopieren %s benutzen!"
 
 #: languages/wptelegram-login-js-translations.php:48
 msgid "Send %1$s command to %2$s, select your bot and then send %3$s"
 msgstr ""
-"Den Befehl %1$s an den %2$s senden, dann den eigenen Bot auswählen und dann "
-"%3$s senden"
+"Den Befehl %1$s an den %2$s senden, dann den eigenen Bot auswählen und dann %"
+"3$s senden"
 
 #: languages/wptelegram-login-js-translations.php:51
 msgid ""
@@ -125,9 +130,18 @@ msgstr "Einstellungen speichern"
 msgid "That's it. You are ready to rock :)"
 msgstr "Das wars! Jetzt kanns losgehen:)"
 
+#: languages/wptelegram-login-js-translations.php:64
+msgid ""
+"Let the users login to your WordPress website with their Telegram and make "
+"it simple for them to get connected and let them receive their email "
+"notifications on Telegram."
+msgstr ""
+"Mit diesem Plugin können sich Benutzer ganz einfach per Telegram auf einer "
+"WordPress-Website registrieren und einloggen."
+
 #: languages/wptelegram-login-js-translations.php:67
 msgid "Do you like %s?"
-msgstr ""
+msgstr "Gefällt dir %s?"
 
 #: languages/wptelegram-login-js-translations.php:70
 msgid "Need help?"
@@ -135,7 +149,7 @@ msgstr "Hilfe?"
 
 #: languages/wptelegram-login-js-translations.php:73
 msgid "Get LIVE support on Telegram"
-msgstr ""
+msgstr "Erhalte LIVE-Support über Telegram"
 
 #: languages/wptelegram-login-js-translations.php:76
 msgid "Login Options"
@@ -221,6 +235,8 @@ msgstr ""
 #: languages/wptelegram-login-js-translations.php:128
 msgid "Display an error message if Telegram is blocked by user's ISP"
 msgstr ""
+"Eine Fehlermeldung anzeigen falls Telegram vom Internetanbieter des "
+"Benutzers blockiert wird"
 
 #: languages/wptelegram-login-js-translations.php:131
 msgid "Leave empty for default"
@@ -228,7 +244,7 @@ msgstr "Leer lassen für Standardeinstellung"
 
 #: languages/wptelegram-login-js-translations.php:134
 msgid "Changes saved successfully."
-msgstr ""
+msgstr "Die Änderungen wurden erfolgreich gespeichert."
 
 #: languages/wptelegram-login-js-translations.php:137
 msgid "Could not connect"
@@ -244,7 +260,7 @@ msgstr "Bitte die Konfigurationsanleitung oben beachten"
 
 #: languages/wptelegram-login-js-translations.php:146
 msgid "Please wait..."
-msgstr ""
+msgstr "Bitte warten..."
 
 #: languages/wptelegram-login-js-translations.php:149
 msgid "Test Token"
@@ -255,14 +271,12 @@ msgid "Use %s above to set automatically."
 msgstr "Auf %s klicken, um den Benutzernamen automatisch auszufüllen."
 
 #: languages/wptelegram-login-js-translations.php:155
-#, fuzzy
 msgid "Follow %s"
-msgstr "Folgen"
+msgstr "Folge %s"
 
 #: languages/wptelegram-login-js-translations.php:158
-#, fuzzy
 msgid "Join %s"
-msgstr "Beitreten"
+msgstr "Tritt %s bei"
 
 #: languages/wptelegram-login-js-translations.php:161
 msgid "Widget Info"
@@ -270,11 +284,13 @@ msgstr "Widget-Informationen"
 
 #: languages/wptelegram-login-js-translations.php:164
 msgid "Goto %1$s and click/drag %2$s and place it where you want it to be."
-msgstr "Im Bereich %1$s das Widget %2$s an die gewünschte Position ziehen. "
+msgstr ""
+"Im Menüpunkt %1$s kann das %2$s an die passende Stelle im Theme positioniert "
+"werden."
 
 #: languages/wptelegram-login-js-translations.php:167
 msgid "Appearance"
-msgstr "Aussehen"
+msgstr "Darstellung"
 
 #: languages/wptelegram-login-js-translations.php:170
 msgid "Widgets"
@@ -285,6 +301,8 @@ msgid ""
 "Alternately, you can use the below shortCode or the block available in block "
 "editor."
 msgstr ""
+"Alternativ kannst du folgenden Shortcode verwenden oder den Block im "
+"Blockeditor. "
 
 #: languages/wptelegram-login-js-translations.php:176
 msgid "Inside page or post content:"
@@ -303,13 +321,12 @@ msgid "Invalid %s"
 msgstr "%s ungültig"
 
 #: languages/wptelegram-login-js-translations.php:188
-#, fuzzy
 msgid "%s is required."
-msgstr "Das Feld \"Bot Token\" ist leer"
+msgstr "%s wird benötigt."
 
 #: languages/wptelegram-login-js-translations.php:191
 msgid "Changes could not be saved."
-msgstr ""
+msgstr "Die Änderungen konnten nicht gespeichert werden."
 
 #: languages/wptelegram-login-js-translations.php:194
 msgid "Bot Token"
@@ -341,25 +358,25 @@ msgstr "Beim Standard-Login ausblenden"
 
 #: languages/wptelegram-login-js-translations.php:215
 msgid "Show error message"
-msgstr ""
+msgstr "Fehlermeldung anzeigen"
 
 #: languages/wptelegram-login-js-translations.php:218
 msgid "Error message text"
-msgstr ""
+msgstr "Inhalt der Fehlermeldung"
 
-#: public/class-wptelegram-login-public.php:97
+#: public/class-wptelegram-login-public.php:98
 msgid "Error:"
 msgstr "Fehler:"
 
-#: public/class-wptelegram-login-public.php:200
+#: public/class-wptelegram-login-public.php:205
 msgid "Unauthorized! Data is NOT from Telegram"
 msgstr "Unautorisiert! Diese Daten stammen NICHT von Telegram"
 
-#: public/class-wptelegram-login-public.php:204
+#: public/class-wptelegram-login-public.php:209
 msgid "Invalid! The data is outdated"
 msgstr "Ungültig! Die Daten sind abgelaufen/veraltet"
 
-#: public/class-wptelegram-login-public.php:231
+#: public/class-wptelegram-login-public.php:293
 msgid ""
 "The Telegram User ID is already associated with another existing user. "
 "Please contact the admin"
@@ -367,7 +384,7 @@ msgstr ""
 "Diese Telegram User ID ist bereits mit einem anderen existierenden Benutzer "
 "verbunden. Bitte den Administrator kontaktieren"
 
-#: public/class-wptelegram-login-public.php:249
+#: public/class-wptelegram-login-public.php:311
 msgid ""
 "Sign up via Telegram is disabled. You must first create an account and "
 "connect it to Telegram to be able to use Telegram Login"
@@ -375,21 +392,21 @@ msgstr ""
 "Anmelden über Telegram ist deaktiviert. Du musst zuerst einen Account "
 "anlegen und mit Telegram verbinden, um Telegram Login verwenden zu können."
 
-#: public/class-wptelegram-login-public.php:340
+#: public/class-wptelegram-login-public.php:402
 msgid "Telegram sign in could not be completed."
 msgstr "Die Telegram-Anmeldung konnte nicht erfolgreich durchgeführt werden."
 
-#: public/class-wptelegram-login-public.php:440
+#: public/class-wptelegram-login-public.php:501
 msgid "Or"
 msgstr "Oder"
 
 #: public/partials/login-view.php:36
 msgid "Error loading Telegram Login!"
-msgstr ""
+msgstr "Fehler beim Laden von Telegram Login!"
 
 #: public/partials/login-view.php:36
 msgid "May be your ISP blocks Telegram!"
-msgstr ""
+msgstr "Vielleicht blockiert dein Internetanbieter den Telegram-Messenger!"
 
 #: public/widgets/class-wptelegram-login-widget-primary.php:26
 msgid "Display the Telegram Log in button"
@@ -399,59 +416,11 @@ msgstr "Telegram Login-Button anzeigen"
 msgid "Title"
 msgstr "Titel"
 
-#~ msgid "WP Telegram"
-#~ msgstr "WP Telegram"
+#~ msgid "https://t.me/manzoorwanijk"
+#~ msgstr "https://t.me/manzoorwanijk"
 
-#~ msgid "Shout in"
-#~ msgstr "Shouten in "
+#~ msgid "Manzoor Wani"
+#~ msgstr "Manzoor Wani"
 
-#~ msgid "Get connected"
-#~ msgstr "In Verbindung treten"
-
-#~ msgid "Follow"
-#~ msgstr "Folgen"
-
-#~ msgid "Join"
-#~ msgstr "Beitreten"
-
-#~ msgid "Bot Token is empty"
-#~ msgstr "Das Feld \"Bot Token\" ist leer"
-
-#~ msgid "Bot username is empty"
-#~ msgstr "Das Feld \"Bot Benutzername\" ist leer"
-
-#, fuzzy
-#~ msgid "Telegram Login_"
-#~ msgstr "Telegram Login"
-
-#~ msgid "Telegram Bot username (without %s)."
-#~ msgstr "Telegram Bot Benutzername (ohne %s)."
-
-#~ msgid "Settings updated"
-#~ msgstr "Einstellungen wurden aktualisiert"
-
-#~ msgid "Invalid Bot Token"
-#~ msgstr "Ungültiger Bot Token"
-
-#~ msgid "Invalid Bot Username"
-#~ msgstr "Ungültiger Bot Benutzername"
-
-#, fuzzy
-#~ msgid "Invalid Bot Token."
-#~ msgstr "Ungültiger Bot Token"
-
-#, fuzzy
-#~ msgid "Invalid Bot Username."
-#~ msgstr "Ungültiger Bot Benutzername"
-
-#, fuzzy
-#~ msgid "Bot Username is required."
-#~ msgstr "Das Feld \"Bot Benutzername\" ist leer"
-
-#, fuzzy
-#~ msgid "Invalid meta key."
-#~ msgstr "Ungültiger Bot Token"
-
-#, fuzzy
-#~ msgid "Avatar URL Meta Key is required."
-#~ msgstr "Avatar URL Meta Key"
+#~ msgid "https://t.me/WPTelegram"
+#~ msgstr "https://t.me/WPTelegram"

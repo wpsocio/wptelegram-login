@@ -184,6 +184,11 @@ class WPTelegram_Login_Settings_Controller extends WPTelegram_Login_REST_Control
 				'sanitize_callback' => 'sanitize_key',
 				'validate_callback' => array( __CLASS__, 'validate_param' ),
 			),
+			'random_email'          => array(
+				'type'              => 'boolean',
+				'default'           => false,
+				'validate_callback' => 'rest_validate_request_arg',
+			),
 			'button_style'          => array(
 				'type'              => 'string',
 				'default'           => 'large',
