@@ -2,6 +2,8 @@
 All notable changes to this project are documented in this file.
 
 ## Unreleased
+### Bug Fixes
+* Fixed Admin page JS path
 
 ## [1.6.1 - 2020-04-12](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.6.1)
 ### Bug Fixes

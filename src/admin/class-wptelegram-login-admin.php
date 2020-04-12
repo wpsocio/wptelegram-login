@@ -95,7 +95,7 @@ class WPTelegram_Login_Admin {
 			// Avoid caching for development.
 			$version = defined( 'WPTELEGRAM_DEV' ) && WPTELEGRAM_DEV ? date( 'y.m.d-is', filemtime( $this->plugin->dir( '/admin/settings/dist/settings-dist.js' ) ) ) : $this->plugin->version();
 
-			wp_enqueue_script( $this->plugin->name() . '-settings', $this->plugin->url( '/admin/settings/dist/settings-dist' ) . $this->plugin->suffix() . '.js', array( 'jquery' ), $version, true );
+			wp_enqueue_script( $this->plugin->name() . '-settings', $this->plugin->url( '/admin/settings/dist/settings-dist.js' ), array( 'jquery' ), $version, true );
 
 			// Pass data to JS.
 			$data = array(
