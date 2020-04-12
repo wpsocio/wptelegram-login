@@ -3,6 +3,10 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.6.1 - 2020-04-12](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.6.1)
+### Bug Fixes
+* Fixed version update
+
 ## [1.6.0 - 2020-04-12](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.6.0)
 ### Enhancements
 * Added support for random email generation

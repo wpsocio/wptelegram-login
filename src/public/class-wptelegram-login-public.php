@@ -241,7 +241,7 @@ class WPTelegram_Login_Public {
 	/**
 	 * Recursive function to generate a unique email.
 	 *
-	 * @since 1.0.0
+	 * @since 1.6.0
 	 *
 	 * If the email already exists, will add a numerical suffix which will increase until a unique email is found.
 	 *

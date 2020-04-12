@@ -225,9 +225,6 @@ const createVersionUpdateCB = (forFile, version) => {
 		case 'since-xyz':
 			patterns = [/@since[\s\t]*(x\.y\.z)/gi];
 			break;
-
-		default:
-			break;
 	}
 	return through2.obj(function(file, _, cb) {
 		if (file.isBuffer()) {
@@ -266,17 +263,17 @@ export const updateVersion = (done) => {
 			// remove all files from the stream
 			.pipe(gulpIgnore.exclude('**/*'))
 
-			// add main file
-			.pipe(gulp.src(`${config.srcDir}/${pkg.name}.php`, srcOptions))
-			.pipe(createVersionUpdateCB('mainfile', version))
+			// add all php files
+			.pipe(gulp.src(`${config.srcDir}/**/*.php`, srcOptions))
+			.pipe(createVersionUpdateCB('since-xyz', version))
 			.pipe(gulp.dest('./'))
 
 			// remove all files from the stream
 			.pipe(gulpIgnore.exclude('**/*'))
 
-			// add all php files
-			.pipe(gulp.src(`${config.srcDir}/**/*.php`, srcOptions))
-			.pipe(createVersionUpdateCB('since-xyz', version))
+			// add main file
+			.pipe(gulp.src(`${config.srcDir}/${pkg.name}.php`, srcOptions))
+			.pipe(createVersionUpdateCB('mainfile', version))
 			.pipe(gulp.dest('./'))
 	);
 };
