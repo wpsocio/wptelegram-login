@@ -1,10 +1,9 @@
+import { __ } from '@wordpress/i18n';
+import { registerBlockType } from '@wordpress/blocks';
+import { InspectorControls } from '@wordpress/block-editor';
+import { PanelBody, RadioControl, ToggleControl, TextControl, SelectControl } from '@wordpress/components';
 //  Import CSS.
 import './editor.scss';
-
-const { __ } = wp.i18n;
-const { registerBlockType } = wp.blocks;
-const { InspectorControls } = wp.blockEditor;
-const { PanelBody, RadioControl, ToggleControl, TextControl, SelectControl } = wp.components;
 
 const {
 	blocks: {
@@ -64,7 +63,7 @@ const blockAttributes = {
 registerBlockType('wptelegram/login', {
 	title: __('WP Telegram Login'),
 	icon: 'smartphone',
-	category: 'widgets',
+	category: 'wptelegram',
 	attributes: blockAttributes,
 	edit({ attributes, setAttributes, className }) {
 		const { button_style, show_user_photo, corner_radius, show_if_user_is } = attributes;
