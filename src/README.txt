@@ -3,7 +3,7 @@ Contributors: manzoorwanijk
 Donate link: https://paypal.me/manzoorwanijk
 Tags: telegram, login, register, social, signup
 Requires at least: 4.7.0
-Tested up to: 5.4
+Tested up to: 5.4.2
 Requires PHP: 5.6
 Stable tag: 1.6.2
 License: GPLv2 or later
