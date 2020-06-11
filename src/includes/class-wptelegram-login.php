@@ -262,6 +262,8 @@ class WPTelegram_Login {
 		$this->loader->add_filter( 'manage_users_columns', $plugin_admin, 'register_custom_user_column' );
 
 		$this->loader->add_filter( 'manage_users_custom_column', $plugin_admin, 'register_custom_user_column_view', 10, 3 );
+
+		$this->loader->add_filter( 'block_categories', $plugin_admin, 'register_block_category', 10, 1 );
 	}
 
 	/**

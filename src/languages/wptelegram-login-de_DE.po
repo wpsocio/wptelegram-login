@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wptelegram-login\n"
-"POT-Creation-Date: 2020-04-11 13:47:48+00:00\n"
+"POT-Creation-Date: 2020-06-11 18:58:52+00:00\n"
 "PO-Revision-Date: 2020-04-11 19:14+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
@@ -20,23 +20,28 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: includes/cmb2\n"
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
 
-#: admin/class-wptelegram-login-admin.php:234
+#: admin/class-wptelegram-login-admin.php:232
+#, fuzzy
+msgid "WP Telegram"
+msgstr "WP Telegram Einloggen"
+
+#: admin/class-wptelegram-login-admin.php:260
 msgid "Telegram Login"
 msgstr "Telegram Login"
 
-#: admin/class-wptelegram-login-admin.php:306
+#: admin/class-wptelegram-login-admin.php:332
 msgid "Any"
 msgstr "Immer anzeigen"
 
-#: admin/class-wptelegram-login-admin.php:307
+#: admin/class-wptelegram-login-admin.php:333
 msgid "Logged out"
 msgstr "ausgeloggt"
 
-#: admin/class-wptelegram-login-admin.php:308
+#: admin/class-wptelegram-login-admin.php:334
 msgid "Logged in"
 msgstr "eingeloggt"
 
-#: admin/class-wptelegram-login-admin.php:336
+#: admin/class-wptelegram-login-admin.php:362
 msgid "Telegram User ID"
 msgstr "Telegram User ID"
 
@@ -364,19 +369,19 @@ msgstr "Fehlermeldung anzeigen"
 msgid "Error message text"
 msgstr "Inhalt der Fehlermeldung"
 
-#: public/class-wptelegram-login-public.php:98
+#: public/class-wptelegram-login-public.php:97
 msgid "Error:"
 msgstr "Fehler:"
 
-#: public/class-wptelegram-login-public.php:205
+#: public/class-wptelegram-login-public.php:206
 msgid "Unauthorized! Data is NOT from Telegram"
 msgstr "Unautorisiert! Diese Daten stammen NICHT von Telegram"
 
-#: public/class-wptelegram-login-public.php:209
+#: public/class-wptelegram-login-public.php:210
 msgid "Invalid! The data is outdated"
 msgstr "Ungültig! Die Daten sind abgelaufen/veraltet"
 
-#: public/class-wptelegram-login-public.php:293
+#: public/class-wptelegram-login-public.php:294
 msgid ""
 "The Telegram User ID is already associated with another existing user. "
 "Please contact the admin"
@@ -384,7 +389,7 @@ msgstr ""
 "Diese Telegram User ID ist bereits mit einem anderen existierenden Benutzer "
 "verbunden. Bitte den Administrator kontaktieren"
 
-#: public/class-wptelegram-login-public.php:311
+#: public/class-wptelegram-login-public.php:312
 msgid ""
 "Sign up via Telegram is disabled. You must first create an account and "
 "connect it to Telegram to be able to use Telegram Login"
@@ -392,11 +397,11 @@ msgstr ""
 "Anmelden über Telegram ist deaktiviert. Du musst zuerst einen Account "
 "anlegen und mit Telegram verbinden, um Telegram Login verwenden zu können."
 
-#: public/class-wptelegram-login-public.php:402
+#: public/class-wptelegram-login-public.php:403
 msgid "Telegram sign in could not be completed."
 msgstr "Die Telegram-Anmeldung konnte nicht erfolgreich durchgeführt werden."
 
-#: public/class-wptelegram-login-public.php:501
+#: public/class-wptelegram-login-public.php:502
 msgid "Or"
 msgstr "Oder"
 

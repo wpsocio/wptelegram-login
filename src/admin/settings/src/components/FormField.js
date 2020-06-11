@@ -11,8 +11,8 @@ const FormField = (props) => {
 	let field;
 
 	if ('radio' === controlProps.type) {
-		field = Object.keys(options).map((key) =>
-			controlledField({ ...props, type: controlProps.type, value: key, _label: options[key] })
+		field = Object.entries(options).map(([value, _label]) =>
+			controlledField({ ...props, type: controlProps.type, value, _label })
 		);
 	} else if ('checkbox' === controlProps.type) {
 		field = controlledField({ ...props, type: controlProps.type });

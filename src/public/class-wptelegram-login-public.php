@@ -70,8 +70,7 @@ class WPTelegram_Login_Public {
 	 */
 	public function telegram_login() {
 
-		$bot_token    = WPTG_Login()->options()->get( 'bot_token' );
-		$random_email = WPTG_Login()->options()->get( 'random_email' );
+		$bot_token = WPTG_Login()->options()->get( 'bot_token' );
 
 		if ( ! $this->is_valid_login_request() || ! $bot_token ) {
 			return;
@@ -122,6 +121,8 @@ class WPTelegram_Login_Public {
 			do_action( 'wp_login', $user->user_login, $user );
 			do_action( 'wptelegram_login', $user->user_login, $user );
 		}
+
+		$random_email = WPTG_Login()->options()->get( 'random_email' );
 
 		if ( $random_email ) {
 			$this->may_be_generate_email( $user );
@@ -230,10 +231,10 @@ class WPTelegram_Login_Public {
 			$random_email = apply_filters( 'wptelegram_login_random_email', $random_email, $user, $random_user, $host );
 
 			wp_update_user(
-				[
+				array(
 					'ID'         => $user->ID,
 					'user_email' => $random_email,
-				]
+				)
 			);
 		}
 	}
@@ -265,7 +266,7 @@ class WPTelegram_Login_Public {
 		if ( ! email_exists( $new_email ) ) {
 			return $new_email;
 		}
-		return call_user_func( array( $this, __FUNCTION__ ), $email, $host );
+		return call_user_func( array( $this, __FUNCTION__ ), $user, $host );
 	}
 
 	/**

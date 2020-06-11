@@ -5,6 +5,8 @@ import autoprefixer from 'autoprefixer';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin-with-rtl';
 // import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import WebpackRTLPlugin from 'webpack-rtl-plugin';
+import camelCase from 'camelCase';
+
 /**
  * Internal dependencies
  */
@@ -47,12 +49,30 @@ const mainSettings = (isDev) => {
 
 const blocks = (isDev) => {
 	const settings = mainSettings(isDev);
+
+	const externals = {};
+	// Define WordPress dependencies
+	const wpPackages = ['block-editor', 'blocks', 'components', 'i18n'];
+	// Setup externals for all WordPress dependencies
+	wpPackages.forEach((wpPackage) => {
+		externals['@wordpress/' + wpPackage] = {
+			this: [
+				'wp',
+				wpPackage.includes('-') ? camelCase(wpPackage) : wpPackage, // 'block-editor' => 'blockEditor'
+			],
+		};
+	});
 	return {
 		...settings,
 		entry: './src/admin/blocks/src/index.js',
 		output: {
 			path: path.resolve(__dirname, 'src/admin/blocks/dist'),
 			filename: 'blocks-build.js',
+			libraryTarget: 'this',
+		},
+		externals: {
+			...settings.externals,
+			...externals,
 		},
 		plugins: [
 			// new BundleAnalyzerPlugin(),

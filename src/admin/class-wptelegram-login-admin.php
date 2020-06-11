@@ -93,7 +93,7 @@ class WPTelegram_Login_Admin {
 		if ( $this->is_settings_page( $hook_suffix ) ) {
 
 			// Avoid caching for development.
-			$version = defined( 'WPTELEGRAM_DEV' ) && WPTELEGRAM_DEV ? date( 'y.m.d-is', filemtime( $this->plugin->dir( '/admin/settings/dist/settings-dist.js' ) ) ) : $this->plugin->version();
+			$version = defined( 'WPTELEGRAM_DEV' ) && WPTELEGRAM_DEV ? gmdate( 'y.m.d-is', filemtime( $this->plugin->dir( '/admin/settings/dist/settings-dist.js' ) ) ) : $this->plugin->version();
 
 			wp_enqueue_script( $this->plugin->name() . '-settings', $this->plugin->url( '/admin/settings/dist/settings-dist.js' ), array( 'jquery' ), $version, true );
 
@@ -196,17 +196,43 @@ class WPTelegram_Login_Admin {
 
 		wp_enqueue_style(
 			$this->plugin->name() . '-block',
-			$this->plugin->url( '/admin/blocks/dist/blocks-build' ) . $this->plugin->suffix() . '.css',
+			$this->plugin->url( '/admin/blocks/dist/blocks-build.css' ),
 			array( 'wp-edit-blocks' ),
 			$this->plugin->version()
 		);
 
 		wp_enqueue_script(
 			$this->plugin->name() . '-block',
-			$this->plugin->url( '/admin/blocks/dist/blocks-build' ) . $this->plugin->suffix() . '.js',
+			$this->plugin->url( '/admin/blocks/dist/blocks-build.js' ),
 			array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor' ),
 			$this->plugin->version(),
 			true
+		);
+	}
+
+	/**
+	 * Registers custom category for blocks.
+	 *
+	 * @since 1.6.3
+	 *
+	 * @param array $categories The block categories.
+	 * @return array
+	 */
+	public function register_block_category( $categories ) {
+		$slugs = wp_list_pluck( $categories, 'slug' );
+		$slug  = 'wptelegram';
+		if ( in_array( $slug, $slugs, true ) ) {
+			return $categories;
+		}
+		return array_merge(
+			$categories,
+			array(
+				array(
+					'slug'  => $slug,
+					'title' => __( 'WP Telegram', 'wptelegram-login' ),
+					'icon'  => null,
+				),
+			)
 		);
 	}
 

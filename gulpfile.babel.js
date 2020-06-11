@@ -135,10 +135,10 @@ export const generatePotFile = (done) => {
 
 	wpi18n
 		.makepot(options)
-		.then(function(wpPackage) {
+		.then(function (wpPackage) {
 			console.log('POT file saved to ' + path.relative(wpPackage.getPath(), wpPackage.getPotFilename()));
 		})
-		.catch(function(error) {
+		.catch(function (error) {
 			console.log(error);
 		})
 		.finally(done);
@@ -226,7 +226,7 @@ const createVersionUpdateCB = (forFile, version) => {
 			patterns = [/@since[\s\t]*(x\.y\.z)/gi];
 			break;
 	}
-	return through2.obj(function(file, _, cb) {
+	return through2.obj(function (file, _, cb) {
 		if (file.isBuffer()) {
 			let contents = file.contents.toString();
 			patterns.forEach((regex) => {
@@ -290,7 +290,7 @@ export const updateChangelog = (done) => {
 		gulp
 			.src(config.srcDir + '/README.txt', srcOptions)
 			.pipe(
-				through2.obj(function(file, _, cb) {
+				through2.obj(function (file, _, cb) {
 					if (file.isBuffer()) {
 						const regex = /== Changelog ==([\s\S])/i;
 						const contents = file.contents.toString().replace(regex, (match, p1) => {
@@ -317,7 +317,7 @@ export const updateChangelog = (done) => {
 			// add changelog.md
 			.pipe(gulp.src('changelog.md', srcOptions))
 			.pipe(
-				through2.obj(function(file, _, cb) {
+				through2.obj(function (file, _, cb) {
 					if (file.isBuffer()) {
 						const regex = /## (Unreleased)/i;
 						const contents = file.contents.toString().replace(regex, (match, p1) => {
@@ -376,10 +376,7 @@ export const stylesRTL = () => {
 };
 
 const copyChangelog = () => {
-	return gulp
-		.src('./changelog.md', { base: './' })
-		.pipe(lineec())
-		.pipe(gulp.dest(config.srcDir));
+	return gulp.src('./changelog.md', { base: './' }).pipe(lineec()).pipe(gulp.dest(config.srcDir));
 };
 
 export const watchPhp = () => {

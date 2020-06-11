@@ -8,5 +8,14 @@
         "phpcompatibility/php-compatibility": "*",
 		"wp-coding-standards/wpcs": "*",
 		"wp-cli/wp-cli-bundle": "*"
+	},
+	"scripts": {
+		"set-config": [
+			"\"vendor/bin/phpcs\" --config-set installed_paths ../../../vendor/wp-coding-standards/wpcs",
+			"\"vendor/bin/phpcs\" --config-set default_standard WordPress"
+		],
+		"lint": "vendor/bin/phpcs",
+		"lint:skip-warnings": "vendor/bin/phpcs -n",
+		"lint:fix": "vendor/bin/phpcbf"
 	}
 }
