@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wptelegram-login\n"
-"POT-Creation-Date: 2020-04-12 11:28:45+00:00\n"
+"POT-Creation-Date: 2020-06-11 18:58:52+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-04-12 11:28-330\n"
+"PO-Revision-Date: 2020-06-12 18:58-330\n"
 "Last-Translator: WP Telegram Login\n"
 "Language-Team: WP Telegram Login\n"
 "Language: en_US\n"
@@ -22,23 +22,27 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Generator: node-wp-i18n\n"
 
-#: admin/class-wptelegram-login-admin.php:234
+#: admin/class-wptelegram-login-admin.php:232
+msgid "WP Telegram"
+msgstr ""
+
+#: admin/class-wptelegram-login-admin.php:260
 msgid "Telegram Login"
 msgstr ""
 
-#: admin/class-wptelegram-login-admin.php:306
+#: admin/class-wptelegram-login-admin.php:332
 msgid "Any"
 msgstr ""
 
-#: admin/class-wptelegram-login-admin.php:307
+#: admin/class-wptelegram-login-admin.php:333
 msgid "Logged out"
 msgstr ""
 
-#: admin/class-wptelegram-login-admin.php:308
+#: admin/class-wptelegram-login-admin.php:334
 msgid "Logged in"
 msgstr ""
 
-#: admin/class-wptelegram-login-admin.php:336
+#: admin/class-wptelegram-login-admin.php:362
 msgid "Telegram User ID"
 msgstr ""
 
@@ -342,35 +346,35 @@ msgstr ""
 msgid "Error message text"
 msgstr ""
 
-#: public/class-wptelegram-login-public.php:98
+#: public/class-wptelegram-login-public.php:97
 msgid "Error:"
 msgstr ""
 
-#: public/class-wptelegram-login-public.php:205
+#: public/class-wptelegram-login-public.php:206
 msgid "Unauthorized! Data is NOT from Telegram"
 msgstr ""
 
-#: public/class-wptelegram-login-public.php:209
+#: public/class-wptelegram-login-public.php:210
 msgid "Invalid! The data is outdated"
 msgstr ""
 
-#: public/class-wptelegram-login-public.php:293
+#: public/class-wptelegram-login-public.php:294
 msgid ""
 "The Telegram User ID is already associated with another existing user. "
 "Please contact the admin"
 msgstr ""
 
-#: public/class-wptelegram-login-public.php:311
+#: public/class-wptelegram-login-public.php:312
 msgid ""
 "Sign up via Telegram is disabled. You must first create an account and "
 "connect it to Telegram to be able to use Telegram Login"
 msgstr ""
 
-#: public/class-wptelegram-login-public.php:402
+#: public/class-wptelegram-login-public.php:403
 msgid "Telegram sign in could not be completed."
 msgstr ""
 
-#: public/class-wptelegram-login-public.php:501
+#: public/class-wptelegram-login-public.php:502
 msgid "Or"
 msgstr ""
 

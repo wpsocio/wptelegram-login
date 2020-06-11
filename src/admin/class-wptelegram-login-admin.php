@@ -213,7 +213,7 @@ class WPTelegram_Login_Admin {
 	/**
 	 * Registers custom category for blocks.
 	 *
-	 * @since x.y.z
+	 * @since 1.6.3
 	 *
 	 * @param array $categories The block categories.
 	 * @return array

@@ -5,7 +5,7 @@ Tags: telegram, login, register, social, signup
 Requires at least: 4.7.0
 Tested up to: 5.4.2
 Requires PHP: 5.6
-Stable tag: 1.6.2
+Stable tag: 1.6.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -122,36 +122,14 @@ Many thanks to the translators for the great job!
 
 == Changelog ==
 
+= 1.6.3 =
+-   Fixed the bug in creating random email
+
 = 1.6.2 =
 * Fixed Admin page JS path
-
-= 1.6.1 =
-
 
 = 1.6.0 =
 * Added support for random email generation
 * Simplified the build process
-
-= 1.5.4 =
-* Added some more hooks to login flow
-* Updated bot token pattern
-
-= 1.5.3 =
-* Fixed the issue with default values not shown for fresh installs
-
-= 1.5.2 =
-* Fixed the wrong shortcode atts
-* Fixed the regenerator-runtime issue
-
-= 1.5.1 =
-* Fixed the 404 for for admin css
-* Fixed the ajax error caused by WordFence
-* Fixed pending upgrades from last update
-* Fixed the hidden login on thememylogin
-* Switched to WPCS in JS.
-
-= 1.5.0 =
-* Removed the CMB2 dependency
-* Migrated to React for settings page
 
 == Upgrade Notice ==

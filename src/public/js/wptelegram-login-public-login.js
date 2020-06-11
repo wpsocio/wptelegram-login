@@ -1,6 +1,6 @@
 'use strict';
 
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
 	var loginForm = $('input[type="password"]').closest('form');
 
 	if (0 === loginForm.length) {
