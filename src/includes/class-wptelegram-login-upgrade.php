@@ -49,12 +49,12 @@ class WPTelegram_Login_Upgrade {
 
 		$current_version = get_option( 'wptelegram_login_ver', '1.5.0' );
 
-		$plugin_settings = WPTG_Login()->options()->get_data();
-		$is_new_install  = empty( $plugin_settings );
-
 		if ( ! version_compare( $current_version, $this->plugin->version(), '<' ) ) {
 			return;
 		}
+
+		$plugin_settings = WPTG_Login()->options()->get_data();
+		$is_new_install  = empty( $plugin_settings );
 
 		do_action( 'wptelegram_login_before_do_upgrade', $current_version );
 
