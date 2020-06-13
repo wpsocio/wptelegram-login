@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.7.0 - 2020-06-14](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.7.0)
+
+### Enhancements
+
+-   Unified Telegram user ID with WP Telegram
+
 ## [1.6.3 - 2020-06-12](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.6.3)
 
 ### Bug Fixes

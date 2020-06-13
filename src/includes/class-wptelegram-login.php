@@ -137,7 +137,6 @@ class WPTelegram_Login {
 		$this->define_public_hooks();
 
 		$this->run();
-
 	}
 
 	/**
@@ -180,6 +179,11 @@ class WPTelegram_Login {
 		 */
 		require_once $this->dir( '/includes/rest-api/class-wptelegram-login-rest-controller.php' );
 		require_once $this->dir( '/includes/rest-api/class-wptelegram-login-settings-controller.php' );
+
+		/**
+		 * The class responsible for plugin upgrades.
+		 */
+		require_once $this->dir( '/includes/class-wptelegram-login-upgrade.php' );
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
@@ -275,9 +279,11 @@ class WPTelegram_Login {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new WPTelegram_Login_Public( $this );
+		$plugin_upgrade = new WPTelegram_Login_Upgrade( $this );
 
-		$this->loader->add_action( 'after_setup_theme', $plugin_public, 'do_upgrade' );
+		$this->loader->add_action( 'after_setup_theme', $plugin_upgrade, 'do_upgrade' );
+
+		$plugin_public = new WPTelegram_Login_Public( $this );
 
 		$this->loader->add_action( 'login_enqueue_scripts', $plugin_public, 'login_enqueue_scripts' );
 
@@ -289,8 +295,6 @@ class WPTelegram_Login {
 		$this->loader->add_shortcode( 'wptelegram-login', get_class( $plugin_public ), 'login_shortcode' );
 
 		$this->loader->add_filter( 'render_block', $plugin_public, 'render_login_block', 11, 2 );
-
-		$this->loader->add_filter( 'wptelegram_notify_user_chat_id', $plugin_public, 'user_telegram_chat_id', 10, 2 );
 
 		$this->loader->add_filter( 'get_avatar_url', $plugin_public, 'custom_avatar_url', 10, 2 );
 

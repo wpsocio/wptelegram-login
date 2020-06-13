@@ -329,7 +329,7 @@ class WPTelegram_Login_Public {
 	 */
 	public function is_returning_user( $tg_user_id ) {
 		$args  = array(
-			'meta_key'   => "{$this->plugin->name()}_user_id", // phpcs:ignore
+			'meta_key'   => WPTELEGRAM_USER_META_KEY, // phpcs:ignore
 			'meta_value' => $tg_user_id, // phpcs:ignore
 			'number'     => 1,
 		);
@@ -404,7 +404,7 @@ class WPTelegram_Login_Public {
 		}
 
 		// Save the telegram user ID.
-		update_user_meta( $wp_user_id, "{$this->plugin->name()}_user_id", $id );
+		update_user_meta( $wp_user_id, WPTELEGRAM_USER_META_KEY, $id );
 
 		if ( ! empty( $photo_url ) ) {
 			$meta_key = WPTG_Login()->options()->get( 'avatar_meta_key' );
@@ -790,109 +790,5 @@ class WPTelegram_Login_Public {
 			}
 		}
 		return $url;
-	}
-
-	/**
-	 * Do the necessary db upgrade, if needed
-	 *
-	 * @since    1.5.1
-	 */
-	public function do_upgrade() {
-
-		$current_version = get_option( 'wptelegram_login_ver', '1.5.0' );
-
-		if ( ! version_compare( $current_version, $this->plugin->version(), '<' ) ) {
-			return;
-		}
-
-		do_action( 'wptelegram_login_before_do_upgrade', $current_version );
-
-		// the sequential upgrades
-		// subsequent upgrade depends upon the previous one.
-		$version_upgrades = array(
-			'1.5.1', // first upgrade.
-		);
-
-		// always.
-		if ( ! in_array( $this->plugin->version(), $version_upgrades, true ) ) {
-			$version_upgrades[] = $this->plugin->version();
-		}
-
-		foreach ( $version_upgrades as $target_version ) {
-
-			if ( version_compare( $current_version, $target_version, '<' ) ) {
-
-				$this->upgrade_to( $target_version );
-
-				$current_version = $target_version;
-			}
-		}
-
-		do_action( 'wptelegram_login_after_do_upgrade', $current_version );
-	}
-
-	/**
-	 * Upgrade to a specific version
-	 *
-	 * @since 1.5.1
-	 *
-	 * @param string $version The plugin verion to upgrade to.
-	 */
-	private function upgrade_to( $version ) {
-
-		// 2.0.1 becomes 201
-		$_version = str_replace( '.', '', $version );
-
-		$method = array( $this, "upgrade_to_{$_version}" );
-
-		if ( is_callable( $method ) ) {
-
-			call_user_func( $method );
-		}
-
-		update_option( 'wptelegram_login_ver', $version );
-	}
-
-	/**
-	 * Upgrade to version 1.5.1
-	 *
-	 * @since    1.5.1
-	 */
-	private function upgrade_to_151() {
-
-		if ( empty( WPTG_Login()->options()->get_data() ) ) {
-			return;
-		}
-
-		$options = array(
-			'disable_signup',
-			'show_user_photo',
-			'hide_on_default',
-			'show_message_on_error',
-		);
-
-		// Convert checkboxes to boolean.
-		foreach ( $options as $key ) {
-			$value = WPTG_Login()->options()->get( $key );
-			WPTG_Login()->options()->set( $key, 'on' === $value );
-		}
-	}
-
-	/**
-	 * Pass the user ID to WP Telegram
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param string $chat_id user chat ID.
-	 * @param string $email   user email.
-	 *
-	 * @return mixed
-	 */
-	public function user_telegram_chat_id( $chat_id, $email ) {
-		$user = get_user_by( 'email', $email );
-		if ( $user && $user instanceof WP_User && empty( $chat_id ) ) {
-			$chat_id = wptelegram_login_user_id( $user->ID );
-		}
-		return $chat_id;
 	}
 }
