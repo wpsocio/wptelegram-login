@@ -65,6 +65,7 @@ class WPTelegram_Login_Upgrade {
 			// subsequent upgrade depends upon the previous one.
 			$version_upgrades = array(
 				'1.5.1', // first upgrade.
+				'1.7.0',
 			);
 		}
 
@@ -126,6 +127,33 @@ class WPTelegram_Login_Upgrade {
 		foreach ( $options as $key ) {
 			$value = WPTG_Login()->options()->get( $key );
 			WPTG_Login()->options()->set( $key, 'on' === $value );
+		}
+	}
+
+	/**
+	 * Upgrade to version 1.7.0
+	 * Changes telegram user id meta key to share between other plugins.
+	 *
+	 * @since    1.7.0
+	 */
+	private function upgrade_to_170() {
+		$old_meta_key = $this->plugin->name() . '_user_id';
+
+		$args  = array(
+			'fields'       => 'ID',
+			'meta_key'     => $old_meta_key, // phpcs:ignore
+			'meta_compare' => 'EXISTS',
+			'number'       => -1,
+		);
+		$users = get_users( $args );
+
+		foreach ( $users as $id ) {
+			// get the existing value.
+			$meta_value = get_user_meta( $id, $old_meta_key, true );
+			// use the new meta key to retain existing value.
+			update_user_meta( $id, WPTELEGRAM_USER_META_KEY, $meta_value );
+			// housekeeping.
+			delete_user_meta( $id, $old_meta_key );
 		}
 	}
 }

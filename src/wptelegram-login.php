@@ -35,6 +35,12 @@ define( 'WPTELEGRAM_LOGIN_DIR', untrailingslashit( plugin_dir_path( __FILE__ ) )
 
 defined( 'WPTELEGRAM_LOGIN_URL' ) || define( 'WPTELEGRAM_LOGIN_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) );
 
+// Telegram user ID meta key.
+if ( ! defined( 'WPTELEGRAM_USER_META_KEY' ) ) {
+	// Common for all WP Telegram plugins.
+	define( 'WPTELEGRAM_USER_META_KEY', 'wptelegram_user_id' );
+}
+
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-wptelegram-login-activator.php

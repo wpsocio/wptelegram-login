@@ -296,8 +296,6 @@ class WPTelegram_Login {
 
 		$this->loader->add_filter( 'render_block', $plugin_public, 'render_login_block', 11, 2 );
 
-		$this->loader->add_filter( 'wptelegram_notify_user_chat_id', $plugin_public, 'user_telegram_chat_id', 10, 2 );
-
 		$this->loader->add_filter( 'get_avatar_url', $plugin_public, 'custom_avatar_url', 10, 2 );
 
 	}

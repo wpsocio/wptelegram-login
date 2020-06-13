@@ -359,7 +359,7 @@ class WPTelegram_Login_Admin {
 	 * @return array
 	 */
 	public function register_custom_user_column( $columns ) {
-		$columns['telegram_chat_id'] = __( 'Telegram User ID', 'wptelegram-login' );
+		$columns[ WPTELEGRAM_USER_META_KEY ] = __( 'Telegram User ID', 'wptelegram-login' );
 		return $columns;
 	}
 
@@ -374,13 +374,13 @@ class WPTelegram_Login_Admin {
 	 */
 	public function register_custom_user_column_view( $output, $column_name, $user_id ) {
 
-		if ( 'telegram_chat_id' === $column_name ) {
+		if ( WPTELEGRAM_USER_META_KEY === $column_name ) {
 
 			$user = get_user_by( 'id', $user_id );
 
 			if ( $user && $user instanceof WP_User ) {
 
-				return $user->wptelegram_login_user_id;
+				return $user->{WPTELEGRAM_USER_META_KEY};
 			}
 		}
 		return $output;

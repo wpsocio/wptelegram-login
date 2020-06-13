@@ -329,7 +329,7 @@ class WPTelegram_Login_Public {
 	 */
 	public function is_returning_user( $tg_user_id ) {
 		$args  = array(
-			'meta_key'   => "{$this->plugin->name()}_user_id", // phpcs:ignore
+			'meta_key'   => WPTELEGRAM_USER_META_KEY, // phpcs:ignore
 			'meta_value' => $tg_user_id, // phpcs:ignore
 			'number'     => 1,
 		);
@@ -404,7 +404,7 @@ class WPTelegram_Login_Public {
 		}
 
 		// Save the telegram user ID.
-		update_user_meta( $wp_user_id, "{$this->plugin->name()}_user_id", $id );
+		update_user_meta( $wp_user_id, WPTELEGRAM_USER_META_KEY, $id );
 
 		if ( ! empty( $photo_url ) ) {
 			$meta_key = WPTG_Login()->options()->get( 'avatar_meta_key' );
