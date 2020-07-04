@@ -49,6 +49,16 @@ class WPTelegram_Login_Admin {
 	 */
 	public function enqueue_styles( $hook_suffix ) {
 
+		if ( ! defined( 'WPTELEGRAM_LOADED' ) ) {
+			wp_enqueue_style(
+				$this->plugin->name(),
+				$this->plugin->url( '/admin/css/admin-menu' ) . $this->plugin->suffix() . '.css',
+				array(),
+				$this->plugin->version(),
+				'all'
+			);
+		}
+
 		// Load only on settings page.
 		if ( $this->is_settings_page( $hook_suffix ) ) {
 			wp_enqueue_style( $this->plugin->name() . '-bootstrap', $this->plugin->url( '/admin/css/bootstrap/bootstrap' ) . $this->plugin->suffix() . '.css', array(), $this->plugin->version(), 'all' );
@@ -268,8 +278,7 @@ class WPTelegram_Login_Admin {
 				esc_html( $this->plugin->title() ),
 				'manage_options',
 				$this->plugin->name(),
-				array( $this, 'display_plugin_admin_page' ),
-				$this->plugin->url( '/admin/icons/icon-16x16-white.svg' )
+				array( $this, 'display_plugin_admin_page' )
 			);
 		}
 	}
