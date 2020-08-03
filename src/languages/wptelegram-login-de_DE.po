@@ -17,8 +17,7 @@ msgstr ""
 "10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Poedit-KeywordsList: __;_e;_x;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: includes/cmb2\n"
-"X-Poedit-SearchPathExcluded-1: node_modules\n"
+"X-Poedit-SearchPathExcluded-0: admin/settings\n"
 
 #: admin/class-wptelegram-login-admin.php:232
 #, fuzzy
