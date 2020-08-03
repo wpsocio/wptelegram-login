@@ -112,7 +112,7 @@ class WPTelegram_Login_Admin {
 				'settings' => array(
 					'saved_opts'  => current_user_can( 'manage_options' ) ? WPTelegram_Login_Settings_Controller::get_default_settings() : array(), // Not to expose bot token to non-admins.
 					'assets'      => array(
-						'logo_url' => $this->plugin->url( '/admin/icons/icon-100x100.svg' ),
+						'logo_url' => $this->plugin->url( '/admin/icons/icon-128x128.svg' ),
 						'tg_icon'  => $this->plugin->url( '/admin/icons/tg-icon.svg' ),
 					),
 					'select_opts' => array(
