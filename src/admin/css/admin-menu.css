@@ -1,12 +1,14 @@
 @font-face {
 	font-family: 'WPTelegram';
-	src: url('../fonts/WPTelegram.eot');
+	src: url('../fonts/WPTelegram.eot'); /* IE9 Compat Modes */
 	src: url('../fonts/WPTelegram.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/WPTelegram.woff2') format('woff2'), url('../fonts/WPTelegram.woff') format('woff'),
-		url('../fonts/WPTelegram.ttf') format('truetype'), url('../fonts/WPTelegram.svg#WPTelegram') format('svg');
+		/* IE6-IE8 */ url('../fonts/WPTelegram.otf') format('opentype'),
+		/* Open Type Font */ url('../fonts/WPTelegram.svg') format('svg'),
+		/* Legacy iOS */ url('../fonts/WPTelegram.ttf') format('truetype'),
+		/* Safari, Android, iOS */ url('../fonts/WPTelegram.woff') format('woff'),
+		/* Modern Browsers */ url('../fonts/WPTelegram.woff2') format('woff2'); /* Modern Browsers */
 	font-weight: normal;
 	font-style: normal;
-	font-display: swap;
 }
 
 #adminmenu #toplevel_page_wptelegram_login .menu-icon-generic div.wp-menu-image::before {
