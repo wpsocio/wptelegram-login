@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wptelegram-login\n"
-"POT-Creation-Date: 2020-06-16 07:19:44+00:00\n"
+"POT-Creation-Date: 2020-08-03 21:04:02+00:00\n"
 "PO-Revision-Date: 2020-04-11 19:14+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
@@ -19,28 +19,28 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: admin/settings\n"
 
-#: admin/class-wptelegram-login-admin.php:232
+#: admin/class-wptelegram-login-admin.php:242
 #, fuzzy
 msgid "WP Telegram"
 msgstr "WP Telegram Einloggen"
 
-#: admin/class-wptelegram-login-admin.php:260
+#: admin/class-wptelegram-login-admin.php:270
 msgid "Telegram Login"
 msgstr "Telegram Login"
 
-#: admin/class-wptelegram-login-admin.php:332
+#: admin/class-wptelegram-login-admin.php:341
 msgid "Any"
 msgstr "Immer anzeigen"
 
-#: admin/class-wptelegram-login-admin.php:333
+#: admin/class-wptelegram-login-admin.php:342
 msgid "Logged out"
 msgstr "ausgeloggt"
 
-#: admin/class-wptelegram-login-admin.php:334
+#: admin/class-wptelegram-login-admin.php:343
 msgid "Logged in"
 msgstr "eingeloggt"
 
-#: admin/class-wptelegram-login-admin.php:362
+#: admin/class-wptelegram-login-admin.php:371
 msgid "Telegram User ID"
 msgstr "Telegram User ID"
 
