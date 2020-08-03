@@ -49,6 +49,16 @@ class WPTelegram_Login_Admin {
 	 */
 	public function enqueue_styles( $hook_suffix ) {
 
+		if ( ! defined( 'WPTELEGRAM_LOADED' ) ) {
+			wp_enqueue_style(
+				$this->plugin->name(),
+				$this->plugin->url( '/admin/css/admin-menu' ) . $this->plugin->suffix() . '.css',
+				array(),
+				$this->plugin->version(),
+				'all'
+			);
+		}
+
 		// Load only on settings page.
 		if ( $this->is_settings_page( $hook_suffix ) ) {
 			wp_enqueue_style( $this->plugin->name() . '-bootstrap', $this->plugin->url( '/admin/css/bootstrap/bootstrap' ) . $this->plugin->suffix() . '.css', array(), $this->plugin->version(), 'all' );
@@ -102,7 +112,7 @@ class WPTelegram_Login_Admin {
 				'settings' => array(
 					'saved_opts'  => current_user_can( 'manage_options' ) ? WPTelegram_Login_Settings_Controller::get_default_settings() : array(), // Not to expose bot token to non-admins.
 					'assets'      => array(
-						'logo_url' => $this->plugin->url( '/admin/icons/icon-100x100.svg' ),
+						'logo_url' => $this->plugin->url( '/admin/icons/icon-128x128.svg' ),
 						'tg_icon'  => $this->plugin->url( '/admin/icons/tg-icon.svg' ),
 					),
 					'select_opts' => array(
@@ -268,8 +278,7 @@ class WPTelegram_Login_Admin {
 				esc_html( $this->plugin->title() ),
 				'manage_options',
 				$this->plugin->name(),
-				array( $this, 'display_plugin_admin_page' ),
-				$this->plugin->url( '/admin/icons/icon-16x16-white.svg' )
+				array( $this, 'display_plugin_admin_page' )
 			);
 		}
 	}

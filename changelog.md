@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.7.1 - 2020-08-4](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.7.1)
+
+### Enhancements
+
+-   Removed button for already connected users
+
 ## [1.7.0 - 2020-06-14](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.7.0)
 
 ### Enhancements

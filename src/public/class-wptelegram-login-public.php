@@ -652,6 +652,13 @@ class WPTelegram_Login_Public {
 			return false;
 		}
 
+		// Whether to show the button if user is already connected.
+		$cur_user_telegram_id = wptelegram_login_user_id();
+		$show_if_connected    = apply_filters( 'wptelegram_login_show_if_user_connected', false, $cur_user_telegram_id );
+		if ( $cur_user_telegram_id && ! $show_if_connected ) {
+			return;
+		}
+
 		/**
 		 * Filters when to show the login button
 		 *
