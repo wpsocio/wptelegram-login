@@ -47,7 +47,7 @@ if ( ! function_exists( 'wptelegram_login_user_id' ) ) {
 		if ( ! absint( $wp_user_id ) ) {
 			$wp_user_id = get_current_user_id();
 		}
-		return absint( get_user_meta( $wp_user_id, WPTELEGRAM_USER_META_KEY, true ) );
+		return absint( get_user_meta( $wp_user_id, WPTELEGRAM_USER_ID_META_KEY, true ) );
 	}
 }
 

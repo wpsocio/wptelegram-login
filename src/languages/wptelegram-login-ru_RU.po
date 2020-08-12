@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wptelegram-login\n"
-"POT-Creation-Date: 2020-08-03 21:04:02+00:00\n"
+"POT-Creation-Date: 2020-08-12 20:26:57+00:00\n"
 "PO-Revision-Date: 2019-02-08 22:46+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
@@ -27,19 +27,19 @@ msgstr "WP Telegram"
 msgid "Telegram Login"
 msgstr "Telegram Login"
 
-#: admin/class-wptelegram-login-admin.php:341
+#: admin/class-wptelegram-login-admin.php:342
 msgid "Any"
 msgstr "Всегда"
 
-#: admin/class-wptelegram-login-admin.php:342
+#: admin/class-wptelegram-login-admin.php:343
 msgid "Logged out"
 msgstr "Выходит из системы"
 
-#: admin/class-wptelegram-login-admin.php:343
+#: admin/class-wptelegram-login-admin.php:344
 msgid "Logged in"
 msgstr "Входит в систему"
 
-#: admin/class-wptelegram-login-admin.php:371
+#: admin/class-wptelegram-login-admin.php:372
 msgid "Telegram User ID"
 msgstr "ID Польз. Telegram"
 
@@ -330,7 +330,7 @@ msgstr ""
 msgid "Telegram sign in could not be completed."
 msgstr "Не удалось выполнить вход через Telegram."
 
-#: public/class-wptelegram-login-public.php:502
+#: public/class-wptelegram-login-public.php:500
 msgid "Or"
 msgstr "ИЛИ"
 

@@ -329,7 +329,7 @@ class WPTelegram_Login_Public {
 	 */
 	public function is_returning_user( $tg_user_id ) {
 		$args  = array(
-			'meta_key'   => WPTELEGRAM_USER_META_KEY, // phpcs:ignore
+			'meta_key'   => WPTELEGRAM_USER_ID_META_KEY, // phpcs:ignore
 			'meta_value' => $tg_user_id, // phpcs:ignore
 			'number'     => 1,
 		);
@@ -403,8 +403,9 @@ class WPTelegram_Login_Public {
 			throw new Exception( __( 'Telegram sign in could not be completed.', 'wptelegram-login' ) . ' ' . $wp_user_id->get_error_message() );
 		}
 
-		// Save the telegram user ID.
-		update_user_meta( $wp_user_id, WPTELEGRAM_USER_META_KEY, $id );
+		// Save the telegram user ID and username.
+		update_user_meta( $wp_user_id, WPTELEGRAM_USER_ID_META_KEY, $id );
+		update_user_meta( $wp_user_id, WPTELEGRAM_USERNAME_META_KEY, $username );
 
 		if ( ! empty( $photo_url ) ) {
 			$meta_key = WPTG_Login()->options()->get( 'avatar_meta_key' );
@@ -455,9 +456,6 @@ class WPTelegram_Login_Public {
 	 */
 	private function redirect( $user ) {
 		$redirect_to = isset( $_REQUEST['redirect_to'] ) ? remove_query_arg( 'reauth', wp_unslash( $_REQUEST['redirect_to'] ) ) : ''; // phpcs:ignore
-
-		// Apply default WP filter.
-		$redirect_to = apply_filters( 'login_redirect', $redirect_to, $redirect_to, $user );
 
 		// Apply plugin specific filter.
 		$redirect_to = apply_filters( 'wptelegram_login_user_redirect_to', $redirect_to, $user );

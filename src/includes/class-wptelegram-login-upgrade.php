@@ -151,7 +151,7 @@ class WPTelegram_Login_Upgrade {
 			// get the existing value.
 			$meta_value = get_user_meta( $id, $old_meta_key, true );
 			// use the new meta key to retain existing value.
-			update_user_meta( $id, WPTELEGRAM_USER_META_KEY, $meta_value );
+			update_user_meta( $id, WPTELEGRAM_USER_ID_META_KEY, $meta_value );
 			// housekeeping.
 			delete_user_meta( $id, $old_meta_key );
 		}
