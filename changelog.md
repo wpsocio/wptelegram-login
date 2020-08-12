@@ -4,6 +4,17 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+### Enhancements
+
+-   Updated user id meta key constant name
+-   Telegram username is now saved to user meta
+-   Updated compatibility with WP 5.5
+
+### Bug Fixes
+
+-   Disabled default WP login redirect to fix unexpected redirects
+-   Fixed admin menu icon
+
 ## [1.7.1 - 2020-08-4](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.7.1)
 
 ### Enhancements
