@@ -4,6 +4,8 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.8.0 - 2020-08-13](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.0)
+
 ### Enhancements
 
 -   Updated user id meta key constant name

@@ -5,7 +5,7 @@ Tags: telegram, login, register, social, signup
 Requires at least: 4.7.0
 Tested up to: 5.5
 Requires PHP: 5.6
-Stable tag: 1.7.1
+Stable tag: 1.8.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,13 @@ Many thanks to the translators for the great job!
 7. User List Table (for admin)
 
 == Changelog ==
+
+= 1.8.0 =
+-   Updated user id meta key constant name
+-   Telegram username is now saved to user meta
+-   Updated compatibility with WP 5.5
+-   Disabled default WP login redirect to fix unexpected redirects
+-   Fixed admin menu icon
 
 = 1.7.1 =
 -   Removed button for already connected users

@@ -111,8 +111,8 @@ const blocks = ( isDev ) => {
 						{
 							loader: 'sass-loader',
 							options: {
-								// additionalData:
-								// 	'@import "./src/admin/blocks/src/common.scss";\n',
+								additionalData:
+									'@import "./src/admin/blocks/src/common.scss";\n',
 								sassOptions: {
 									outputStyle: 'expanded',
 								},
