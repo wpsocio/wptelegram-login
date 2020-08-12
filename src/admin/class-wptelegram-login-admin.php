@@ -52,7 +52,7 @@ class WPTelegram_Login_Admin {
 		if ( ! defined( 'WPTELEGRAM_LOADED' ) ) {
 			wp_enqueue_style(
 				$this->plugin->name(),
-				$this->plugin->url( '/admin/css/admin-menu' ) . $this->plugin->suffix() . '.css',
+				$this->plugin->url( '/admin/css/admin' ) . $this->plugin->suffix() . '.css',
 				array(),
 				$this->plugin->version(),
 				'all'
@@ -112,7 +112,7 @@ class WPTelegram_Login_Admin {
 				'settings' => array(
 					'saved_opts'  => current_user_can( 'manage_options' ) ? WPTelegram_Login_Settings_Controller::get_default_settings() : array(), // Not to expose bot token to non-admins.
 					'assets'      => array(
-						'logo_url' => $this->plugin->url( '/admin/icons/icon-128x128.svg' ),
+						'logo_url' => $this->plugin->url( '/admin/icons/icon-128x128.png' ),
 						'tg_icon'  => $this->plugin->url( '/admin/icons/tg-icon.svg' ),
 					),
 					'select_opts' => array(

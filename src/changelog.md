@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.8.1 - 2020-08-13](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.1)
+
+### Bug Fixes
+
+-   Fixed admin styles
+
 ## [1.8.0 - 2020-08-13](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.0)
 
 ### Enhancements
