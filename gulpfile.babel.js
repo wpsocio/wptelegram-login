@@ -408,11 +408,11 @@ export const styles = () => {
 		.src( config.styleSRC, { allowEmpty: true } )
 		.pipe( plumber( errorHandler ) )
 		.pipe( lineec() )
-		.pipe( gulp.dest( './' ) )
+		.pipe( gulp.dest( config.srcDir ) )
 		.pipe( rename( { suffix: '.min' } ) )
 		.pipe( minifycss( { maxLineLen: 10 } ) )
 		.pipe( lineec() )
-		.pipe( gulp.dest( './' ) )
+		.pipe( gulp.dest( config.srcDir ) )
 		.pipe(
 			notify( {
 				message: '\n\n✅  ===> STYLES — completed!\n',
@@ -423,20 +423,16 @@ export const styles = () => {
 
 export const stylesRTL = () => {
 	return gulp
-		.src( config.styleSRC, {
-			allowEmpty: true,
-			cwd: config.srcDir,
-			base: './',
-		} )
+		.src( config.styleSRC, { allowEmpty: true } )
 		.pipe( plumber( errorHandler ) )
 		.pipe( autoprefixer( config.BROWSERS_LIST ) )
 		.pipe( rename( { suffix: '-rtl' } ) ) // Append "-rtl" to the filename.
 		.pipe( rtlcss() ) // Convert to RTL.
-		.pipe( gulp.dest( './' ) )
+		.pipe( gulp.dest( config.srcDir ) )
 		.pipe( rename( { suffix: '.min' } ) )
 		.pipe( minifycss( { maxLineLen: 10 } ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-		.pipe( gulp.dest( './' ) )
+		.pipe( gulp.dest( config.srcDir ) )
 		.pipe(
 			notify( {
 				message: '\n\n✅  ===> STYLES RTL — completed!\n',
@@ -474,7 +470,7 @@ export const webpack = () => {
 		.pipe( gulp.dest( ( file ) => file.base ) );
 };
 
-export const build = gulp.series( webpack, esNextJS, i18n );
+export const build = gulp.series( webpack, esNextJS, i18n, stylesRTL, styles );
 
 export const prerelease = gulp.parallel( build, copyChangelog );
 

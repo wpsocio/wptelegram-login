@@ -15,13 +15,17 @@ const config = {
 	vendorBin: './vendor/bin',
 	PhpStandard: 'WordPress',
 	ESNextJS: srcDir + '/**/*.esnext.js',
-	styleSRC: 'public/css/*.css',
+	styleSRC: [
+		srcDir + '/**/css/*.css',
+		'!' + srcDir + '/**/*-rtl.css',
+		'!' + srcDir + '/**/*.min.css',
+	],
 	styleDest: srcDir,
 
 	// Translation options.
 	textDomain: name,
-	potFilename: `${name}.pot`,
-	JSPotFilename: `${name}.js.pot`,
+	potFilename: `${ name }.pot`,
+	JSPotFilename: `${ name }.js.pot`,
 	domainPath: srcDir + '/languages',
 	packageName: 'WP Telegram Comments',
 	bugReport: 'http://wordpress.org/support/plugin/' + name,
