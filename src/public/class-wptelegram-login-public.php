@@ -457,9 +457,6 @@ class WPTelegram_Login_Public {
 	private function redirect( $user ) {
 		$redirect_to = isset( $_REQUEST['redirect_to'] ) ? remove_query_arg( 'reauth', wp_unslash( $_REQUEST['redirect_to'] ) ) : ''; // phpcs:ignore
 
-		// Apply default WP filter.
-		$redirect_to = apply_filters( 'login_redirect', $redirect_to, $redirect_to, $user );
-
 		// Apply plugin specific filter.
 		$redirect_to = apply_filters( 'wptelegram_login_user_redirect_to', $redirect_to, $user );
 
