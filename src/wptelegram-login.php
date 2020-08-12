@@ -40,6 +40,10 @@ if ( ! defined( 'WPTELEGRAM_USER_ID_META_KEY' ) ) {
 	// Common for all WP Telegram plugins.
 	define( 'WPTELEGRAM_USER_ID_META_KEY', 'wptelegram_user_id' );
 }
+if ( ! defined( 'WPTELEGRAM_USERNAME_META_KEY' ) ) {
+	// Common for all WP Telegram plugins.
+	define( 'WPTELEGRAM_USERNAME_META_KEY', 'wptelegram_username' );
+}
 
 /**
  * The code that runs during plugin activation.

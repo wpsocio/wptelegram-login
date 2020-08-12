@@ -403,8 +403,9 @@ class WPTelegram_Login_Public {
 			throw new Exception( __( 'Telegram sign in could not be completed.', 'wptelegram-login' ) . ' ' . $wp_user_id->get_error_message() );
 		}
 
-		// Save the telegram user ID.
+		// Save the telegram user ID and username.
 		update_user_meta( $wp_user_id, WPTELEGRAM_USER_ID_META_KEY, $id );
+		update_user_meta( $wp_user_id, WPTELEGRAM_USERNAME_META_KEY, $username );
 
 		if ( ! empty( $photo_url ) ) {
 			$meta_key = WPTG_Login()->options()->get( 'avatar_meta_key' );
