@@ -52,7 +52,7 @@ class WPTelegram_Login_Admin {
 		if ( ! defined( 'WPTELEGRAM_LOADED' ) ) {
 			wp_enqueue_style(
 				$this->plugin->name(),
-				$this->plugin->url( '/admin/css/admin-menu' ) . $this->plugin->suffix() . '.css',
+				$this->plugin->url( '/admin/css/admin' ) . $this->plugin->suffix() . '.css',
 				array(),
 				$this->plugin->version(),
 				'all'

@@ -2,7 +2,8 @@
 #loginform #wptelegram-login-wrap *,
 #registerform #wptelegram-login-wrap,
 #registerform #wptelegram-login-wrap * {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 #wptelegram-login-wrap {
     display: none;
