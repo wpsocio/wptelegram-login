@@ -278,7 +278,8 @@ class WPTelegram_Login_Admin {
 				esc_html( $this->plugin->title() ),
 				'manage_options',
 				$this->plugin->name(),
-				array( $this, 'display_plugin_admin_page' )
+				array( $this, 'display_plugin_admin_page' ),
+				'none'
 			);
 		}
 	}
@@ -368,7 +369,7 @@ class WPTelegram_Login_Admin {
 	 * @return array
 	 */
 	public function register_custom_user_column( $columns ) {
-		$columns[ WPTELEGRAM_USER_META_KEY ] = __( 'Telegram User ID', 'wptelegram-login' );
+		$columns[ WPTELEGRAM_USER_ID_META_KEY ] = __( 'Telegram User ID', 'wptelegram-login' );
 		return $columns;
 	}
 
@@ -383,13 +384,13 @@ class WPTelegram_Login_Admin {
 	 */
 	public function register_custom_user_column_view( $output, $column_name, $user_id ) {
 
-		if ( WPTELEGRAM_USER_META_KEY === $column_name ) {
+		if ( WPTELEGRAM_USER_ID_META_KEY === $column_name ) {
 
 			$user = get_user_by( 'id', $user_id );
 
 			if ( $user && $user instanceof WP_User ) {
 
-				return $user->{WPTELEGRAM_USER_META_KEY};
+				return $user->{WPTELEGRAM_USER_ID_META_KEY};
 			}
 		}
 		return $output;
