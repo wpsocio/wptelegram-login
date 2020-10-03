@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wptelegram-login\n"
-"POT-Creation-Date: 2020-08-12 20:26:57+00:00\n"
+"POT-Creation-Date: 2020-10-03 13:24:41+00:00\n"
 "PO-Revision-Date: 2019-02-08 22:46+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
@@ -39,7 +39,53 @@ msgstr "Выходит из системы"
 msgid "Logged in"
 msgstr "Входит в систему"
 
-#: admin/class-wptelegram-login-admin.php:372
+#: admin/class-wptelegram-login-admin.php:380
+#, fuzzy
+msgid "Telegram Info"
+msgstr "Telegram Login"
+
+#: admin/class-wptelegram-login-admin.php:381
+msgid "Here you can connect this account to Telegram."
+msgstr ""
+
+#: admin/class-wptelegram-login-admin.php:385
+#, fuzzy
+msgid "Telegram Chat ID"
+msgstr "ID Польз. Telegram"
+
+#: admin/class-wptelegram-login-admin.php:389
+#: languages/wptelegram-login-js-translations.php:121
+msgid "INSTRUCTIONS!"
+msgstr "ИНСТРУКЦИЯ!"
+
+#. translators: %s is bot username
+#: admin/class-wptelegram-login-admin.php:396
+msgid "Get your Chat ID from %s and enter it above."
+msgstr ""
+
+#: admin/class-wptelegram-login-admin.php:397
+msgid "Ask the user to get the Chat ID from %s and enter it above."
+msgstr ""
+
+#. translators: %s is bot username
+#: admin/class-wptelegram-login-admin.php:407
+msgid "Start a conversation with %s to receive notifications."
+msgstr ""
+
+#: admin/class-wptelegram-login-admin.php:408
+msgid "Ask the user to start a conversation with %s to receive notifications."
+msgstr ""
+
+#: admin/class-wptelegram-login-admin.php:436
+#: public/class-wptelegram-login-public.php:97
+msgid "Error:"
+msgstr "Ошибка:"
+
+#: admin/class-wptelegram-login-admin.php:436
+msgid "Please Enter a valid Chat ID"
+msgstr ""
+
+#: admin/class-wptelegram-login-admin.php:479
 msgid "Telegram User ID"
 msgstr "ID Польз. Telegram"
 
@@ -216,10 +262,6 @@ msgstr ""
 "С помощью этого плагина, вы можете сделать простую авторизацию для ваших "
 "пользователей через Telegram."
 
-#: languages/wptelegram-login-js-translations.php:121
-msgid "INSTRUCTIONS!"
-msgstr "ИНСТРУКЦИЯ!"
-
 #: languages/wptelegram-login-js-translations.php:124
 #, fuzzy
 msgid ""
@@ -296,10 +338,6 @@ msgstr "Выводить сообщение об ошибке"
 #: languages/wptelegram-login-js-translations.php:172
 msgid "Error message text"
 msgstr "Текст ошибки"
-
-#: public/class-wptelegram-login-public.php:97
-msgid "Error:"
-msgstr "Ошибка:"
 
 #: public/class-wptelegram-login-public.php:206
 msgid "Unauthorized! Data is NOT from Telegram"

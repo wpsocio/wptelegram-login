@@ -362,6 +362,113 @@ class WPTelegram_Login_Admin {
 	}
 
 	/**
+	 * Adds User Telegram ID field to user profile.
+	 *
+	 * @since    1.8.2
+	 * @param WP_User $user Currently-listed user.
+	 * @return void
+	 */
+	public function add_user_profile_fields( $user ) {
+		$telegram_id  = get_the_author_meta( WPTELEGRAM_USER_ID_META_KEY, $user->ID );
+		$field_name   = WPTELEGRAM_USER_ID_META_KEY;
+		$bot_username = WPTG_Login()->options()->get( 'bot_username' );
+		if ( empty( $bot_username ) ) {
+			return;
+		}
+		$is_current_user = get_current_user_id() === $user->ID;
+		?>
+		<h2><?php esc_html_e( 'Telegram Info', 'wptelegram-login' ); ?></h2>
+		<p class="description"><?php esc_html_e( 'Here you can connect this account to Telegram.', 'wptelegram-login' ); ?></p>
+		<table class="form-table">
+			<tr>
+				<th>
+					<label for="<?php echo esc_attr( $field_name ); ?>"><?php esc_html_e( 'Telegram Chat ID', 'wptelegram-login' ); ?></label>
+				</th>
+				<td>
+					<input type="text" name="<?php echo esc_attr( $field_name ); ?>" id="<?php echo esc_attr( $field_name ); ?>" value="<?php echo esc_attr( $telegram_id ); ?>" class="regular-text" />
+					<p style="color:#f10e0e;"><b><?php esc_html_e( 'INSTRUCTIONS!', 'wptelegram-login' ); ?></b></p>
+					<ul style="list-style-type: disc;">
+						<li>
+							<?php
+								/* translators: %s is bot username */
+								printf(
+									$is_current_user // phpcs:ignore
+									? __( 'Get your Chat ID from %s and enter it above.', 'wptelegram-login' )
+									: __( 'Ask the user to get the Chat ID from %s and enter it above.', 'wptelegram-login' ),
+									'<a href="https://t.me/MyChatInfoBot" target="_blank">@MyChatInfoBot</a>'
+								);
+							?>
+						</li>
+						<li>
+							<?php
+								/* translators: %s is bot username */
+								printf(
+									$is_current_user // phpcs:ignore
+									? __( 'Start a conversation with %s to receive notifications.', 'wptelegram-login' )
+									: __( 'Ask the user to start a conversation with %s to receive notifications.', 'wptelegram-login' ),
+									'<a href="https://t.me/' . $bot_username . '"  target="_blank">@' . $bot_username . '</a>'
+								);
+							?>
+						</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		<?php
+	}
+
+	/**
+	 * Validate the profile fields.
+	 *
+	 * @since   1.8.2
+	 * @param   WP_Error $errors WP_Error object (passed by reference).
+	 * @param   bool     $update Whether this is a user update.
+	 * @param   stdClass $user   User object (passed by reference).
+	 */
+	public function validate_user_profile_fields( &$errors, $update = null, &$user = null ) {
+
+		if ( isset( $_POST[ WPTELEGRAM_USER_META_KEY ] ) ) { // phpcs:ignore
+
+			$chat_id = sanitize_text_field( $_POST[ WPTELEGRAM_USER_META_KEY ] ); // phpcs:ignore
+
+			if ( $chat_id && ! self::is_valid_chat_id( $chat_id ) ) {
+
+				$errors->add( 'invalid_chat_id', __( 'Error:', 'wptelegram-login' ) . ' ' . __( 'Please Enter a valid Chat ID', 'wptelegram-login' ) );
+			}
+		}
+	}
+
+	/**
+	 * Update user fields.
+	 *
+	 * @since   1.8.2
+	 * @param integer $user_id The user ID.
+	 * @return void
+	 */
+	public function update_user_profile_fields( $user_id ) {
+		if ( current_user_can( 'edit_user', $user_id ) && isset( $_POST[ WPTELEGRAM_USER_META_KEY ] ) ) { // phpcs:ignore
+			$chat_id = $_POST[ WPTELEGRAM_USER_META_KEY ]; // phpcs:ignore
+			$chat_id = sanitize_text_field( $chat_id );
+
+			if ( empty( $chat_id ) ) {
+				delete_user_meta( $user_id, WPTELEGRAM_USER_META_KEY );
+			} elseif ( self::is_valid_chat_id( $chat_id ) ) {
+				update_user_meta( $user_id, WPTELEGRAM_USER_META_KEY, $chat_id );
+			}
+		}
+	}
+
+	/**
+	 * Whether a given chat ID is valid.
+	 *
+	 * @param integer $chat_id The Telegram chat ID.
+	 * @return bool
+	 */
+	public static function is_valid_chat_id( $chat_id ) {
+		return (bool) preg_match( '/^\-?[^0\D]\d{6,51}$/', $chat_id );
+	}
+
+	/**
 	 * Register the column to be displayed in user list table.
 	 *
 	 * @since    1.0.0
