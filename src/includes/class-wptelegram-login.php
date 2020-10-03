@@ -263,8 +263,12 @@ class WPTelegram_Login {
 
 		$this->loader->add_action( 'widgets_init', $plugin_admin, 'register_widgets' );
 
+		$this->loader->add_action( 'show_user_profile', $plugin_admin, 'add_user_profile_fields' );
+		$this->loader->add_action( 'edit_user_profile', $plugin_admin, 'add_user_profile_fields' );
+		$this->loader->add_filter( 'user_profile_update_errors', $plugin_admin, 'validate_user_profile_fields', 10, 3 );
+		$this->loader->add_action( 'personal_options_update', $plugin_admin, 'update_user_profile_fields' );
+		$this->loader->add_action( 'edit_user_profile_update', $plugin_admin, 'update_user_profile_fields' );
 		$this->loader->add_filter( 'manage_users_columns', $plugin_admin, 'register_custom_user_column' );
-
 		$this->loader->add_filter( 'manage_users_custom_column', $plugin_admin, 'register_custom_user_column_view', 10, 3 );
 
 		$this->loader->add_filter( 'block_categories', $plugin_admin, 'register_block_category', 10, 1 );
