@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wptelegram-login\n"
-"POT-Creation-Date: 2020-08-12 21:23:54+00:00\n"
+"POT-Creation-Date: 2020-10-03 13:24:41+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-08-13 21:23-330\n"
+"PO-Revision-Date: 2020-10-3 13:24-330\n"
 "Last-Translator: WP Telegram Login\n"
 "Language-Team: WP Telegram Login\n"
 "Language: en_US\n"
@@ -42,7 +42,51 @@ msgstr ""
 msgid "Logged in"
 msgstr ""
 
-#: admin/class-wptelegram-login-admin.php:372
+#: admin/class-wptelegram-login-admin.php:380
+msgid "Telegram Info"
+msgstr ""
+
+#: admin/class-wptelegram-login-admin.php:381
+msgid "Here you can connect this account to Telegram."
+msgstr ""
+
+#: admin/class-wptelegram-login-admin.php:385
+msgid "Telegram Chat ID"
+msgstr ""
+
+#: admin/class-wptelegram-login-admin.php:389
+#: languages/wptelegram-login-js-translations.php:121
+msgid "INSTRUCTIONS!"
+msgstr ""
+
+#: admin/class-wptelegram-login-admin.php:396
+#. translators: %s is bot username
+msgid "Get your Chat ID from %s and enter it above."
+msgstr ""
+
+#: admin/class-wptelegram-login-admin.php:397
+msgid "Ask the user to get the Chat ID from %s and enter it above."
+msgstr ""
+
+#: admin/class-wptelegram-login-admin.php:407
+#. translators: %s is bot username
+msgid "Start a conversation with %s to receive notifications."
+msgstr ""
+
+#: admin/class-wptelegram-login-admin.php:408
+msgid "Ask the user to start a conversation with %s to receive notifications."
+msgstr ""
+
+#: admin/class-wptelegram-login-admin.php:436
+#: public/class-wptelegram-login-public.php:97
+msgid "Error:"
+msgstr ""
+
+#: admin/class-wptelegram-login-admin.php:436
+msgid "Please Enter a valid Chat ID"
+msgstr ""
+
+#: admin/class-wptelegram-login-admin.php:479
 msgid "Telegram User ID"
 msgstr ""
 
@@ -207,10 +251,6 @@ msgid ""
 "Telegram and make it simple for them to get connected."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:121
-msgid "INSTRUCTIONS!"
-msgstr ""
-
 #: languages/wptelegram-login-js-translations.php:124
 msgid ""
 "Let the users login to your WordPress website with their Telegram and make "
@@ -280,10 +320,6 @@ msgstr ""
 
 #: languages/wptelegram-login-js-translations.php:172
 msgid "Error message text"
-msgstr ""
-
-#: public/class-wptelegram-login-public.php:97
-msgid "Error:"
 msgstr ""
 
 #: public/class-wptelegram-login-public.php:206

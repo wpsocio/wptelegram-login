@@ -4,6 +4,8 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.8.2 - 2020-10-3](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.2)
+
 ### Enhancements
 
 -   Added Telegram user ID field to user profile

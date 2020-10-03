@@ -364,7 +364,7 @@ class WPTelegram_Login_Admin {
 	/**
 	 * Adds User Telegram ID field to user profile.
 	 *
-	 * @since    x.y.z
+	 * @since    1.8.2
 	 * @param WP_User $user Currently-listed user.
 	 * @return void
 	 */
@@ -420,7 +420,7 @@ class WPTelegram_Login_Admin {
 	/**
 	 * Validate the profile fields.
 	 *
-	 * @since   x.y.z
+	 * @since   1.8.2
 	 * @param   WP_Error $errors WP_Error object (passed by reference).
 	 * @param   bool     $update Whether this is a user update.
 	 * @param   stdClass $user   User object (passed by reference).
@@ -441,7 +441,7 @@ class WPTelegram_Login_Admin {
 	/**
 	 * Update user fields.
 	 *
-	 * @since   x.y.z
+	 * @since   1.8.2
 	 * @param integer $user_id The user ID.
 	 * @return void
 	 */
