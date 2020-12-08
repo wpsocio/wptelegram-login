@@ -427,9 +427,9 @@ class WPTelegram_Login_Admin {
 	 */
 	public function validate_user_profile_fields( &$errors, $update = null, &$user = null ) {
 
-		if ( isset( $_POST[ WPTELEGRAM_USER_META_KEY ] ) ) { // phpcs:ignore
+		if ( isset( $_POST[ WPTELEGRAM_USER_ID_META_KEY ] ) ) { // phpcs:ignore
 
-			$chat_id = sanitize_text_field( $_POST[ WPTELEGRAM_USER_META_KEY ] ); // phpcs:ignore
+			$chat_id = sanitize_text_field( $_POST[ WPTELEGRAM_USER_ID_META_KEY ] ); // phpcs:ignore
 
 			if ( $chat_id && ! self::is_valid_chat_id( $chat_id ) ) {
 
@@ -446,14 +446,14 @@ class WPTelegram_Login_Admin {
 	 * @return void
 	 */
 	public function update_user_profile_fields( $user_id ) {
-		if ( current_user_can( 'edit_user', $user_id ) && isset( $_POST[ WPTELEGRAM_USER_META_KEY ] ) ) { // phpcs:ignore
-			$chat_id = $_POST[ WPTELEGRAM_USER_META_KEY ]; // phpcs:ignore
+		if ( current_user_can( 'edit_user', $user_id ) && isset( $_POST[ WPTELEGRAM_USER_ID_META_KEY ] ) ) { // phpcs:ignore
+			$chat_id = $_POST[ WPTELEGRAM_USER_ID_META_KEY ]; // phpcs:ignore
 			$chat_id = sanitize_text_field( $chat_id );
 
 			if ( empty( $chat_id ) ) {
-				delete_user_meta( $user_id, WPTELEGRAM_USER_META_KEY );
+				delete_user_meta( $user_id, WPTELEGRAM_USER_ID_META_KEY );
 			} elseif ( self::is_valid_chat_id( $chat_id ) ) {
-				update_user_meta( $user_id, WPTELEGRAM_USER_META_KEY, $chat_id );
+				update_user_meta( $user_id, WPTELEGRAM_USER_ID_META_KEY, $chat_id );
 			}
 		}
 	}
