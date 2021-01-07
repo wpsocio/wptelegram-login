@@ -365,9 +365,9 @@ class WPTelegram_Login_Public {
 
 		if ( is_null( $ex_wp_user_id ) ) { // New user.
 
-			// If no username, use the sanitized first_name.
+			// If no username, use the sanitized first_name and id
 			if ( empty( $username ) ) {
-				$username = sanitize_user( $first_name, true );
+				$username = sanitize_user( $first_name . $id, true );
 			}
 
 			$unique_username = $this->unique_username( $username );
