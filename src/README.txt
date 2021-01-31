@@ -5,7 +5,7 @@ Tags: telegram, login, register, social, signup
 Requires at least: 4.7.0
 Tested up to: 5.5
 Requires PHP: 5.6
-Stable tag: 1.8.3
+Stable tag: 1.8.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,11 @@ Many thanks to the translators for the great job!
 7. User List Table (for admin)
 
 == Changelog ==
+
+= 1.8.4 =
+-   Fixed the empty username error for non ASCII names
+-   Fixed the wrong Telegram username saved to user profile
+-   Integrated Telegram login details with WP REST API
 
 = 1.8.3 =
 -   Fixed the Telegram ID update from edit profile

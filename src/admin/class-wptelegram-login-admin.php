@@ -259,7 +259,7 @@ class WPTelegram_Login_Admin {
 	/**
 	 * Register user fields in WP REST API.
 	 *
-	 * @since x.y.z
+	 * @since 1.8.4
 	 */
 	public function register_user_fields() {
 		register_rest_field(
@@ -301,7 +301,7 @@ class WPTelegram_Login_Admin {
 	/**
 	 * Add custom params to WP REST user collection.
 	 *
-	 * @since x.y.z
+	 * @since 1.8.4
 	 *
 	 * @param array $query_params JSON Schema-formatted collection parameters.
 	 */
@@ -316,7 +316,7 @@ class WPTelegram_Login_Admin {
 	/**
 	 * Modifies WP REST user query if needed.
 	 *
-	 * @since x.y.z
+	 * @since 1.8.4
 	 *
 	 * @param array           $prepared_args Array of arguments for WP_User_Query.
 	 * @param WP_REST_Request $request       The current request.

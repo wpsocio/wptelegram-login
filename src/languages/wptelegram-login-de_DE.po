@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wptelegram-login\n"
-"POT-Creation-Date: 2020-10-03 13:24:41+00:00\n"
+"POT-Creation-Date: 2021-01-31 08:24:48+00:00\n"
 "PO-Revision-Date: 2020-04-11 19:14+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
@@ -24,69 +24,73 @@ msgstr ""
 msgid "WP Telegram"
 msgstr "WP Telegram Einloggen"
 
-#: admin/class-wptelegram-login-admin.php:270
+#: admin/class-wptelegram-login-admin.php:310
+msgid "Limit result set to users who have their Telegram accounts connected."
+msgstr ""
+
+#: admin/class-wptelegram-login-admin.php:355
 msgid "Telegram Login"
 msgstr "Telegram Login"
 
-#: admin/class-wptelegram-login-admin.php:342
+#: admin/class-wptelegram-login-admin.php:427
 msgid "Any"
 msgstr "Immer anzeigen"
 
-#: admin/class-wptelegram-login-admin.php:343
+#: admin/class-wptelegram-login-admin.php:428
 msgid "Logged out"
 msgstr "ausgeloggt"
 
-#: admin/class-wptelegram-login-admin.php:344
+#: admin/class-wptelegram-login-admin.php:429
 msgid "Logged in"
 msgstr "eingeloggt"
 
-#: admin/class-wptelegram-login-admin.php:380
+#: admin/class-wptelegram-login-admin.php:465
 #, fuzzy
 msgid "Telegram Info"
 msgstr "Telegram Login"
 
-#: admin/class-wptelegram-login-admin.php:381
+#: admin/class-wptelegram-login-admin.php:466
 msgid "Here you can connect this account to Telegram."
 msgstr ""
 
-#: admin/class-wptelegram-login-admin.php:385
+#: admin/class-wptelegram-login-admin.php:470
 #, fuzzy
 msgid "Telegram Chat ID"
 msgstr "Telegram User ID"
 
-#: admin/class-wptelegram-login-admin.php:389
+#: admin/class-wptelegram-login-admin.php:474
 #: languages/wptelegram-login-js-translations.php:121
 msgid "INSTRUCTIONS!"
 msgstr "KONFIGURATIONSANLEITUNG"
 
 #. translators: %s is bot username
-#: admin/class-wptelegram-login-admin.php:396
+#: admin/class-wptelegram-login-admin.php:481
 msgid "Get your Chat ID from %s and enter it above."
 msgstr ""
 
-#: admin/class-wptelegram-login-admin.php:397
+#: admin/class-wptelegram-login-admin.php:482
 msgid "Ask the user to get the Chat ID from %s and enter it above."
 msgstr ""
 
 #. translators: %s is bot username
-#: admin/class-wptelegram-login-admin.php:407
+#: admin/class-wptelegram-login-admin.php:492
 msgid "Start a conversation with %s to receive notifications."
 msgstr ""
 
-#: admin/class-wptelegram-login-admin.php:408
+#: admin/class-wptelegram-login-admin.php:493
 msgid "Ask the user to start a conversation with %s to receive notifications."
 msgstr ""
 
-#: admin/class-wptelegram-login-admin.php:436
+#: admin/class-wptelegram-login-admin.php:521
 #: public/class-wptelegram-login-public.php:97
 msgid "Error:"
 msgstr "Fehler:"
 
-#: admin/class-wptelegram-login-admin.php:436
+#: admin/class-wptelegram-login-admin.php:521
 msgid "Please Enter a valid Chat ID"
 msgstr ""
 
-#: admin/class-wptelegram-login-admin.php:479
+#: admin/class-wptelegram-login-admin.php:564
 msgid "Telegram User ID"
 msgstr "Telegram User ID"
 
@@ -362,11 +366,11 @@ msgstr ""
 "Anmelden über Telegram ist deaktiviert. Du musst zuerst einen Account "
 "anlegen und mit Telegram verbinden, um Telegram Login verwenden zu können."
 
-#: public/class-wptelegram-login-public.php:403
+#: public/class-wptelegram-login-public.php:404
 msgid "Telegram sign in could not be completed."
 msgstr "Die Telegram-Anmeldung konnte nicht erfolgreich durchgeführt werden."
 
-#: public/class-wptelegram-login-public.php:500
+#: public/class-wptelegram-login-public.php:501
 msgid "Or"
 msgstr "Oder"
 

@@ -4,6 +4,8 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.8.4 - 2021-01-31](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.4)
+
 ### Bug Fixes
 
 -   Fixed the empty username error for non ASCII names
