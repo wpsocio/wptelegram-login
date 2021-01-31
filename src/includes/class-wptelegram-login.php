@@ -261,6 +261,8 @@ class WPTelegram_Login {
 
 		$this->loader->add_action( 'rest_api_init', $plugin_admin, 'register_rest_routes' );
 
+		$this->loader->add_action( 'rest_api_init', $plugin_admin, 'register_user_fields' );
+
 		$this->loader->add_action( 'widgets_init', $plugin_admin, 'register_widgets' );
 
 		$this->loader->add_action( 'show_user_profile', $plugin_admin, 'add_user_profile_fields' );
@@ -272,6 +274,10 @@ class WPTelegram_Login {
 		$this->loader->add_filter( 'manage_users_custom_column', $plugin_admin, 'register_custom_user_column_view', 10, 3 );
 
 		$this->loader->add_filter( 'block_categories', $plugin_admin, 'register_block_category', 10, 1 );
+
+		$this->loader->add_filter( 'rest_user_collection_params', $plugin_admin, 'rest_user_collection_params', 10, 1 );
+
+		$this->loader->add_filter( 'rest_user_query', $plugin_admin, 'modify_rest_user_query', 10, 2 );
 	}
 
 	/**
@@ -301,7 +307,6 @@ class WPTelegram_Login {
 		$this->loader->add_filter( 'render_block', $plugin_public, 'render_login_block', 11, 2 );
 
 		$this->loader->add_filter( 'get_avatar_url', $plugin_public, 'custom_avatar_url', 10, 2 );
-
 	}
 
 	/**

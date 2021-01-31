@@ -9,6 +9,10 @@ All notable changes to this project are documented in this file.
 -   Fixed the empty username error for non ASCII names
 -   Fixed the wrong Telegram username saved to user profile
 
+### Enhancements
+
+-   Integrated Telegram login details with WP REST API
+
 ## [1.8.3 - 2020-12-8](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.3)
 
 ### Bug Fixes

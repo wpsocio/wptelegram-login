@@ -257,6 +257,91 @@ class WPTelegram_Login_Admin {
 	}
 
 	/**
+	 * Register user fields in WP REST API.
+	 *
+	 * @since x.y.z
+	 */
+	public function register_user_fields() {
+		register_rest_field(
+			'user',
+			WPTELEGRAM_USER_ID_META_KEY,
+			array(
+				'get_callback'    => function ( $object ) {
+					return current_user_can( 'list_users' ) ? get_user_meta( $object['id'], WPTELEGRAM_USER_ID_META_KEY, true ) : '';
+				},
+				'update_callback' => function ( $value, $object ) {
+					update_user_meta( $object->ID, WPTELEGRAM_USER_ID_META_KEY, $value );
+				},
+				'schema'          => array(
+					'type'        => 'string',
+					'arg_options' => array(
+						'sanitize_callback' => 'sanitize_text_field',
+						'validate_callback' => function ( $chat_id ) {
+							return self::is_valid_chat_id( $chat_id );
+						},
+					),
+				),
+			)
+		);
+
+		register_rest_field(
+			'user',
+			WPTELEGRAM_USERNAME_META_KEY,
+			array(
+				'get_callback' => function ( $object ) {
+					return current_user_can( 'list_users' ) ? get_user_meta( $object['id'], WPTELEGRAM_USERNAME_META_KEY, true ) : '';
+				},
+				'schema'       => array(
+					'type' => 'string',
+				),
+			),
+		);
+	}
+
+	/**
+	 * Add custom params to WP REST user collection.
+	 *
+	 * @since x.y.z
+	 *
+	 * @param array $query_params JSON Schema-formatted collection parameters.
+	 */
+	public function rest_user_collection_params( $query_params ) {
+		$query_params['telegram_users_only'] = array(
+			'description' => __( 'Limit result set to users who have their Telegram accounts connected.' ),
+			'type'        => 'boolean',
+		);
+		return $query_params;
+	}
+
+	/**
+	 * Modifies WP REST user query if needed.
+	 *
+	 * @since x.y.z
+	 *
+	 * @param array           $prepared_args Array of arguments for WP_User_Query.
+	 * @param WP_REST_Request $request       The current request.
+	 */
+	public function modify_rest_user_query( $prepared_args, $request ) {
+		if ( ! $request->get_param( 'telegram_users_only' ) ) {
+			return $prepared_args;
+		}
+		$prepared_args['meta_query'] = array(
+			'relation' => 'AND',
+			array(
+				'key'     => WPTELEGRAM_USER_ID_META_KEY,
+				'compare' => 'EXISTS',
+			),
+			array(
+				'key'     => WPTELEGRAM_USER_ID_META_KEY,
+				'compare' => '!=',
+				'value'   => '',
+			),
+		);
+
+		return $prepared_args;
+	}
+
+	/**
 	 * Register the admin menu.
 	 *
 	 * @since 1.5.0
