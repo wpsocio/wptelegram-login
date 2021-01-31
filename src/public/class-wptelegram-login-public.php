@@ -357,15 +357,16 @@ class WPTelegram_Login_Public {
 		$data = apply_filters( 'wptelegram_login_save_user_data', $data, $ex_wp_user_id );
 
 		// The data fields received.
-		$id         = $data['id'];
-		$first_name = $data['first_name'];
-		$last_name  = isset( $data['last_name'] ) ? $data['last_name'] : '';
-		$username   = isset( $data['username'] ) ? $data['username'] : '';
-		$photo_url  = isset( $data['photo_url'] ) ? $data['photo_url'] : '';
+		$id          = $data['id'];
+		$first_name  = $data['first_name'];
+		$last_name   = isset( $data['last_name'] ) ? $data['last_name'] : '';
+		$tg_username = isset( $data['username'] ) ? $data['username'] : '';
+		$photo_url   = isset( $data['photo_url'] ) ? $data['photo_url'] : '';
+		$username    = $tg_username;
 
 		if ( is_null( $ex_wp_user_id ) ) { // New user.
 
-			// If no username, use the sanitized first_name and id
+			// If no username, use the sanitized first_name and id.
 			if ( empty( $username ) ) {
 				$username = sanitize_user( $first_name . $id, true );
 			}
@@ -405,7 +406,7 @@ class WPTelegram_Login_Public {
 
 		// Save the telegram user ID and username.
 		update_user_meta( $wp_user_id, WPTELEGRAM_USER_ID_META_KEY, $id );
-		update_user_meta( $wp_user_id, WPTELEGRAM_USERNAME_META_KEY, $username );
+		update_user_meta( $wp_user_id, WPTELEGRAM_USERNAME_META_KEY, $tg_username );
 
 		if ( ! empty( $photo_url ) ) {
 			$meta_key = WPTG_Login()->options()->get( 'avatar_meta_key' );
