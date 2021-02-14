@@ -183,14 +183,14 @@ class AssetManager extends BaseClass {
 
 		wp_enqueue_style(
 			$this->plugin->name() . '-login-page',
-			$this->plugin->url( sprintf( '/public/css/login-page%s.css', wp_scripts_get_suffix() ) ),
+			$this->plugin->url( sprintf( '/shared/css/login-page%s.css', wp_scripts_get_suffix() ) ),
 			array(),
 			$this->plugin->version()
 		);
 
 		wp_enqueue_script(
 			$this->plugin->name() . '-login-page',
-			$this->plugin->url( sprintf( '/public/js/login-page%s.js', wp_scripts_get_suffix() ) ),
+			$this->plugin->url( sprintf( '/shared/js/login-page%s.js', wp_scripts_get_suffix() ) ),
 			array( 'jquery' ),
 			$this->plugin->version(),
 			false
