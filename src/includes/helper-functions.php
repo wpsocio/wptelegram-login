@@ -5,8 +5,8 @@
  * @link       https://t.me/manzoorwanijk
  * @since      1.0.0
  *
- * @package    WPTelegram_Login
- * @subpackage WPTelegram_Login/includes
+ * @package    WPTelegram\Login
+ * @subpackage WPTelegram\Login/includes
  */
 
 /**
@@ -63,7 +63,7 @@ if ( ! function_exists( 'wptelegram_login' ) ) {
 	 * @return NULL|string        The html output
 	 */
 	function wptelegram_login( $args = array(), $echo = true ) {
-		$output = WPTelegram_Login_Public::login_shortcode( $args );
+		$output = \WPTelegram\Login\shared\Shared::login_shortcode( $args );
 		if ( $echo ) {
 			echo $output; // phpcs:ignore WordPress.Security.EscapeOutput
 		} else {

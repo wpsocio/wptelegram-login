@@ -1,8 +1,8 @@
 {
 	"phpcbf.standard": "WordPress",
-	"phpcs.standard": "WordPress",
+	"phpcs.standard": "./phpcs.xml",
 	"[php]": {
 		"editor.formatOnSave": false,
-		"editor.defaultFormatter": "persoderlind.vscode-phpcbf",
-	},
+		"editor.defaultFormatter": "persoderlind.vscode-phpcbf"
+	}
 }
