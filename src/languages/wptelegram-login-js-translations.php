@@ -1,174 +1,258 @@
 <?php
 /* THIS IS A GENERATED FILE. DO NOT EDIT DIRECTLY. */
 $generated_i18n_strings = array(
-	// Reference: src/admin/blocks/src/telegram-login/block.js:102
-	// Reference: src/admin/settings/src/fields.js:90
-	__( 'Show if user is', 'wptelegram-login' ),
-
-	// Reference: src/admin/blocks/src/telegram-login/block.js:64
-	__( 'WP Telegram Login', 'wptelegram-login' ),
-
-	// Reference: src/admin/blocks/src/telegram-login/block.js:73
-	__( 'Button Settings', 'wptelegram-login' ),
-
-	// Reference: src/admin/blocks/src/telegram-login/block.js:75
-	// Reference: src/admin/settings/src/fields.js:87
-	__( 'Button Style', 'wptelegram-login' ),
-
-	// Reference: src/admin/blocks/src/telegram-login/block.js:85
-	// Reference: src/admin/settings/src/fields.js:88
-	__( 'Show User Photo', 'wptelegram-login' ),
-
-	// Reference: src/admin/blocks/src/telegram-login/block.js:94
-	// Reference: src/admin/settings/src/fields.js:89
-	__( 'Corner Radius', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/BotTestResult.js:8
-	__( 'Test Result:', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:111
-	__( 'The default role to assign for the new users', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:124
-	__( 'Redirect location after login', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:126
-	__( 'Default', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:127
-	__( 'Homepage', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:128
-	__( 'Current page', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:129
-	// Reference: src/admin/settings/src/fields.js:84
-	__( 'Custom URL', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:153
-	__( 'The user meta key to be used to save Telegram photo URL.', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:168
-	__( 'Generate a random email address', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:170
-	__( 'If checked, a random email address will be generated for new user accounts.', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:172
-	__( 'Useful when you want the users to be able to receive private notifications.', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:182
-	__( 'Button Options', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:187
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:12
+	// Reference: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:8
 	__( 'Large', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/src/components/FormRenderer.js:188
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:13
+	// Reference: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:9
 	__( 'Medium', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/src/components/FormRenderer.js:189
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:14
+	// Reference: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:10
 	__( 'Small', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/src/components/FormRenderer.js:198
-	__( 'Display Telegram user profile photo beside button', 'wptelegram-login' ),
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:35
+	__( 'Button Settings', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/src/components/FormRenderer.js:226
-	__( 'Who can see the login button', 'wptelegram-login' ),
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:37
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:10
+	__( 'Button Style', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/src/components/FormRenderer.js:237
-	__( 'Hide the button on default WordPress login/register page', 'wptelegram-login' ),
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:43
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:20
+	__( 'Show User Photo', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/src/components/FormRenderer.js:249
-	__( 'Display an error message if Telegram is blocked by user\'s ISP', 'wptelegram-login' ),
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:48
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:11
+	__( 'Corner Radius', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/src/components/FormRenderer.js:260
-	__( 'Leave empty for default', 'wptelegram-login' ),
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:56
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:18
+	__( 'Show if user is', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/src/components/FormRenderer.js:272
-	__( 'Save Changes', 'wptelegram-login' ),
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/index.tsx:12
+	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:43
+	__( 'WP Telegram Login', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/src/components/FormRenderer.js:33
-	__( 'Could not connect', 'wptelegram-login' ),
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:12
+	__( 'Error message text', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/src/components/FormRenderer.js:44
-	__( 'Telegram Options', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:48
-	__( 'Please read the instructions above', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:70
-	__( 'Please wait...', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:79
-	__( 'Test Token', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:79
-	__( 'Use %s above to set automatically.', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:94
-	__( 'Login Options', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/FormRenderer.js:98
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:13
 	__( 'Disable Sign up', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/src/components/FormRenderer.js:99
-	__( 'If checked, only the existing users who have connected their Telegram will be able to login.', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/Header.js:28
-	__( 'With this plugin, you can let the users login to your website with their Telegram and make it simple for them to get connected.', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/Instructions.js:13
-	__( 'INSTRUCTIONS!', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/PluginInfoCard.js:16
-	__( 'Let the users login to your WordPress website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram.', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/SocialIcons.js:29
-	__( 'Follow %s', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/SocialIcons.js:49
-	__( 'Join %s', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/components/WidgetInfoCard.js:12
-	__( 'Widget Info', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/fields.js:65
-	__( 'Invalid %s', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/fields.js:68
-	__( '%s is required.', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/fields.js:72
-	__( 'Changes could not be saved.', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/fields.js:79
-	__( 'Bot Token', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/fields.js:80
-	__( 'Bot Username', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/fields.js:81
-	__( 'Sign up', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/fields.js:82
-	__( 'User Role', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/fields.js:83
-	__( 'Redirect to', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/fields.js:85
-	__( 'Avatar URL Meta Key', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/fields.js:86
-	__( 'Random Email', 'wptelegram-login' ),
-
-	// Reference: src/admin/settings/src/fields.js:91
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:14
 	__( 'Hide on default login', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/src/fields.js:92
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:15
+	__( 'Random Email', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:16
+	__( 'Redirect to', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:17
+	// Reference: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:13
+	__( 'Custom URL', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:19
 	__( 'Show error message', 'wptelegram-login' ),
 
-	// Reference: src/admin/settings/src/fields.js:93
-	__( 'Error message text', 'wptelegram-login' )
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:21
+	__( 'User Role', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:7
+	__( 'Avatar URL Meta Key', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:8
+	__( 'Bot Token', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:9
+	__( 'Bot Username', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:17
+	__( 'Button Options', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:26
+	__( 'Display Telegram user profile photo beside button.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:32
+	// Reference: domains/wptelegram/login/main/src/ui/ErrorMessageOptions.tsx:27
+	__( 'Leave empty for default.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:41
+	__( 'Who can see the login button.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:48
+	__( 'Hide the button on default WordPress login/register page.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/ErrorMessageOptions.tsx:17
+	__( 'Error Message', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/ErrorMessageOptions.tsx:19
+	__( 'Display an error message if Telegram is blocked by user\'s ISP.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/Instructions.tsx:16
+	/* translators: 1 command name, 2 bot name */
+	__( 'Create a Bot by sending %1$s command to %2$s.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/Instructions.tsx:35
+	__( 'After completing the steps %s will provide you the Bot Token.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/Instructions.tsx:39
+	__( 'Copy the token and paste into the Bot Token field below.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/Instructions.tsx:43
+	/* translators: %s application name */
+	__( 'For ease, use %s', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/Instructions.tsx:49
+	__( 'Telegram Desktop', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/Instructions.tsx:59
+	/* translators: 1 command name, 2 bot name, 3 site url */
+	__( 'Send %1$s command to %2$s, select your bot and then send %3$s', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/Instructions.tsx:84
+	__( 'Test your bot token below and fill in the bot username if not filled automatically.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/Instructions.tsx:86
+	__( 'Hit %s below', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/Instructions.tsx:86
+	__( 'Save Changes', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/Instructions.tsx:87
+	__( 'That\'s it. You are ready to rock :)', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:10
+	__( 'Default', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:11
+	__( 'Homepage', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:12
+	__( 'Current page', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:40
+	__( 'Login Options', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:42
+	__( 'If enabled, only the existing users who have connected their Telegram will be able to login.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:51
+	__( 'The default role to assign for the new users.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:59
+	__( 'Redirect location after login.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:75
+	__( 'The user meta key to be used to save Telegram photo URL.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:86
+	__( 'If enabled, a random email address will be generated for new user accounts.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:88
+	__( 'Useful when you want the users to be able to receive private notifications.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/Sidebar.tsx:18
+	__( 'Let the users login to your WordPress website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/Sidebar.tsx:21
+	__( 'Get LIVE support on Telegram', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/SubmitInfo.tsx:11
+	__( 'Submit', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:47
+	__( 'Telegram Options', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:55
+	__( 'Please wait…', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:62
+	__( 'Please read the instructions above.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:72
+	__( 'Test Token', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:72
+	__( 'Use %s above to set automatically.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:26
+	__( 'Widget Info', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:32
+	/* translators: 1, 2 Menu names */
+	__( 'Goto %1$s and click/drag %2$s and place it where you want it to be.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:39
+	__( 'Appearance', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:40
+	__( 'Widgets', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:48
+	__( 'Alternately, you can use the below shortcode or the block available in block editor.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:50
+	__( 'Inside page or post content:', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:56
+	__( 'Inside the theme templates', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:62
+	__( 'or', 'wptelegram-login' ),
+
+	// Reference: packages/components/src/Instructions/Instructions.tsx:11
+	__( 'INSTRUCTIONS!', 'wptelegram-login' ),
+
+	// Reference: packages/components/src/PluginInfo/PluginInfoCard.tsx:43
+	__( 'Do you like %s?', 'wptelegram-login' ),
+
+	// Reference: packages/components/src/PluginInfo/PluginInfoCard.tsx:62
+	__( 'Need help?', 'wptelegram-login' ),
+
+	// Reference: packages/components/src/TestResult/TestResult.tsx:14
+	__( 'Test Result:', 'wptelegram-login' ),
+
+	// Reference: packages/components/src/WPTGSocialIcons/WPTGSocialIcons.tsx:38
+	__( 'Follow %s', 'wptelegram-login' ),
+
+	// Reference: packages/components/src/WPTGSocialIcons/WPTGSocialIcons.tsx:45
+	__( 'Join %s', 'wptelegram-login' ),
+
+	// Reference: packages/services/src/apiFetch/index.ts:31
+	__( 'Some error occured', 'wptelegram-login' ),
+
+	// Reference: packages/services/src/apiFetch/index.ts:33
+	__( 'Could not connect', 'wptelegram-login' ),
+
+	// Reference: packages/services/src/apiFetch/index.ts:36
+	__( 'Error:', 'wptelegram-login' ),
+
+	// Reference: packages/services/src/telegram/TelegramUtils.ts:105
+	__( 'A message will be sent to the Channel/Group/Chat. You can modify the text below', 'wptelegram-login' ),
+
+	// Reference: packages/services/src/telegram/TelegramUtils.ts:106
+	__( 'This is a test message', 'wptelegram-login' ),
+
+	// Reference: packages/services/src/telegram/TelegramUtils.ts:124
+	__( 'Success', 'wptelegram-login' ),
+
+	// Reference: packages/services/src/useDisplayFeedback.ts:64
+	__( 'Lets fix these errors first.', 'wptelegram-login' ),
+
+	// Reference: packages/services/src/useSubmitForm.ts:42
+	__( 'Changes saved successfully.', 'wptelegram-login' ),
+
+	// Reference: packages/utilities/src/fields.ts:29
+	__( 'Invalid %s', 'wptelegram-login' ),
+
+	// Reference: packages/utilities/src/fields.ts:32
+	__( '%s required.', 'wptelegram-login' ),
+
+	// Reference: packages/utilities/src/fields.ts:35
+	__( 'Changes could not be saved.', 'wptelegram-login' )
 );
 /* THIS IS THE END OF THE GENERATED FILE */

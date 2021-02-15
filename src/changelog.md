@@ -4,6 +4,34 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.9.0 - 2021-02-16](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.0)
+
+### Bug Fixes
+
+-   Fixed the syntax error for older PHP versions.
+
+### Enhancements
+
+-   Refreshed the UI
+-   Switched to PHP namespaces
+
+## [1.8.4 - 2021-01-31](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.4)
+
+### Bug Fixes
+
+-   Fixed the empty username error for non ASCII names
+-   Fixed the wrong Telegram username saved to user profile
+
+### Enhancements
+
+-   Integrated Telegram login details with WP REST API
+
+## [1.8.3 - 2020-12-8](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.3)
+
+### Bug Fixes
+
+-   Fixed the Telegram ID update from edit profile
+
 ## [1.8.2 - 2020-10-3](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.2)
 
 ### Enhancements

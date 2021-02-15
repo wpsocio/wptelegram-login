@@ -21,7 +21,7 @@
  * @link       https://t.me/manzoorwanijk
  * @since      1.0.0
  *
- * @package    WPTelegram_Login
+ * @package    WPTelegram\Login
  */
 
 // If uninstall not called from WordPress, then exit.

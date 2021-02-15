@@ -2,7 +2,6 @@ import gulp from 'gulp';
 
 import fs from 'fs';
 import { exec } from 'child_process';
-import autoprefixer from 'gulp-autoprefixer';
 import path from 'path';
 import babel from 'gulp-babel';
 import plumber from 'gulp-plumber';
@@ -17,11 +16,8 @@ import { sprintf } from '@wordpress/i18n';
 import potomo from 'gulp-potomo';
 import through2 from 'through2';
 import gulpIgnore from 'gulp-ignore';
-import webpackStream from 'webpack-stream';
 import minifycss from 'gulp-uglifycss';
-import rtlcss from 'gulp-rtlcss';
 
-import webpackConfig from './webpack.config.babel';
 import config from './gulp.config';
 
 const pkg = JSON.parse( fs.readFileSync( './package.json', 'utf8' ) );
@@ -421,26 +417,6 @@ export const styles = () => {
 		);
 };
 
-export const stylesRTL = () => {
-	return gulp
-		.src( config.styleSRC, { allowEmpty: true } )
-		.pipe( plumber( errorHandler ) )
-		.pipe( autoprefixer( config.BROWSERS_LIST ) )
-		.pipe( rename( { suffix: '-rtl' } ) ) // Append "-rtl" to the filename.
-		.pipe( rtlcss() ) // Convert to RTL.
-		.pipe( gulp.dest( config.srcDir ) )
-		.pipe( rename( { suffix: '.min' } ) )
-		.pipe( minifycss( { maxLineLen: 10 } ) )
-		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-		.pipe( gulp.dest( config.srcDir ) )
-		.pipe(
-			notify( {
-				message: '\n\n✅  ===> STYLES RTL — completed!\n',
-				onLast: true,
-			} )
-		);
-};
-
 const copyChangelog = () => {
 	return gulp
 		.src( './changelog.md', { base: './' } )
@@ -459,18 +435,7 @@ export const watchPhp = () => {
 	} );
 };
 
-export const webpack = () => {
-	return gulp
-		.src( './', { allowEmpty: true, read: false } )
-		.pipe(
-			webpackStream( {
-				config: webpackConfig(),
-			} )
-		)
-		.pipe( gulp.dest( ( file ) => file.base ) );
-};
-
-export const build = gulp.series( webpack, esNextJS, i18n, stylesRTL, styles );
+export const build = gulp.series( esNextJS, i18n, styles );
 
 export const prerelease = gulp.parallel( build, copyChangelog );
 
