@@ -2,10 +2,10 @@
 Contributors: manzoorwanijk
 Donate link: https://paypal.me/manzoorwanijk
 Tags: telegram, login, register, social, signup
-Requires at least: 4.7.0
-Tested up to: 5.6
-Requires PHP: 5.6
-Stable tag: 1.8.4
+Requires at least: 5.5
+Tested up to: 5.6.1
+Requires PHP: 7.0
+Stable tag: 1.9.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -122,41 +122,9 @@ Many thanks to the translators for the great job!
 
 == Changelog ==
 
-= 1.8.4 =
--   Fixed the empty username error for non ASCII names
--   Fixed the wrong Telegram username saved to user profile
--   Integrated Telegram login details with WP REST API
-
-= 1.8.3 =
--   Fixed the Telegram ID update from edit profile
-
-= 1.8.2 =
--   Added Telegram user ID field to user profile
-
-= 1.8.1 =
--   Fixed admin styles
-
-= 1.8.0 =
--   Updated user id meta key constant name
--   Telegram username is now saved to user meta
--   Updated compatibility with WP 5.5
--   Disabled default WP login redirect to fix unexpected redirects
--   Fixed admin menu icon
-
-= 1.7.1 =
--   Removed button for already connected users
-
-= 1.7.0 =
--   Unified Telegram user ID with WP Telegram
-
-= 1.6.3 =
--   Fixed the bug in creating random email
-
-= 1.6.2 =
-* Fixed Admin page JS path
-
-= 1.6.0 =
-* Added support for random email generation
-* Simplified the build process
+= 1.9.0 =
+-   Fixed the syntax error for older PHP versions.
+-   Refreshed the UI
+-   Switched to PHP namespaces
 
 == Upgrade Notice ==

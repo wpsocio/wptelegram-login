@@ -4,6 +4,8 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.9.0 - 2021-02-16](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.0)
+
 ### Bug Fixes
 
 -   Fixed the syntax error for older PHP versions.

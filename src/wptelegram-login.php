@@ -10,7 +10,7 @@
  * Plugin Name:       WP Telegram Login
  * Plugin URI:        https://t.me/WPTelegram
  * Description:       Let the users login to your WordPress website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram.
- * Version:           1.8.4
+ * Version:           1.9.0
  * Author:            Manzoor Wani
  * Author URI:        https://t.me/manzoorwanijk
  * License:           GPL-2.0+
@@ -27,7 +27,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'WPTELEGRAM_LOGIN_VER', '1.8.4' );
+define( 'WPTELEGRAM_LOGIN_VER', '1.9.0' );
 
 define( 'WPTELEGRAM_LOGIN_BASENAME', plugin_basename( __FILE__ ) );
 
@@ -55,7 +55,7 @@ require WPTELEGRAM_LOGIN_DIR . '/autoload.php';
  * This action is documented in includes/class-wptelegram-login-activator.php
  */
 function activate_wptelegram_login() {
-	\WPTelegram\Login\Activator::activate();
+	\WPTelegram\Login\includes\Activator::activate();
 }
 
 /**
@@ -63,7 +63,7 @@ function activate_wptelegram_login() {
  * This action is documented in includes/class-wptelegram-login-deactivator.php
  */
 function deactivate_wptelegram_login() {
-	\WPTelegram\Login\Deactivator::deactivate();
+	\WPTelegram\Login\includes\Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_wptelegram_login' );

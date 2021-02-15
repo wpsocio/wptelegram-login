@@ -29,7 +29,7 @@ class AssetManager extends BaseClass {
 	/**
 	 * Register the stylesheets for the admin area.
 	 *
-	 * @since    x.y.z
+	 * @since    1.9.0
 	 * @param string $hook_suffix The current admin page.
 	 */
 	public function enqueue_admin_styles( $hook_suffix ) {
@@ -61,7 +61,7 @@ class AssetManager extends BaseClass {
 	/**
 	 * Register the JavaScript for the admin area.
 	 *
-	 * @since    x.y.z
+	 * @since    1.9.0
 	 * @param string $hook_suffix The current admin page.
 	 */
 	public function enqueue_admin_scripts( $hook_suffix ) {
@@ -172,7 +172,7 @@ class AssetManager extends BaseClass {
 	/**
 	 * Register the scripts for the login page
 	 *
-	 * @since    x.y.z
+	 * @since    1.9.0
 	 */
 	public function login_enqueue_scripts() {
 
