@@ -1,0 +1,349 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:12
+#: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:8
+msgid "Large"
+msgstr ""
+
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:13
+#: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:9
+msgid "Medium"
+msgstr ""
+
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:14
+#: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:10
+msgid "Small"
+msgstr ""
+
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:35
+msgid "Button Settings"
+msgstr ""
+
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:37
+#: domains/wptelegram/login/main/src/services/fields.ts:10
+msgid "Button Style"
+msgstr ""
+
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:43
+#: domains/wptelegram/login/main/src/services/fields.ts:20
+msgid "Show User Photo"
+msgstr ""
+
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:48
+#: domains/wptelegram/login/main/src/services/fields.ts:11
+msgid "Corner Radius"
+msgstr ""
+
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:56
+#: domains/wptelegram/login/main/src/services/fields.ts:18
+msgid "Show if user is"
+msgstr ""
+
+#: domains/wptelegram/login/blocks/src/telegram-login/index.tsx:12
+#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:43
+msgid "WP Telegram Login"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/services/fields.ts:12
+msgid "Error message text"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/services/fields.ts:13
+msgid "Disable Sign up"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/services/fields.ts:14
+msgid "Hide on default login"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/services/fields.ts:15
+msgid "Random Email"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/services/fields.ts:16
+msgid "Redirect to"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/services/fields.ts:17
+#: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:13
+msgid "Custom URL"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/services/fields.ts:19
+msgid "Show error message"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/services/fields.ts:21
+msgid "User Role"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/services/fields.ts:7
+msgid "Avatar URL Meta Key"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/services/fields.ts:8
+msgid "Bot Token"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/services/fields.ts:9
+msgid "Bot Username"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:17
+msgid "Button Options"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:26
+msgid "Display Telegram user profile photo beside button."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:32
+#: domains/wptelegram/login/main/src/ui/ErrorMessageOptions.tsx:27
+msgid "Leave empty for default."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:41
+msgid "Who can see the login button."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:48
+msgid "Hide the button on default WordPress login/register page."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/ErrorMessageOptions.tsx:17
+msgid "Error Message"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/ErrorMessageOptions.tsx:19
+msgid "Display an error message if Telegram is blocked by user's ISP."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:16
+#. 1 command name, 2 bot name
+msgid "Create a Bot by sending %1$s command to %2$s."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:35
+msgid "After completing the steps %s will provide you the Bot Token."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:39
+msgid "Copy the token and paste into the Bot Token field below."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:43
+#. %s application name
+msgid "For ease, use %s"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:49
+msgid "Telegram Desktop"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:59
+#. 1 command name, 2 bot name, 3 site url
+msgid "Send %1$s command to %2$s, select your bot and then send %3$s"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:84
+msgid ""
+"Test your bot token below and fill in the bot username if not filled "
+"automatically."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:86
+msgid "Hit %s below"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:86
+msgid "Save Changes"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:87
+msgid "That's it. You are ready to rock :)"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:10
+msgid "Default"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:11
+msgid "Homepage"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:12
+msgid "Current page"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:40
+msgid "Login Options"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:42
+msgid ""
+"If enabled, only the existing users who have connected their Telegram will "
+"be able to login."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:51
+msgid "The default role to assign for the new users."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:59
+msgid "Redirect location after login."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:75
+msgid "The user meta key to be used to save Telegram photo URL."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:86
+msgid "If enabled, a random email address will be generated for new user accounts."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:88
+msgid "Useful when you want the users to be able to receive private notifications."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/Sidebar.tsx:18
+msgid ""
+"Let the users login to your WordPress website with their Telegram and make "
+"it simple for them to get connected and let them receive their email "
+"notifications on Telegram."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/Sidebar.tsx:21
+msgid "Get LIVE support on Telegram"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/SubmitInfo.tsx:11
+msgid "Submit"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:47
+msgid "Telegram Options"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:55
+msgid "Please wait…"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:62
+msgid "Please read the instructions above."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:72
+msgid "Test Token"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:72
+msgid "Use %s above to set automatically."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:26
+msgid "Widget Info"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:32
+#. 1, 2 Menu names
+msgid "Goto %1$s and click/drag %2$s and place it where you want it to be."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:39
+msgid "Appearance"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:40
+msgid "Widgets"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:48
+msgid ""
+"Alternately, you can use the below shortcode or the block available in "
+"block editor."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:50
+msgid "Inside page or post content:"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:56
+msgid "Inside the theme templates"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:62
+msgid "or"
+msgstr ""
+
+#: packages/components/src/Instructions/Instructions.tsx:11
+msgid "INSTRUCTIONS!"
+msgstr ""
+
+#: packages/components/src/PluginInfo/PluginInfoCard.tsx:43
+msgid "Do you like %s?"
+msgstr ""
+
+#: packages/components/src/PluginInfo/PluginInfoCard.tsx:62
+msgid "Need help?"
+msgstr ""
+
+#: packages/components/src/TestResult/TestResult.tsx:14
+msgid "Test Result:"
+msgstr ""
+
+#: packages/components/src/WPTGSocialIcons/WPTGSocialIcons.tsx:38
+msgid "Follow %s"
+msgstr ""
+
+#: packages/components/src/WPTGSocialIcons/WPTGSocialIcons.tsx:45
+msgid "Join %s"
+msgstr ""
+
+#: packages/services/src/apiFetch/index.ts:31
+msgid "Some error occured"
+msgstr ""
+
+#: packages/services/src/apiFetch/index.ts:33
+msgid "Could not connect"
+msgstr ""
+
+#: packages/services/src/apiFetch/index.ts:36
+msgid "Error:"
+msgstr ""
+
+#: packages/services/src/telegram/TelegramUtils.ts:105
+msgid ""
+"A message will be sent to the Channel/Group/Chat. You can modify the text "
+"below"
+msgstr ""
+
+#: packages/services/src/telegram/TelegramUtils.ts:106
+msgid "This is a test message"
+msgstr ""
+
+#: packages/services/src/telegram/TelegramUtils.ts:124
+msgid "Success"
+msgstr ""
+
+#: packages/services/src/useDisplayFeedback.ts:64
+msgid "Lets fix these errors first."
+msgstr ""
+
+#: packages/services/src/useSubmitForm.ts:42
+msgid "Changes saved successfully."
+msgstr ""
+
+#: packages/utilities/src/fields.ts:29
+msgid "Invalid %s"
+msgstr ""
+
+#: packages/utilities/src/fields.ts:32
+msgid "%s required."
+msgstr ""
+
+#: packages/utilities/src/fields.ts:35
+msgid "Changes could not be saved."
+msgstr ""

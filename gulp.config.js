@@ -22,7 +22,7 @@ const config = {
 	// Translation options.
 	textDomain: name,
 	potFilename: `${ name }.pot`,
-	JSPotFilename: `${ name }.js.pot`,
+	JSPotFilename: 'js-translations.pot',
 	domainPath: srcDir + '/languages',
 	packageName: 'WP Telegram Comments',
 	bugReport: 'http://wordpress.org/support/plugin/' + name,

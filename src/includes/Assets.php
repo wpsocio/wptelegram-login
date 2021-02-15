@@ -241,7 +241,6 @@ class Assets {
 		return $this->assets_url . $path;
 	}
 
-
 	/**
 	 * Get the absolute path of an asset.
 	 *
