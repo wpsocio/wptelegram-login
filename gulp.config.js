@@ -13,8 +13,9 @@ const config = {
 	PhpStandard: 'WordPress',
 	ESNextJS: srcDir + '/**/*.esnext.js',
 	styleSRC: [
-		srcDir + '/assets/css/*.css',
-		'!' + srcDir + '/assets/css/*.min.css',
+		srcDir + '/**/css/*.css',
+		'!' + srcDir + '/assets/static/**',
+		'!' + srcDir + '/**/*.min.css',
 	],
 	styleDest: srcDir,
 

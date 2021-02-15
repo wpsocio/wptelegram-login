@@ -251,8 +251,8 @@ class Assets {
 	 * @return string
 	 */
 	public function get_asset_path( $entry_point, $type = self::ASSET_EXT_JS ) {
-		$file_name = $this->get_asset( $entry_point, $type );
-		return $this->assets_path . $file_name;
+		$path = $this->get_asset( $entry_point, $type );
+		return $this->path( $path );
 	}
 
 	/**
@@ -264,8 +264,8 @@ class Assets {
 	 * @return string
 	 */
 	public function get_asset_url( $entry_point, $type = self::ASSET_EXT_JS ) {
-		$file_name = $this->get_asset( $entry_point, $type );
-		return $this->assets_url . $file_name;
+		$path = $this->get_asset( $entry_point, $type );
+		return $this->url( $path );
 	}
 
 	/**

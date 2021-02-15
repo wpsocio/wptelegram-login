@@ -24,6 +24,7 @@ class AssetManager extends BaseClass {
 
 	const ADMIN_MAIN_JS_HANDLE = 'wptelegram-login--main';
 	const BLOCKS_JS_HANDLE     = 'wptelegram-login--blocks';
+	const WP_LOGIN_JS_HANDLE   = 'wptelegram-login--wp-login';
 
 	/**
 	 * Register the stylesheets for the admin area.
@@ -181,20 +182,30 @@ class AssetManager extends BaseClass {
 			return;
 		}
 
-		wp_enqueue_style(
-			$this->plugin->name() . '-login-page',
-			$this->plugin->assets()->url( sprintf( '/css/login-page%s.css', wp_scripts_get_suffix() ) ),
-			array(),
-			$this->plugin->version()
-		);
+		$entrypoint = self::WP_LOGIN_JS_HANDLE;
 
 		wp_enqueue_script(
-			$this->plugin->name() . '-login-page',
-			$this->plugin->assets()->url( sprintf( '/js/login-page%s.js', wp_scripts_get_suffix() ) ),
-			array( 'jquery' ),
-			$this->plugin->version(),
-			false
+			$entrypoint,
+			$this->plugin->assets()->get_asset_url( $entrypoint ),
+			$this->plugin->assets()->get_asset_dependencies( $entrypoint ),
+			$this->plugin->assets()->get_asset_version( $entrypoint ),
+			true
 		);
+
+		// don't load styles for dev env.
+		if ( defined( 'WP_PLUGINS_DEV_LOADED' ) && WP_PLUGINS_DEV_LOADED ) {
+			return;
+		}
+
+		if ( $this->plugin->assets()->has_asset( $entrypoint, Assets::ASSET_EXT_CSS ) ) {
+			wp_enqueue_style(
+				$entrypoint,
+				$this->plugin->assets()->get_asset_url( $entrypoint, Assets::ASSET_EXT_CSS ),
+				array(),
+				$this->plugin->assets()->get_asset_version( $entrypoint, Assets::ASSET_EXT_CSS ),
+				'all'
+			);
+		}
 	}
 
 	/**
