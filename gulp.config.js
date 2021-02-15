@@ -1,9 +1,6 @@
 /**
  * Gulp Configuration File
  */
-/**
- * Internal dependencies
- */
 import pkg from './package.json';
 
 const srcDir = './src';
@@ -16,9 +13,8 @@ const config = {
 	PhpStandard: 'WordPress',
 	ESNextJS: srcDir + '/**/*.esnext.js',
 	styleSRC: [
-		srcDir + '/**/css/*.css',
-		'!' + srcDir + '/**/*-rtl.css',
-		'!' + srcDir + '/**/*.min.css',
+		srcDir + '/assets/css/*.css',
+		'!' + srcDir + '/assets/css/*.min.css',
 	],
 	styleDest: srcDir,
 

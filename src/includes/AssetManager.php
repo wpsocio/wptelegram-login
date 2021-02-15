@@ -36,7 +36,7 @@ class AssetManager extends BaseClass {
 		if ( ! defined( 'WPTELEGRAM_LOADED' ) ) {
 			wp_enqueue_style(
 				$this->plugin->name() . '-menu',
-				$this->plugin->url( sprintf( '/admin/css/admin-menu%s.css', wp_scripts_get_suffix() ) ),
+				$this->plugin->assets()->url( sprintf( '/css/admin-menu%s.css', wp_scripts_get_suffix() ) ),
 				array(),
 				$this->plugin->version(),
 				'all'
@@ -113,8 +113,8 @@ class AssetManager extends BaseClass {
 				'wp_rest_url'    => esc_url_raw( rest_url() ),
 			),
 			'assets'     => array(
-				'logoUrl'   => $this->plugin->url( '/admin/icons/icon-128x128.png' ),
-				'tgIconUrl' => $this->plugin->url( '/admin/icons/tg-icon.svg' ),
+				'logoUrl'   => $this->plugin->assets()->url( '/icons/icon-128x128.png' ),
+				'tgIconUrl' => $this->plugin->assets()->url( '/icons/tg-icon.svg' ),
 			),
 			'uiData'     => array(
 				'show_if_user_is' => self::get_show_if_user_is_options(),
@@ -183,14 +183,14 @@ class AssetManager extends BaseClass {
 
 		wp_enqueue_style(
 			$this->plugin->name() . '-login-page',
-			$this->plugin->url( sprintf( '/shared/css/login-page%s.css', wp_scripts_get_suffix() ) ),
+			$this->plugin->assets()->url( sprintf( '/css/login-page%s.css', wp_scripts_get_suffix() ) ),
 			array(),
 			$this->plugin->version()
 		);
 
 		wp_enqueue_script(
 			$this->plugin->name() . '-login-page',
-			$this->plugin->url( sprintf( '/shared/js/login-page%s.js', wp_scripts_get_suffix() ) ),
+			$this->plugin->assets()->url( sprintf( '/js/login-page%s.js', wp_scripts_get_suffix() ) ),
 			array( 'jquery' ),
 			$this->plugin->version(),
 			false
@@ -228,8 +228,8 @@ class AssetManager extends BaseClass {
 		$data['assets'] = array_merge(
 			$data['assets'],
 			array(
-				'loginImageUrl'  => $this->plugin->url( '/admin/icons/telegram-login.svg' ),
-				'loginAvatarUrl' => $this->plugin->url( '/admin/icons/telegram-login-avatar.svg' ),
+				'loginImageUrl'  => $this->plugin->assets()->url( '/icons/telegram-login.svg' ),
+				'loginAvatarUrl' => $this->plugin->assets()->url( '/icons/telegram-login-avatar.svg' ),
 			)
 		);
 

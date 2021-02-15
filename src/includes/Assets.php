@@ -83,7 +83,6 @@ class Assets {
 	 */
 	private $manifest_path;
 
-
 	/**
 	 * Assets constructor.
 	 *
@@ -95,7 +94,6 @@ class Assets {
 		$this->assets_url  = untrailingslashit( $assets_url );
 		$this->initialize();
 	}
-
 
 	/**
 	 * Initializes the assets.
@@ -110,7 +108,6 @@ class Assets {
 			$this->get_entry_points();
 		}
 	}
-
 
 	/**
 	 * Sets the path to manifest file.
@@ -129,7 +126,6 @@ class Assets {
 		$this->manifest_path = $manifest_path;
 	}
 
-
 	/**
 	 * Loads the manifest file.
 	 *
@@ -142,7 +138,6 @@ class Assets {
 			$this->manifest = json_decode( $manifest_json, true );
 		}
 	}
-
 
 	/**
 	 * Get the "files" prop from the manifest file.
@@ -159,7 +154,6 @@ class Assets {
 		return $this->asset_files;
 	}
 
-
 	/**
 	 * Get the "entrypoints" prop from the manifest file.
 	 *
@@ -175,7 +169,6 @@ class Assets {
 		return $this->entry_points;
 	}
 
-
 	/**
 	 * Get the relative path of an asset.
 	 *
@@ -187,7 +180,6 @@ class Assets {
 	private function get_asset( $entry_point, $type = self::ASSET_EXT_JS ) {
 		return $this->has_asset( $entry_point, $type ) ? $this->asset_files[ $entry_point . $type ] : '';
 	}
-
 
 	/**
 	 * Get the dependencies of an asset.
@@ -207,7 +199,6 @@ class Assets {
 
 		return $dependencies;
 	}
-
 
 	/**
 	 * Get the asset details from the asset.php file for the entrypoint.
@@ -230,14 +221,24 @@ class Assets {
 		return require $full_path;
 	}
 
-
 	/**
 	 * Get the path to assets directory.
 	 *
+	 * @param string $path Path to append.
 	 * @return string
 	 */
-	public function get_assets_path() {
-		return $this->assets_path;
+	public function path( $path = '' ) {
+		return $this->assets_path . $path;
+	}
+
+	/**
+	 * Get the URL to assets directory.
+	 *
+	 * @param string $path Path to append.
+	 * @return string
+	 */
+	public function url( $path = '' ) {
+		return $this->assets_url . $path;
 	}
 
 
@@ -254,7 +255,6 @@ class Assets {
 		return $this->assets_path . $file_name;
 	}
 
-
 	/**
 	 * Get the URL for an asset.
 	 *
@@ -267,7 +267,6 @@ class Assets {
 		$file_name = $this->get_asset( $entry_point, $type );
 		return $this->assets_url . $file_name;
 	}
-
 
 	/**
 	 * Get the version for an asset.
@@ -283,7 +282,6 @@ class Assets {
 			? $asset[ self::KEY_VERSION ]
 			: filemtime( $this->get_asset_path( $entry_point, $type ) );
 	}
-
 
 	/**
 	 * Check whether the entrypoint has an asset.
