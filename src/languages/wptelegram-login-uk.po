@@ -4,17 +4,16 @@ msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wptelegram-login\n"
 "POT-Creation-Date: 2021-02-15 19:18:41+00:00\n"
-"PO-Revision-Date: 2019-02-08 22:46+0530\n"
+"PO-Revision-Date: 2021-02-16 02:09+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: uk\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Poedit-KeywordsList: __;_e;_x;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: admin/settings\n"
@@ -32,18 +31,16 @@ msgid "Telegram Login"
 msgstr "Telegram Вхід"
 
 #: admin/Admin.php:219
-#, fuzzy
 msgid "Telegram Info"
-msgstr "Telegram Вхід"
+msgstr ""
 
 #: admin/Admin.php:220
 msgid "Here you can connect this account to Telegram."
 msgstr ""
 
 #: admin/Admin.php:224
-#, fuzzy
 msgid "Telegram Chat ID"
-msgstr "Ідентифікатор користувача Telegram"
+msgstr ""
 
 #: admin/Admin.php:228 languages/wptelegram-login-js-translations.php:208
 msgid "INSTRUCTIONS!"
@@ -83,12 +80,8 @@ msgid "Telegram User ID"
 msgstr "Ідентифікатор користувача Telegram"
 
 #: includes/AssetManager.php:107
-msgid ""
-"With this plugin, you can let the users login to your website with their "
-"Telegram and make it simple for them to get connected."
-msgstr ""
-"За допомогою цього плагіна ви можете дозволити користувачам увійти на ваш "
-"веб-сайт за допомогою Telegram та спростити їх авторизацію."
+msgid "With this plugin, you can let the users login to your website with their Telegram and make it simple for them to get connected."
+msgstr "За допомогою цього плагіна ви можете дозволити користувачам увійти на ваш веб-сайт за допомогою Telegram та спростити їх авторизацію."
 
 #: includes/AssetManager.php:157
 msgid "Any"
@@ -195,37 +188,28 @@ msgid "Button Options"
 msgstr "Параметри кнопки"
 
 #: languages/wptelegram-login-js-translations.php:77
-#, fuzzy
 msgid "Display Telegram user profile photo beside button."
-msgstr "Показувати фото профілю користувача Telegram біля кнопки"
+msgstr "Показувати фото профілю користувача Telegram біля кнопки."
 
 #: languages/wptelegram-login-js-translations.php:81
-#, fuzzy
 msgid "Leave empty for default."
-msgstr "Залишити порожнім за замовчуванням"
+msgstr "Залишити порожнім за замовчуванням."
 
 #: languages/wptelegram-login-js-translations.php:84
-#, fuzzy
 msgid "Who can see the login button."
-msgstr "Хто може бачити кнопку входу"
+msgstr "Хто може бачити кнопку входу."
 
 #: languages/wptelegram-login-js-translations.php:87
-#, fuzzy
 msgid "Hide the button on default WordPress login/register page."
-msgstr ""
-"Приховати кнопку на сторінці входу/реєстрації WordPress за замовчуванням"
+msgstr "Приховати кнопку на сторінці входу/реєстрації WordPress за замовчуванням."
 
 #: languages/wptelegram-login-js-translations.php:90
-#, fuzzy
 msgid "Error Message"
-msgstr "Текст повідомлення про помилку"
+msgstr ""
 
 #: languages/wptelegram-login-js-translations.php:93
-#, fuzzy
 msgid "Display an error message if Telegram is blocked by user's ISP."
-msgstr ""
-"Показувати повідомлення про помилку, якщо Telegram заблокований провайдером "
-"користувача"
+msgstr "Показувати повідомлення про помилку, якщо Telegram заблокований провайдером користувача."
 
 #. translators: 1 command name, 2 bot name
 #: languages/wptelegram-login-js-translations.php:97
@@ -234,7 +218,7 @@ msgstr "Створіть Бота, відправивши команду %1$s  �
 
 #: languages/wptelegram-login-js-translations.php:100
 msgid "After completing the steps %s will provide you the Bot Token."
-msgstr "Після виконання кроків %s надасть вам Токен Бота"
+msgstr "Після виконання кроків %s надасть вам Токен Бота."
 
 #: languages/wptelegram-login-js-translations.php:103
 msgid "Copy the token and paste into the Bot Token field below."
@@ -246,9 +230,8 @@ msgid "For ease, use %s"
 msgstr "Для зручності використовуйте %s"
 
 #: languages/wptelegram-login-js-translations.php:110
-#, fuzzy
 msgid "Telegram Desktop"
-msgstr "Telegram Вхід"
+msgstr ""
 
 #. translators: 1 command name, 2 bot name, 3 site url
 #: languages/wptelegram-login-js-translations.php:114
@@ -256,12 +239,8 @@ msgid "Send %1$s command to %2$s, select your bot and then send %3$s"
 msgstr "Надішліть команду %1$s до %2$s, виберіть свого Бота і відправте %3$s"
 
 #: languages/wptelegram-login-js-translations.php:117
-msgid ""
-"Test your bot token below and fill in the bot username if not filled "
-"automatically."
-msgstr ""
-"Перевірте свій Токен Бота нижче та заповніть користувацьке ім'я Бота, якщо "
-"воно не заповнилось автоматично."
+msgid "Test your bot token below and fill in the bot username if not filled automatically."
+msgstr "Перевірте свій Токен Бота нижче та заповніть користувацьке ім'я Бота, якщо воно не заповнилось автоматично."
 
 #: languages/wptelegram-login-js-translations.php:120
 msgid "Hit %s below"
@@ -292,49 +271,32 @@ msgid "Login Options"
 msgstr "Параметри входу"
 
 #: languages/wptelegram-login-js-translations.php:141
-#, fuzzy
-msgid ""
-"If enabled, only the existing users who have connected their Telegram will "
-"be able to login."
-msgstr ""
-"Якщо встановлено прапорець, лише існуючі користувачі, які підключили "
-"Telegram, зможуть увійти."
+msgid "If enabled, only the existing users who have connected their Telegram will be able to login."
+msgstr "Якщо встановлено прапорець, лише існуючі користувачі, які підключили Telegram, зможуть увійти."
 
 #: languages/wptelegram-login-js-translations.php:144
-#, fuzzy
 msgid "The default role to assign for the new users."
-msgstr "Роль за замовчуванням для нових користувачів"
+msgstr "Роль за замовчуванням для нових користувачів."
 
 #: languages/wptelegram-login-js-translations.php:147
-#, fuzzy
 msgid "Redirect location after login."
-msgstr "Місце перенаправлення після входу"
+msgstr "Місце перенаправлення після входу."
 
 #: languages/wptelegram-login-js-translations.php:150
 msgid "The user meta key to be used to save Telegram photo URL."
-msgstr ""
-"Мета-ключ користувача, який використовується для збереження URL-адреси фото "
-"Telegram."
+msgstr "Мета-ключ користувача, який використовується для збереження URL-адреси фото Telegram."
 
 #: languages/wptelegram-login-js-translations.php:153
-msgid ""
-"If enabled, a random email address will be generated for new user accounts."
+msgid "If enabled, a random email address will be generated for new user accounts."
 msgstr ""
 
 #: languages/wptelegram-login-js-translations.php:156
-msgid ""
-"Useful when you want the users to be able to receive private notifications."
+msgid "Useful when you want the users to be able to receive private notifications."
 msgstr ""
 
 #: languages/wptelegram-login-js-translations.php:159
-msgid ""
-"Let the users login to your WordPress website with their Telegram and make "
-"it simple for them to get connected and let them receive their email "
-"notifications on Telegram."
-msgstr ""
-"Дозвольте користувачам увійти на ваш веб-сайт WordPress за допомогою "
-"Telegram, спростіть авторизацію та дозвольте отримувати сповіщення "
-"електронною поштою у Telegram."
+msgid "Let the users login to your WordPress website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram."
+msgstr "Дозвольте користувачам увійти на ваш веб-сайт WordPress за допомогою Telegram, спростіть авторизацію та дозвольте отримувати сповіщення електронною поштою у Telegram."
 
 #: languages/wptelegram-login-js-translations.php:162
 msgid "Get LIVE support on Telegram"
@@ -349,14 +311,12 @@ msgid "Telegram Options"
 msgstr "Параметри Telegram "
 
 #: languages/wptelegram-login-js-translations.php:171
-#, fuzzy
 msgid "Please wait…"
 msgstr "Будь ласка, зачекайте..."
 
 #: languages/wptelegram-login-js-translations.php:174
-#, fuzzy
 msgid "Please read the instructions above."
-msgstr "Будь ласка, прочитайте інструкції вище"
+msgstr "Будь ласка, прочитайте інструкції вище."
 
 #: languages/wptelegram-login-js-translations.php:177
 msgid "Test Token"
@@ -373,9 +333,7 @@ msgstr "Інформація віджета"
 #. translators: 1, 2 Menu names
 #: languages/wptelegram-login-js-translations.php:187
 msgid "Goto %1$s and click/drag %2$s and place it where you want it to be."
-msgstr ""
-"Перейдіть на %1$s і натисніть/перетягніть %2$s та розмістіть його там, де ви "
-"хочете."
+msgstr "Перейдіть на %1$s і натисніть/перетягніть %2$s та розмістіть його там, де ви хочете."
 
 #: languages/wptelegram-login-js-translations.php:190
 msgid "Appearance"
@@ -386,13 +344,8 @@ msgid "Widgets"
 msgstr "Віджети"
 
 #: languages/wptelegram-login-js-translations.php:196
-#, fuzzy
-msgid ""
-"Alternately, you can use the below shortcode or the block available in block "
-"editor."
-msgstr ""
-"Крім того, ви можете скористатись шорткодом нижче або блоком, доступним у "
-"редакторі блоків"
+msgid "Alternately, you can use the below shortcode or the block available in block editor."
+msgstr "Крім того, ви можете скористатись шорткодом нижче або блоком, доступним у редакторі блоків."
 
 #: languages/wptelegram-login-js-translations.php:199
 msgid "Inside page or post content:"
@@ -435,9 +388,7 @@ msgid "Could not connect"
 msgstr "Не вдається підключитися"
 
 #: languages/wptelegram-login-js-translations.php:235
-msgid ""
-"A message will be sent to the Channel/Group/Chat. You can modify the text "
-"below"
+msgid "A message will be sent to the Channel/Group/Chat. You can modify the text below"
 msgstr ""
 
 #: languages/wptelegram-login-js-translations.php:238
@@ -461,7 +412,6 @@ msgid "Invalid %s"
 msgstr "Невірний %s"
 
 #: languages/wptelegram-login-js-translations.php:253
-#, fuzzy
 msgid "%s required."
 msgstr "%s є обов'язковим."
 
@@ -478,21 +428,12 @@ msgid "Invalid! The data is outdated"
 msgstr "Недійсний! Дані застарілі"
 
 #: shared/LoginHandler.php:255
-msgid ""
-"The Telegram User ID is already associated with another existing user. "
-"Please contact the admin"
-msgstr ""
-"Ідентифікатор користувача Telegram вже пов'язаний з іншим наявним "
-"користувачем. Будь ласка, зверніться до адміністратора"
+msgid "The Telegram User ID is already associated with another existing user. Please contact the admin"
+msgstr "Ідентифікатор користувача Telegram вже пов'язаний з іншим наявним користувачем. Будь ласка, зверніться до адміністратора"
 
 #: shared/LoginHandler.php:273
-msgid ""
-"Sign up via Telegram is disabled. You must first create an account and "
-"connect it to Telegram to be able to use Telegram Login"
-msgstr ""
-"Реєстрація через Telegram вимкнена. Спочатку потрібно створити обліковий "
-"запис і підключити його до Telegram, щоб мати можливість користуватися "
-"Telegram Вхід"
+msgid "Sign up via Telegram is disabled. You must first create an account and connect it to Telegram to be able to use Telegram Login"
+msgstr "Реєстрація через Telegram вимкнена. Спочатку потрібно створити обліковий запис і підключити його до Telegram, щоб мати можливість користуватися Telegram Вхід"
 
 #: shared/LoginHandler.php:365
 msgid "Telegram sign in could not be completed."
@@ -517,15 +458,3 @@ msgstr "Показувати кнопку входу Telegram"
 #: shared/widgets/Primary.php:143
 msgid "Title"
 msgstr "Заголовок"
-
-#~ msgid "Sign up"
-#~ msgstr "Реєстрація"
-
-#~ msgid "https://t.me/manzoorwanijk"
-#~ msgstr "https://t.me/manzoorwanijk"
-
-#~ msgid "Manzoor Wani"
-#~ msgstr "Manzoor Wani"
-
-#~ msgid "https://t.me/WPTelegram"
-#~ msgstr "https://t.me/WPTelegram"
