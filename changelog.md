@@ -4,6 +4,11 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+### Bug Fixes
+
+-   Fixed the missing Telegram ID in user table
+-   Fixed creation of new user on login
+
 ## [1.9.1 - 2021-02-16](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.1)
 
 ### Bug Fixes

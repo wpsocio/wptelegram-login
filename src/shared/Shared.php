@@ -12,6 +12,7 @@
 namespace WPTelegram\Login\shared;
 
 use WPTelegram\Login\includes\BaseClass;
+use WP_User;
 
 /**
  * The public-facing functionality of the plugin.

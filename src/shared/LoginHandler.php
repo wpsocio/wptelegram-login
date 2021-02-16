@@ -12,6 +12,8 @@
 namespace WPTelegram\Login\shared;
 
 use WPTelegram\Login\includes\BaseClass;
+use WP_User;
+use Exception;
 
 /**
  * The login handling functionality of the plugin.
