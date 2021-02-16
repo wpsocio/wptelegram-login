@@ -5,7 +5,7 @@ Tags: telegram, login, register, social, signup
 Requires at least: 5.5
 Tested up to: 5.6.1
 Requires PHP: 7.0
-Stable tag: 1.9.1
+Stable tag: 1.9.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,10 @@ Many thanks to the translators for the great job!
 7. User List Table (for admin)
 
 == Changelog ==
+
+= 1.9.2 =
+-   Fixed the missing Telegram ID in user table
+-   Fixed creation of new user on login
 
 = 1.9.1 =
 -   Fixed i18n

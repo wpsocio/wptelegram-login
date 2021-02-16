@@ -12,6 +12,7 @@
 namespace WPTelegram\Login\admin;
 
 use WPTelegram\Login\includes\BaseClass;
+use WP_User;
 
 /**
  * The admin-specific functionality of the plugin.
