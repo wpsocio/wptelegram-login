@@ -79,6 +79,8 @@ register_deactivation_hook( __FILE__, 'deactivate_wptelegram_login' );
  * not affect the page life cycle.
  *
  * @since    1.0.0
+ *
+ * @return \WPTelegram\Login\includes\Main
  */
 function WPTG_Login() { // phpcs:ignore WordPress.NamingConventions.ValidFunctionName -- Ignore  snake_case
 

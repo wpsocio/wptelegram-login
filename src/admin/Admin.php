@@ -13,6 +13,7 @@ namespace WPTelegram\Login\admin;
 
 use WPTelegram\Login\includes\BaseClass;
 use WP_User;
+use WP_REST_Request;
 
 /**
  * The admin-specific functionality of the plugin.
@@ -130,14 +131,14 @@ class Admin extends BaseClass {
 	 *
 	 * @since 1.8.4
 	 *
-	 * @param array            $prepared_args Array of arguments for WP_User_Query.
-	 * @param \WP_REST_Request $request       The current request.
+	 * @param array           $prepared_args Array of arguments for WP_User_Query.
+	 * @param WP_REST_Request $request       The current request.
 	 */
-	public function modify_rest_user_query( $prepared_args, $request ) {
+	public function modify_rest_user_query( $prepared_args, WP_REST_Request $request ) {
 		if ( ! $request->get_param( 'telegram_users_only' ) ) {
 			return $prepared_args;
 		}
-		$prepared_args['meta_query'] = array(
+		$prepared_args['meta_query'] = array( // phpcs:ignore
 			'relation' => 'AND',
 			array(
 				'key'     => WPTELEGRAM_USER_ID_META_KEY,
@@ -160,7 +161,7 @@ class Admin extends BaseClass {
 	 */
 	public function add_plugin_admin_menu() {
 
-		if ( defined( 'WPTELEGRAM_LOADED' ) && WPTELEGRAM_LOADED ) {
+		if ( defined( 'WPTELEGRAM_LOADED' ) ) {
 			add_submenu_page(
 				'wptelegram',
 				esc_html( $this->plugin->title() ),

@@ -193,7 +193,7 @@ class AssetManager extends BaseClass {
 		);
 
 		// don't load styles for dev env.
-		if ( defined( 'WP_PLUGINS_DEV_LOADED' ) && WP_PLUGINS_DEV_LOADED ) {
+		if ( defined( 'WP_PLUGINS_DEV_LOADED' ) ) {
 			return;
 		}
 
@@ -251,7 +251,7 @@ class AssetManager extends BaseClass {
 		);
 
 		// don't load styles for dev env.
-		if ( defined( 'WP_PLUGINS_DEV_LOADED' ) && WP_PLUGINS_DEV_LOADED ) {
+		if ( defined( 'WP_PLUGINS_DEV_LOADED' ) ) {
 			return;
 		}
 

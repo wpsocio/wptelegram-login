@@ -137,7 +137,7 @@ class Options implements Iterator, ArrayAccess {
 	 */
 	public function remove( $key ) {
 
-		unset( $this->data[ $offset ] );
+		unset( $this->data[ $key ] );
 
 		return $this->update_data();
 	}
@@ -256,7 +256,7 @@ class Options implements Iterator, ArrayAccess {
 	 * @param string $key Options array key.
 	 */
 	public function __unset( $key ) {
-		return $this->_unset( $key );
+		return $this->remove( $key );
 	}
 
 	/**
@@ -347,7 +347,7 @@ class Options implements Iterator, ArrayAccess {
 	 * @param mixed $offset The offset to unset.
 	 */
 	public function offsetUnset( $offset ) {
-		return $this->_unset( $offset );
+		return $this->remove( $offset );
 	}
 
 	/**

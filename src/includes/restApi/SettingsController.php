@@ -158,9 +158,8 @@ class SettingsController extends RESTController {
 				'validate_callback' => array( __CLASS__, 'validate_param' ),
 			),
 			'disable_signup'        => array(
-				'type'              => 'boolean',
-				'default'           => false,
-				'validate_callback' => 'rest_validate_request_arg',
+				'type'    => 'boolean',
+				'default' => false,
 			),
 			'user_role'             => array(
 				'type'              => 'string',
@@ -178,7 +177,6 @@ class SettingsController extends RESTController {
 			'redirect_url'          => array(
 				'type'              => 'string',
 				'sanitize_callback' => 'sanitize_text_field',
-				'validate_callback' => 'rest_validate_request_arg',
 			),
 			'avatar_meta_key'       => array(
 				'type'              => 'string',
@@ -187,9 +185,8 @@ class SettingsController extends RESTController {
 				'validate_callback' => array( __CLASS__, 'validate_param' ),
 			),
 			'random_email'          => array(
-				'type'              => 'boolean',
-				'default'           => false,
-				'validate_callback' => 'rest_validate_request_arg',
+				'type'    => 'boolean',
+				'default' => false,
 			),
 			'button_style'          => array(
 				'type'              => 'string',
@@ -199,9 +196,8 @@ class SettingsController extends RESTController {
 				'enum'              => array( 'large', 'medium', 'small' ),
 			),
 			'show_user_photo'       => array(
-				'type'              => 'boolean',
-				'default'           => true,
-				'validate_callback' => 'rest_validate_request_arg',
+				'type'    => 'boolean',
+				'default' => true,
 			),
 			'corner_radius'         => array(
 				'type'              => 'number',
@@ -212,23 +208,21 @@ class SettingsController extends RESTController {
 			'show_if_user_is'       => array(
 				'type'              => 'string',
 				'default'           => 'logged_out',
-				'sanitize_callback' => 'sanitize_text_field',
 				'validate_callback' => 'rest_validate_request_arg',
+				'sanitize_callback' => 'sanitize_text_field',
 			),
 			'hide_on_default'       => array(
-				'type'              => 'boolean',
-				'default'           => false,
-				'validate_callback' => 'rest_validate_request_arg',
+				'type'    => 'boolean',
+				'default' => false,
 			),
 			'show_message_on_error' => array(
-				'type'              => 'boolean',
-				'default'           => false,
-				'validate_callback' => 'rest_validate_request_arg',
+				'type'    => 'boolean',
+				'default' => false,
 			),
 			'custom_error_message'  => array(
 				'type'              => 'string',
-				'sanitize_callback' => 'sanitize_text_field',
 				'validate_callback' => 'rest_validate_request_arg',
+				'sanitize_callback' => 'sanitize_text_field',
 			),
 		);
 	}

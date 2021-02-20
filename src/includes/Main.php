@@ -48,7 +48,7 @@ class Main {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Main    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -294,6 +294,8 @@ class Main {
 	 *
 	 * @since    1.0.0
 	 * @access   public
+	 *
+	 * @return Options The options instance.
 	 */
 	public function options() {
 
@@ -305,6 +307,8 @@ class Main {
 	 *
 	 * @since    1.9.0
 	 * @access   public
+	 *
+	 * @return Assets The assets instance.
 	 */
 	public function assets() {
 
