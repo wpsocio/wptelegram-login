@@ -107,7 +107,7 @@ class AssetManager extends BaseClass {
 				'description' => __( 'With this plugin, you can let the users login to your website with their Telegram and make it simple for them to get connected.', 'wptelegram-login' ),
 			),
 			'api'        => array(
-				'admin_url'      => admin_url( 'admin-ajax.php' ),
+				'admin_url'      => admin_url(),
 				'nonce'          => wp_create_nonce( 'wptelegram-login' ),
 				'use'            => 'BROWSER', // or may be 'SERVER'?
 				'rest_namespace' => 'wptelegram-login/v1',

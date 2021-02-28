@@ -4,254 +4,259 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+### Bug Fixes
+
+- Fixed admin links on settings page
+- Fixed translation for plugin title
+
 ## [1.9.2 - 2021-02-16](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.2)
 
 ### Bug Fixes
 
--   Fixed the missing Telegram ID in user table
--   Fixed creation of new user on login
+- Fixed the missing Telegram ID in user table
+- Fixed creation of new user on login
 
 ## [1.9.1 - 2021-02-16](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.1)
 
 ### Bug Fixes
 
--   Fixed i18n
+- Fixed i18n
 
 ## [1.9.0 - 2021-02-16](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.0)
 
 ### Bug Fixes
 
--   Fixed the syntax error for older PHP versions.
+- Fixed the syntax error for older PHP versions.
 
 ### Enhancements
 
--   Refreshed the UI
--   Switched to PHP namespaces
+- Refreshed the UI
+- Switched to PHP namespaces
 
 ## [1.8.4 - 2021-01-31](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.4)
 
 ### Bug Fixes
 
--   Fixed the empty username error for non ASCII names
--   Fixed the wrong Telegram username saved to user profile
+- Fixed the empty username error for non ASCII names
+- Fixed the wrong Telegram username saved to user profile
 
 ### Enhancements
 
--   Integrated Telegram login details with WP REST API
+- Integrated Telegram login details with WP REST API
 
 ## [1.8.3 - 2020-12-8](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.3)
 
 ### Bug Fixes
 
--   Fixed the Telegram ID update from edit profile
+- Fixed the Telegram ID update from edit profile
 
 ## [1.8.2 - 2020-10-3](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.2)
 
 ### Enhancements
 
--   Added Telegram user ID field to user profile
+- Added Telegram user ID field to user profile
 
 ## [1.8.1 - 2020-08-13](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.1)
 
 ### Bug Fixes
 
--   Fixed admin styles
+- Fixed admin styles
 
 ## [1.8.0 - 2020-08-13](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.0)
 
 ### Enhancements
 
--   Updated user id meta key constant name
--   Telegram username is now saved to user meta
--   Updated compatibility with WP 5.5
+- Updated user id meta key constant name
+- Telegram username is now saved to user meta
+- Updated compatibility with WP 5.5
 
 ### Bug Fixes
 
--   Disabled default WP login redirect to fix unexpected redirects
--   Fixed admin menu icon
+- Disabled default WP login redirect to fix unexpected redirects
+- Fixed admin menu icon
 
 ## [1.7.1 - 2020-08-4](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.7.1)
 
 ### Enhancements
 
--   Removed button for already connected users
+- Removed button for already connected users
 
 ## [1.7.0 - 2020-06-14](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.7.0)
 
 ### Enhancements
 
--   Unified Telegram user ID with WP Telegram
+- Unified Telegram user ID with WP Telegram
 
 ## [1.6.3 - 2020-06-12](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.6.3)
 
 ### Bug Fixes
 
--   Fixed the bug in creating random email
+- Fixed the bug in creating random email
 
 ## [1.6.2 - 2020-04-12](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.6.2)
 
 ### Bug Fixes
 
--   Fixed Admin page JS path
+- Fixed Admin page JS path
 
 ## [1.6.1 - 2020-04-12](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.6.1)
 
 ### Bug Fixes
 
--   Fixed version update
+- Fixed version update
 
 ## [1.6.0 - 2020-04-12](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.6.0)
 
 ### Enhancements
 
--   Added support for random email generation
--   Simplified the build process
+- Added support for random email generation
+- Simplified the build process
 
 ## [1.5.4 - 2019-10-23](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.5.4)
 
 ### Enhancements
 
--   Added some more hooks to login flow
--   Updated bot token pattern
+- Added some more hooks to login flow
+- Updated bot token pattern
 
 ## [1.5.3 - 2019-09-20](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.5.3)
 
 ### Bug Fixes
 
--   Fixed the issue with default values not shown for fresh installs
+- Fixed the issue with default values not shown for fresh installs
 
 ## [1.5.2 - 2019-08-19](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.5.2)
 
 ### Bug Fixes
 
--   Fixed the wrong shortcode atts
--   Fixed the regenerator-runtime issue
+- Fixed the wrong shortcode atts
+- Fixed the regenerator-runtime issue
 
 ## [1.5.1 - 2019-07-29](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.5.1)
 
 ### Bug Fixes
 
--   Fixed the 404 for for admin css
--   Fixed the ajax error caused by WordFence
--   Fixed pending upgrades from last update
--   Fixed the hidden login on thememylogin
+- Fixed the 404 for for admin css
+- Fixed the ajax error caused by WordFence
+- Fixed pending upgrades from last update
+- Fixed the hidden login on thememylogin
 
 ### Enhancements
 
--   Switched to WPCS in JS.
+- Switched to WPCS in JS.
 
 ## [1.5.0 - 2019-07-18](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.5.0)
 
 ### Enhancements
 
--   Removed the CMB2 dependency
--   Migrated to React for settings page
+- Removed the CMB2 dependency
+- Migrated to React for settings page
 
 ## [1.4.1 - 2019-03-23](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.4.1)
 
 ### Bug Fixes
 
--   Fixed the PHP warning on the settings page
+- Fixed the PHP warning on the settings page
 
 ## [1.4.0 - 2019-03-23](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.4.0)
 
 ### Enhancements
 
--   Added Gutenberg Block for login button
+- Added Gutenberg Block for login button
 
 ## 1.3.4 - 2018-11-23
 
 ### Bug Fixes
 
--   Fixed 404 issue for WP in sub directory
+- Fixed 404 issue for WP in sub directory
 
 ## [1.3.3 - 2018-11-11](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/1.3.3)
 
 ### Enhancements
 
--   Bundled CMB2 to handle the dependency
+- Bundled CMB2 to handle the dependency
 
 ### Bug Fixes
 
--   Fixed UI bugs on login page with errors
--   Fixed the shortcode instruction for `show_user_photo`
+- Fixed UI bugs on login page with errors
+- Fixed the shortcode instruction for `show_user_photo`
 
 ## 1.3.2 - 2018-11-02
 
 ### Enhancements
 
--   Prepare for WP Telegram 2.0.0
+- Prepare for WP Telegram 2.0.0
 
 ## [1.3.1 - 2018-10-20](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.3.1)
 
 ### Enhancements
 
--   Added Russian Translation. Thanks to @zzart
+- Added Russian Translation. Thanks to @zzart
 
 ### Bug Fixes
 
--   Fixed the Save Settings errors
--   Fixed option class error in old PHP versions
+- Fixed the Save Settings errors
+- Fixed option class error in old PHP versions
 
 ## 1.3.0 - 2018-10-07
 
 ### Enhancements
 
--   Revamped the options to avoid the use of globals
--   Added the option to disable the button on default WP login page
+- Revamped the options to avoid the use of globals
+- Added the option to disable the button on default WP login page
 
 ### Bug Fixes
 
--   Fixed the PHP warnings for first time install
--   Fixed the error in user columns in older WP versions
+- Fixed the PHP warnings for first time install
+- Fixed the error in user columns in older WP versions
 
 ## 1.2.8 - 2018-09-26
 
 ### Bug Fixes
 
--   Fixed some PHP Warnings
+- Fixed some PHP Warnings
 
 ## 1.2.7 - 2018-09-24
 
--   Added support for user avatars to be should by default
--   Minor fixes
+- Added support for user avatars to be should by default
+- Minor fixes
 
 ## 1.2.6 - 2018-09-09
 
--   Added the option to disable sign ups
--   Minor fixes
+- Added the option to disable sign ups
+- Minor fixes
 
 ## 1.2.5 - 2018-09-07
 
--   Fixed the PHP warnings created by widget visibility options
--   Fixed the Errors during widget update
--   Other fixes
+- Fixed the PHP warnings created by widget visibility options
+- Fixed the Errors during widget update
+- Other fixes
 
 ## 1.2.4 - 2018-06-28
 
--   Fixed the bug related to password recovery button
--   Added efficient plugin dependency management
+- Fixed the bug related to password recovery button
+- Added efficient plugin dependency management
 
 ## 1.2.3 - 2018-05-04
 
--   Fixed the issue with integration with WP Telegram Notifications
+- Fixed the issue with integration with WP Telegram Notifications
 
 ## 1.2.2 - 2018-05-04
 
--   Fixed the issue with login button not shown to specific roles
+- Fixed the issue with login button not shown to specific roles
 
 ## 1.2.1 - 2018-04-26
 
--   Fixed the issue with login button not shown by default
+- Fixed the issue with login button not shown by default
 
 ## 1.2.0 - 2018-04-17
 
--   Added the option whom to show the login button
+- Added the option whom to show the login button
 
 ## 1.0.1 - 2018-04-16
 
--   Added integration with WPTelegram Notifications for users
+- Added integration with WPTelegram Notifications for users
 
 ## 1.0.0 - 2018-04-16
 
--   Initial Release.
+- Initial Release.
