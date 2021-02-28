@@ -2,10 +2,10 @@
 Contributors: manzoorwanijk
 Donate link: https://paypal.me/manzoorwanijk
 Tags: telegram, login, register, social, signup
-Requires at least: 5.5
-Tested up to: 5.6.1
+Requires at least: 5.3
+Tested up to: 5.6.2
 Requires PHP: 7.0
-Stable tag: 1.9.2
+Stable tag: 1.9.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,10 @@ Many thanks to the translators for the great job!
 7. User List Table (for admin)
 
 == Changelog ==
+
+= 1.9.3 =
+- Fixed admin links on settings page
+- Fixed translation for plugin title
 
 = 1.9.2 =
 -   Fixed the missing Telegram ID in user table
