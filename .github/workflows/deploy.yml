@@ -12,7 +12,7 @@ jobs:
 
       # Remove everything except src/, .wordpress-org and .gitattributes
       - name: Clean up
-        run: find . -maxdepth 1 ! -name ".gitattributes" ! -name "src" ! -name ".wordpress-org" ! -name . -exec rm -rf {} \;
+        run: find . -maxdepth 1 ! -name ".git" ! -name ".gitattributes" ! -name "src" ! -name ".wordpress-org" ! -name . -exec rm -rf {} \;
 
       # Move everything from src/ to root directory
       - name: Extract src
