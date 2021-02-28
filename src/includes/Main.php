@@ -140,8 +140,6 @@ class Main {
 
 		$this->version = WPTELEGRAM_LOGIN_VER;
 
-		$this->title = __( 'WP Telegram Login', 'wptelegram-login' );
-
 		$this->plugin_name = 'wptelegram_login';
 
 		$this->load_dependencies();
@@ -322,6 +320,11 @@ class Main {
 	 * @return    string    The title of the plugin.
 	 */
 	public function title() {
+		// Set here instead of constructor
+		// to be able to translate it.
+		if ( ! $this->title ) {
+			$this->title = __( 'WP Telegram Login', 'wptelegram-login' );
+		}
 		return $this->title;
 	}
 
