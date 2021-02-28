@@ -52,7 +52,6 @@ require WPTELEGRAM_LOGIN_DIR . '/autoload.php';
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-wptelegram-login-activator.php
  */
 function activate_wptelegram_login() {
 	\WPTelegram\Login\includes\Activator::activate();
@@ -60,7 +59,6 @@ function activate_wptelegram_login() {
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-wptelegram-login-deactivator.php
  */
 function deactivate_wptelegram_login() {
 	\WPTelegram\Login\includes\Deactivator::deactivate();

@@ -3,7 +3,7 @@
 **Contributors:** [manzoorwanijk](https://github.com/manzoorwanijk)  
 **Tags:** telegram, login, register, social, signup  
 **Requires at least:** 5.5  
-**Tested up to:** 5.6.1  
+**Tested up to:** 5.6.2  
 **Stable tag:** 1.9.2  
 **License:** GPLv2 or later  
 **License URI:** [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
@@ -22,25 +22,25 @@ Let the users login to your WordPress website with their Telegram and make it si
 
 ## Why Telegram Login?
 
--   Removes the lengthy registration forms
--   Removes the need for captchas
--   Removes the need for email verification
--   No “forgot password?” stuff
--   Provides enough information about the user
+- Removes the lengthy registration forms
+- Removes the need for captchas
+- Removes the need for email verification
+- No “forgot password?” stuff
+- Provides enough information about the user
 
 ## Features:
 
--   Safe, secure and easy login method
--   Relies upon SHA-256 hashed data strings
--   User data is trustworthy – verified by Telegram
--   Users can remotely logout of the websites
--   Can be used to prevent spam registrations
--   Easy to install and set up for the admin
--   Can be used to let new users sign up
--   Existing users can connect their Telegram account
--   Users can be given any desired role on the website
--   Login button can be displayed anywhere
--   Can be extended with custom code
+- Safe, secure and easy login method
+- Relies upon SHA-256 hashed data strings
+- User data is trustworthy – verified by Telegram
+- Users can remotely logout of the websites
+- Can be used to prevent spam registrations
+- Easy to install and set up for the admin
+- Can be used to let new users sign up
+- Existing users can connect their Telegram account
+- Users can be given any desired role on the website
+- Login button can be displayed anywhere
+- Can be extended with custom code
 
 ## Widget Info
 

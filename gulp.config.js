@@ -11,17 +11,12 @@ const config = {
 	watchPhp: srcDir + '/**/*.php',
 	vendorBin: './vendor/bin',
 	PhpStandard: 'WordPress',
-	ESNextJS: srcDir + '/**/*.esnext.js',
-	styleSRC: [
-		srcDir + '/**/css/*.css',
-		'!' + srcDir + '/assets/static/**',
-		'!' + srcDir + '/**/*.min.css',
-	],
+	styleSRC: [srcDir + '/**/css/*.css', '!' + srcDir + '/assets/static/**', '!' + srcDir + '/**/*.min.css'],
 	styleDest: srcDir,
 
 	// Translation options.
 	textDomain: name,
-	potFilename: `${ name }.pot`,
+	potFilename: `${name}.pot`,
 	JSPotFilename: 'js-translations.pot',
 	domainPath: srcDir + '/languages',
 	packageName: 'WP Telegram Comments',

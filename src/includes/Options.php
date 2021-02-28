@@ -105,6 +105,39 @@ class Options implements Iterator, ArrayAccess {
 	}
 
 	/**
+	 * Retrieves an option by nested path, with keys separated by dot.
+	 *
+	 * @since x.y.z
+	 *
+	 * @param string $path    Path to the value..
+	 * @param mixed  $default Optional default value.
+	 *
+	 * @return mixed Option value.
+	 */
+	public function get_path( $path = '', $default = false ) {
+		// If it's not a nested path.
+		if ( false === strpos( $path, '.' ) ) {
+			return $this->get( $path, $default );
+		}
+
+		$value = $this->get( 'all' );
+
+		if ( ! is_array( $value ) ) {
+			return $default;
+		}
+
+		foreach ( explode( '.', $path ) as $key ) {
+
+			if ( ! is_array( $value ) || ! array_key_exists( $key, $value ) ) {
+				return $default;
+			}
+			$value = $value[ $key ];
+		}
+
+		return apply_filters( strtolower( __CLASS__ ) . "_{$this->option_key}_get_path_{$path}", $value, $default );
+	}
+
+	/**
 	 * Sets an option by key.
 	 *
 	 * @since 1.0.0
