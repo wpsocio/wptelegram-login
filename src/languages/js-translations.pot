@@ -3,47 +3,47 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "X-Generator: babel-plugin-makepot\n"
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:12
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:13
 #: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:8
 msgid "Large"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:13
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:14
 #: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:9
 msgid "Medium"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:14
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:15
 #: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:10
 msgid "Small"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:35
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:36
 msgid "Button Settings"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:37
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:38
 #: domains/wptelegram/login/main/src/services/fields.ts:10
 msgid "Button Style"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:43
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:44
 #: domains/wptelegram/login/main/src/services/fields.ts:20
 msgid "Show User Photo"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:48
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:49
 #: domains/wptelegram/login/main/src/services/fields.ts:11
 msgid "Corner Radius"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:56
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:57
 #: domains/wptelegram/login/main/src/services/fields.ts:18
 msgid "Show if user is"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/index.tsx:12
-#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:43
+#: domains/wptelegram/login/blocks/src/telegram-login/index.tsx:13
+#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:28
 msgid "WP Telegram Login"
 msgstr ""
 
@@ -159,6 +159,7 @@ msgid "Hit %s below"
 msgstr ""
 
 #: domains/wptelegram/login/main/src/ui/Instructions.tsx:86
+#: domains/wptelegram/login/main/src/ui/SubmitInfo.tsx:11
 msgid "Save Changes"
 msgstr ""
 
@@ -219,15 +220,13 @@ msgstr ""
 msgid "Get LIVE support on Telegram"
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/SubmitInfo.tsx:11
-msgid "Submit"
-msgstr ""
-
 #: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:47
 msgid "Telegram Options"
 msgstr ""
 
 #: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:55
+#: packages/components/src/useBotTokenTest.tsx:39
+#: packages/components/src/useChatWithTest.tsx:89
 msgid "Please wait…"
 msgstr ""
 
@@ -236,6 +235,7 @@ msgid "Please read the instructions above."
 msgstr ""
 
 #: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:72
+#: packages/components/src/useBotTokenTest.tsx:39
 msgid "Test Token"
 msgstr ""
 
@@ -243,51 +243,62 @@ msgstr ""
 msgid "Use %s above to set automatically."
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:26
-msgid "Widget Info"
-msgstr ""
-
-#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:32
+#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:17
+#: packages/components/src/WidgetInfo/WidgetInfo.tsx:25
 #. 1, 2 Menu names
 msgid "Goto %1$s and click/drag %2$s and place it where you want it to be."
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:39
+#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:24
+#: packages/components/src/WidgetInfo/WidgetInfo.tsx:32
 msgid "Appearance"
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:40
+#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:25
+#: packages/components/src/WidgetInfo/WidgetInfo.tsx:33
 msgid "Widgets"
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:48
+#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:33
+#: packages/components/src/WidgetInfo/WidgetInfo.tsx:41
 msgid ""
 "Alternately, you can use the below shortcode or the block available in "
 "block editor."
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:50
+#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:35
+#: packages/components/src/WidgetInfo/WidgetInfo.tsx:43
 msgid "Inside page or post content:"
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:56
+#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:41
+#: packages/components/src/WidgetInfo/WidgetInfo.tsx:47
 msgid "Inside the theme templates"
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:62
+#: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:47
+#: packages/components/src/WidgetInfo/WidgetInfo.tsx:51
 msgid "or"
 msgstr ""
 
-#: packages/components/src/Instructions/Instructions.tsx:11
+#: packages/components/src/Instructions/Instructions.tsx:15
 msgid "INSTRUCTIONS!"
 msgstr ""
 
-#: packages/components/src/PluginInfo/PluginInfoCard.tsx:43
+#: packages/components/src/PluginInfo/PluginInfoCard.tsx:42
 msgid "Do you like %s?"
 msgstr ""
 
-#: packages/components/src/PluginInfo/PluginInfoCard.tsx:62
+#: packages/components/src/PluginInfo/PluginInfoCard.tsx:61
 msgid "Need help?"
+msgstr ""
+
+#: packages/components/src/TestResult/MemberCountResult.tsx:15
+msgid "Members Count:"
+msgstr ""
+
+#: packages/components/src/TestResult/TestMessageResult.tsx:15
+msgid "Test result:"
 msgstr ""
 
 #: packages/components/src/TestResult/TestResult.tsx:14
@@ -302,8 +313,16 @@ msgstr ""
 msgid "Join %s"
 msgstr ""
 
+#: packages/components/src/WidgetInfo/WidgetInfoCard.tsx:14
+msgid "Widget Info"
+msgstr ""
+
+#: packages/components/src/useChatWithTest.tsx:89
+msgid "Send Test"
+msgstr ""
+
 #: packages/services/src/apiFetch/index.ts:31
-msgid "Some error occured"
+msgid "Something went wrong"
 msgstr ""
 
 #: packages/services/src/apiFetch/index.ts:33

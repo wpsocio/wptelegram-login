@@ -11,8 +11,6 @@
 
 namespace WPTelegram\Login\includes;
 
-use WPTelegram\Login\includes\Main;
-
 /**
  * The base class of the plugin.
  *
@@ -28,7 +26,7 @@ abstract class BaseClass {
 	 * The plugin class instance.
 	 *
 	 * @since    1.0.0
-	 * @access   private
+	 * @access   protected
 	 * @var      Main $plugin The plugin class instance.
 	 */
 	protected $plugin;

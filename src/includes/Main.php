@@ -48,7 +48,7 @@ class Main {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Main    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -139,8 +139,6 @@ class Main {
 	public function __construct() {
 
 		$this->version = WPTELEGRAM_LOGIN_VER;
-
-		$this->title = __( 'WP Telegram Login', 'wptelegram-login' );
 
 		$this->plugin_name = 'wptelegram_login';
 
@@ -294,6 +292,8 @@ class Main {
 	 *
 	 * @since    1.0.0
 	 * @access   public
+	 *
+	 * @return Options The options instance.
 	 */
 	public function options() {
 
@@ -305,6 +305,8 @@ class Main {
 	 *
 	 * @since    1.9.0
 	 * @access   public
+	 *
+	 * @return Assets The assets instance.
 	 */
 	public function assets() {
 
@@ -318,6 +320,11 @@ class Main {
 	 * @return    string    The title of the plugin.
 	 */
 	public function title() {
+		// Set here instead of constructor
+		// to be able to translate it.
+		if ( ! $this->title ) {
+			$this->title = __( 'WP Telegram Login', 'wptelegram-login' );
+		}
 		return $this->title;
 	}
 

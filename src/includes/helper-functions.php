@@ -9,30 +9,6 @@
  * @subpackage WPTelegram\Login/includes
  */
 
-/**
- * Wrapper function around cmb2_get_option
- *
- * @since  1.0.0
- * @param  string $key     Options array key.
- * @param  mixed  $default Optional default value.
- * @return mixed           Option value
- */
-function wptelegram_login_get_option( $key = '', $default = false ) {
-	if ( function_exists( 'cmb2_get_option' ) ) {
-		// Use cmb2_get_option as it passes through some key filters.
-		return cmb2_get_option( 'wptelegram_login', $key, $default );
-	}
-	// Fallback to get_option if CMB2 is not loaded yet.
-	$opts = get_option( 'wptelegram_login', $default );
-	$val  = $default;
-	if ( 'all' === $key ) {
-		$val = $opts;
-	} elseif ( is_array( $opts ) && array_key_exists( $key, $opts ) && false !== $opts[ $key ] ) {
-		$val = $opts[ $key ];
-	}
-	return $val;
-}
-
 if ( ! function_exists( 'wptelegram_login_user_id' ) ) {
 	/**
 	 * Get the saved Telegram User ID for the given or current

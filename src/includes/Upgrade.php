@@ -78,8 +78,8 @@ class Upgrade extends BaseClass {
 	 */
 	private function upgrade_to( $version ) {
 
-		// 2.0.1 becomes 201
-		$_version = str_replace( '.', '', $version );
+		// 2.0.1 becomes 2_0_1
+		$_version = str_replace( '.', '_', $version );
 
 		$method = array( $this, "upgrade_to_{$_version}" );
 
@@ -96,7 +96,7 @@ class Upgrade extends BaseClass {
 	 *
 	 * @since    1.5.1
 	 */
-	private function upgrade_to_151() {
+	private function upgrade_to_1_5_1() {
 
 		$options = array(
 			'disable_signup',
@@ -118,7 +118,7 @@ class Upgrade extends BaseClass {
 	 *
 	 * @since    1.7.0
 	 */
-	private function upgrade_to_170() {
+	private function upgrade_to_1_7_0() {
 		$old_meta_key = $this->plugin->name() . '_user_id';
 
 		$args  = array(
