@@ -107,7 +107,7 @@ class Options implements Iterator, ArrayAccess {
 	/**
 	 * Retrieves an option by nested path, with keys separated by dot.
 	 *
-	 * @since x.y.z
+	 * @since 1.9.3
 	 *
 	 * @param string $path    Path to the value..
 	 * @param mixed  $default Optional default value.

@@ -1,39 +1,39 @@
 <?php
 /* THIS IS A GENERATED FILE. DO NOT EDIT DIRECTLY. */
 $generated_i18n_strings = array(
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:12
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:13
 	// Reference: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:8
 	__( 'Large', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:13
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:14
 	// Reference: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:9
 	__( 'Medium', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:14
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:15
 	// Reference: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:10
 	__( 'Small', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:35
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:36
 	__( 'Button Settings', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:37
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:38
 	// Reference: domains/wptelegram/login/main/src/services/fields.ts:10
 	__( 'Button Style', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:43
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:44
 	// Reference: domains/wptelegram/login/main/src/services/fields.ts:20
 	__( 'Show User Photo', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:48
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:49
 	// Reference: domains/wptelegram/login/main/src/services/fields.ts:11
 	__( 'Corner Radius', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:56
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:57
 	// Reference: domains/wptelegram/login/main/src/services/fields.ts:18
 	__( 'Show if user is', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/index.tsx:12
-	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:43
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/index.tsx:13
+	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:28
 	__( 'WP Telegram Login', 'wptelegram-login' ),
 
 	// Reference: domains/wptelegram/login/main/src/services/fields.ts:12
@@ -120,6 +120,7 @@ $generated_i18n_strings = array(
 	__( 'Hit %s below', 'wptelegram-login' ),
 
 	// Reference: domains/wptelegram/login/main/src/ui/Instructions.tsx:86
+	// Reference: domains/wptelegram/login/main/src/ui/SubmitInfo.tsx:11
 	__( 'Save Changes', 'wptelegram-login' ),
 
 	// Reference: domains/wptelegram/login/main/src/ui/Instructions.tsx:87
@@ -161,57 +162,67 @@ $generated_i18n_strings = array(
 	// Reference: domains/wptelegram/login/main/src/ui/Sidebar.tsx:21
 	__( 'Get LIVE support on Telegram', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/main/src/ui/SubmitInfo.tsx:11
-	__( 'Submit', 'wptelegram-login' ),
-
 	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:47
 	__( 'Telegram Options', 'wptelegram-login' ),
 
 	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:55
+	// Reference: packages/components/src/useBotTokenTest.tsx:39
+	// Reference: packages/components/src/useChatWithTest.tsx:89
 	__( 'Please wait…', 'wptelegram-login' ),
 
 	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:62
 	__( 'Please read the instructions above.', 'wptelegram-login' ),
 
 	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:72
+	// Reference: packages/components/src/useBotTokenTest.tsx:39
 	__( 'Test Token', 'wptelegram-login' ),
 
 	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:72
 	__( 'Use %s above to set automatically.', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:26
-	__( 'Widget Info', 'wptelegram-login' ),
-
-	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:32
+	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:17
+	// Reference: packages/components/src/WidgetInfo/WidgetInfo.tsx:25
 	/* translators: 1, 2 Menu names */
 	__( 'Goto %1$s and click/drag %2$s and place it where you want it to be.', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:39
+	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:24
+	// Reference: packages/components/src/WidgetInfo/WidgetInfo.tsx:32
 	__( 'Appearance', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:40
+	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:25
+	// Reference: packages/components/src/WidgetInfo/WidgetInfo.tsx:33
 	__( 'Widgets', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:48
+	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:33
+	// Reference: packages/components/src/WidgetInfo/WidgetInfo.tsx:41
 	__( 'Alternately, you can use the below shortcode or the block available in block editor.', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:50
+	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:35
+	// Reference: packages/components/src/WidgetInfo/WidgetInfo.tsx:43
 	__( 'Inside page or post content:', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:56
+	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:41
+	// Reference: packages/components/src/WidgetInfo/WidgetInfo.tsx:47
 	__( 'Inside the theme templates', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:62
+	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:47
+	// Reference: packages/components/src/WidgetInfo/WidgetInfo.tsx:51
 	__( 'or', 'wptelegram-login' ),
 
-	// Reference: packages/components/src/Instructions/Instructions.tsx:11
+	// Reference: packages/components/src/Instructions/Instructions.tsx:15
 	__( 'INSTRUCTIONS!', 'wptelegram-login' ),
 
-	// Reference: packages/components/src/PluginInfo/PluginInfoCard.tsx:43
+	// Reference: packages/components/src/PluginInfo/PluginInfoCard.tsx:42
 	__( 'Do you like %s?', 'wptelegram-login' ),
 
-	// Reference: packages/components/src/PluginInfo/PluginInfoCard.tsx:62
+	// Reference: packages/components/src/PluginInfo/PluginInfoCard.tsx:61
 	__( 'Need help?', 'wptelegram-login' ),
+
+	// Reference: packages/components/src/TestResult/MemberCountResult.tsx:15
+	__( 'Members Count:', 'wptelegram-login' ),
+
+	// Reference: packages/components/src/TestResult/TestMessageResult.tsx:15
+	__( 'Test result:', 'wptelegram-login' ),
 
 	// Reference: packages/components/src/TestResult/TestResult.tsx:14
 	__( 'Test Result:', 'wptelegram-login' ),
@@ -222,8 +233,14 @@ $generated_i18n_strings = array(
 	// Reference: packages/components/src/WPTGSocialIcons/WPTGSocialIcons.tsx:45
 	__( 'Join %s', 'wptelegram-login' ),
 
+	// Reference: packages/components/src/WidgetInfo/WidgetInfoCard.tsx:14
+	__( 'Widget Info', 'wptelegram-login' ),
+
+	// Reference: packages/components/src/useChatWithTest.tsx:89
+	__( 'Send Test', 'wptelegram-login' ),
+
 	// Reference: packages/services/src/apiFetch/index.ts:31
-	__( 'Some error occured', 'wptelegram-login' ),
+	__( 'Something went wrong', 'wptelegram-login' ),
 
 	// Reference: packages/services/src/apiFetch/index.ts:33
 	__( 'Could not connect', 'wptelegram-login' ),
