@@ -120,7 +120,7 @@ class AssetManager extends BaseClass {
 			'uiData'     => array(
 				'show_if_user_is' => self::get_show_if_user_is_options(),
 			),
-			'i18n'       => wptelegram_get_jed_locale_data( 'wptelegram-login' ),
+			'i18n'       => Utils::get_jed_locale_data( 'wptelegram-login' ),
 		);
 
 		return $data;

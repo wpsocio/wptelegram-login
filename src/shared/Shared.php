@@ -12,6 +12,7 @@
 namespace WPTelegram\Login\shared;
 
 use WPTelegram\Login\includes\BaseClass;
+use WPTelegram\Login\includes\Utils;
 use WP_User;
 
 /**
@@ -109,7 +110,7 @@ class Shared extends BaseClass {
 				global $pagenow;
 				// Prevent redirect to login page.
 				if ( 'wp-login.php' !== $pagenow ) {
-					$redirect_to = wp_get_current_url();
+					$redirect_to = Utils::wp_get_current_url();
 				}
 				break;
 
@@ -162,7 +163,7 @@ class Shared extends BaseClass {
 			 * The locate_template() returns path to file.
 			 * if either the child theme or the parent theme have overridden the template.
 			 */
-			if ( self::is_valid_template( $overridden_template ) ) {
+			if ( Utils::is_valid_template( $overridden_template ) ) {
 				load_template( $overridden_template );
 			}
 		} else {
@@ -260,38 +261,6 @@ class Shared extends BaseClass {
 			}
 		}
 		return true;
-	}
-
-	/**
-	 * Check whether the template path is valid
-	 *
-	 * @since  1.0.0
-	 * @param  string $template The template path.
-	 * @return bool
-	 */
-	private static function is_valid_template( $template ) {
-		/**
-		 * Only allow templates that are in the active theme directory,
-		 * parent theme directory, or the /wp-includes/theme-compat/ directory
-		 * (prevent directory traversal attacks)
-		 */
-		$valid_paths = array_map(
-			'realpath',
-			array(
-				get_stylesheet_directory(),
-				get_template_directory(),
-				ABSPATH . WPINC . '/theme-compat/',
-			)
-		);
-
-		$path = realpath( $template );
-
-		foreach ( $valid_paths as $valid_path ) {
-			if ( preg_match( '/\A' . preg_quote( $valid_path, '/' ) . '/', $path ) ) {
-				return true;
-			}
-		}
-		return false;
 	}
 
 	/**
