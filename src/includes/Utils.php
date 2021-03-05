@@ -25,7 +25,7 @@ class Utils {
 	/**
 	 * Check whether the template path is valid.
 	 *
-	 * @since x.y.z
+	 * @since 1.9.4
 	 * @param string $template The template path.
 	 *
 	 * @return bool
@@ -60,7 +60,7 @@ class Utils {
 	 *
 	 * @source gutenberg_get_jed_locale_data()
 	 *
-	 * @since x.y.z
+	 * @since 1.9.4
 	 *
 	 * @param  string $domain Translation domain.
 	 *
@@ -94,7 +94,7 @@ class Utils {
 	 *
 	 * @source https://roots.io/routing-wp-requests/
 	 *
-	 * @since x.y.z
+	 * @since 1.9.4
 	 *
 	 * @return string        The current URL
 	 */
