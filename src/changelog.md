@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.9.4 - 2021-03-5](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.4)
+
+### Bug Fixes
+
+- Fixed the hidden login on WP registration page
+
 ## [1.9.3 - 2021-02-28](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.3)
 
 ### Bug Fixes

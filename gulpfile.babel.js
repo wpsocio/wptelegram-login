@@ -202,7 +202,7 @@ export const updateVersion = (done) => {
 
 	return (
 		gulp
-			.src(['./package.json'], srcOptions)
+			.src(['./package.json','./composer.json'], srcOptions)
 			.pipe(createVersionUpdateCB('package', version))
 			.pipe(gulp.dest('./'))
 

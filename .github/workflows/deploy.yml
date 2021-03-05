@@ -12,7 +12,7 @@ jobs:
 
       # Remove everything except src/, .wordpress-org and .distignore
       - name: Clean up
-        run: find . -maxdepth 1 ! -name ".git" ! -name ".distignore" ! -name "src" ! -name ".wordpress-org" ! -name . -exec rm -rf {} \;
+        run: find . -maxdepth 1 -name ".distignore" ! -name "src" ! -name ".wordpress-org" ! -name . -exec rm -rf {} \;
 
       # Move everything from src/ to root directory
       - name: Extract src
@@ -29,6 +29,8 @@ jobs:
 
       - name: Upload release asset
         uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_ACCESS_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: ${{github.workspace}}/${{ github.event.repository.name }}.zip
