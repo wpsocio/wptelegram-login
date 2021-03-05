@@ -5,7 +5,7 @@ Tags: telegram, login, register, social, signup
 Requires at least: 5.3
 Tested up to: 5.6.2
 Requires PHP: 7.0
-Stable tag: 1.9.4
+Stable tag: 1.9.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,9 @@ Many thanks to the translators for the great job!
 7. User List Table (for admin)
 
 == Changelog ==
+
+= 1.9.5 =
+- Fixed the messed up last update
 
 = 1.9.4 =
 - Fixed the hidden login on WP registration page

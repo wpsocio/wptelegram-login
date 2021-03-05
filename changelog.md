@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.9.5 - 2021-03-5](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.5)
+
+### Bug Fixes
+
+- Fixed the messed up last update
+
 ## [1.9.4 - 2021-03-5](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.4)
 
 ### Bug Fixes

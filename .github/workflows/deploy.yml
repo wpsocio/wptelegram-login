@@ -12,7 +12,7 @@ jobs:
 
       # Remove everything except src/, .wordpress-org and .distignore
       - name: Clean up
-        run: find . -maxdepth 1 -name ".distignore" ! -name "src" ! -name ".wordpress-org" ! -name . -exec rm -rf {} \;
+        run: find . -maxdepth 1 ! -name ".distignore" ! -name "src" ! -name ".wordpress-org" ! -name . -exec rm -rf {} \;
 
       # Move everything from src/ to root directory
       - name: Extract src
