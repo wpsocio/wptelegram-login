@@ -220,27 +220,17 @@ msgstr ""
 msgid "Get LIVE support on Telegram"
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:47
+#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:14
 msgid "Telegram Options"
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:55
-#: packages/components/src/useBotTokenTest.tsx:39
-#: packages/components/src/useChatWithTest.tsx:89
-msgid "Please wait…"
-msgstr ""
-
-#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:62
-msgid "Please read the instructions above."
-msgstr ""
-
-#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:72
-#: packages/components/src/useBotTokenTest.tsx:39
-msgid "Test Token"
-msgstr ""
-
-#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:72
+#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:24
 msgid "Use %s above to set automatically."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:24
+#: packages/components/src/useBotTokenTest.tsx:46
+msgid "Test Token"
 msgstr ""
 
 #: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:17
@@ -281,8 +271,32 @@ msgstr ""
 msgid "or"
 msgstr ""
 
+#: packages/components/src/BotTokenField.tsx:38
+msgid "Please read the instructions above."
+msgstr ""
+
 #: packages/components/src/Instructions/Instructions.tsx:15
 msgid "INSTRUCTIONS!"
+msgstr ""
+
+#: packages/components/src/InstructionsLink.tsx:12
+msgid "Click here for instructions."
+msgstr ""
+
+#: packages/components/src/ParseModeField.tsx:13
+msgid "None"
+msgstr ""
+
+#: packages/components/src/ParseModeField.tsx:17
+msgid "Markdown style"
+msgstr ""
+
+#: packages/components/src/ParseModeField.tsx:21
+msgid "HTML style"
+msgstr ""
+
+#: packages/components/src/ParseModeField.tsx:38
+msgid "Learn more"
 msgstr ""
 
 #: packages/components/src/PluginInfo/PluginInfoCard.tsx:42
@@ -291,6 +305,14 @@ msgstr ""
 
 #: packages/components/src/PluginInfo/PluginInfoCard.tsx:61
 msgid "Need help?"
+msgstr ""
+
+#: packages/components/src/ProxyDisclaimer.tsx:10
+msgid "Use the proxy at your own risk!"
+msgstr ""
+
+#: packages/components/src/ProxyDisclaimer.tsx:8
+msgid "DISCLAIMER!"
 msgstr ""
 
 #: packages/components/src/TestResult/MemberCountResult.tsx:15
@@ -317,8 +339,21 @@ msgstr ""
 msgid "Widget Info"
 msgstr ""
 
-#: packages/components/src/useChatWithTest.tsx:89
+#: packages/components/src/useBotTokenTest.tsx:46
+#: packages/components/src/useChatWithTest.tsx:92
+msgid "Please wait…"
+msgstr ""
+
+#: packages/components/src/useChatWithTest.tsx:92
 msgid "Send Test"
+msgstr ""
+
+#: packages/form/src/render/RenderRepeatable.tsx:54
+msgid "Entry %d"
+msgstr ""
+
+#: packages/form/src/render/RenderRepeatable.tsx:92
+msgid "Add"
 msgstr ""
 
 #: packages/services/src/apiFetch/index.ts:31
