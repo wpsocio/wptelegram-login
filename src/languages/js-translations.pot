@@ -283,22 +283,6 @@ msgstr ""
 msgid "Click here for instructions."
 msgstr ""
 
-#: packages/components/src/ParseModeField.tsx:13
-msgid "None"
-msgstr ""
-
-#: packages/components/src/ParseModeField.tsx:17
-msgid "Markdown style"
-msgstr ""
-
-#: packages/components/src/ParseModeField.tsx:21
-msgid "HTML style"
-msgstr ""
-
-#: packages/components/src/ParseModeField.tsx:38
-msgid "Learn more"
-msgstr ""
-
 #: packages/components/src/PluginInfo/PluginInfoCard.tsx:42
 msgid "Do you like %s?"
 msgstr ""
@@ -348,11 +332,7 @@ msgstr ""
 msgid "Send Test"
 msgstr ""
 
-#: packages/form/src/render/RenderRepeatable.tsx:54
-msgid "Entry %d"
-msgstr ""
-
-#: packages/form/src/render/RenderRepeatable.tsx:92
+#: packages/form/src/render/RenderRepeatable.tsx:85
 msgid "Add"
 msgstr ""
 
