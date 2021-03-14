@@ -5,9 +5,9 @@
     "wptelegram-login--blocks.js.map": "/static/js/wptelegram-login--blocks.507f9c0a.js.map",
     "wptelegram-login--blocks.php": "/static/js/wptelegram-login--blocks.f7aa31f9.asset.php",
     "wptelegram-login--main.css": "/static/css/wptelegram-login--main.b8fec9f9.css",
-    "wptelegram-login--main.js": "/static/js/wptelegram-login--main.ea845bcb.js",
-    "wptelegram-login--main.js.map": "/static/js/wptelegram-login--main.ea845bcb.js.map",
-    "wptelegram-login--main.php": "/static/js/wptelegram-login--main.d0e78c99.asset.php",
+    "wptelegram-login--main.js": "/static/js/wptelegram-login--main.b8d13fbb.js",
+    "wptelegram-login--main.js.map": "/static/js/wptelegram-login--main.b8d13fbb.js.map",
+    "wptelegram-login--main.php": "/static/js/wptelegram-login--main.149f2bd8.asset.php",
     "wptelegram-login--wp-login.css": "/static/css/wptelegram-login--wp-login.7a2fac72.css",
     "wptelegram-login--wp-login.js": "/static/js/wptelegram-login--wp-login.db0f12c0.js",
     "wptelegram-login--wp-login.js.map": "/static/js/wptelegram-login--wp-login.db0f12c0.js.map",
@@ -16,7 +16,7 @@
     "static/css/wptelegram-login--main.b8fec9f9.css.map": "/static/css/wptelegram-login--main.b8fec9f9.css.map",
     "static/css/wptelegram-login--wp-login.7a2fac72.css.map": "/static/css/wptelegram-login--wp-login.7a2fac72.css.map",
     "static/js/wptelegram-login--blocks.507f9c0a.js.LICENSE.txt": "/static/js/wptelegram-login--blocks.507f9c0a.js.LICENSE.txt",
-    "static/js/wptelegram-login--main.ea845bcb.js.LICENSE.txt": "/static/js/wptelegram-login--main.ea845bcb.js.LICENSE.txt"
+    "static/js/wptelegram-login--main.b8d13fbb.js.LICENSE.txt": "/static/js/wptelegram-login--main.b8d13fbb.js.LICENSE.txt"
   },
   "entrypoints": {
     "wptelegram-login--blocks": [
@@ -26,8 +26,8 @@
     ],
     "wptelegram-login--main": [
       "static/css/wptelegram-login--main.b8fec9f9.css",
-      "static/js/wptelegram-login--main.ea845bcb.js",
-      "static/js/wptelegram-login--main.d0e78c99.asset.php"
+      "static/js/wptelegram-login--main.b8d13fbb.js",
+      "static/js/wptelegram-login--main.149f2bd8.asset.php"
     ],
     "wptelegram-login--wp-login": [
       "static/css/wptelegram-login--wp-login.7a2fac72.css",

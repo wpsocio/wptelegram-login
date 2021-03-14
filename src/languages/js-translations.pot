@@ -283,11 +283,11 @@ msgstr ""
 msgid "Click here for instructions."
 msgstr ""
 
-#: packages/components/src/PluginInfo/PluginInfoCard.tsx:42
+#: packages/components/src/PluginInfo/PluginInfoCard.tsx:44
 msgid "Do you like %s?"
 msgstr ""
 
-#: packages/components/src/PluginInfo/PluginInfoCard.tsx:61
+#: packages/components/src/PluginInfo/PluginInfoCard.tsx:64
 msgid "Need help?"
 msgstr ""
 
