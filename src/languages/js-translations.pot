@@ -291,7 +291,7 @@ msgstr ""
 msgid "Need help?"
 msgstr ""
 
-#: packages/components/src/ProxyDisclaimer.tsx:10
+#: packages/components/src/ProxyDisclaimer.tsx:11
 msgid "Use the proxy at your own risk!"
 msgstr ""
 
@@ -304,9 +304,6 @@ msgid "Members Count:"
 msgstr ""
 
 #: packages/components/src/TestResult/TestMessageResult.tsx:15
-msgid "Test result:"
-msgstr ""
-
 #: packages/components/src/TestResult/TestResult.tsx:14
 msgid "Test Result:"
 msgstr ""
