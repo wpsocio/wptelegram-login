@@ -229,7 +229,7 @@ msgid "Use %s above to set automatically."
 msgstr ""
 
 #: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:24
-#: packages/components/src/useBotTokenTest.tsx:46
+#: packages/components/src/useBotTokenTest.tsx:88
 msgid "Test Token"
 msgstr ""
 
@@ -287,16 +287,12 @@ msgstr ""
 msgid "Do you like %s?"
 msgstr ""
 
+#: packages/components/src/PluginInfo/PluginInfoCard.tsx:54
+msgid "Write a review"
+msgstr ""
+
 #: packages/components/src/PluginInfo/PluginInfoCard.tsx:64
 msgid "Need help?"
-msgstr ""
-
-#: packages/components/src/ProxyDisclaimer.tsx:11
-msgid "Use the proxy at your own risk!"
-msgstr ""
-
-#: packages/components/src/ProxyDisclaimer.tsx:8
-msgid "DISCLAIMER!"
 msgstr ""
 
 #: packages/components/src/TestResult/MemberCountResult.tsx:15
@@ -320,16 +316,16 @@ msgstr ""
 msgid "Widget Info"
 msgstr ""
 
-#: packages/components/src/useBotTokenTest.tsx:46
-#: packages/components/src/useChatWithTest.tsx:92
+#: packages/components/src/useBotTokenTest.tsx:88
+#: packages/components/src/useChatWithTest.tsx:94
 msgid "Please wait…"
 msgstr ""
 
-#: packages/components/src/useChatWithTest.tsx:92
+#: packages/components/src/useChatWithTest.tsx:94
 msgid "Send Test"
 msgstr ""
 
-#: packages/form/src/render/RenderRepeatable.tsx:86
+#: packages/form/src/render/RenderRepeatable.tsx:103
 msgid "Add"
 msgstr ""
 
