@@ -229,7 +229,7 @@ msgid "Use %s above to set automatically."
 msgstr ""
 
 #: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:24
-#: packages/components/src/useBotTokenTest.tsx:88
+#: packages/components/src/useBotTokenTest.tsx:95
 msgid "Test Token"
 msgstr ""
 
@@ -316,7 +316,7 @@ msgstr ""
 msgid "Widget Info"
 msgstr ""
 
-#: packages/components/src/useBotTokenTest.tsx:88
+#: packages/components/src/useBotTokenTest.tsx:95
 #: packages/components/src/useChatWithTest.tsx:94
 msgid "Please wait…"
 msgstr ""
@@ -325,7 +325,7 @@ msgstr ""
 msgid "Send Test"
 msgstr ""
 
-#: packages/form/src/render/RenderRepeatable.tsx:103
+#: packages/form/src/render/RenderRepeatable.tsx:102
 msgid "Add"
 msgstr ""
 
