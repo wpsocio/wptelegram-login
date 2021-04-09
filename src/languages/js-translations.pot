@@ -229,7 +229,7 @@ msgid "Use %s above to set automatically."
 msgstr ""
 
 #: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:24
-#: packages/components/src/useBotTokenTest.tsx:95
+#: packages/components/src/useBotTokenTest.tsx:96
 msgid "Test Token"
 msgstr ""
 
@@ -316,7 +316,7 @@ msgstr ""
 msgid "Widget Info"
 msgstr ""
 
-#: packages/components/src/useBotTokenTest.tsx:95
+#: packages/components/src/useBotTokenTest.tsx:96
 #: packages/components/src/useChatWithTest.tsx:94
 msgid "Please wait…"
 msgstr ""
@@ -325,19 +325,19 @@ msgstr ""
 msgid "Send Test"
 msgstr ""
 
-#: packages/form/src/render/RenderRepeatable.tsx:102
+#: packages/form/src/render/RenderRepeatable.tsx:101
 msgid "Add"
 msgstr ""
 
-#: packages/services/src/apiFetch/index.ts:34
+#: packages/services/src/apiFetch/index.ts:35
 msgid "Something went wrong"
 msgstr ""
 
-#: packages/services/src/apiFetch/index.ts:36
+#: packages/services/src/apiFetch/index.ts:37
 msgid "Could not connect"
 msgstr ""
 
-#: packages/services/src/apiFetch/index.ts:39
+#: packages/services/src/apiFetch/index.ts:40
 msgid "Error:"
 msgstr ""
 
