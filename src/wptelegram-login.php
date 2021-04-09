@@ -10,7 +10,7 @@
  * Plugin Name:       WP Telegram Login
  * Plugin URI:        https://t.me/WPTelegram
  * Description:       Let the users login to your WordPress website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram.
- * Version:           1.9.5
+ * Version:           1.9.6
  * Author:            Manzoor Wani
  * Author URI:        https://manzoorwani.dev
  * License:           GPL-2.0+
@@ -27,7 +27,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'WPTELEGRAM_LOGIN_VER', '1.9.5' );
+define( 'WPTELEGRAM_LOGIN_VER', '1.9.6' );
 
 define( 'WPTELEGRAM_LOGIN_BASENAME', plugin_basename( __FILE__ ) );
 

@@ -162,23 +162,15 @@ $generated_i18n_strings = array(
 	// Reference: domains/wptelegram/login/main/src/ui/Sidebar.tsx:21
 	__( 'Get LIVE support on Telegram', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:47
+	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:14
 	__( 'Telegram Options', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:55
-	// Reference: packages/components/src/useBotTokenTest.tsx:39
-	// Reference: packages/components/src/useChatWithTest.tsx:89
-	__( 'Please wait…', 'wptelegram-login' ),
-
-	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:62
-	__( 'Please read the instructions above.', 'wptelegram-login' ),
-
-	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:72
-	// Reference: packages/components/src/useBotTokenTest.tsx:39
-	__( 'Test Token', 'wptelegram-login' ),
-
-	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:72
+	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:24
 	__( 'Use %s above to set automatically.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:24
+	// Reference: packages/components/src/useBotTokenTest.tsx:96
+	__( 'Test Token', 'wptelegram-login' ),
 
 	// Reference: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:17
 	// Reference: packages/components/src/WidgetInfo/WidgetInfo.tsx:25
@@ -209,21 +201,28 @@ $generated_i18n_strings = array(
 	// Reference: packages/components/src/WidgetInfo/WidgetInfo.tsx:51
 	__( 'or', 'wptelegram-login' ),
 
+	// Reference: packages/components/src/BotTokenField.tsx:38
+	__( 'Please read the instructions above.', 'wptelegram-login' ),
+
 	// Reference: packages/components/src/Instructions/Instructions.tsx:15
 	__( 'INSTRUCTIONS!', 'wptelegram-login' ),
 
-	// Reference: packages/components/src/PluginInfo/PluginInfoCard.tsx:42
+	// Reference: packages/components/src/InstructionsLink.tsx:12
+	__( 'Click here for instructions.', 'wptelegram-login' ),
+
+	// Reference: packages/components/src/PluginInfo/PluginInfoCard.tsx:44
 	__( 'Do you like %s?', 'wptelegram-login' ),
 
-	// Reference: packages/components/src/PluginInfo/PluginInfoCard.tsx:61
+	// Reference: packages/components/src/PluginInfo/PluginInfoCard.tsx:54
+	__( 'Write a review', 'wptelegram-login' ),
+
+	// Reference: packages/components/src/PluginInfo/PluginInfoCard.tsx:64
 	__( 'Need help?', 'wptelegram-login' ),
 
 	// Reference: packages/components/src/TestResult/MemberCountResult.tsx:15
 	__( 'Members Count:', 'wptelegram-login' ),
 
 	// Reference: packages/components/src/TestResult/TestMessageResult.tsx:15
-	__( 'Test result:', 'wptelegram-login' ),
-
 	// Reference: packages/components/src/TestResult/TestResult.tsx:14
 	__( 'Test Result:', 'wptelegram-login' ),
 
@@ -236,16 +235,23 @@ $generated_i18n_strings = array(
 	// Reference: packages/components/src/WidgetInfo/WidgetInfoCard.tsx:14
 	__( 'Widget Info', 'wptelegram-login' ),
 
-	// Reference: packages/components/src/useChatWithTest.tsx:89
+	// Reference: packages/components/src/useBotTokenTest.tsx:96
+	// Reference: packages/components/src/useChatWithTest.tsx:94
+	__( 'Please wait…', 'wptelegram-login' ),
+
+	// Reference: packages/components/src/useChatWithTest.tsx:94
 	__( 'Send Test', 'wptelegram-login' ),
 
-	// Reference: packages/services/src/apiFetch/index.ts:31
+	// Reference: packages/form/src/render/RenderRepeatable.tsx:101
+	__( 'Add', 'wptelegram-login' ),
+
+	// Reference: packages/services/src/apiFetch/index.ts:35
 	__( 'Something went wrong', 'wptelegram-login' ),
 
-	// Reference: packages/services/src/apiFetch/index.ts:33
+	// Reference: packages/services/src/apiFetch/index.ts:37
 	__( 'Could not connect', 'wptelegram-login' ),
 
-	// Reference: packages/services/src/apiFetch/index.ts:36
+	// Reference: packages/services/src/apiFetch/index.ts:40
 	__( 'Error:', 'wptelegram-login' ),
 
 	// Reference: packages/services/src/telegram/TelegramUtils.ts:105
@@ -260,7 +266,7 @@ $generated_i18n_strings = array(
 	// Reference: packages/services/src/useDisplayFeedback.ts:64
 	__( 'Lets fix these errors first.', 'wptelegram-login' ),
 
-	// Reference: packages/services/src/useSubmitForm.ts:42
+	// Reference: packages/services/src/useSubmitForm.ts:50
 	__( 'Changes saved successfully.', 'wptelegram-login' ),
 
 	// Reference: packages/utilities/src/fields.ts:29

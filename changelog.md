@@ -4,6 +4,8 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.9.6 - 2021-04-9](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.6)
+
 ### Bug Fixes
 
 - Fixed Telegram login when login and register are on same page
