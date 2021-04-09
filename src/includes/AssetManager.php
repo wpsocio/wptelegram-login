@@ -2,7 +2,7 @@
 /**
  * The assets manager of the plugin.
  *
- * @link       https://t.me/manzoorwanijk
+ * @link       https://manzoorwani.dev
  * @since      1.0.0
  *
  * @package    WPTelegram\Login
@@ -36,10 +36,10 @@ class AssetManager extends BaseClass {
 
 		if ( ! defined( 'WPTELEGRAM_LOADED' ) ) {
 			wp_enqueue_style(
-				$this->plugin->name() . '-menu',
-				$this->plugin->assets()->url( sprintf( '/css/admin-menu%s.css', wp_scripts_get_suffix() ) ),
-				array(),
-				$this->plugin->version(),
+				$this->plugin()->name() . '-menu',
+				$this->plugin()->assets()->url( sprintf( '/css/admin-menu%s.css', wp_scripts_get_suffix() ) ),
+				[],
+				$this->plugin()->version(),
 				'all'
 			);
 		}
@@ -47,12 +47,12 @@ class AssetManager extends BaseClass {
 		$entrypoint = self::ADMIN_MAIN_JS_HANDLE;
 
 		// Load only on settings page.
-		if ( $this->is_settings_page( $hook_suffix ) && $this->plugin->assets()->has_asset( $entrypoint, Assets::ASSET_EXT_CSS ) ) {
+		if ( $this->is_settings_page( $hook_suffix ) && $this->plugin()->assets()->has_asset( $entrypoint, Assets::ASSET_EXT_CSS ) ) {
 			wp_enqueue_style(
 				$entrypoint,
-				$this->plugin->assets()->get_asset_url( $entrypoint, Assets::ASSET_EXT_CSS ),
-				array(),
-				$this->plugin->assets()->get_asset_version( $entrypoint, Assets::ASSET_EXT_CSS ),
+				$this->plugin()->assets()->get_asset_url( $entrypoint, Assets::ASSET_EXT_CSS ),
+				[],
+				$this->plugin()->assets()->get_asset_version( $entrypoint, Assets::ASSET_EXT_CSS ),
 				'all'
 			);
 		}
@@ -71,9 +71,9 @@ class AssetManager extends BaseClass {
 
 			wp_enqueue_script(
 				$entrypoint,
-				$this->plugin->assets()->get_asset_url( $entrypoint ),
-				$this->plugin->assets()->get_asset_dependencies( $entrypoint ),
-				$this->plugin->assets()->get_asset_version( $entrypoint ),
+				$this->plugin()->assets()->get_asset_url( $entrypoint ),
+				$this->plugin()->assets()->get_asset_dependencies( $entrypoint ),
+				$this->plugin()->assets()->get_asset_version( $entrypoint ),
 				true
 			);
 
@@ -99,29 +99,29 @@ class AssetManager extends BaseClass {
 	 * @return array
 	 */
 	private function get_dom_data() {
-		$data = array(
-			'pluginInfo' => array(
-				'title'       => $this->plugin->title(),
-				'name'        => $this->plugin->name(),
-				'version'     => $this->plugin->version(),
+		$data = [
+			'pluginInfo' => [
+				'title'       => $this->plugin()->title(),
+				'name'        => $this->plugin()->name(),
+				'version'     => $this->plugin()->version(),
 				'description' => __( 'With this plugin, you can let the users login to your website with their Telegram and make it simple for them to get connected.', 'wptelegram-login' ),
-			),
-			'api'        => array(
+			],
+			'api'        => [
 				'admin_url'      => admin_url(),
 				'nonce'          => wp_create_nonce( 'wptelegram-login' ),
 				'use'            => 'BROWSER', // or may be 'SERVER'?
 				'rest_namespace' => 'wptelegram-login/v1',
 				'wp_rest_url'    => esc_url_raw( rest_url() ),
-			),
-			'assets'     => array(
-				'logoUrl'   => $this->plugin->assets()->url( '/icons/icon-128x128.png' ),
-				'tgIconUrl' => $this->plugin->assets()->url( '/icons/tg-icon.svg' ),
-			),
-			'uiData'     => array(
+			],
+			'assets'     => [
+				'logoUrl'   => $this->plugin()->assets()->url( '/icons/icon-128x128.png' ),
+				'tgIconUrl' => $this->plugin()->assets()->url( '/icons/tg-icon.svg' ),
+			],
+			'uiData'     => [
 				'show_if_user_is' => self::get_show_if_user_is_options(),
-			),
+			],
 			'i18n'       => Utils::get_jed_locale_data( 'wptelegram-login' ),
-		);
+		];
 
 		return $data;
 	}
@@ -133,13 +133,13 @@ class AssetManager extends BaseClass {
 	 */
 	public static function user_role_options_cb() {
 
-		$data = array();
+		$data = [];
 
 		foreach ( get_editable_roles() as $role_name => $role_info ) {
-			$data[] = array(
+			$data[] = [
 				'value' => $role_name,
 				'label' => translate_user_role( $role_info['name'] ),
-			);
+			];
 		}
 		return $data;
 	}
@@ -151,20 +151,20 @@ class AssetManager extends BaseClass {
 	 */
 	public static function get_show_if_user_is_options() {
 
-		$data = array(
-			array(
+		$data = [
+			[
 				'value' => '0',
 				'label' => __( 'Any', 'wptelegram-login' ),
-			),
-			array(
+			],
+			[
 				'value' => 'logged_out',
 				'label' => __( 'Logged out', 'wptelegram-login' ),
-			),
-			array(
+			],
+			[
 				'value' => 'logged_in',
 				'label' => __( 'Logged in', 'wptelegram-login' ),
-			),
-		);
+			],
+		];
 
 		return array_merge( $data, self::user_role_options_cb() );
 	}
@@ -186,9 +186,9 @@ class AssetManager extends BaseClass {
 
 		wp_enqueue_script(
 			$entrypoint,
-			$this->plugin->assets()->get_asset_url( $entrypoint ),
-			$this->plugin->assets()->get_asset_dependencies( $entrypoint ),
-			$this->plugin->assets()->get_asset_version( $entrypoint ),
+			$this->plugin()->assets()->get_asset_url( $entrypoint ),
+			$this->plugin()->assets()->get_asset_dependencies( $entrypoint ),
+			$this->plugin()->assets()->get_asset_version( $entrypoint ),
 			true
 		);
 
@@ -197,12 +197,12 @@ class AssetManager extends BaseClass {
 			return;
 		}
 
-		if ( $this->plugin->assets()->has_asset( $entrypoint, Assets::ASSET_EXT_CSS ) ) {
+		if ( $this->plugin()->assets()->has_asset( $entrypoint, Assets::ASSET_EXT_CSS ) ) {
 			wp_enqueue_style(
 				$entrypoint,
-				$this->plugin->assets()->get_asset_url( $entrypoint, Assets::ASSET_EXT_CSS ),
-				array(),
-				$this->plugin->assets()->get_asset_version( $entrypoint, Assets::ASSET_EXT_CSS ),
+				$this->plugin()->assets()->get_asset_url( $entrypoint, Assets::ASSET_EXT_CSS ),
+				[],
+				$this->plugin()->assets()->get_asset_version( $entrypoint, Assets::ASSET_EXT_CSS ),
 				'all'
 			);
 		}
@@ -215,7 +215,7 @@ class AssetManager extends BaseClass {
 	 * @param string $hook_suffix The current admin page.
 	 */
 	public function is_settings_page( $hook_suffix ) {
-		return ( false !== strpos( $hook_suffix, '_page_' . $this->plugin->name() ) );
+		return ( false !== strpos( $hook_suffix, '_page_' . $this->plugin()->name() ) );
 	}
 
 	/**
@@ -228,9 +228,9 @@ class AssetManager extends BaseClass {
 
 		wp_enqueue_script(
 			$entrypoint,
-			$this->plugin->assets()->get_asset_url( $entrypoint ),
-			$this->plugin->assets()->get_asset_dependencies( $entrypoint ),
-			$this->plugin->assets()->get_asset_version( $entrypoint ),
+			$this->plugin()->assets()->get_asset_url( $entrypoint ),
+			$this->plugin()->assets()->get_asset_dependencies( $entrypoint ),
+			$this->plugin()->assets()->get_asset_version( $entrypoint ),
 			true
 		);
 
@@ -238,10 +238,10 @@ class AssetManager extends BaseClass {
 
 		$data['assets'] = array_merge(
 			$data['assets'],
-			array(
-				'loginImageUrl'  => $this->plugin->assets()->url( '/icons/telegram-login.svg' ),
-				'loginAvatarUrl' => $this->plugin->assets()->url( '/icons/telegram-login-avatar.svg' ),
-			)
+			[
+				'loginImageUrl'  => $this->plugin()->assets()->url( '/icons/telegram-login.svg' ),
+				'loginAvatarUrl' => $this->plugin()->assets()->url( '/icons/telegram-login-avatar.svg' ),
+			]
 		);
 
 		wp_add_inline_script(
@@ -255,12 +255,12 @@ class AssetManager extends BaseClass {
 			return;
 		}
 
-		if ( $this->plugin->assets()->has_asset( $entrypoint, Assets::ASSET_EXT_CSS ) ) {
+		if ( $this->plugin()->assets()->has_asset( $entrypoint, Assets::ASSET_EXT_CSS ) ) {
 			wp_enqueue_style(
 				$entrypoint,
-				$this->plugin->assets()->get_asset_url( $entrypoint, Assets::ASSET_EXT_CSS ),
-				array(),
-				$this->plugin->assets()->get_asset_version( $entrypoint, Assets::ASSET_EXT_CSS ),
+				$this->plugin()->assets()->get_asset_url( $entrypoint, Assets::ASSET_EXT_CSS ),
+				[],
+				$this->plugin()->assets()->get_asset_version( $entrypoint, Assets::ASSET_EXT_CSS ),
 				'all'
 			);
 		}

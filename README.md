@@ -3,7 +3,7 @@
 **Contributors:** [manzoorwanijk](https://github.com/manzoorwanijk)  
 **Tags:** telegram, login, register, social, signup  
 **Requires at least:** 5.3  
-**Tested up to:** 5.6.2  
+**Tested up to:** 5.7  
 **Stable tag:** 1.9.5  
 **License:** GPLv2 or later  
 **License URI:** [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)

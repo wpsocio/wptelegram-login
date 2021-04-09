@@ -2,7 +2,7 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       https://t.me/manzoorwanijk
+ * @link       https://manzoorwani.dev
  * @since      1.0.0
  *
  * @package    WPTelegram\Login
@@ -75,15 +75,15 @@ class Shared extends BaseClass {
 	 *
 	 * @param array $atts shortcode params.
 	 */
-	public static function login_shortcode( $atts = array() ) {
+	public static function login_shortcode( $atts = [] ) {
 
-		$defaults = array(
+		$defaults = [
 			'button_style'    => 'large',
 			'show_user_photo' => '1',
 			'corner_radius'   => '',
 			'show_if_user_is' => 'logged_out',
 			'bot_username'    => '',
-		);
+		];
 
 		// Use global options.
 		foreach ( $defaults as $key => $default ) {
@@ -134,10 +134,10 @@ class Shared extends BaseClass {
 
 		$bot_username = $args['bot_username'];
 
-		$args = array(
+		$args = [
 			'action'      => 'wptelegram_login',
 			'redirect_to' => urlencode_deep( $redirect_to ),
-		);
+		];
 
 		// The actual URL to be passed to Telegram as call back.
 		$callback_url = add_query_arg( $args, home_url() );

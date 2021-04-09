@@ -2,7 +2,7 @@
 /**
  * The main plugin file.
  *
- * @link              https://t.me/manzoorwanijk
+ * @link              https://manzoorwani.dev
  * @since             1.0.0
  * @package           WPTelegram\Login
  *
@@ -12,7 +12,7 @@
  * Description:       Let the users login to your WordPress website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram.
  * Version:           1.9.5
  * Author:            Manzoor Wani
- * Author URI:        https://t.me/manzoorwanijk
+ * Author URI:        https://manzoorwani.dev
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       wptelegram-login

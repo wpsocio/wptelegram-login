@@ -4,6 +4,11 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+### Bug Fixes
+
+- Fixed Telegram login when login and register are on same page
+- Fixed the issue of custom redirect URL not saved
+
 ## [1.9.5 - 2021-03-5](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.5)
 
 ### Bug Fixes

@@ -2,7 +2,7 @@
 /**
  * Utility methods.
  *
- * @link       https://t.me/manzoorwanijk
+ * @link       https://manzoorwani.dev
  * @since      2.0.0
  *
  * @package    WPTelegram\Login
@@ -38,11 +38,11 @@ class Utils {
 		 */
 		$valid_paths = array_map(
 			'realpath',
-			array(
+			[
 				get_stylesheet_directory(),
 				get_template_directory(),
 				ABSPATH . WPINC . '/theme-compat/',
-			)
+			]
 		);
 
 		$path = realpath( $template );
@@ -69,12 +69,12 @@ class Utils {
 	public static function get_jed_locale_data( $domain ) {
 		$translations = get_translations_for_domain( $domain );
 
-		$locale = array(
-			'' => array(
+		$locale = [
+			'' => [
 				'domain' => $domain,
 				'lang'   => is_admin() ? get_user_locale() : get_locale(),
-			),
-		);
+			],
+		];
 
 		if ( ! empty( $translations->headers['Plural-Forms'] ) ) {
 			$locale['']['plural_forms'] = $translations->headers['Plural-Forms'];
@@ -100,7 +100,7 @@ class Utils {
 	 */
 	public static function wp_get_current_url() {
 
-		$current_uri = trim( esc_url_raw( add_query_arg( array() ) ), '/' );
+		$current_uri = trim( esc_url_raw( add_query_arg( [] ) ), '/' );
 
 		$home_path = trim( wp_parse_url( home_url(), PHP_URL_PATH ), '/' );
 

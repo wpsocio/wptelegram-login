@@ -2,7 +2,7 @@
 /**
  * Helper functions.
  *
- * @link       https://t.me/manzoorwanijk
+ * @link       https://manzoorwani.dev
  * @since      1.0.0
  *
  * @package    WPTelegram\Login
@@ -38,7 +38,7 @@ if ( ! function_exists( 'wptelegram_login' ) ) {
 	 *
 	 * @return NULL|string        The html output
 	 */
-	function wptelegram_login( $args = array(), $echo = true ) {
+	function wptelegram_login( $args = [], $echo = true ) {
 		$output = \WPTelegram\Login\shared\Shared::login_shortcode( $args );
 		if ( $echo ) {
 			echo $output; // phpcs:ignore WordPress.Security.EscapeOutput

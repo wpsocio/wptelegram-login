@@ -2,7 +2,7 @@
 /**
  * Do the necessary db upgrade
  *
- * @link       https://t.me/manzoorwanijk
+ * @link       https://manzoorwani.dev
  * @since      1.7.0
  *
  * @package    WPTelegram\Login
@@ -31,7 +31,7 @@ class Upgrade extends BaseClass {
 
 		$current_version = get_option( 'wptelegram_login_ver', '1.5.0' );
 
-		if ( ! version_compare( $current_version, $this->plugin->version(), '<' ) ) {
+		if ( ! version_compare( $current_version, $this->plugin()->version(), '<' ) ) {
 			return;
 		}
 
@@ -40,27 +40,27 @@ class Upgrade extends BaseClass {
 
 		do_action( 'wptelegram_login_before_do_upgrade', $current_version );
 
-		$version_upgrades = array();
+		$version_upgrades = [];
 
 		if ( ! $is_new_install ) {
 			// the sequential upgrades
 			// subsequent upgrade depends upon the previous one.
-			$version_upgrades = array(
+			$version_upgrades = [
 				'1.5.1', // first upgrade.
 				'1.7.0',
-			);
+			];
 		}
 
 		// always.
-		if ( ! in_array( $this->plugin->version(), $version_upgrades, true ) ) {
-			$version_upgrades[] = $this->plugin->version();
+		if ( ! in_array( $this->plugin()->version(), $version_upgrades, true ) ) {
+			$version_upgrades[] = $this->plugin()->version();
 		}
 
 		foreach ( $version_upgrades as $target_version ) {
 
 			if ( version_compare( $current_version, $target_version, '<' ) ) {
 
-				$this->upgrade_to( $target_version );
+				$this->upgrade_to( $target_version, $is_new_install );
 
 				$current_version = $target_version;
 			}
@@ -74,16 +74,18 @@ class Upgrade extends BaseClass {
 	 *
 	 * @since 1.5.1
 	 *
-	 * @param string $version The plugin verion to upgrade to.
+	 * @param string  $version        The plugin verion to upgrade to.
+	 * @param boolean $is_new_install Whether it's a fresh install of the plugin.
 	 */
-	private function upgrade_to( $version ) {
+	private function upgrade_to( $version, $is_new_install ) {
 
 		// 2.0.1 becomes 2_0_1
 		$_version = str_replace( '.', '_', $version );
 
-		$method = array( $this, "upgrade_to_{$_version}" );
+		$method = [ $this, "upgrade_to_{$_version}" ];
 
-		if ( is_callable( $method ) ) {
+		// No upgrades for fresh installations.
+		if ( ! $is_new_install && is_callable( $method ) ) {
 
 			call_user_func( $method );
 		}
@@ -98,12 +100,12 @@ class Upgrade extends BaseClass {
 	 */
 	private function upgrade_to_1_5_1() {
 
-		$options = array(
+		$options = [
 			'disable_signup',
 			'show_user_photo',
 			'hide_on_default',
 			'show_message_on_error',
-		);
+		];
 
 		// Convert checkboxes to boolean.
 		foreach ( $options as $key ) {
@@ -119,14 +121,14 @@ class Upgrade extends BaseClass {
 	 * @since    1.7.0
 	 */
 	private function upgrade_to_1_7_0() {
-		$old_meta_key = $this->plugin->name() . '_user_id';
+		$old_meta_key = $this->plugin()->name() . '_user_id';
 
-		$args  = array(
+		$args  = [
 			'fields'       => 'ID',
 			'meta_key'     => $old_meta_key, // phpcs:ignore
 			'meta_compare' => 'EXISTS',
 			'number'       => -1,
-		);
+		];
 		$users = get_users( $args );
 
 		foreach ( $users as $id ) {
