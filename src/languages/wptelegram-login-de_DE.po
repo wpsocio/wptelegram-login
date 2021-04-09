@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wptelegram-login\n"
-"POT-Creation-Date: 2021-03-05 10:30:02+00:00\n"
+"POT-Creation-Date: 2021-04-09 10:08:36+00:00\n"
 "PO-Revision-Date: 2021-02-16 02:08+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
@@ -43,7 +43,7 @@ msgstr ""
 msgid "Telegram Chat ID"
 msgstr ""
 
-#: admin/Admin.php:230 languages/wptelegram-login-js-translations.php:213
+#: admin/Admin.php:230 languages/wptelegram-login-js-translations.php:208
 msgid "INSTRUCTIONS!"
 msgstr "KONFIGURATIONSANLEITUNG"
 
@@ -67,7 +67,7 @@ msgstr ""
 msgid "Ask the user to start a conversation with %s to receive notifications."
 msgstr ""
 
-#: admin/Admin.php:279 languages/wptelegram-login-js-translations.php:249
+#: admin/Admin.php:279 languages/wptelegram-login-js-translations.php:255
 #: shared/LoginHandler.php:60
 msgid "Error:"
 msgstr "Fehler:"
@@ -338,38 +338,30 @@ msgstr "Erhalte LIVE-Support über Telegram"
 msgid "Telegram Options"
 msgstr "Telegram Optionen"
 
-#: languages/wptelegram-login-js-translations.php:171
-msgid "Please wait…"
-msgstr "Bitte warten..."
-
-#: languages/wptelegram-login-js-translations.php:174
-msgid "Please read the instructions above."
-msgstr "Bitte die Konfigurationsanleitung oben beachten."
-
-#: languages/wptelegram-login-js-translations.php:178
-msgid "Test Token"
-msgstr "Token testen"
-
-#: languages/wptelegram-login-js-translations.php:181
+#: languages/wptelegram-login-js-translations.php:169
 msgid "Use %s above to set automatically."
 msgstr "Auf %s klicken, um den Benutzernamen automatisch auszufüllen."
 
+#: languages/wptelegram-login-js-translations.php:173
+msgid "Test Token"
+msgstr "Token testen"
+
 #. translators: 1, 2 Menu names
-#: languages/wptelegram-login-js-translations.php:186
+#: languages/wptelegram-login-js-translations.php:178
 msgid "Goto %1$s and click/drag %2$s and place it where you want it to be."
 msgstr ""
 "Im Menüpunkt %1$s kann das %2$s an die passende Stelle im Theme positioniert "
 "werden."
 
-#: languages/wptelegram-login-js-translations.php:190
+#: languages/wptelegram-login-js-translations.php:182
 msgid "Appearance"
 msgstr "Darstellung"
 
-#: languages/wptelegram-login-js-translations.php:194
+#: languages/wptelegram-login-js-translations.php:186
 msgid "Widgets"
 msgstr "Widgets"
 
-#: languages/wptelegram-login-js-translations.php:198
+#: languages/wptelegram-login-js-translations.php:190
 msgid ""
 "Alternately, you can use the below shortcode or the block available in block "
 "editor."
@@ -377,94 +369,110 @@ msgstr ""
 "Alternativ kannst du folgenden Shortcode verwenden oder den Block im "
 "Blockeditor. "
 
-#: languages/wptelegram-login-js-translations.php:202
+#: languages/wptelegram-login-js-translations.php:194
 msgid "Inside page or post content:"
 msgstr "Auf einer Seite oder in einem Beitrag:"
 
-#: languages/wptelegram-login-js-translations.php:206
+#: languages/wptelegram-login-js-translations.php:198
 msgid "Inside the theme templates"
 msgstr "In Theme-Vorlagen"
 
-#: languages/wptelegram-login-js-translations.php:210
+#: languages/wptelegram-login-js-translations.php:202
 msgid "or"
 msgstr "oder"
 
-#: languages/wptelegram-login-js-translations.php:216
+#: languages/wptelegram-login-js-translations.php:205
+msgid "Please read the instructions above."
+msgstr "Bitte die Konfigurationsanleitung oben beachten."
+
+#: languages/wptelegram-login-js-translations.php:211
+#, fuzzy
+msgid "Click here for instructions."
+msgstr "Bitte die Konfigurationsanleitung oben beachten."
+
+#: languages/wptelegram-login-js-translations.php:214
 msgid "Do you like %s?"
 msgstr "Gefällt dir %s?"
 
-#: languages/wptelegram-login-js-translations.php:219
+#: languages/wptelegram-login-js-translations.php:217
+msgid "Write a review"
+msgstr ""
+
+#: languages/wptelegram-login-js-translations.php:220
 msgid "Need help?"
 msgstr "Hilfe?"
 
-#: languages/wptelegram-login-js-translations.php:222
+#: languages/wptelegram-login-js-translations.php:223
 msgid "Members Count:"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:225
-#, fuzzy
-msgid "Test result:"
-msgstr "Testresultat:"
-
-#: languages/wptelegram-login-js-translations.php:228
+#: languages/wptelegram-login-js-translations.php:227
 msgid "Test Result:"
 msgstr "Testresultat:"
 
-#: languages/wptelegram-login-js-translations.php:231
+#: languages/wptelegram-login-js-translations.php:230
 msgid "Follow %s"
 msgstr "Folge %s"
 
-#: languages/wptelegram-login-js-translations.php:234
+#: languages/wptelegram-login-js-translations.php:233
 msgid "Join %s"
 msgstr "Tritt %s bei"
 
-#: languages/wptelegram-login-js-translations.php:237
+#: languages/wptelegram-login-js-translations.php:236
 msgid "Widget Info"
 msgstr "Widget-Informationen"
 
 #: languages/wptelegram-login-js-translations.php:240
+msgid "Please wait…"
+msgstr "Bitte warten..."
+
+#: languages/wptelegram-login-js-translations.php:243
 msgid "Send Test"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:243
+#: languages/wptelegram-login-js-translations.php:246
+msgid "Add"
+msgstr ""
+
+#: languages/wptelegram-login-js-translations.php:249
 msgid "Something went wrong"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:246
+#: languages/wptelegram-login-js-translations.php:252
 msgid "Could not connect"
 msgstr "Verbindung konnte nicht hergestellt werden"
 
-#: languages/wptelegram-login-js-translations.php:252
+#: languages/wptelegram-login-js-translations.php:258
 msgid ""
 "A message will be sent to the Channel/Group/Chat. You can modify the text "
 "below"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:255
+#: languages/wptelegram-login-js-translations.php:261
 msgid "This is a test message"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:258
+#: languages/wptelegram-login-js-translations.php:264
 msgid "Success"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:261
+#: languages/wptelegram-login-js-translations.php:267
 msgid "Lets fix these errors first."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:264
+#: languages/wptelegram-login-js-translations.php:270
 msgid "Changes saved successfully."
 msgstr "Die Änderungen wurden erfolgreich gespeichert."
 
-#: languages/wptelegram-login-js-translations.php:267
+#: languages/wptelegram-login-js-translations.php:273
 msgid "Invalid %s"
 msgstr "%s ungültig"
 
-#: languages/wptelegram-login-js-translations.php:270
+#: languages/wptelegram-login-js-translations.php:276
 msgid "%s required."
 msgstr "%s wird benötigt."
 
-#: languages/wptelegram-login-js-translations.php:273
+#: languages/wptelegram-login-js-translations.php:279
 msgid "Changes could not be saved."
 msgstr "Die Änderungen konnten nicht gespeichert werden."
 
@@ -515,3 +523,7 @@ msgstr "Telegram Login-Button anzeigen"
 #: shared/widgets/Primary.php:143
 msgid "Title"
 msgstr "Titel"
+
+#, fuzzy
+#~ msgid "Test result:"
+#~ msgstr "Testresultat:"

@@ -220,27 +220,17 @@ msgstr ""
 msgid "Get LIVE support on Telegram"
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:47
+#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:14
 msgid "Telegram Options"
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:55
-#: packages/components/src/useBotTokenTest.tsx:39
-#: packages/components/src/useChatWithTest.tsx:89
-msgid "Please wait…"
-msgstr ""
-
-#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:62
-msgid "Please read the instructions above."
-msgstr ""
-
-#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:72
-#: packages/components/src/useBotTokenTest.tsx:39
-msgid "Test Token"
-msgstr ""
-
-#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:72
+#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:24
 msgid "Use %s above to set automatically."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/TelegramOptions.tsx:24
+#: packages/components/src/useBotTokenTest.tsx:96
+msgid "Test Token"
 msgstr ""
 
 #: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:17
@@ -281,15 +271,27 @@ msgstr ""
 msgid "or"
 msgstr ""
 
+#: packages/components/src/BotTokenField.tsx:38
+msgid "Please read the instructions above."
+msgstr ""
+
 #: packages/components/src/Instructions/Instructions.tsx:15
 msgid "INSTRUCTIONS!"
 msgstr ""
 
-#: packages/components/src/PluginInfo/PluginInfoCard.tsx:42
+#: packages/components/src/InstructionsLink.tsx:12
+msgid "Click here for instructions."
+msgstr ""
+
+#: packages/components/src/PluginInfo/PluginInfoCard.tsx:44
 msgid "Do you like %s?"
 msgstr ""
 
-#: packages/components/src/PluginInfo/PluginInfoCard.tsx:61
+#: packages/components/src/PluginInfo/PluginInfoCard.tsx:54
+msgid "Write a review"
+msgstr ""
+
+#: packages/components/src/PluginInfo/PluginInfoCard.tsx:64
 msgid "Need help?"
 msgstr ""
 
@@ -298,9 +300,6 @@ msgid "Members Count:"
 msgstr ""
 
 #: packages/components/src/TestResult/TestMessageResult.tsx:15
-msgid "Test result:"
-msgstr ""
-
 #: packages/components/src/TestResult/TestResult.tsx:14
 msgid "Test Result:"
 msgstr ""
@@ -317,19 +316,28 @@ msgstr ""
 msgid "Widget Info"
 msgstr ""
 
-#: packages/components/src/useChatWithTest.tsx:89
+#: packages/components/src/useBotTokenTest.tsx:96
+#: packages/components/src/useChatWithTest.tsx:94
+msgid "Please wait…"
+msgstr ""
+
+#: packages/components/src/useChatWithTest.tsx:94
 msgid "Send Test"
 msgstr ""
 
-#: packages/services/src/apiFetch/index.ts:31
+#: packages/form/src/render/RenderRepeatable.tsx:101
+msgid "Add"
+msgstr ""
+
+#: packages/services/src/apiFetch/index.ts:35
 msgid "Something went wrong"
 msgstr ""
 
-#: packages/services/src/apiFetch/index.ts:33
+#: packages/services/src/apiFetch/index.ts:37
 msgid "Could not connect"
 msgstr ""
 
-#: packages/services/src/apiFetch/index.ts:36
+#: packages/services/src/apiFetch/index.ts:40
 msgid "Error:"
 msgstr ""
 
@@ -351,7 +359,7 @@ msgstr ""
 msgid "Lets fix these errors first."
 msgstr ""
 
-#: packages/services/src/useSubmitForm.ts:42
+#: packages/services/src/useSubmitForm.ts:50
 msgid "Changes saved successfully."
 msgstr ""
 

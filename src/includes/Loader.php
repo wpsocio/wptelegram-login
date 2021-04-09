@@ -2,7 +2,7 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       https://t.me/manzoorwanijk
+ * @link       https://manzoorwani.dev
  * @since      1.0.0
  *
  * @package    WPTelegram\Login
@@ -58,9 +58,9 @@ class Loader {
 	 */
 	public function __construct() {
 
-		$this->actions    = array();
-		$this->filters    = array();
-		$this->shortcodes = array();
+		$this->actions    = [];
+		$this->filters    = [];
+		$this->shortcodes = [];
 
 	}
 
@@ -120,13 +120,13 @@ class Loader {
 	 */
 	private function add( $hooks, $hook, $component, $callback, $priority = 10, $accepted_args = 1 ) {
 
-		$hooks[] = array(
+		$hooks[] = [
 			'hook'          => $hook,
 			'component'     => $component,
 			'callback'      => $callback,
 			'priority'      => $priority,
 			'accepted_args' => $accepted_args,
-		);
+		];
 
 		return $hooks;
 
@@ -140,15 +140,15 @@ class Loader {
 	public function run() {
 
 		foreach ( $this->filters as $hook ) {
-			add_filter( $hook['hook'], array( $hook['component'], $hook['callback'] ), $hook['priority'], $hook['accepted_args'] );
+			add_filter( $hook['hook'], [ $hook['component'], $hook['callback'] ], $hook['priority'], $hook['accepted_args'] );
 		}
 
 		foreach ( $this->actions as $hook ) {
-			add_action( $hook['hook'], array( $hook['component'], $hook['callback'] ), $hook['priority'], $hook['accepted_args'] );
+			add_action( $hook['hook'], [ $hook['component'], $hook['callback'] ], $hook['priority'], $hook['accepted_args'] );
 		}
 
 		foreach ( $this->shortcodes as $hook ) {
-			add_shortcode( $hook['hook'], array( $hook['component'], $hook['callback'] ) );
+			add_shortcode( $hook['hook'], [ $hook['component'], $hook['callback'] ] );
 		}
 	}
 }

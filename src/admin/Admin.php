@@ -2,7 +2,7 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       https://t.me/manzoorwanijk
+ * @link       https://manzoorwani.dev
  * @since      1.0.0
  *
  * @package    WPTelegram\Login
@@ -43,13 +43,13 @@ class Admin extends BaseClass {
 		}
 		return array_merge(
 			$categories,
-			array(
-				array(
+			[
+				[
 					'slug'  => $slug,
 					'title' => __( 'WP Telegram', 'wptelegram-login' ),
 					'icon'  => null,
-				),
-			)
+				],
+			]
 		);
 	}
 
@@ -73,40 +73,40 @@ class Admin extends BaseClass {
 		register_rest_field(
 			'user',
 			$meta_key,
-			array(
+			[
 				'get_callback'    => function ( $object ) use ( $meta_key ) {
 					return current_user_can( 'list_users' ) ? get_user_meta( $object['id'], $meta_key, true ) : '';
 				},
 				'update_callback' => function ( $value, $object ) use ( $meta_key ) {
 					update_user_meta( $object->ID, $meta_key, $value );
 				},
-				'schema'          => array(
+				'schema'          => [
 					'type'        => 'string',
-					'arg_options' => array(
+					'arg_options' => [
 						'sanitize_callback' => 'sanitize_text_field',
 						'validate_callback' => function ( $chat_id ) {
 							return self::is_valid_chat_id( $chat_id );
 						},
-					),
-				),
-			)
+					],
+				],
+			]
 		);
 
 		$meta_key = WPTELEGRAM_USERNAME_META_KEY;
 		register_rest_field(
 			'user',
 			$meta_key,
-			array(
+			[
 				'get_callback' => function ( $object ) use ( $meta_key ) {
 					return current_user_can( 'list_users' ) ? get_user_meta( $object['id'], $meta_key, true ) : '';
 				},
-				'schema'       => array(
+				'schema'       => [
 					'type'        => 'string',
-					'arg_options' => array(
+					'arg_options' => [
 						'sanitize_callback' => 'sanitize_text_field',
-					),
-				),
-			)
+					],
+				],
+			]
 		);
 
 	}
@@ -119,10 +119,10 @@ class Admin extends BaseClass {
 	 * @param array $query_params JSON Schema-formatted collection parameters.
 	 */
 	public function rest_user_collection_params( $query_params ) {
-		$query_params['telegram_users_only'] = array(
+		$query_params['telegram_users_only'] = [
 			'description' => __( 'Limit result set to users who have their Telegram accounts connected.' ),
 			'type'        => 'boolean',
-		);
+		];
 		return $query_params;
 	}
 
@@ -140,15 +140,15 @@ class Admin extends BaseClass {
 		}
 		$prepared_args['meta_query'] = array( // phpcs:ignore
 			'relation' => 'AND',
-			array(
+			[
 				'key'     => WPTELEGRAM_USER_ID_META_KEY,
 				'compare' => 'EXISTS',
-			),
-			array(
+			],
+			[
 				'key'     => WPTELEGRAM_USER_ID_META_KEY,
 				'compare' => '!=',
 				'value'   => '',
-			),
+			],
 		);
 
 		return $prepared_args;
@@ -164,19 +164,19 @@ class Admin extends BaseClass {
 		if ( defined( 'WPTELEGRAM_LOADED' ) ) {
 			add_submenu_page(
 				'wptelegram',
-				esc_html( $this->plugin->title() ),
+				esc_html( $this->plugin()->title() ),
 				esc_html__( 'Telegram Login', 'wptelegram-login' ),
 				'manage_options',
-				$this->plugin->name(),
-				array( $this, 'display_plugin_admin_page' )
+				$this->plugin()->name(),
+				[ $this, 'display_plugin_admin_page' ]
 			);
 		} else {
 			add_menu_page(
-				esc_html( $this->plugin->title() ),
-				esc_html( $this->plugin->title() ),
+				esc_html( $this->plugin()->title() ),
+				esc_html( $this->plugin()->title() ),
 				'manage_options',
-				$this->plugin->name(),
-				array( $this, 'display_plugin_admin_page' ),
+				$this->plugin()->name(),
+				[ $this, 'display_plugin_admin_page' ],
 				'none'
 			);
 		}

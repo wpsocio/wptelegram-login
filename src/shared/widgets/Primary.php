@@ -2,7 +2,7 @@
 /**
  * The primary widget.
  *
- * @link  https://t.me/manzoorwanijk
+ * @link  https://manzoorwani.dev
  * @since 1.6.0
  *
  * @package    WPTelegram\Login
@@ -24,9 +24,9 @@ class Primary extends \WP_Widget {
 		parent::__construct(
 			'wptelegram_login_primary',
 			esc_html__( 'WP Telegram Login', 'wptelegram-login' ),
-			array(
+			[
 				'description' => esc_html__( 'Display the Telegram Log in button', 'wptelegram-login' ),
-			)
+			]
 		);
 	}
 
@@ -85,7 +85,7 @@ class Primary extends \WP_Widget {
 
 		$instance['title'] = sanitize_text_field( $new_instance['title'] );
 
-		if ( ! empty( $new_instance['button_style'] ) && in_array( $new_instance['button_style'], array( 'large', 'medium', 'small' ), true ) ) {
+		if ( ! empty( $new_instance['button_style'] ) && in_array( $new_instance['button_style'], [ 'large', 'medium', 'small' ], true ) ) {
 			$instance['button_style'] = $new_instance['button_style'];
 		} else {
 			$instance['button_style'] = 'large';
@@ -122,13 +122,13 @@ class Primary extends \WP_Widget {
 	 */
 	public function form( $instance ) {
 
-		$defaults = array(
+		$defaults = [
 			'title'           => '',
 			'button_style'    => 'large',
 			'show_user_photo' => true,
 			'show_if_user_is' => '',
 			'corner_radius'   => '',
-		);
+		];
 
 		$opts = WPTG_Login()->options();
 

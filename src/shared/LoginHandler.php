@@ -2,7 +2,7 @@
 /**
  * The login handling functionality of the plugin.
  *
- * @link       https://t.me/manzoorwanijk
+ * @link       https://manzoorwani.dev
  * @since      1.0.0
  *
  * @package    WPTelegram\Login
@@ -57,7 +57,7 @@ class LoginHandler extends BaseClass {
 
 		} catch ( Exception $e ) {
 			// phpcs:ignore WordPress.Security.EscapeOutput
-			wp_die( $e->getMessage(), __( 'Error:', 'wptelegram-login' ), array( 'back_link' => true ) );
+			wp_die( $e->getMessage(), __( 'Error:', 'wptelegram-login' ), [ 'back_link' => true ] );
 		}
 
 		$user = wp_get_current_user();
@@ -123,7 +123,7 @@ class LoginHandler extends BaseClass {
 	 */
 	public function filter_input_fields( $input ) {
 
-		$desired_fields = array(
+		$desired_fields = [
 			'id'         => '',
 			'first_name' => '',
 			'last_name'  => '',
@@ -131,7 +131,7 @@ class LoginHandler extends BaseClass {
 			'photo_url'  => '',
 			'auth_date'  => '',
 			'hash'       => '',
-		);
+		];
 
 		return array_intersect_key( $input, $desired_fields );
 	}
@@ -154,7 +154,7 @@ class LoginHandler extends BaseClass {
 		$check_hash = $auth_data['hash'];
 		unset( $auth_data['hash'] );
 
-		$data_check_arr = array();
+		$data_check_arr = [];
 		foreach ( $auth_data as $key => $value ) {
 			$data_check_arr[] = $key . '=' . $value;
 		}
@@ -194,10 +194,10 @@ class LoginHandler extends BaseClass {
 			$random_email = apply_filters( 'wptelegram_login_random_email', $random_email, $user, $random_user, $host );
 
 			wp_update_user(
-				array(
+				[
 					'ID'         => $user->ID,
 					'user_email' => $random_email,
-				)
+				]
 			);
 		}
 	}
@@ -229,7 +229,7 @@ class LoginHandler extends BaseClass {
 		if ( ! email_exists( $new_email ) ) {
 			return $new_email;
 		}
-		return call_user_func( array( $this, __FUNCTION__ ), $user, $host );
+		return call_user_func( [ $this, __FUNCTION__ ], $user, $host );
 	}
 
 	/**
@@ -291,11 +291,11 @@ class LoginHandler extends BaseClass {
 	 * @return boolean|WP_User User object or false
 	 */
 	public function is_returning_user( $tg_user_id ) {
-		$args  = array(
+		$args  = [
 			'meta_key'   => WPTELEGRAM_USER_ID_META_KEY, // phpcs:ignore
 			'meta_value' => $tg_user_id, // phpcs:ignore
 			'number'     => 1,
-		);
+		];
 		$users = get_users( $args );
 		if ( ! empty( $users ) ) {
 			return reset( $users );
@@ -408,7 +408,7 @@ class LoginHandler extends BaseClass {
 		if ( ! username_exists( $new_username ) ) {
 			return $new_username;
 		}
-		return call_user_func( array( $this, __FUNCTION__ ), $username );
+		return call_user_func( [ $this, __FUNCTION__ ], $username );
 	}
 
 	/**

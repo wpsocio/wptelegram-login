@@ -2,7 +2,7 @@
 /**
  * The base class of the plugin.
  *
- * @link       https://t.me/manzoorwanijk
+ * @link       https://manzoorwani.dev
  * @since      1.0.0
  *
  * @package    WPTelegram\Login
@@ -26,10 +26,10 @@ abstract class BaseClass {
 	 * The plugin class instance.
 	 *
 	 * @since    1.0.0
-	 * @access   protected
+	 * @access   private
 	 * @var      Main $plugin The plugin class instance.
 	 */
-	protected $plugin;
+	private $plugin;
 
 	/**
 	 * Initialize the class and set its properties.
@@ -40,5 +40,15 @@ abstract class BaseClass {
 	public function __construct( $plugin ) {
 
 		$this->plugin = $plugin;
+	}
+
+	/**
+	 * Get the instance of the plugin.
+	 *
+	 * @since     1.9.6
+	 * @return    Main    The plugin class instance.
+	 */
+	protected function plugin() {
+		return $this->plugin;
 	}
 }

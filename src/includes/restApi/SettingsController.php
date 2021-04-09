@@ -2,7 +2,7 @@
 /**
  * Plugin settings endpoint for WordPress REST API.
  *
- * @link       https://t.me/manzoorwanijk
+ * @link       https://manzoorwani.dev
  * @since      1.5.0
  *
  * @package    WPTelegram\Login
@@ -49,20 +49,20 @@ class SettingsController extends RESTController {
 		register_rest_route(
 			$this->namespace,
 			'/' . $this->rest_base,
-			array(
-				array(
+			[
+				[
 					'methods'             => \WP_REST_Server::READABLE,
-					'callback'            => array( $this, 'get_settings' ),
-					'permission_callback' => array( $this, 'settings_permissions' ),
+					'callback'            => [ $this, 'get_settings' ],
+					'permission_callback' => [ $this, 'settings_permissions' ],
 					'args'                => self::get_settings_params( 'view' ),
-				),
-				array(
+				],
+				[
 					'methods'             => \WP_REST_Server::CREATABLE,
-					'callback'            => array( $this, 'update_settings' ),
-					'permission_callback' => array( $this, 'settings_permissions' ),
+					'callback'            => [ $this, 'update_settings' ],
+					'permission_callback' => [ $this, 'settings_permissions' ],
 					'args'                => self::get_settings_params( 'edit' ),
-				),
-			)
+				],
+			]
 		);
 	}
 
@@ -119,7 +119,7 @@ class SettingsController extends RESTController {
 	 */
 	public function update_settings( \WP_REST_Request $request ) {
 
-		$settings = array();
+		$settings = [];
 
 		foreach ( self::get_settings_params() as $key => $args ) {
 			$value = $request->get_param( $key );
@@ -144,87 +144,87 @@ class SettingsController extends RESTController {
 	 * @return array Query parameters for the settings.
 	 */
 	public static function get_settings_params( $context = 'edit' ) {
-		return array(
-			'bot_token'             => array(
+		return [
+			'bot_token'             => [
 				'type'              => 'string',
 				'required'          => ( 'edit' === $context ),
 				'sanitize_callback' => 'sanitize_text_field',
-				'validate_callback' => array( __CLASS__, 'validate_param' ),
-			),
-			'bot_username'          => array(
+				'validate_callback' => [ __CLASS__, 'validate_param' ],
+			],
+			'bot_username'          => [
 				'type'              => 'string',
 				'required'          => ( 'edit' === $context ),
 				'sanitize_callback' => 'sanitize_text_field',
-				'validate_callback' => array( __CLASS__, 'validate_param' ),
-			),
-			'disable_signup'        => array(
+				'validate_callback' => [ __CLASS__, 'validate_param' ],
+			],
+			'disable_signup'        => [
 				'type'    => 'boolean',
 				'default' => false,
-			),
-			'user_role'             => array(
+			],
+			'user_role'             => [
 				'type'              => 'string',
 				'default'           => get_option( 'default_role' ),
 				'sanitize_callback' => 'sanitize_text_field',
 				'validate_callback' => 'rest_validate_request_arg',
-			),
-			'redirect_to'           => array(
+			],
+			'redirect_to'           => [
 				'type'              => 'string',
 				'default'           => 'default',
 				'sanitize_callback' => 'sanitize_text_field',
 				'validate_callback' => 'rest_validate_request_arg',
-				'enum'              => array( 'default', 'homepage', 'current_page', 'custom_url' ),
-			),
-			'redirect_url'          => array(
+				'enum'              => [ 'default', 'homepage', 'current_page', 'custom_url' ],
+			],
+			'redirect_url'          => [
 				'type'              => 'string',
 				'sanitize_callback' => 'sanitize_text_field',
-			),
-			'avatar_meta_key'       => array(
+			],
+			'avatar_meta_key'       => [
 				'type'              => 'string',
 				'default'           => 'wptg_login_avatar',
 				'sanitize_callback' => 'sanitize_key',
-				'validate_callback' => array( __CLASS__, 'validate_param' ),
-			),
-			'random_email'          => array(
+				'validate_callback' => [ __CLASS__, 'validate_param' ],
+			],
+			'random_email'          => [
 				'type'    => 'boolean',
 				'default' => false,
-			),
-			'button_style'          => array(
+			],
+			'button_style'          => [
 				'type'              => 'string',
 				'default'           => 'large',
 				'sanitize_callback' => 'sanitize_text_field',
 				'validate_callback' => 'rest_validate_request_arg',
-				'enum'              => array( 'large', 'medium', 'small' ),
-			),
-			'show_user_photo'       => array(
+				'enum'              => [ 'large', 'medium', 'small' ],
+			],
+			'show_user_photo'       => [
 				'type'    => 'boolean',
 				'default' => true,
-			),
-			'corner_radius'         => array(
+			],
+			'corner_radius'         => [
 				'type'              => 'number',
 				'maximum'           => 20,
 				'sanitize_callback' => 'sanitize_text_field',
-				'validate_callback' => array( __CLASS__, 'validate_param' ),
-			),
-			'show_if_user_is'       => array(
+				'validate_callback' => [ __CLASS__, 'validate_param' ],
+			],
+			'show_if_user_is'       => [
 				'type'              => 'string',
 				'default'           => 'logged_out',
 				'validate_callback' => 'rest_validate_request_arg',
 				'sanitize_callback' => 'sanitize_text_field',
-			),
-			'hide_on_default'       => array(
+			],
+			'hide_on_default'       => [
 				'type'    => 'boolean',
 				'default' => false,
-			),
-			'show_message_on_error' => array(
+			],
+			'show_message_on_error' => [
 				'type'    => 'boolean',
 				'default' => false,
-			),
-			'custom_error_message'  => array(
+			],
+			'custom_error_message'  => [
 				'type'              => 'string',
 				'validate_callback' => 'rest_validate_request_arg',
 				'sanitize_callback' => 'sanitize_text_field',
-			),
-		);
+			],
+		];
 	}
 
 	/**

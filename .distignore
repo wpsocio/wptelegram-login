@@ -1,3 +1,5 @@
 /.wordpress-org
 
 .distignore
+
+/languages/js-translations.pot

@@ -2,7 +2,7 @@
 /**
  * WP REST API functionality of the plugin.
  *
- * @link       https://t.me/manzoorwanijk
+ * @link       https://manzoorwani.dev
  * @since      1.5.0
  *
  * @package    WPTelegram\Login
