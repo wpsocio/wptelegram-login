@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wptelegram-login\n"
-"POT-Creation-Date: 2021-04-09 10:08:36+00:00\n"
+"POT-Creation-Date: 2021-04-24 16:36:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2021-04-9 10:8-330\n"
+"PO-Revision-Date: 2021-04-24 16:36-330\n"
 "Last-Translator: WP Telegram Login\n"
 "Language-Team: WP Telegram Login\n"
 "Language: en_US\n"
@@ -31,78 +31,78 @@ msgstr ""
 msgid "Limit result set to users who have their Telegram accounts connected."
 msgstr ""
 
-#: admin/Admin.php:168
+#: admin/Admin.php:176
 msgid "Telegram Login"
 msgstr ""
 
-#: admin/Admin.php:221
+#: admin/Admin.php:229
 msgid "Telegram Info"
 msgstr ""
 
-#: admin/Admin.php:222
+#: admin/Admin.php:230
 msgid "Here you can connect this account to Telegram."
 msgstr ""
 
-#: admin/Admin.php:226
+#: admin/Admin.php:234
 msgid "Telegram Chat ID"
 msgstr ""
 
-#: admin/Admin.php:230 languages/wptelegram-login-js-translations.php:208
+#: admin/Admin.php:238 languages/wptelegram-login-js-translations.php:220
 msgid "INSTRUCTIONS!"
 msgstr ""
 
-#: admin/Admin.php:237
+#: admin/Admin.php:245
 #. translators: %s is bot username
 msgid "Get your Chat ID from %s and enter it above."
 msgstr ""
 
-#: admin/Admin.php:239
+#: admin/Admin.php:247
 #. translators: %s is bot username
 msgid "Ask the user to get the Chat ID from %s and enter it above."
 msgstr ""
 
-#: admin/Admin.php:249
+#: admin/Admin.php:257
 #. translators: %s is bot username
 msgid "Start a conversation with %s to receive notifications."
 msgstr ""
 
-#: admin/Admin.php:251
+#: admin/Admin.php:259
 #. translators: %s is bot username
 msgid "Ask the user to start a conversation with %s to receive notifications."
 msgstr ""
 
-#: admin/Admin.php:279 languages/wptelegram-login-js-translations.php:255
+#: admin/Admin.php:287 languages/wptelegram-login-js-translations.php:269
 #: shared/LoginHandler.php:60
 msgid "Error:"
 msgstr ""
 
-#: admin/Admin.php:279
+#: admin/Admin.php:287
 msgid "Please Enter a valid Chat ID"
 msgstr ""
 
-#: admin/Admin.php:322
+#: admin/Admin.php:330
 msgid "Telegram User ID"
 msgstr ""
 
-#: includes/AssetManager.php:107
+#: includes/AssetManager.php:148
 msgid ""
 "With this plugin, you can let the users login to your website with their "
 "Telegram and make it simple for them to get connected."
 msgstr ""
 
-#: includes/AssetManager.php:157
+#: includes/AssetManager.php:231
 msgid "Any"
 msgstr ""
 
-#: includes/AssetManager.php:161
+#: includes/AssetManager.php:235
 msgid "Logged out"
 msgstr ""
 
-#: includes/AssetManager.php:165
+#: includes/AssetManager.php:239
 msgid "Logged in"
 msgstr ""
 
-#: includes/Main.php:326 languages/wptelegram-login-js-translations.php:37
+#: includes/Main.php:370 languages/wptelegram-login-js-translations.php:37
 #: shared/widgets/Primary.php:26
 msgid "WP Telegram Login"
 msgstr ""
@@ -218,238 +218,258 @@ msgstr ""
 msgid "Display an error message if Telegram is blocked by user's ISP."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:97
+#: languages/wptelegram-login-js-translations.php:96
+msgid "Note:"
+msgstr ""
+
+#: languages/wptelegram-login-js-translations.php:99
+msgid "You can use the same bot for all the WP Telegram plugins."
+msgstr ""
+
+#: languages/wptelegram-login-js-translations.php:103
 #. translators: 1 command name, 2 bot name
 msgid "Create a Bot by sending %1$s command to %2$s."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:100
+#: languages/wptelegram-login-js-translations.php:106
 msgid "After completing the steps %s will provide you the Bot Token."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:103
+#: languages/wptelegram-login-js-translations.php:109
 msgid "Copy the token and paste into the Bot Token field below."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:107
+#: languages/wptelegram-login-js-translations.php:113
 #. translators: %s application name
 msgid "For ease, use %s"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:110
+#: languages/wptelegram-login-js-translations.php:116
 msgid "Telegram Desktop"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:114
+#: languages/wptelegram-login-js-translations.php:120
 #. translators: 1 command name, 2 bot name, 3 site url
 msgid "Send %1$s command to %2$s, select your bot and then send %3$s"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:117
+#: languages/wptelegram-login-js-translations.php:123
 msgid ""
 "Test your bot token below and fill in the bot username if not filled "
 "automatically."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:120
+#: languages/wptelegram-login-js-translations.php:126
 msgid "Hit %s below"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:124
+#: languages/wptelegram-login-js-translations.php:130
 msgid "Save Changes"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:127
+#: languages/wptelegram-login-js-translations.php:133
 msgid "That's it. You are ready to rock :)"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:130
+#: languages/wptelegram-login-js-translations.php:136
 msgid "Default"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:133
+#: languages/wptelegram-login-js-translations.php:139
 msgid "Homepage"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:136
+#: languages/wptelegram-login-js-translations.php:142
 msgid "Current page"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:139
+#: languages/wptelegram-login-js-translations.php:145
 msgid "Login Options"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:142
+#: languages/wptelegram-login-js-translations.php:148
 msgid ""
 "If enabled, only the existing users who have connected their Telegram will "
 "be able to login."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:145
+#: languages/wptelegram-login-js-translations.php:151
 msgid "The default role to assign for the new users."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:148
+#: languages/wptelegram-login-js-translations.php:154
 msgid "Redirect location after login."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:151
+#: languages/wptelegram-login-js-translations.php:157
 msgid "The user meta key to be used to save Telegram photo URL."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:154
+#: languages/wptelegram-login-js-translations.php:160
 msgid "If enabled, a random email address will be generated for new user accounts."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:157
+#: languages/wptelegram-login-js-translations.php:163
 msgid "Useful when you want the users to be able to receive private notifications."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:160
+#: languages/wptelegram-login-js-translations.php:166
 msgid ""
 "Let the users login to your WordPress website with their Telegram and make "
 "it simple for them to get connected and let them receive their email "
 "notifications on Telegram."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:163
+#: languages/wptelegram-login-js-translations.php:169
 msgid "Get LIVE support on Telegram"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:166
+#: languages/wptelegram-login-js-translations.php:172
 msgid "Telegram Options"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:169
+#: languages/wptelegram-login-js-translations.php:175
 msgid "Use %s above to set automatically."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:173
+#: languages/wptelegram-login-js-translations.php:179
 msgid "Test Token"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:178
+#: languages/wptelegram-login-js-translations.php:184
 #. translators: 1, 2 Menu names
 msgid "Goto %1$s and click/drag %2$s and place it where you want it to be."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:182
+#: languages/wptelegram-login-js-translations.php:188
 msgid "Appearance"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:186
+#: languages/wptelegram-login-js-translations.php:192
 msgid "Widgets"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:190
+#: languages/wptelegram-login-js-translations.php:196
 msgid ""
 "Alternately, you can use the below shortcode or the block available in "
 "block editor."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:194
+#: languages/wptelegram-login-js-translations.php:200
 msgid "Inside page or post content:"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:198
+#: languages/wptelegram-login-js-translations.php:204
 msgid "Inside the theme templates"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:202
+#: languages/wptelegram-login-js-translations.php:208
 msgid "or"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:205
+#: languages/wptelegram-login-js-translations.php:211
 msgid "Please read the instructions above."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:211
-msgid "Click here for instructions."
-msgstr ""
-
 #: languages/wptelegram-login-js-translations.php:214
-msgid "Do you like %s?"
+msgid "No"
 msgstr ""
 
 #: languages/wptelegram-login-js-translations.php:217
-msgid "Write a review"
-msgstr ""
-
-#: languages/wptelegram-login-js-translations.php:220
-msgid "Need help?"
+msgid "Yes"
 msgstr ""
 
 #: languages/wptelegram-login-js-translations.php:223
+msgid "Click here for instructions."
+msgstr ""
+
+#: languages/wptelegram-login-js-translations.php:226
+msgid "Do you like %s?"
+msgstr ""
+
+#: languages/wptelegram-login-js-translations.php:229
+msgid "Write a review"
+msgstr ""
+
+#: languages/wptelegram-login-js-translations.php:232
+msgid "Need help?"
+msgstr ""
+
+#: languages/wptelegram-login-js-translations.php:235
 msgid "Members Count:"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:227
+#: languages/wptelegram-login-js-translations.php:238
+msgid "Result:"
+msgstr ""
+
+#: languages/wptelegram-login-js-translations.php:241
 msgid "Test Result:"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:230
+#: languages/wptelegram-login-js-translations.php:244
 msgid "Follow %s"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:233
+#: languages/wptelegram-login-js-translations.php:247
 msgid "Join %s"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:236
+#: languages/wptelegram-login-js-translations.php:250
 msgid "Widget Info"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:240
+#: languages/wptelegram-login-js-translations.php:254
 msgid "Please wait…"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:243
+#: languages/wptelegram-login-js-translations.php:257
 msgid "Send Test"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:246
+#: languages/wptelegram-login-js-translations.php:260
 msgid "Add"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:249
+#: languages/wptelegram-login-js-translations.php:263
 msgid "Something went wrong"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:252
+#: languages/wptelegram-login-js-translations.php:266
 msgid "Could not connect"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:258
+#: languages/wptelegram-login-js-translations.php:272
 msgid ""
 "A message will be sent to the Channel/Group/Chat. You can modify the text "
 "below"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:261
+#: languages/wptelegram-login-js-translations.php:275
 msgid "This is a test message"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:264
+#: languages/wptelegram-login-js-translations.php:278
 msgid "Success"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:267
+#: languages/wptelegram-login-js-translations.php:281
 msgid "Lets fix these errors first."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:270
+#: languages/wptelegram-login-js-translations.php:284
 msgid "Changes saved successfully."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:273
+#: languages/wptelegram-login-js-translations.php:287
 msgid "Invalid %s"
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:276
+#: languages/wptelegram-login-js-translations.php:290
 msgid "%s required."
 msgstr ""
 
-#: languages/wptelegram-login-js-translations.php:279
+#: languages/wptelegram-login-js-translations.php:293
 msgid "Changes could not be saved."
 msgstr ""
 

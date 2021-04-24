@@ -5,7 +5,7 @@ Tags: telegram, login, register, social, signup
 Requires at least: 5.3
 Tested up to: 5.7.1
 Requires PHP: 7.0
-Stable tag: 1.9.6
+Stable tag: 1.9.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,10 @@ Many thanks to the translators for the great job!
 7. User List Table (for admin)
 
 == Changelog ==
+
+= 1.9.7 =
+- Improved user REST meta query for Telegram users
+- Fixed default settings for Gutenberg blocks
 
 = 1.9.6 =
 - Fixed Telegram login when login and register are on same page
