@@ -11,6 +11,9 @@
 
 namespace WPTelegram\Login\includes;
 
+use WPTelegram\Login\includes\restApi\SettingsController;
+use ReflectionClass;
+
 /**
  * The assets manager of the plugin.
  *
@@ -27,6 +30,49 @@ class AssetManager extends BaseClass {
 	const WP_LOGIN_JS_HANDLE   = 'wptelegram-login--wp-login';
 
 	/**
+	 * Register the assets.
+	 *
+	 * @since x.y.z
+	 */
+	public function register_assets() {
+
+		$request_check = new ReflectionClass( self::class );
+
+		$constants = $request_check->getConstants();
+
+		$assets = $this->plugin()->assets();
+
+		foreach ( $constants as $handle ) {
+			wp_register_script(
+				$handle,
+				$assets->get_asset_url( $handle ),
+				$assets->get_asset_dependencies( $handle ),
+				$assets->get_asset_version( $handle ),
+				true
+			);
+
+			// Register styles only if they exist.
+			if ( $assets->has_asset( $handle, Assets::ASSET_EXT_CSS ) ) {
+				wp_register_style(
+					$handle,
+					$assets->get_asset_url( $handle, Assets::ASSET_EXT_CSS ),
+					[],
+					$assets->get_asset_version( $handle, Assets::ASSET_EXT_CSS ),
+					'all'
+				);
+			}
+		}
+
+		wp_register_style(
+			$this->plugin()->name() . '-menu',
+			$assets->url( sprintf( '/css/admin-menu%s.css', wp_scripts_get_suffix() ) ),
+			[],
+			$this->plugin()->version(),
+			'all'
+		);
+	}
+
+	/**
 	 * Register the stylesheets for the admin area.
 	 *
 	 * @since    1.9.0
@@ -35,26 +81,14 @@ class AssetManager extends BaseClass {
 	public function enqueue_admin_styles( $hook_suffix ) {
 
 		if ( ! defined( 'WPTELEGRAM_LOADED' ) ) {
-			wp_enqueue_style(
-				$this->plugin()->name() . '-menu',
-				$this->plugin()->assets()->url( sprintf( '/css/admin-menu%s.css', wp_scripts_get_suffix() ) ),
-				[],
-				$this->plugin()->version(),
-				'all'
-			);
+			wp_enqueue_style( $this->plugin()->name() . '-menu' );
 		}
 
-		$entrypoint = self::ADMIN_MAIN_JS_HANDLE;
+		$handle = self::ADMIN_MAIN_JS_HANDLE;
 
 		// Load only on settings page.
-		if ( $this->is_settings_page( $hook_suffix ) && $this->plugin()->assets()->has_asset( $entrypoint, Assets::ASSET_EXT_CSS ) ) {
-			wp_enqueue_style(
-				$entrypoint,
-				$this->plugin()->assets()->get_asset_url( $entrypoint, Assets::ASSET_EXT_CSS ),
-				[],
-				$this->plugin()->assets()->get_asset_version( $entrypoint, Assets::ASSET_EXT_CSS ),
-				'all'
-			);
+		if ( $this->is_settings_page( $hook_suffix ) && wp_style_is( $handle, 'registered' ) ) {
+			wp_enqueue_style( $handle );
 		}
 	}
 
@@ -67,38 +101,45 @@ class AssetManager extends BaseClass {
 	public function enqueue_admin_scripts( $hook_suffix ) {
 		// Load only on settings page.
 		if ( $this->is_settings_page( $hook_suffix ) ) {
-			$entrypoint = self::ADMIN_MAIN_JS_HANDLE;
+			$handle = self::ADMIN_MAIN_JS_HANDLE;
 
-			wp_enqueue_script(
-				$entrypoint,
-				$this->plugin()->assets()->get_asset_url( $entrypoint ),
-				$this->plugin()->assets()->get_asset_dependencies( $entrypoint ),
-				$this->plugin()->assets()->get_asset_version( $entrypoint ),
-				true
-			);
+			wp_enqueue_script( $handle );
 
 			// Pass data to JS.
 			$data = $this->get_dom_data();
-			// Not to expose bot token to non-admins.
-			if ( current_user_can( 'manage_options' ) ) {
-				$data['savedSettings'] = \WPTelegram\Login\includes\restApi\SettingsController::get_default_settings();
-			}
-			$data['uiData']['user_role'] = self::user_role_options_cb();
 
-			wp_add_inline_script(
-				$entrypoint,
-				sprintf( 'var wptelegram_login = %s;', json_encode( $data ) ), // phpcs:ignore WordPress.WP.AlternativeFunctions
-				'before'
-			);
+			self::add_dom_data( $handle, $data );
 		}
+	}
+
+	/**
+	 * Add the data to DOM.
+	 *
+	 * @since x.y.z
+	 *
+	 * @param string $handle The script handle to attach the data to.
+	 * @param mixed  $data   The data to add.
+	 * @param string $var    The JavaScript variable name to use.
+	 *
+	 * @return void
+	 */
+	public static function add_dom_data( $handle, $data, $var = 'wptelegram_login' ) {
+		wp_add_inline_script(
+			$handle,
+			sprintf( 'var %s = %s;', $var, wp_json_encode( $data ) ),
+			'before'
+		);
 	}
 
 	/**
 	 * Get the common DOM data.
 	 *
+	 * @param string $for The domain for which the DOM data is to be rendered.
+	 * possible values: 'SETTINGS_PAGE' | 'BLOCKS'.
+	 *
 	 * @return array
 	 */
-	private function get_dom_data() {
+	public function get_dom_data( $for = 'SETTINGS_PAGE' ) {
 		$data = [
 			'pluginInfo' => [
 				'title'       => $this->plugin()->title(),
@@ -118,12 +159,45 @@ class AssetManager extends BaseClass {
 				'tgIconUrl' => $this->plugin()->assets()->url( '/icons/tg-icon.svg' ),
 			],
 			'uiData'     => [
-				'show_if_user_is' => self::get_show_if_user_is_options(),
+				'show_if_user_is'   => self::get_show_if_user_is_options(),
+				'wptelegram_active' => defined( 'WPTELEGRAM_LOADED' ),
 			],
 			'i18n'       => Utils::get_jed_locale_data( 'wptelegram-login' ),
 		];
 
-		return $data;
+		$settings = SettingsController::get_default_settings();
+
+		// Not to expose bot token to non-admins.
+		if ( 'SETTINGS_PAGE' === $for && current_user_can( 'manage_options' ) ) {
+			$data['savedSettings'] = $settings;
+			// Add UI data for settings page.
+			$data['uiData']['user_role'] = self::user_role_options_cb();
+		}
+
+		if ( 'BLOCKS' === $for ) {
+
+			$data['assets'] = array_merge(
+				$data['assets'],
+				[
+					'loginImageUrl'  => $this->plugin()->assets()->url( '/icons/telegram-login.svg' ),
+					'loginAvatarUrl' => $this->plugin()->assets()->url( '/icons/telegram-login-avatar.svg' ),
+				]
+			);
+
+			$data['savedSettings'] = array_intersect_key(
+				$settings,
+				array_flip(
+					[
+						'button_style',
+						'show_user_photo',
+						'corner_radius',
+						'show_if_user_is',
+					]
+				)
+			);
+		}
+
+		return apply_filters( 'wptelegram_login_assets_dom_data', $data, $for, $this->plugin() );
 	}
 
 	/**
@@ -182,29 +256,17 @@ class AssetManager extends BaseClass {
 			return;
 		}
 
-		$entrypoint = self::WP_LOGIN_JS_HANDLE;
+		$handle = self::WP_LOGIN_JS_HANDLE;
 
-		wp_enqueue_script(
-			$entrypoint,
-			$this->plugin()->assets()->get_asset_url( $entrypoint ),
-			$this->plugin()->assets()->get_asset_dependencies( $entrypoint ),
-			$this->plugin()->assets()->get_asset_version( $entrypoint ),
-			true
-		);
+		wp_enqueue_script( $handle );
 
 		// don't load styles for dev env.
 		if ( defined( 'WP_PLUGINS_DEV_LOADED' ) ) {
 			return;
 		}
 
-		if ( $this->plugin()->assets()->has_asset( $entrypoint, Assets::ASSET_EXT_CSS ) ) {
-			wp_enqueue_style(
-				$entrypoint,
-				$this->plugin()->assets()->get_asset_url( $entrypoint, Assets::ASSET_EXT_CSS ),
-				[],
-				$this->plugin()->assets()->get_asset_version( $entrypoint, Assets::ASSET_EXT_CSS ),
-				'all'
-			);
+		if ( wp_style_is( $handle, 'registered' ) ) {
+			wp_enqueue_style( $handle );
 		}
 	}
 
@@ -224,45 +286,16 @@ class AssetManager extends BaseClass {
 	 * @since    1.4.1
 	 */
 	public function enqueue_block_editor_assets() {
-		$entrypoint = self::BLOCKS_JS_HANDLE;
+		$handle = self::BLOCKS_JS_HANDLE;
 
-		wp_enqueue_script(
-			$entrypoint,
-			$this->plugin()->assets()->get_asset_url( $entrypoint ),
-			$this->plugin()->assets()->get_asset_dependencies( $entrypoint ),
-			$this->plugin()->assets()->get_asset_version( $entrypoint ),
-			true
-		);
+		wp_enqueue_script( $handle );
 
-		$data = $this->get_dom_data();
+		$data = $this->get_dom_data( 'BLOCKS' );
 
-		$data['assets'] = array_merge(
-			$data['assets'],
-			[
-				'loginImageUrl'  => $this->plugin()->assets()->url( '/icons/telegram-login.svg' ),
-				'loginAvatarUrl' => $this->plugin()->assets()->url( '/icons/telegram-login-avatar.svg' ),
-			]
-		);
+		self::add_dom_data( $handle, $data );
 
-		wp_add_inline_script(
-			$entrypoint,
-			sprintf( 'var wptelegram_login = %s;', json_encode( $data ) ), // phpcs:ignore WordPress.WP.AlternativeFunctions
-			'before'
-		);
-
-		// don't load styles for dev env.
-		if ( defined( 'WP_PLUGINS_DEV_LOADED' ) ) {
-			return;
-		}
-
-		if ( $this->plugin()->assets()->has_asset( $entrypoint, Assets::ASSET_EXT_CSS ) ) {
-			wp_enqueue_style(
-				$entrypoint,
-				$this->plugin()->assets()->get_asset_url( $entrypoint, Assets::ASSET_EXT_CSS ),
-				[],
-				$this->plugin()->assets()->get_asset_version( $entrypoint, Assets::ASSET_EXT_CSS ),
-				'all'
-			);
+		if ( wp_style_is( $handle, 'registered' ) ) {
+			wp_enqueue_style( $handle );
 		}
 	}
 }
