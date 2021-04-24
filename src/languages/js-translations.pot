@@ -18,31 +18,31 @@ msgstr ""
 msgid "Small"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:36
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:47
 msgid "Button Settings"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:38
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:49
 #: domains/wptelegram/login/main/src/services/fields.ts:10
 msgid "Button Style"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:44
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:55
 #: domains/wptelegram/login/main/src/services/fields.ts:20
 msgid "Show User Photo"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:49
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:60
 #: domains/wptelegram/login/main/src/services/fields.ts:11
 msgid "Corner Radius"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:57
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:68
 #: domains/wptelegram/login/main/src/services/fields.ts:18
 msgid "Show if user is"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/index.tsx:13
+#: domains/wptelegram/login/blocks/src/telegram-login/index.tsx:15
 #: domains/wptelegram/login/main/src/ui/WidgetInfoCard.tsx:28
 msgid "WP Telegram Login"
 msgstr ""
@@ -121,49 +121,57 @@ msgstr ""
 msgid "Display an error message if Telegram is blocked by user's ISP."
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/Instructions.tsx:16
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:15
+msgid "Note:"
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:15
+msgid "You can use the same bot for all the WP Telegram plugins."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:23
 #. 1 command name, 2 bot name
 msgid "Create a Bot by sending %1$s command to %2$s."
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/Instructions.tsx:35
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:42
 msgid "After completing the steps %s will provide you the Bot Token."
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/Instructions.tsx:39
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:46
 msgid "Copy the token and paste into the Bot Token field below."
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/Instructions.tsx:43
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:50
 #. %s application name
 msgid "For ease, use %s"
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/Instructions.tsx:49
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:56
 msgid "Telegram Desktop"
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/Instructions.tsx:59
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:66
 #. 1 command name, 2 bot name, 3 site url
 msgid "Send %1$s command to %2$s, select your bot and then send %3$s"
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/Instructions.tsx:84
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:91
 msgid ""
 "Test your bot token below and fill in the bot username if not filled "
 "automatically."
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/Instructions.tsx:86
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:93
 msgid "Hit %s below"
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/Instructions.tsx:86
-#: domains/wptelegram/login/main/src/ui/SubmitInfo.tsx:11
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:93
+#: packages/components/src/Submit/SubmitButton.tsx:15
 msgid "Save Changes"
 msgstr ""
 
-#: domains/wptelegram/login/main/src/ui/Instructions.tsx:87
+#: domains/wptelegram/login/main/src/ui/Instructions.tsx:94
 msgid "That's it. You are ready to rock :)"
 msgstr ""
 
@@ -275,6 +283,14 @@ msgstr ""
 msgid "Please read the instructions above."
 msgstr ""
 
+#: packages/components/src/ConfirmDialog.tsx:53
+msgid "No"
+msgstr ""
+
+#: packages/components/src/ConfirmDialog.tsx:56
+msgid "Yes"
+msgstr ""
+
 #: packages/components/src/Instructions/Instructions.tsx:15
 msgid "INSTRUCTIONS!"
 msgstr ""
@@ -299,7 +315,10 @@ msgstr ""
 msgid "Members Count:"
 msgstr ""
 
-#: packages/components/src/TestResult/TestMessageResult.tsx:15
+#: packages/components/src/TestResult/MessageResult.tsx:15
+msgid "Result:"
+msgstr ""
+
 #: packages/components/src/TestResult/TestResult.tsx:14
 msgid "Test Result:"
 msgstr ""
@@ -355,11 +374,11 @@ msgstr ""
 msgid "Success"
 msgstr ""
 
-#: packages/services/src/useDisplayFeedback.ts:64
+#: packages/services/src/useDisplayFeedback.ts:62
 msgid "Lets fix these errors first."
 msgstr ""
 
-#: packages/services/src/useSubmitForm.ts:50
+#: packages/services/src/useSubmitForm.ts:54
 msgid "Changes saved successfully."
 msgstr ""
 

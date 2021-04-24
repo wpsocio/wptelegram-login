@@ -135,10 +135,12 @@ class Admin extends BaseClass {
 	 * @param WP_REST_Request $request       The current request.
 	 */
 	public function modify_rest_user_query( $prepared_args, WP_REST_Request $request ) {
-		if ( ! $request->get_param( 'telegram_users_only' ) ) {
+		$telegram_users_only = $request->get_param( 'telegram_users_only' );
+
+		if ( ! $telegram_users_only ) {
 			return $prepared_args;
 		}
-		$prepared_args['meta_query'] = array( // phpcs:ignore
+		$meta_query = [
 			'relation' => 'AND',
 			[
 				'key'     => WPTELEGRAM_USER_ID_META_KEY,
@@ -149,7 +151,13 @@ class Admin extends BaseClass {
 				'compare' => '!=',
 				'value'   => '',
 			],
-		);
+		];
+		// If there is already a meta query.
+		if ( ! empty( $prepared_args['meta_query'] ) ) {
+			$meta_query[] = $prepared_args['meta_query'];
+		}
+
+		$prepared_args['meta_query'] = $meta_query; // phpcs:ignore
 
 		return $prepared_args;
 	}
