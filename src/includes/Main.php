@@ -43,16 +43,6 @@ class Main {
 	protected static $instance = null;
 
 	/**
-	 * The loader that's responsible for maintaining and registering all hooks that power
-	 * the plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   protected
-	 * @var      Loader    $loader    Maintains and registers all hooks for the plugin.
-	 */
-	protected $loader;
-
-	/**
 	 * Title of the plugin.
 	 *
 	 * @since    1.0.0
@@ -96,6 +86,15 @@ class Main {
 	 * @var      string    $assets    The assets handler.
 	 */
 	protected $assets;
+
+	/**
+	 * The asset manager.
+	 *
+	 * @since    x.y.z
+	 * @access   protected
+	 * @var      AssetManager $asset_manager The asset manager.
+	 */
+	protected $asset_manager;
 
 	/**
 	 * Main class Instance.
@@ -143,14 +142,42 @@ class Main {
 		$this->plugin_name = 'wptelegram_login';
 
 		$this->load_dependencies();
-		$this->set_options();
-		$this->set_assets();
 
 		$this->set_locale();
+
+		$this->init();
+	}
+
+	/**
+	 * Registers the initial hooks.
+	 *
+	 * @since    x.y.z
+	 * @access   private
+	 */
+	private function init() {
+
+		$plugin_upgrade = new Upgrade( $this );
+
+		// First lets do the upgrades, if needed.
+		add_action( 'plugins_loaded', [ $plugin_upgrade, 'do_upgrade' ], 10 );
+
+		// Then lets hook everything up.
+		add_action( 'plugins_loaded', [ $this, 'hookup' ], 20 );
+	}
+
+	/**
+	 * Registers the initial hooks.
+	 *
+	 * @since    x.y.z
+	 * @access   public
+	 */
+	public function hookup() {
+		// If an upgrade is going on.
+		if ( defined( 'WPTELEGRAM_LOGIN_DOING_UPGRADE' ) && WPTELEGRAM_LOGIN_DOING_UPGRADE ) {
+			return;
+		}
 		$this->define_admin_hooks();
 		$this->define_shared_hooks();
-
-		$this->run();
 	}
 
 	/**
@@ -167,8 +194,6 @@ class Main {
 		* Helper functions
 		*/
 		require_once $this->dir( '/includes/helper-functions.php' );
-
-		$this->loader = new Loader();
 	}
 
 	/**
@@ -180,7 +205,21 @@ class Main {
 	private function set_options() {
 
 		$this->options = new Options( $this->plugin_name );
+	}
 
+	/**
+	 * Get the plugin options
+	 *
+	 * @since    1.0.0
+	 * @access   public
+	 *
+	 * @return Options
+	 */
+	public function options() {
+		if ( ! $this->options ) {
+			$this->set_options();
+		}
+		return $this->options;
 	}
 
 	/**
@@ -194,6 +233,48 @@ class Main {
 	}
 
 	/**
+	 * Get the plugin assets handler.
+	 *
+	 * @since    1.9.0
+	 * @access   public
+	 *
+	 * @return Assets The assets instance.
+	 */
+	public function assets() {
+		if ( ! $this->assets ) {
+			$this->set_assets();
+		}
+
+		return $this->assets;
+	}
+
+	/**
+	 * Set the asset manager.
+	 *
+	 * @since    x.y.z
+	 * @access   private
+	 */
+	private function set_asset_manager() {
+		$this->asset_manager = new AssetManager( $this );
+	}
+
+	/**
+	 * Get the plugin assets manager.
+	 *
+	 * @since    x.y.z
+	 * @access   public
+	 *
+	 * @return AssetManager The asset manager.
+	 */
+	public function asset_manager() {
+		if ( ! $this->asset_manager ) {
+			$this->set_asset_manager();
+		}
+
+		return $this->asset_manager;
+	}
+
+	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
 	 * @since    1.0.0
@@ -203,7 +284,7 @@ class Main {
 
 		$plugin_i18n = new I18n();
 
-		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
+		add_action( 'plugins_loaded', [ $plugin_i18n, 'load_plugin_textdomain' ] );
 
 	}
 
@@ -218,27 +299,27 @@ class Main {
 
 		$plugin_admin = new Admin( $this );
 
-		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_plugin_admin_menu', 11 );
+		add_action( 'admin_menu', [ $plugin_admin, 'add_plugin_admin_menu' ], 11 );
 
-		$this->loader->add_action( 'rest_api_init', $plugin_admin, 'register_rest_routes' );
+		add_action( 'rest_api_init', [ $plugin_admin, 'register_rest_routes' ] );
 
-		$this->loader->add_action( 'rest_api_init', $plugin_admin, 'register_user_fields' );
+		add_action( 'rest_api_init', [ $plugin_admin, 'register_user_fields' ] );
 
-		$this->loader->add_action( 'widgets_init', $plugin_admin, 'register_widgets' );
+		add_action( 'widgets_init', [ $plugin_admin, 'register_widgets' ] );
 
-		$this->loader->add_action( 'show_user_profile', $plugin_admin, 'add_user_profile_fields' );
-		$this->loader->add_action( 'edit_user_profile', $plugin_admin, 'add_user_profile_fields' );
-		$this->loader->add_filter( 'user_profile_update_errors', $plugin_admin, 'validate_user_profile_fields', 10, 3 );
-		$this->loader->add_action( 'personal_options_update', $plugin_admin, 'update_user_profile_fields' );
-		$this->loader->add_action( 'edit_user_profile_update', $plugin_admin, 'update_user_profile_fields' );
-		$this->loader->add_filter( 'manage_users_columns', $plugin_admin, 'register_custom_user_column' );
-		$this->loader->add_filter( 'manage_users_custom_column', $plugin_admin, 'register_custom_user_column_view', 10, 3 );
+		add_action( 'show_user_profile', [ $plugin_admin, 'add_user_profile_fields' ] );
+		add_action( 'edit_user_profile', [ $plugin_admin, 'add_user_profile_fields' ] );
+		add_filter( 'user_profile_update_errors', [ $plugin_admin, 'validate_user_profile_fields' ], 10, 3 );
+		add_action( 'personal_options_update', [ $plugin_admin, 'update_user_profile_fields' ] );
+		add_action( 'edit_user_profile_update', [ $plugin_admin, 'update_user_profile_fields' ] );
+		add_filter( 'manage_users_columns', [ $plugin_admin, 'register_custom_user_column' ] );
+		add_filter( 'manage_users_custom_column', [ $plugin_admin, 'register_custom_user_column_view' ], 10, 3 );
 
-		$this->loader->add_filter( 'block_categories', $plugin_admin, 'register_block_category', 10, 1 );
+		add_filter( 'block_categories', [ $plugin_admin, 'register_block_category' ], 10, 1 );
 
-		$this->loader->add_filter( 'rest_user_collection_params', $plugin_admin, 'rest_user_collection_params', 10, 1 );
+		add_filter( 'rest_user_collection_params', [ $plugin_admin, 'rest_user_collection_params' ], 10, 1 );
 
-		$this->loader->add_filter( 'rest_user_query', $plugin_admin, 'modify_rest_user_query', 10, 2 );
+		add_filter( 'rest_user_query', [ $plugin_admin, 'modify_rest_user_query' ], 10, 2 );
 	}
 
 	/**
@@ -249,68 +330,31 @@ class Main {
 	 */
 	private function define_shared_hooks() {
 
-		$upgrade = new Upgrade( $this );
-
-		$this->loader->add_action( 'after_setup_theme', $upgrade, 'do_upgrade' );
-
 		$shared = new Shared( $this );
 
-		$this->loader->add_action( 'register_form', $shared, 'add_telegram_login_button' );
-		$this->loader->add_action( 'login_form', $shared, 'add_telegram_login_button' );
+		add_action( 'register_form', [ $shared, 'add_telegram_login_button' ] );
+		add_action( 'login_form', [ $shared, 'add_telegram_login_button' ] );
 
-		$this->loader->add_shortcode( 'wptelegram-login', get_class( $shared ), 'login_shortcode' );
+		add_shortcode( 'wptelegram-login', [ Shared::class, 'login_shortcode' ] );
 
-		$this->loader->add_filter( 'render_block', $shared, 'render_login_block', 11, 2 );
+		add_filter( 'render_block', [ $shared, 'render_login_block' ], 11, 2 );
 
-		$this->loader->add_filter( 'get_avatar_url', $shared, 'custom_avatar_url', 10, 2 );
+		add_filter( 'get_avatar_url', [ $shared, 'custom_avatar_url' ], 10, 2 );
 
 		$login_handler = new LoginHandler( $this );
 
-		$this->loader->add_action( 'init', $login_handler, 'telegram_login' );
+		add_action( 'init', [ $login_handler, 'telegram_login' ] );
 
 		$asset_manager = new AssetManager( $this );
 
-		$this->loader->add_action( 'admin_enqueue_scripts', $asset_manager, 'enqueue_admin_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $asset_manager, 'enqueue_admin_scripts' );
+		add_action( 'admin_init', [ $this->asset_manager(), 'register_assets' ] );
 
-		$this->loader->add_action( 'enqueue_block_editor_assets', $asset_manager, 'enqueue_block_editor_assets' );
+		add_action( 'admin_enqueue_scripts', [ $asset_manager, 'enqueue_admin_styles' ] );
+		add_action( 'admin_enqueue_scripts', [ $asset_manager, 'enqueue_admin_scripts' ] );
 
-		$this->loader->add_action( 'login_enqueue_scripts', $asset_manager, 'login_enqueue_scripts' );
-	}
+		add_action( 'enqueue_block_editor_assets', [ $asset_manager, 'enqueue_block_editor_assets' ] );
 
-	/**
-	 * Run the loader to execute all of the hooks with WordPress.
-	 *
-	 * @since    1.0.0
-	 */
-	private function run() {
-		$this->loader->run();
-	}
-
-	/**
-	 * Get the plugin options
-	 *
-	 * @since    1.0.0
-	 * @access   public
-	 *
-	 * @return Options The options instance.
-	 */
-	public function options() {
-
-		return $this->options;
-	}
-
-	/**
-	 * Get the plugin assets handler.
-	 *
-	 * @since    1.9.0
-	 * @access   public
-	 *
-	 * @return Assets The assets instance.
-	 */
-	public function assets() {
-
-		return $this->assets;
+		add_action( 'login_enqueue_scripts', [ $asset_manager, 'login_enqueue_scripts' ] );
 	}
 
 	/**

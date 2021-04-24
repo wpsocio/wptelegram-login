@@ -35,6 +35,10 @@ class Upgrade extends BaseClass {
 			return;
 		}
 
+		if ( ! defined( 'WPTELEGRAM_LOGIN_DOING_UPGRADE' ) ) {
+			define( 'WPTELEGRAM_LOGIN_DOING_UPGRADE', true );
+		}
+
 		$plugin_settings = WPTG_Login()->options()->get_data();
 		$is_new_install  = empty( $plugin_settings );
 
