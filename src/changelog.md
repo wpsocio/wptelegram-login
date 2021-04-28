@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.9.8 - 2021-04-28](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.8)
+
+### Bug fixes
+
+- Fixed the issue of settings not saved due to trailing slash redirects
+
 ## [1.9.7 - 2021-04-24](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.7)
 
 ### Enhancements
