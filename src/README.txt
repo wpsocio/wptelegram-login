@@ -109,6 +109,14 @@ Many thanks to the translators for the great job!
 
 [How do I create a bot?](https://core.telegram.org/bots/faq#how-do-i-create-a-bot).
 
+= Can I display button more than once on a page =
+
+Sorry, that's not possible because Telegram allows only single button per page.
+
+= I see "Bot domain invalid" message =
+
+Follow the instructions given on the settings page. You need to send `/setdomain` to @BotFather.
+
 
 == Screenshots ==
 
