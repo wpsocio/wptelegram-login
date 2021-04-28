@@ -5,3 +5,5 @@ node_modules/
 
 # Composer #
 /vendor/
+
+/bundles/

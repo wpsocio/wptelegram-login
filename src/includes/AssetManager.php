@@ -260,11 +260,6 @@ class AssetManager extends BaseClass {
 
 		wp_enqueue_script( $handle );
 
-		// don't load styles for dev env.
-		if ( defined( 'WP_PLUGINS_DEV_LOADED' ) ) {
-			return;
-		}
-
 		if ( wp_style_is( $handle, 'registered' ) ) {
 			wp_enqueue_style( $handle );
 		}

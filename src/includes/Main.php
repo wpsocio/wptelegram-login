@@ -414,14 +414,4 @@ class Main {
 	public function url( $path = '' ) {
 		return WPTELEGRAM_LOGIN_URL . $path;
 	}
-
-	/**
-	 * The reference to the class that orchestrates the hooks with the plugin.
-	 *
-	 * @since     1.0.0
-	 * @return    Loader    Orchestrates the hooks of the plugin.
-	 */
-	public function get_loader() {
-		return $this->loader;
-	}
 }

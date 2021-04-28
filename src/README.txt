@@ -5,7 +5,7 @@ Tags: telegram, login, register, social, signup
 Requires at least: 5.3
 Tested up to: 5.7.1
 Requires PHP: 7.0
-Stable tag: 1.9.7
+Stable tag: 1.9.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -109,6 +109,14 @@ Many thanks to the translators for the great job!
 
 [How do I create a bot?](https://core.telegram.org/bots/faq#how-do-i-create-a-bot).
 
+= Can I display button more than once on a page =
+
+Sorry, that's not possible because Telegram allows only single button per page.
+
+= I see "Bot domain invalid" message =
+
+Follow the instructions given on the settings page. You need to send `/setdomain` to @BotFather.
+
 
 == Screenshots ==
 
@@ -121,6 +129,9 @@ Many thanks to the translators for the great job!
 7. User List Table (for admin)
 
 == Changelog ==
+
+= 1.9.8 =
+- Fixed the issue of settings not saved due to trailing slash redirects
 
 = 1.9.7 =
 - Improved user REST meta query for Telegram users
