@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://github.com/manzoorwanijk/wptelegram-login\n"
-"POT-Creation-Date: 2021-04-28 09:18:00+00:00\n"
+"POT-Creation-Date: 2021-05-03 21:23:51+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2021-04-28 9:18-330\n"
+"PO-Revision-Date: 2021-05-3 21:230\n"
 "Last-Translator: WP Telegram Login\n"
 "Language-Team: WP Telegram Login\n"
 "Language: en_US\n"
@@ -23,7 +23,7 @@ msgstr ""
 "X-Generator: node-wp-i18n\n"
 "X-Poedit-SearchPathExcluded-0: assets\n"
 
-#: admin/Admin.php:49
+#: admin/Admin.php:49 includes/Utils.php:123 includes/Utils.php:124
 msgid "WP Telegram"
 msgstr ""
 
@@ -31,78 +31,78 @@ msgstr ""
 msgid "Limit result set to users who have their Telegram accounts connected."
 msgstr ""
 
-#: admin/Admin.php:176
+#: admin/Admin.php:174
 msgid "Telegram Login"
 msgstr ""
 
-#: admin/Admin.php:229
+#: admin/Admin.php:217
 msgid "Telegram Info"
 msgstr ""
 
-#: admin/Admin.php:230
+#: admin/Admin.php:218
 msgid "Here you can connect this account to Telegram."
 msgstr ""
 
-#: admin/Admin.php:234
+#: admin/Admin.php:222
 msgid "Telegram Chat ID"
 msgstr ""
 
-#: admin/Admin.php:238 languages/wptelegram-login-js-translations.php:220
+#: admin/Admin.php:226 languages/wptelegram-login-js-translations.php:220
 msgid "INSTRUCTIONS!"
 msgstr ""
 
-#: admin/Admin.php:245
+#: admin/Admin.php:233
 #. translators: %s is bot username
 msgid "Get your Chat ID from %s and enter it above."
 msgstr ""
 
-#: admin/Admin.php:247
+#: admin/Admin.php:235
 #. translators: %s is bot username
 msgid "Ask the user to get the Chat ID from %s and enter it above."
 msgstr ""
 
-#: admin/Admin.php:257
+#: admin/Admin.php:245
 #. translators: %s is bot username
 msgid "Start a conversation with %s to receive notifications."
 msgstr ""
 
-#: admin/Admin.php:259
+#: admin/Admin.php:247
 #. translators: %s is bot username
 msgid "Ask the user to start a conversation with %s to receive notifications."
 msgstr ""
 
-#: admin/Admin.php:287 languages/wptelegram-login-js-translations.php:269
+#: admin/Admin.php:275 languages/wptelegram-login-js-translations.php:269
 #: shared/LoginHandler.php:60
 msgid "Error:"
 msgstr ""
 
-#: admin/Admin.php:287
+#: admin/Admin.php:275
 msgid "Please Enter a valid Chat ID"
 msgstr ""
 
-#: admin/Admin.php:330
+#: admin/Admin.php:318
 msgid "Telegram User ID"
 msgstr ""
 
-#: includes/AssetManager.php:148
+#: includes/AssetManager.php:150
 msgid ""
 "With this plugin, you can let the users login to your website with their "
 "Telegram and make it simple for them to get connected."
 msgstr ""
 
-#: includes/AssetManager.php:231
+#: includes/AssetManager.php:233
 msgid "Any"
 msgstr ""
 
-#: includes/AssetManager.php:235
+#: includes/AssetManager.php:237
 msgid "Logged out"
 msgstr ""
 
-#: includes/AssetManager.php:239
+#: includes/AssetManager.php:241
 msgid "Logged in"
 msgstr ""
 
-#: includes/Main.php:370 languages/wptelegram-login-js-translations.php:37
+#: includes/Main.php:371 languages/wptelegram-login-js-translations.php:37
 #: shared/widgets/Primary.php:26
 msgid "WP Telegram Login"
 msgstr ""
