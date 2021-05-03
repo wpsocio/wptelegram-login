@@ -168,26 +168,14 @@ class Admin extends BaseClass {
 	 * @since 1.5.0
 	 */
 	public function add_plugin_admin_menu() {
-
-		if ( defined( 'WPTELEGRAM_LOADED' ) ) {
-			add_submenu_page(
-				'wptelegram',
-				esc_html( $this->plugin()->title() ),
-				esc_html__( 'Telegram Login', 'wptelegram-login' ),
-				'manage_options',
-				$this->plugin()->name(),
-				[ $this, 'display_plugin_admin_page' ]
-			);
-		} else {
-			add_menu_page(
-				esc_html( $this->plugin()->title() ),
-				esc_html( $this->plugin()->title() ),
-				'manage_options',
-				$this->plugin()->name(),
-				[ $this, 'display_plugin_admin_page' ],
-				'none'
-			);
-		}
+		add_submenu_page(
+			'wptelegram',
+			esc_html( $this->plugin()->title() ),
+			esc_html__( 'Telegram Login', 'wptelegram-login' ),
+			'manage_options',
+			$this->plugin()->name(),
+			[ $this, 'display_plugin_admin_page' ]
+		);
 	}
 
 	/**

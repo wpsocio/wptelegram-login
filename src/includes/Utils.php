@@ -111,4 +111,49 @@ class Utils {
 
 		return home_url( $current_uri );
 	}
+
+	/**
+	 * Update the menu structure to make WP Telegram the top level link.
+	 */
+	public static function update_menu_structure() {
+		global $admin_page_hooks;
+
+		if ( ! defined( 'WPTELEGRAM_LOADED' ) && empty( $admin_page_hooks['wptelegram'] ) ) {
+			add_menu_page(
+				__( 'WP Telegram', 'wptelegram-login' ),
+				__( 'WP Telegram', 'wptelegram-login' ),
+				'manage_options',
+				'wptelegram',
+				null,
+				'',
+				80
+			);
+			add_action( 'admin_menu', [ __CLASS__, 'remove_wptelegram_menu' ], 20 );
+		}
+	}
+
+	/**
+	 * Update the menu structure to remove WP Telegram top level link.
+	 */
+	public static function remove_wptelegram_menu() {
+		global $submenu;
+
+		if ( ! current_user_can( 'manage_options' ) || empty( $submenu['wptelegram'] ) ) {
+			return;
+		}
+
+		$key = null;
+		foreach ( $submenu['wptelegram'] as $submenu_key => $submenu_item ) {
+			if ( 'wptelegram' === $submenu_item[2] ) {
+				$key = $submenu_key;
+				break;
+			}
+		}
+
+		if ( null === $key ) {
+			return;
+		}
+
+		unset( $submenu['wptelegram'][ $key ] );
+	}
 }

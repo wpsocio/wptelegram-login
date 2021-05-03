@@ -299,7 +299,8 @@ class Main {
 
 		$plugin_admin = new Admin( $this );
 
-		add_action( 'admin_menu', [ $plugin_admin, 'add_plugin_admin_menu' ], 11 );
+		add_action( 'admin_menu', [ $plugin_admin, 'add_plugin_admin_menu' ] );
+		add_action( 'admin_menu', [ Utils::class, 'update_menu_structure' ], 5 );
 
 		add_action( 'rest_api_init', [ $plugin_admin, 'register_rest_routes' ] );
 
@@ -345,9 +346,9 @@ class Main {
 
 		add_action( 'init', [ $login_handler, 'telegram_login' ] );
 
-		$asset_manager = new AssetManager( $this );
+		$asset_manager = $this->asset_manager();
 
-		add_action( 'admin_init', [ $this->asset_manager(), 'register_assets' ] );
+		add_action( 'admin_init', [ $asset_manager, 'register_assets' ] );
 
 		add_action( 'admin_enqueue_scripts', [ $asset_manager, 'enqueue_admin_styles' ] );
 		add_action( 'admin_enqueue_scripts', [ $asset_manager, 'enqueue_admin_scripts' ] );
