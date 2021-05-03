@@ -63,13 +63,15 @@ class AssetManager extends BaseClass {
 			}
 		}
 
-		wp_register_style(
-			$this->plugin()->name() . '-menu',
-			$assets->url( sprintf( '/css/admin-menu%s.css', wp_scripts_get_suffix() ) ),
-			[],
-			$this->plugin()->version(),
-			'all'
-		);
+		if ( ! defined( 'WPTELEGRAM_LOADED' ) ) {
+			wp_register_style(
+				'wptelegram-menu',
+				$assets->url( sprintf( '/css/admin-menu%s.css', wp_scripts_get_suffix() ) ),
+				[],
+				$this->plugin()->version(),
+				'all'
+			);
+		}
 	}
 
 	/**
@@ -81,7 +83,7 @@ class AssetManager extends BaseClass {
 	public function enqueue_admin_styles( $hook_suffix ) {
 
 		if ( ! defined( 'WPTELEGRAM_LOADED' ) ) {
-			wp_enqueue_style( $this->plugin()->name() . '-menu' );
+			wp_enqueue_style( 'wptelegram-menu' );
 		}
 
 		$handle = self::ADMIN_MAIN_JS_HANDLE;
