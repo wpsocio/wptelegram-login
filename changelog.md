@@ -4,6 +4,10 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+### Improvements
+
+- Cleaned up the admin menu for single entry for WP Telegram
+
 ## [1.9.8 - 2021-04-28](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.8)
 
 ### Bug fixes
