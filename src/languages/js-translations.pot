@@ -18,26 +18,26 @@ msgstr ""
 msgid "Small"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:47
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:48
 msgid "Button Settings"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:49
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:50
 #: domains/wptelegram/login/main/src/services/fields.ts:10
 msgid "Button Style"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:55
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:56
 #: domains/wptelegram/login/main/src/services/fields.ts:20
 msgid "Show User Photo"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:60
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:61
 #: domains/wptelegram/login/main/src/services/fields.ts:11
 msgid "Corner Radius"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:68
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:69
 #: domains/wptelegram/login/main/src/services/fields.ts:18
 msgid "Show if user is"
 msgstr ""
@@ -336,11 +336,11 @@ msgid "Widget Info"
 msgstr ""
 
 #: packages/components/src/useBotTokenTest.tsx:96
-#: packages/components/src/useChatWithTest.tsx:94
+#: packages/components/src/useChatWithTest.tsx:95
 msgid "Please wait…"
 msgstr ""
 
-#: packages/components/src/useChatWithTest.tsx:94
+#: packages/components/src/useChatWithTest.tsx:95
 msgid "Send Test"
 msgstr ""
 
@@ -382,14 +382,14 @@ msgstr ""
 msgid "Changes saved successfully."
 msgstr ""
 
-#: packages/utilities/src/fields.ts:29
+#: packages/utilities/src/fields.ts:31
 msgid "Invalid %s"
 msgstr ""
 
-#: packages/utilities/src/fields.ts:32
+#: packages/utilities/src/fields.ts:34
 msgid "%s required."
 msgstr ""
 
-#: packages/utilities/src/fields.ts:35
+#: packages/utilities/src/fields.ts:37
 msgid "Changes could not be saved."
 msgstr ""
