@@ -156,4 +156,62 @@ class Utils {
 
 		unset( $submenu['wptelegram'][ $key ] );
 	}
+
+	/**
+	 * Sanitize the input.
+	 *
+	 * @param  mixed $input  The input.
+	 * @param  bool  $typefy Whether to convert strings to the appropriate data type.
+	 * @since  x.y.z
+	 *
+	 * @return mixed
+	 */
+	public static function sanitize( $input, $typefy = false ) {
+
+		if ( is_array( $input ) ) {
+
+			foreach ( $input as $key => $value ) {
+
+				$input[ sanitize_text_field( $key ) ] = self::sanitize( $value, $typefy );
+			}
+			return $input;
+		}
+
+		// These are safe types.
+		if ( is_bool( $input ) || is_int( $input ) || is_float( $input ) ) {
+			return $input;
+		}
+
+		// Now we will treat it as string.
+		$input = sanitize_text_field( $input );
+
+		// avoid numeric or boolean values as strings.
+		if ( $typefy ) {
+			return self::typefy( $input );
+		}
+
+		return $input;
+	}
+
+	/**
+	 * Convert the input into the proper data type
+	 *
+	 * @param  mixed $input The input.
+	 * @since  x.y.z
+	 *
+	 * @return mixed
+	 */
+	public static function typefy( $input ) {
+
+		if ( is_numeric( $input ) ) {
+
+			return floatval( $input );
+
+		} elseif ( is_string( $input ) && preg_match( '/^(?:true|false)$/i', $input ) ) {
+
+			return 'true' === strtolower( $input );
+		}
+
+		return $input;
+	}
 }
