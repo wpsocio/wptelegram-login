@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.9.10 - 2021-09-15](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.10)
+
+### Bug Fixes
+
+- Fixed the failed login when Telegram name has special characters
+
 ## [1.9.9 - 2021-05-3](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.9)
 
 ### Improvements

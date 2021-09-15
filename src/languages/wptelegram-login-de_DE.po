@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/manzoorwanijk/wptelegram-login\n"
-"POT-Creation-Date: 2021-05-03 21:23:51+00:00\n"
+"POT-Creation-Date: 2021-09-15 05:02:08+00:00\n"
 "PO-Revision-Date: 2021-02-16 02:08+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
@@ -68,7 +68,7 @@ msgid "Ask the user to start a conversation with %s to receive notifications."
 msgstr ""
 
 #: admin/Admin.php:275 languages/wptelegram-login-js-translations.php:269
-#: shared/LoginHandler.php:60
+#: shared/LoginHandler.php:61
 msgid "Error:"
 msgstr "Fehler:"
 
@@ -497,15 +497,15 @@ msgstr "%s wird benötigt."
 msgid "Changes could not be saved."
 msgstr "Die Änderungen konnten nicht gespeichert werden."
 
-#: shared/LoginHandler.php:169
+#: shared/LoginHandler.php:170
 msgid "Unauthorized! Data is NOT from Telegram"
 msgstr "Unautorisiert! Diese Daten stammen NICHT von Telegram"
 
-#: shared/LoginHandler.php:173
+#: shared/LoginHandler.php:174
 msgid "Invalid! The data is outdated"
 msgstr "Ungültig! Die Daten sind abgelaufen/veraltet"
 
-#: shared/LoginHandler.php:257
+#: shared/LoginHandler.php:259
 msgid ""
 "The Telegram User ID is already associated with another existing user. "
 "Please contact the admin"
@@ -513,7 +513,7 @@ msgstr ""
 "Diese Telegram User ID ist bereits mit einem anderen existierenden Benutzer "
 "verbunden. Bitte den Administrator kontaktieren"
 
-#: shared/LoginHandler.php:275
+#: shared/LoginHandler.php:277
 msgid ""
 "Sign up via Telegram is disabled. You must first create an account and "
 "connect it to Telegram to be able to use Telegram Login"
@@ -521,7 +521,7 @@ msgstr ""
 "Anmelden über Telegram ist deaktiviert. Du musst zuerst einen Account "
 "anlegen und mit Telegram verbinden, um Telegram Login verwenden zu können."
 
-#: shared/LoginHandler.php:367
+#: shared/LoginHandler.php:369
 msgid "Telegram sign in could not be completed."
 msgstr "Die Telegram-Anmeldung konnte nicht erfolgreich durchgeführt werden."
 

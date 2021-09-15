@@ -162,7 +162,7 @@ class Utils {
 	 *
 	 * @param  mixed $input  The input.
 	 * @param  bool  $typefy Whether to convert strings to the appropriate data type.
-	 * @since  x.y.z
+	 * @since  1.9.10
 	 *
 	 * @return mixed
 	 */
@@ -197,7 +197,7 @@ class Utils {
 	 * Convert the input into the proper data type
 	 *
 	 * @param  mixed $input The input.
-	 * @since  x.y.z
+	 * @since  1.9.10
 	 *
 	 * @return mixed
 	 */
