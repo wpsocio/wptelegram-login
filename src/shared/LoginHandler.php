@@ -12,6 +12,7 @@
 namespace WPTelegram\Login\shared;
 
 use WPTelegram\Login\includes\BaseClass;
+use WPTelegram\Login\includes\Utils;
 use WP_User;
 use Exception;
 
@@ -41,7 +42,7 @@ class LoginHandler extends BaseClass {
 
 		do_action( 'wptelegram_login_init' );
 
-		$input = $_GET; // phpcs:disable WordPress.Security.NonceVerification.Recommended
+		$input = wp_unslash( $_GET ); // phpcs:disable WordPress.Security.NonceVerification.Recommended
 
 		// Remove any unwanted fields.
 		$input = $this->filter_input_fields( $input );
@@ -172,7 +173,8 @@ class LoginHandler extends BaseClass {
 		if ( ( time() - $auth_data['auth_date'] ) > 86400 ) {
 			throw new Exception( __( 'Invalid! The data is outdated', 'wptelegram-login' ) );
 		}
-		return $auth_data;
+
+		return Utils::sanitize( $auth_data );
 	}
 
 	/**

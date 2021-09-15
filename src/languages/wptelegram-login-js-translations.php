@@ -13,22 +13,22 @@ $generated_i18n_strings = array(
 	// Reference: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:10
 	__( 'Small', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:47
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:48
 	__( 'Button Settings', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:49
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:50
 	// Reference: domains/wptelegram/login/main/src/services/fields.ts:10
 	__( 'Button Style', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:55
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:56
 	// Reference: domains/wptelegram/login/main/src/services/fields.ts:20
 	__( 'Show User Photo', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:60
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:61
 	// Reference: domains/wptelegram/login/main/src/services/fields.ts:11
 	__( 'Corner Radius', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:68
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:69
 	// Reference: domains/wptelegram/login/main/src/services/fields.ts:18
 	__( 'Show if user is', 'wptelegram-login' ),
 
@@ -250,10 +250,10 @@ $generated_i18n_strings = array(
 	__( 'Widget Info', 'wptelegram-login' ),
 
 	// Reference: packages/components/src/useBotTokenTest.tsx:96
-	// Reference: packages/components/src/useChatWithTest.tsx:94
+	// Reference: packages/components/src/useChatWithTest.tsx:95
 	__( 'Please wait…', 'wptelegram-login' ),
 
-	// Reference: packages/components/src/useChatWithTest.tsx:94
+	// Reference: packages/components/src/useChatWithTest.tsx:95
 	__( 'Send Test', 'wptelegram-login' ),
 
 	// Reference: packages/form/src/render/RenderRepeatable.tsx:101
@@ -283,13 +283,13 @@ $generated_i18n_strings = array(
 	// Reference: packages/services/src/useSubmitForm.ts:54
 	__( 'Changes saved successfully.', 'wptelegram-login' ),
 
-	// Reference: packages/utilities/src/fields.ts:29
+	// Reference: packages/utilities/src/fields.ts:31
 	__( 'Invalid %s', 'wptelegram-login' ),
 
-	// Reference: packages/utilities/src/fields.ts:32
+	// Reference: packages/utilities/src/fields.ts:34
 	__( '%s required.', 'wptelegram-login' ),
 
-	// Reference: packages/utilities/src/fields.ts:35
+	// Reference: packages/utilities/src/fields.ts:37
 	__( 'Changes could not be saved.', 'wptelegram-login' )
 );
 /* THIS IS THE END OF THE GENERATED FILE */
