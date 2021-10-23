@@ -4,6 +4,10 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+### Bug Fixes
+
+- Fixed PHP warning for `block_categories` deprecation
+
 ## [1.9.10 - 2021-09-15](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.10)
 
 ### Bug Fixes

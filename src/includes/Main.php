@@ -316,7 +316,7 @@ class Main {
 		add_filter( 'manage_users_columns', [ $plugin_admin, 'register_custom_user_column' ] );
 		add_filter( 'manage_users_custom_column', [ $plugin_admin, 'register_custom_user_column_view' ], 10, 3 );
 
-		add_filter( 'block_categories', [ $plugin_admin, 'register_block_category' ], 10, 1 );
+		add_filter( 'block_categories_all', [ $plugin_admin, 'register_block_category' ], 10, 1 );
 
 		add_filter( 'rest_user_collection_params', [ $plugin_admin, 'rest_user_collection_params' ], 10, 1 );
 
