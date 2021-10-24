@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.9.12 - 2021-10-24](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.12)
+
+### Bug Fixes
+
+- Fixed PHP Fatal Error for Block Widgets
+
 ## [1.9.11 - 2021-10-23](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.11)
 
 ### Bug Fixes

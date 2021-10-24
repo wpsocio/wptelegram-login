@@ -5,7 +5,7 @@ Tags: telegram, login, register, social, signup
 Requires at least: 5.7
 Tested up to: 5.8.1
 Requires PHP: 7.0
-Stable tag: 1.9.11
+Stable tag: 1.9.12
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -129,6 +129,9 @@ Follow the instructions given on the settings page. You need to send `/setdomain
 7. User List Table (for admin)
 
 == Changelog ==
+
+= 1.9.12 =
+- Fixed PHP Fatal Error for Block Widgets
 
 = 1.9.11 =
 - Fixed PHP warning for `block_categories` deprecation

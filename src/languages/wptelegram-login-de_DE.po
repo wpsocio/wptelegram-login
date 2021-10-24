@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/manzoorwanijk/wptelegram-login\n"
-"POT-Creation-Date: 2021-09-15 05:02:08+00:00\n"
+"POT-Creation-Date: 2021-10-24 12:32:01+00:00\n"
 "PO-Revision-Date: 2021-02-16 02:08+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
@@ -88,15 +88,15 @@ msgstr ""
 "Mit diesem Plugin können sich Benutzer ganz einfach per Telegram auf einer "
 "WordPress-Website registrieren und einloggen."
 
-#: includes/AssetManager.php:233
+#: includes/AssetManager.php:236
 msgid "Any"
 msgstr "Immer anzeigen"
 
-#: includes/AssetManager.php:237
+#: includes/AssetManager.php:240
 msgid "Logged out"
 msgstr "ausgeloggt"
 
-#: includes/AssetManager.php:241
+#: includes/AssetManager.php:244
 msgid "Logged in"
 msgstr "eingeloggt"
 
