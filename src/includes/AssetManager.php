@@ -208,7 +208,10 @@ class AssetManager extends BaseClass {
 	 * @return array
 	 */
 	public static function user_role_options_cb() {
-
+		// get_editable_roles may not exist for Block Widgets.
+		if ( ! function_exists( 'get_editable_roles' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/user.php';
+		}
 		$data = [];
 
 		foreach ( get_editable_roles() as $role_name => $role_info ) {
