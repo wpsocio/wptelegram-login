@@ -2,7 +2,7 @@
 /**
  * The primary widget.
  *
- * @link  https://manzoorwani.dev
+ * @link  https://wpsocio.com
  * @since 1.6.0
  *
  * @package    WPTelegram\Login

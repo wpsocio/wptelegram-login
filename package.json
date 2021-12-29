@@ -6,15 +6,15 @@
 	"main": "Gruntfile.js",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/manzoorwanijk/wptelegram-login"
+		"url": "https://github.com/wpsocio/wptelegram-login"
 	},
 	"author": {
-		"name": "Manzoor Wani",
-		"url": "https://t.me/manzoorwanijk"
+		"name": "WP Socio",
+		"url": "https://wpsocio.com"
 	},
 	"license": "GPLv2",
 	"bugs": {
-		"url": "https://github.com/manzoorwanijk/wptelegram-login/issues"
+		"url": "https://github.com/wpsocio/wptelegram-login/issues"
 	},
 	"scripts": {
 		"build": "gulp build",
