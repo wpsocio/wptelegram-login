@@ -2,7 +2,7 @@
 /**
  * The base class of the plugin.
  *
- * @link       https://manzoorwani.dev
+ * @link       https://wpsocio.com
  * @since      1.0.0
  *
  * @package    WPTelegram\Login
@@ -18,7 +18,7 @@ namespace WPTelegram\Login\includes;
  *
  * @package    WPTelegram\Login
  * @subpackage WPTelegram\Login\includes
- * @author     Manzoor Wani <@manzoorwanijk>
+ * @author     WP Socio
  */
 abstract class BaseClass {
 

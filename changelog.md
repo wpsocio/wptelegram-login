@@ -2,39 +2,45 @@
 
 All notable changes to this project are documented in this file.
 
+### Bug Fixes
+
+- Maintenance release
+
 ## Unreleased
 
-## [1.9.12 - 2021-10-24](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.12)
+## [1.9.13 - 2021-12-29](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.13)
+
+## [1.9.12 - 2021-10-24](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.12)
 
 ### Bug Fixes
 
 - Fixed PHP Fatal Error for Block Widgets
 
-## [1.9.11 - 2021-10-23](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.11)
+## [1.9.11 - 2021-10-23](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.11)
 
 ### Bug Fixes
 
 - Fixed PHP warning for `block_categories` deprecation
 
-## [1.9.10 - 2021-09-15](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.10)
+## [1.9.10 - 2021-09-15](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.10)
 
 ### Bug Fixes
 
 - Fixed the failed login when Telegram name has special characters
 
-## [1.9.9 - 2021-05-3](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.9)
+## [1.9.9 - 2021-05-3](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.9)
 
 ### Improvements
 
 - Cleaned up the admin menu for single entry for WP Telegram
 
-## [1.9.8 - 2021-04-28](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.8)
+## [1.9.8 - 2021-04-28](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.8)
 
 ### Bug fixes
 
 - Fixed the issue of settings not saved due to trailing slash redirects
 
-## [1.9.7 - 2021-04-24](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.7)
+## [1.9.7 - 2021-04-24](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.7)
 
 ### Enhancements
 
@@ -44,46 +50,46 @@ All notable changes to this project are documented in this file.
 
 - Fixed default settings for Gutenberg blocks
 
-## [1.9.6 - 2021-04-9](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.6)
+## [1.9.6 - 2021-04-9](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.6)
 
 ### Bug Fixes
 
 - Fixed Telegram login when login and register are on same page
 - Fixed the issue of custom redirect URL not saved
 
-## [1.9.5 - 2021-03-5](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.5)
+## [1.9.5 - 2021-03-5](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.5)
 
 ### Bug Fixes
 
 - Fixed the messed up last update
 
-## [1.9.4 - 2021-03-5](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.4)
+## [1.9.4 - 2021-03-5](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.4)
 
 ### Bug Fixes
 
 - Fixed the hidden login on WP registration page
 
-## [1.9.3 - 2021-02-28](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.3)
+## [1.9.3 - 2021-02-28](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.3)
 
 ### Bug Fixes
 
 - Fixed admin links on settings page
 - Fixed translation for plugin title
 
-## [1.9.2 - 2021-02-16](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.2)
+## [1.9.2 - 2021-02-16](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.2)
 
 ### Bug Fixes
 
 - Fixed the missing Telegram ID in user table
 - Fixed creation of new user on login
 
-## [1.9.1 - 2021-02-16](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.1)
+## [1.9.1 - 2021-02-16](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.1)
 
 ### Bug Fixes
 
 - Fixed i18n
 
-## [1.9.0 - 2021-02-16](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.9.0)
+## [1.9.0 - 2021-02-16](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.0)
 
 ### Bug Fixes
 
@@ -94,7 +100,7 @@ All notable changes to this project are documented in this file.
 - Refreshed the UI
 - Switched to PHP namespaces
 
-## [1.8.4 - 2021-01-31](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.4)
+## [1.8.4 - 2021-01-31](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.8.4)
 
 ### Bug Fixes
 
@@ -105,25 +111,25 @@ All notable changes to this project are documented in this file.
 
 - Integrated Telegram login details with WP REST API
 
-## [1.8.3 - 2020-12-8](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.3)
+## [1.8.3 - 2020-12-8](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.8.3)
 
 ### Bug Fixes
 
 - Fixed the Telegram ID update from edit profile
 
-## [1.8.2 - 2020-10-3](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.2)
+## [1.8.2 - 2020-10-3](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.8.2)
 
 ### Enhancements
 
 - Added Telegram user ID field to user profile
 
-## [1.8.1 - 2020-08-13](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.1)
+## [1.8.1 - 2020-08-13](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.8.1)
 
 ### Bug Fixes
 
 - Fixed admin styles
 
-## [1.8.0 - 2020-08-13](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.8.0)
+## [1.8.0 - 2020-08-13](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.8.0)
 
 ### Enhancements
 
@@ -136,64 +142,64 @@ All notable changes to this project are documented in this file.
 - Disabled default WP login redirect to fix unexpected redirects
 - Fixed admin menu icon
 
-## [1.7.1 - 2020-08-4](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.7.1)
+## [1.7.1 - 2020-08-4](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.7.1)
 
 ### Enhancements
 
 - Removed button for already connected users
 
-## [1.7.0 - 2020-06-14](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.7.0)
+## [1.7.0 - 2020-06-14](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.7.0)
 
 ### Enhancements
 
 - Unified Telegram user ID with WP Telegram
 
-## [1.6.3 - 2020-06-12](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.6.3)
+## [1.6.3 - 2020-06-12](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.6.3)
 
 ### Bug Fixes
 
 - Fixed the bug in creating random email
 
-## [1.6.2 - 2020-04-12](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.6.2)
+## [1.6.2 - 2020-04-12](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.6.2)
 
 ### Bug Fixes
 
 - Fixed Admin page JS path
 
-## [1.6.1 - 2020-04-12](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.6.1)
+## [1.6.1 - 2020-04-12](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.6.1)
 
 ### Bug Fixes
 
 - Fixed version update
 
-## [1.6.0 - 2020-04-12](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.6.0)
+## [1.6.0 - 2020-04-12](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.6.0)
 
 ### Enhancements
 
 - Added support for random email generation
 - Simplified the build process
 
-## [1.5.4 - 2019-10-23](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.5.4)
+## [1.5.4 - 2019-10-23](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.5.4)
 
 ### Enhancements
 
 - Added some more hooks to login flow
 - Updated bot token pattern
 
-## [1.5.3 - 2019-09-20](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.5.3)
+## [1.5.3 - 2019-09-20](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.5.3)
 
 ### Bug Fixes
 
 - Fixed the issue with default values not shown for fresh installs
 
-## [1.5.2 - 2019-08-19](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.5.2)
+## [1.5.2 - 2019-08-19](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.5.2)
 
 ### Bug Fixes
 
 - Fixed the wrong shortcode atts
 - Fixed the regenerator-runtime issue
 
-## [1.5.1 - 2019-07-29](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.5.1)
+## [1.5.1 - 2019-07-29](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.5.1)
 
 ### Bug Fixes
 
@@ -206,20 +212,20 @@ All notable changes to this project are documented in this file.
 
 - Switched to WPCS in JS.
 
-## [1.5.0 - 2019-07-18](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.5.0)
+## [1.5.0 - 2019-07-18](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.5.0)
 
 ### Enhancements
 
 - Removed the CMB2 dependency
 - Migrated to React for settings page
 
-## [1.4.1 - 2019-03-23](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.4.1)
+## [1.4.1 - 2019-03-23](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.4.1)
 
 ### Bug Fixes
 
 - Fixed the PHP warning on the settings page
 
-## [1.4.0 - 2019-03-23](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.4.0)
+## [1.4.0 - 2019-03-23](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.4.0)
 
 ### Enhancements
 
@@ -231,7 +237,7 @@ All notable changes to this project are documented in this file.
 
 - Fixed 404 issue for WP in sub directory
 
-## [1.3.3 - 2018-11-11](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/1.3.3)
+## [1.3.3 - 2018-11-11](https://github.com/wpsocio/wptelegram-login/releases/tag/1.3.3)
 
 ### Enhancements
 
@@ -248,7 +254,7 @@ All notable changes to this project are documented in this file.
 
 - Prepare for WP Telegram 2.0.0
 
-## [1.3.1 - 2018-10-20](https://github.com/manzoorwanijk/wptelegram-login/releases/tag/v1.3.1)
+## [1.3.1 - 2018-10-20](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.3.1)
 
 ### Enhancements
 
