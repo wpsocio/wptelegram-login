@@ -8,6 +8,8 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.9.13 - 2021-12-29](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.13)
+
 ## [1.9.12 - 2021-10-24](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.12)
 
 ### Bug Fixes
