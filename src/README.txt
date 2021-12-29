@@ -131,7 +131,7 @@ Follow the instructions given on the settings page. You need to send `/setdomain
 == Changelog ==
 
 = 1.9.13 =
-
+- Maintenance release
 
 = 1.9.12 =
 - Fixed PHP Fatal Error for Block Widgets
