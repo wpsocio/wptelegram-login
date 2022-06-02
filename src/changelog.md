@@ -2,13 +2,17 @@
 
 All notable changes to this project are documented in this file.
 
-### Bug Fixes
-
-- Maintenance release
-
 ## Unreleased
 
+## [1.9.14 - 2022-06-2](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.14)
+
+### Improvements
+
+- Added filters for Telegram avatar usage
+
 ## [1.9.13 - 2021-12-29](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.13)
+
+- Maintenance release
 
 ## [1.9.12 - 2021-10-24](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.12)
 

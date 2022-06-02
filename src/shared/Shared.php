@@ -275,6 +275,11 @@ class Shared extends BaseClass {
 	 */
 	public function custom_avatar_url( $url, $id_or_email ) {
 
+		// if short-circuited.
+		if ( ! apply_filters( 'wptelegram_login_use_telegram_avatar', true, $url, $id_or_email ) ) {
+			return $url;
+		}
+
 		$user = false;
 
 		if ( is_numeric( $id_or_email ) ) {
@@ -300,10 +305,10 @@ class Shared extends BaseClass {
 			// Make sure the meta key is not empty.
 			if ( $meta_key ) {
 
-				$avatar = get_user_meta( $user->ID, $meta_key, true );
+				$avatar_url = get_user_meta( $user->ID, $meta_key, true );
 
-				if ( ! empty( $avatar ) ) {
-					return $avatar;
+				if ( ! empty( $avatar_url ) ) {
+					return apply_filters( 'wptelegram_login_custom_avatar_url', $avatar_url, $url, $id_or_email );
 				}
 			}
 		}
