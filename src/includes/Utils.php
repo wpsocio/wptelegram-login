@@ -11,6 +11,8 @@
 
 namespace WPTelegram\Login\includes;
 
+use WPTelegram\Login\includes\restApi\SettingsController;
+
 /**
  * Utility methods.
  *
@@ -213,5 +215,22 @@ class Utils {
 		}
 
 		return $input;
+	}
+
+	/**
+	 * Get the default settings.
+	 *
+	 * @return array
+	 */
+	public static function get_default_settings() {
+
+		// Get the default values.
+		$settings = SettingsController::get_settings_params();
+
+		foreach ( $settings as $key => $args ) {
+			$settings[ $key ] = isset( $args['default'] ) ? $args['default'] : '';
+		}
+
+		return $settings;
 	}
 }

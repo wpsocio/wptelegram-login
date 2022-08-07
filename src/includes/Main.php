@@ -205,6 +205,15 @@ class Main {
 	private function set_options() {
 
 		$this->options = new Options( $this->plugin_name );
+
+		$settings = $this->options->get_data();
+
+		// If we have nothing saved.
+		if ( empty( $settings ) ) {
+			// Save the default settings.
+			$default_settings = Utils::get_default_settings();
+			$this->options->set_data( $default_settings )->update_data();
+		}
 	}
 
 	/**

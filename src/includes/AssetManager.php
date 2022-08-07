@@ -167,7 +167,7 @@ class AssetManager extends BaseClass {
 			'i18n'       => Utils::get_jed_locale_data( 'wptelegram-login' ),
 		];
 
-		$settings = SettingsController::get_default_settings();
+		$settings = SettingsController::get_rest_settings();
 
 		// Not to expose bot token to non-admins.
 		if ( 'SETTINGS_PAGE' === $for && current_user_can( 'manage_options' ) ) {
