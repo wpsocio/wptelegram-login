@@ -8,6 +8,10 @@ All notable changes to this project are documented in this file.
 
 - Updated options to load Bot Token from WP Telegram by default
 
+### Bug Fixes
+
+- Fixed failed login with emoji names when DB does not support multibyte characters
+
 ## [1.9.14 - 2022-06-2](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.14)
 
 ### Improvements
