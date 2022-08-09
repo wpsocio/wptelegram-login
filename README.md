@@ -4,7 +4,7 @@
 **Tags:** telegram, login, register, social, signup  
 **Requires at least:** 5.8  
 **Tested up to:** 6.0.1  
-**Stable tag:** 1.9.14  
+**Stable tag:** 1.9.15  
 **License:** GPLv2 or later  
 **License URI:** [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
 

@@ -4,6 +4,8 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.9.15 - 2022-08-9](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.15)
+
 ### Improvements
 
 - Updated options to load Bot Token from WP Telegram by default
