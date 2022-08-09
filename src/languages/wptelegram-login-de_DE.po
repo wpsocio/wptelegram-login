@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/wpsocio/wptelegram-login\n"
-"POT-Creation-Date: 2021-10-24 12:32:01+00:00\n"
+"POT-Creation-Date: 2022-08-09 07:38:54+00:00\n"
 "PO-Revision-Date: 2021-02-16 02:08+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: admin/settings\n"
 
-#: admin/Admin.php:49 includes/Utils.php:123 includes/Utils.php:124
+#: admin/Admin.php:49 includes/Utils.php:125 includes/Utils.php:126
 msgid "WP Telegram"
 msgstr ""
 
@@ -100,7 +100,7 @@ msgstr "ausgeloggt"
 msgid "Logged in"
 msgstr "eingeloggt"
 
-#: includes/Main.php:371 languages/wptelegram-login-js-translations.php:37
+#: includes/Main.php:380 languages/wptelegram-login-js-translations.php:37
 #: shared/widgets/Primary.php:26
 msgid "WP Telegram Login"
 msgstr "WP Telegram Einloggen"
@@ -521,7 +521,7 @@ msgstr ""
 "Anmelden über Telegram ist deaktiviert. Du musst zuerst einen Account "
 "anlegen und mit Telegram verbinden, um Telegram Login verwenden zu können."
 
-#: shared/LoginHandler.php:369
+#: shared/LoginHandler.php:355 shared/LoginHandler.php:375
 msgid "Telegram sign in could not be completed."
 msgstr "Die Telegram-Anmeldung konnte nicht erfolgreich durchgeführt werden."
 

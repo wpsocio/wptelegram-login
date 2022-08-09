@@ -11,6 +11,8 @@
 
 namespace WPTelegram\Login\includes\restApi;
 
+use WPTelegram\Login\includes\Utils;
+
 /**
  * Class to handle the settings endpoint.
  *
@@ -53,13 +55,13 @@ class SettingsController extends RESTController {
 				[
 					'methods'             => \WP_REST_Server::READABLE,
 					'callback'            => [ $this, 'get_settings' ],
-					'permission_callback' => [ $this, 'settings_permissions' ],
+					'permission_callback' => [ __CLASS__, 'settings_permissions' ],
 					'args'                => self::get_settings_params( 'view' ),
 				],
 				[
 					'methods'             => \WP_REST_Server::CREATABLE,
 					'callback'            => [ $this, 'update_settings' ],
-					'permission_callback' => [ $this, 'settings_permissions' ],
+					'permission_callback' => [ __CLASS__, 'settings_permissions' ],
 					'args'                => self::get_settings_params( 'edit' ),
 				],
 			]
@@ -73,32 +75,25 @@ class SettingsController extends RESTController {
 	 *
 	 * @return bool
 	 */
-	public function settings_permissions() {
+	public static function settings_permissions() {
 		return current_user_can( 'manage_options' );
 	}
 
 	/**
-	 * Get the default settings.
+	 * Get the settings for REST API.
 	 *
 	 * @return array
 	 */
-	public static function get_default_settings() {
+	public static function get_rest_settings() {
 
 		$settings = WPTG_Login()->options()->get_data();
 
-		// If we have somethings saved.
+		// If we have something saved.
 		if ( ! empty( $settings ) ) {
 			return $settings;
 		}
 
-		// Get the default values.
-		$settings = self::get_settings_params();
-
-		foreach ( $settings as $key => $args ) {
-			$settings[ $key ] = isset( $args['default'] ) ? $args['default'] : '';
-		}
-
-		return $settings;
+		return Utils::get_default_settings();
 	}
 
 	/**
@@ -107,7 +102,7 @@ class SettingsController extends RESTController {
 	 * @since 1.5.0
 	 */
 	public function get_settings() {
-		return rest_ensure_response( self::get_default_settings() );
+		return rest_ensure_response( self::get_rest_settings() );
 	}
 
 	/**
@@ -144,15 +139,29 @@ class SettingsController extends RESTController {
 	 * @return array Query parameters for the settings.
 	 */
 	public static function get_settings_params( $context = 'edit' ) {
+		$default_bot_token    = '';
+		$default_bot_username = '';
+
+		// Load Bot Token from WP Telegram if available.
+		if ( defined( 'WPTELEGRAM_LOADED' ) && function_exists( 'WPTG' ) && self::settings_permissions() ) {
+			// Avoid intelephense error for directly calling WPTG().
+			$wptg_options = call_user_func( 'WPTG' )->options();
+
+			$default_bot_token    = $wptg_options->get( 'bot_token', $default_bot_token );
+			$default_bot_username = $wptg_options->get( 'bot_username', $default_bot_username );
+		}
+
 		return [
 			'bot_token'             => [
 				'type'              => 'string',
+				'default'           => $default_bot_token,
 				'required'          => ( 'edit' === $context ),
 				'sanitize_callback' => 'sanitize_text_field',
 				'validate_callback' => [ __CLASS__, 'validate_param' ],
 			],
 			'bot_username'          => [
 				'type'              => 'string',
+				'default'           => $default_bot_username,
 				'required'          => ( 'edit' === $context ),
 				'sanitize_callback' => 'sanitize_text_field',
 				'validate_callback' => [ __CLASS__, 'validate_param' ],

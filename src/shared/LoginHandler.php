@@ -310,16 +310,16 @@ class LoginHandler extends BaseClass {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  array    $data          The user details.
-	 * @param  int|NULL $ex_wp_user_id Existing WP User ID.
+	 * @param  array    $data       The user details.
+	 * @param  int|NULL $wp_user_id Existing WP User ID.
 	 *
 	 * @throws Exception The exception.
 	 *
 	 * @return int|WP_Error The newly created user's ID or a WP_Error object if the user could not be created
 	 */
-	public function save_user_data( $data, $ex_wp_user_id = null ) {
+	public function save_user_data( $data, $wp_user_id = null ) {
 
-		$data = apply_filters( 'wptelegram_login_save_user_data', $data, $ex_wp_user_id );
+		$data = apply_filters( 'wptelegram_login_save_user_data', $data, $wp_user_id );
 
 		// The data fields received.
 		$id          = $data['id'];
@@ -329,7 +329,7 @@ class LoginHandler extends BaseClass {
 		$photo_url   = isset( $data['photo_url'] ) ? $data['photo_url'] : '';
 		$username    = $tg_username;
 
-		if ( is_null( $ex_wp_user_id ) ) { // New user.
+		if ( is_null( $wp_user_id ) ) { // New user.
 
 			// If no username, use the sanitized first_name and id.
 			if ( empty( $username ) ) {
@@ -344,26 +344,32 @@ class LoginHandler extends BaseClass {
 
 			$role = WPTG_Login()->options()->get( 'user_role' );
 
-			$userdata = compact( 'user_pass', 'user_login', 'first_name', 'last_name', 'role' );
+			// Create the user without first and last name to avoid wp_insert_user() failing on multi-byte characters.
+			$userdata = compact( 'user_pass', 'user_login', 'role' );
 
 			$userdata = apply_filters( 'wptelegram_login_insert_user_data', $userdata );
 
 			$wp_user_id = wp_insert_user( $userdata );
 
+			if ( is_wp_error( $wp_user_id ) ) {
+				throw new Exception( __( 'Telegram sign in could not be completed.', 'wptelegram-login' ) . ' ' . $wp_user_id->get_error_message() );
+			}
+
 			do_action( 'wptelegram_login_after_insert_user', $wp_user_id, $userdata );
 
-		} else { // Update.
-
-			$ID = $ex_wp_user_id; // phpcs:ignore WordPress.NamingConventions.ValidVariableName -- Ignore  snake_case
-
-			$userdata = compact( 'ID', 'first_name', 'last_name' );
-
-			$userdata = apply_filters( 'wptelegram_login_update_user_data', $userdata );
-
-			$wp_user_id = wp_update_user( $userdata );
-
-			do_action( 'wptelegram_login_after_update_user', $wp_user_id, $userdata );
 		}
+
+		/* Update the user */
+
+		$ID = $wp_user_id; // phpcs:ignore WordPress.NamingConventions.ValidVariableName -- Ignore  snake_case
+
+		$userdata = compact( 'ID', 'first_name', 'last_name' );
+
+		$userdata = apply_filters( 'wptelegram_login_update_user_data', $userdata );
+
+		$wp_user_id = wp_update_user( $userdata );
+
+		do_action( 'wptelegram_login_after_update_user', $wp_user_id, $userdata );
 
 		if ( is_wp_error( $wp_user_id ) ) {
 			throw new Exception( __( 'Telegram sign in could not be completed.', 'wptelegram-login' ) . ' ' . $wp_user_id->get_error_message() );
