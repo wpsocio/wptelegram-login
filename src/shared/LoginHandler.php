@@ -252,6 +252,8 @@ class LoginHandler extends BaseClass {
 		// Check if the user is signing in again.
 		$ret_user = $this->is_returning_user( $data['id'] );
 
+		$existing_user_id = null;
+
 		if ( $cur_user->exists() ) { // Logged in user.
 
 			// Signed in user and the Telegram user not same.
@@ -259,11 +261,11 @@ class LoginHandler extends BaseClass {
 				throw new Exception( __( 'The Telegram User ID is already associated with another existing user. Please contact the admin', 'wptelegram-login' ) );
 			}
 
-			$wp_user_id = $this->save_user_data( $data, $cur_user->ID );
+			$existing_user_id = $cur_user->ID;
 
 		} elseif ( $ret_user instanceof WP_User ) { // Existing logged out.
 
-			$wp_user_id = $this->save_user_data( $data, $ret_user->ID );
+			$existing_user_id = $ret_user->ID;
 
 		} else { // New user.
 
@@ -277,10 +279,16 @@ class LoginHandler extends BaseClass {
 				throw new Exception( __( 'Sign up via Telegram is disabled. You must first create an account and connect it to Telegram to be able to use Telegram Login', 'wptelegram-login' ) );
 
 			}
-
-			$wp_user_id = $this->save_user_data( $data );
 		}
-		return $wp_user_id;
+
+		// Pass `false` if you do not want to update user profile for existing users.
+		$always_update_user_data = apply_filters( 'wptelegram_login_always_update_user_data', true, $data, $existing_user_id );
+
+		if ( $existing_user_id && ! $always_update_user_data ) {
+			return $existing_user_id;
+		}
+
+		return $this->save_user_data( $data, $existing_user_id );
 	}
 
 	/**
