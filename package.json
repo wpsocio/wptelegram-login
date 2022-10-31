@@ -28,7 +28,7 @@
 		"start": "npm run dev"
 	},
 	"devDependencies": {
-		"@wordpress/i18n": "^4.20.0",
+		"@wordpress/i18n": "4.16.0",
 		"eslint": "^8.26.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-prettier": "^4.2.1",
