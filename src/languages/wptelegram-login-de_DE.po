@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/wpsocio/wptelegram-login\n"
-"POT-Creation-Date: 2022-08-09 07:38:54+00:00\n"
+"POT-Creation-Date: 2022-10-31 06:16:40+00:00\n"
 "PO-Revision-Date: 2021-02-16 02:08+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
@@ -505,7 +505,7 @@ msgstr "Unautorisiert! Diese Daten stammen NICHT von Telegram"
 msgid "Invalid! The data is outdated"
 msgstr "Ungültig! Die Daten sind abgelaufen/veraltet"
 
-#: shared/LoginHandler.php:259
+#: shared/LoginHandler.php:261
 msgid ""
 "The Telegram User ID is already associated with another existing user. "
 "Please contact the admin"
@@ -513,7 +513,7 @@ msgstr ""
 "Diese Telegram User ID ist bereits mit einem anderen existierenden Benutzer "
 "verbunden. Bitte den Administrator kontaktieren"
 
-#: shared/LoginHandler.php:277
+#: shared/LoginHandler.php:279
 msgid ""
 "Sign up via Telegram is disabled. You must first create an account and "
 "connect it to Telegram to be able to use Telegram Login"
@@ -521,7 +521,7 @@ msgstr ""
 "Anmelden über Telegram ist deaktiviert. Du musst zuerst einen Account "
 "anlegen und mit Telegram verbinden, um Telegram Login verwenden zu können."
 
-#: shared/LoginHandler.php:355 shared/LoginHandler.php:375
+#: shared/LoginHandler.php:363 shared/LoginHandler.php:383
 msgid "Telegram sign in could not be completed."
 msgstr "Die Telegram-Anmeldung konnte nicht erfolgreich durchgeführt werden."
 

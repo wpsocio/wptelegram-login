@@ -4,6 +4,8 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.9.16 - 2022-10-31](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.16)
+
 ### Enhancements
 
 - Added a filter to allow disabling profile update for existing users.
