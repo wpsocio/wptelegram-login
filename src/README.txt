@@ -3,7 +3,7 @@ Contributors: wpsocio, irshadahmad21
 Donate link: https://wpsocio.com
 Tags: telegram, login, register, social, signup
 Requires at least: 5.8
-Tested up to: 6.1.0
+Tested up to: 6.1.1
 Requires PHP: 7.0
 Stable tag: 1.9.17
 License: GPLv2 or later
