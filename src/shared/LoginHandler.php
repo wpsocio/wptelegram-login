@@ -48,7 +48,7 @@ class LoginHandler extends BaseClass {
 		$input = $this->filter_input_fields( $input );
 
 		try {
-			$auth_data = $this->get_authorization_data( $input );
+			$auth_data = $this->validate_auth_data( $input );
 
 			do_action( 'wptelegram_login_pre_save_user_data', $auth_data );
 
@@ -125,13 +125,20 @@ class LoginHandler extends BaseClass {
 	public function filter_input_fields( $input ) {
 
 		$desired_fields = [
+			// Shared fields.
+			'auth_date'  => '',
+			'hash'       => '',
+			// Normal login fields.
 			'id'         => '',
 			'first_name' => '',
 			'last_name'  => '',
 			'username'   => '',
 			'photo_url'  => '',
-			'auth_date'  => '',
-			'hash'       => '',
+			// WebAppData fields.
+			'query_id'   => '',
+			'user'       => '',
+			// Misc.
+			'source'     => '',
 		];
 
 		return array_intersect_key( $input, $desired_fields );
@@ -142,39 +149,110 @@ class LoginHandler extends BaseClass {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param array $auth_data The input data.
+	 * @param array $input_data The input data.
 	 *
 	 * @throws Exception The exception.
 	 *
 	 * @return array
 	 */
-	public function get_authorization_data( $auth_data ) {
+	public function validate_auth_data( $input_data ) {
+
+		// create a copy of the data.
+		$auth_data = $input_data;
 
 		$bot_token = WPTG_Login()->options()->get( 'bot_token' );
 
-		$check_hash = $auth_data['hash'];
-		unset( $auth_data['hash'] );
+		$incoming_hash = sanitize_text_field( $auth_data['hash'] );
+		$data_source   = ! empty( $auth_data['source'] ) ? sanitize_text_field( $auth_data['source'] ) : '';
+
+		unset( $auth_data['hash'], $auth_data['source'] );
+
+		$secret_key = self::get_secret_key( $data_source, $bot_token );
+
+		$generated_hash = self::hash_auth_data( $auth_data, $secret_key );
+
+		if ( ! hash_equals( $generated_hash, $incoming_hash ) ) {
+			throw new Exception( __( 'Unauthorized! Data is NOT from Telegram', 'wptelegram-login' ) );
+		}
+
+		if ( ( time() - intval( $auth_data['auth_date'] ) ) > DAY_IN_SECONDS ) {
+			throw new Exception( __( 'Invalid! The data is outdated', 'wptelegram-login' ) );
+		}
+
+		$auth_data = Utils::sanitize( $auth_data );
+
+		if ( 'WebAppData' === $data_source ) {
+			$auth_data = ! empty( $auth_data['user'] ) ? Utils::sanitize( json_decode( $auth_data['user'], true ) ) : [];
+		}
+
+		return apply_filters( 'wptelegram_login_valid_auth_data', $auth_data, $input_data );
+	}
+
+	/**
+	 * Generate a hash for the incoming auth data.
+	 *
+	 * @since x.y.z
+	 *
+	 * @param array  $auth_data The auth data received.
+	 * @param string $secret_key The secret key to use for HMAC hashing.
+	 *
+	 * @return string
+	 */
+	public static function hash_auth_data( $auth_data, $secret_key ) {
 
 		$data_check_arr = [];
+
 		foreach ( $auth_data as $key => $value ) {
 			$data_check_arr[] = $key . '=' . $value;
 		}
+
 		// Sort in alphabetical order.
 		sort( $data_check_arr );
 
 		$data_check_string = implode( "\n", $data_check_arr );
-		$secret_key        = hash( 'sha256', $bot_token, true );
-		$hash              = hash_hmac( 'sha256', $data_check_string, $secret_key );
 
-		if ( strcmp( $hash, $check_hash ) !== 0 ) {
-			throw new Exception( __( 'Unauthorized! Data is NOT from Telegram', 'wptelegram-login' ) );
+		$generated_hash = bin2hex( hash_hmac( 'sha256', $data_check_string, $secret_key, true ) );
+
+		return apply_filters( 'wptelegram_login_hash_auth_data', $generated_hash, $auth_data, $secret_key );
+	}
+
+	/**
+	 * Get the secret key for the data source.
+	 *
+	 * @since x.y.z
+	 *
+	 * @param string $data_source The data source.
+	 * @param string $bot_token The bot token.
+	 *
+	 * @return string
+	 */
+	public static function get_secret_key( $data_source, $bot_token ) {
+		$secret_key = '';
+
+		switch ( $data_source ) {
+			case 'WebAppData':
+				/**
+				 * The data from web app uses HMAC-SHA-256 signature of the bot token
+				 * with the constant string `WebAppData` used as a key.
+				 *
+				 * @link https://core.telegram.org/bots/webapps#validating-data-received-via-the-web-app
+				 */
+				$secret_key = hash_hmac( 'sha256', $bot_token, 'WebAppData', true );
+
+				break;
+
+			default:
+				/**
+				 * The data from normal login uses SHA256 hash of the bot token.
+				 *
+				 * @link https://core.telegram.org/widgets/login#checking-authorization
+				 */
+				$secret_key = hash( 'sha256', $bot_token, true );
+
+				break;
 		}
 
-		if ( ( time() - $auth_data['auth_date'] ) > 86400 ) {
-			throw new Exception( __( 'Invalid! The data is outdated', 'wptelegram-login' ) );
-		}
-
-		return Utils::sanitize( $auth_data );
+		return apply_filters( 'wptelegram_login_get_secret_key', $secret_key, $data_source, $bot_token );
 	}
 
 	/**
@@ -243,6 +321,10 @@ class LoginHandler extends BaseClass {
 	 * @throws Exception The exception.
 	 */
 	public function save_telegram_user_data( $data ) {
+
+		if ( empty( $data['id'] ) || empty( $data['first_name'] ) ) {
+			throw new Exception( __( 'Invalid! The data is incomplete', 'wptelegram-login' ) );
+		}
 
 		$data = array_map( 'htmlspecialchars', $data );
 

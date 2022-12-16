@@ -18,7 +18,7 @@ Complete contributors list found here: [github.com/wpsocio/wptelegram-login/grap
 
 ## Description
 
-Let the users login to your WordPress website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram.
+Let the users log in to your WordPress website with their Telegram and make it simple for them to get connected, and let them receive their email notifications on Telegram.
 
 ## Why Telegram Login?
 
@@ -30,23 +30,22 @@ Let the users login to your WordPress website with their Telegram and make it si
 
 ## Features:
 
-- Safe, secure and easy login method
+- Safe, secure, and easy login method
 - Relies upon SHA-256 hashed data strings
 - User data is trustworthy – verified by Telegram
-- Users can remotely logout of the websites
 - Can be used to prevent spam registrations
 - Easy to install and set up for the admin
 - Can be used to let new users sign up
 - Existing users can connect their Telegram account
 - Users can be given any desired role on the website
-- Login button can be displayed anywhere
+- The login button can be displayed anywhere
 - Can be extended with custom code
 
 ## Widget Info
 
 Goto **Appearance** > **Widgets** and click/drag **WP Telegram Login** and place it where you want it to be.
 
-Alternately, you can use the below shortcode.
+Alternatively, you can use the below shortcode.
 
 Inside page or post content:
 
@@ -75,16 +74,32 @@ or
 <?php echo do_shortcode( '[wptelegram-login button_style="small" show_user_photo="0" show_if_user_is="logged_in"]' ); ?>
 ```
 
-### Contribution
+## Telegram Web App data
 
-Development occurs on Github, and all contributions welcome.
+The plugin can also handle the data sent by the [Telegram Web App](https://core.telegram.org/bots/webapps). Simply send `window.Telegram.WebApp.initData` query string to this URL: </br >
+`http://<your-website.com>/?action=wptelegram_login&source=WebAppData`
+
+The final URL might look like this: </br >
+`http://<your-website.com>/?action=wptelegram_login&source=WebAppData&query_id=XXXX&user=XXXX&auth_date=XXXX&hash=XXXX`
+
+The plugin will:
+
+- Validate the data for you
+- Create a user account for the user if it doesn't exist
+- Login the user to the website in the context of your Web App.
+
+**Note**: You need to use the same bot token for both the plugin and the Web App.
+
+## Contribution
+
+Development occurs on Github, and all contributions are welcome.
 
 ## Translation
 
-If you are looking to provide language translation files, Please do so via [WordPress Plugin Translations](https://translate.wordpress.org/projects/wp-plugins/wptelegram-login).
+If you want to provide language translation files, please do so via [WordPress Plugin Translations](https://translate.wordpress.org/projects/wp-plugins/wptelegram-login).
 
 ## Installation
 
 1. Upload the `wptelegram-login` folder to the `/wp-content/plugins/` directory
-2. Activate the plugin through the Plugins menu in WordPress. After activation, you should see the menu of this plugin the the admin
+2. Activate the plugin through the Plugins menu in WordPress. After activation, you should see the menu of this plugin the admin
 3. Configure the plugin.
