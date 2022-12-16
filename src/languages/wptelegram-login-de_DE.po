@@ -506,9 +506,8 @@ msgid "Invalid! The data is outdated"
 msgstr "Ungültig! Die Daten sind abgelaufen/veraltet"
 
 #: shared/LoginHandler.php:326
-#, fuzzy
 msgid "Invalid! The data is incomplete"
-msgstr "Ungültig! Die Daten sind abgelaufen/veraltet"
+msgstr "Ungültig! Die Daten sind unvollständig"
 
 #: shared/LoginHandler.php:343
 msgid ""

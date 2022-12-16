@@ -500,9 +500,8 @@ msgid "Invalid! The data is outdated"
 msgstr "Недійсний! Дані застарілі"
 
 #: shared/LoginHandler.php:326
-#, fuzzy
 msgid "Invalid! The data is incomplete"
-msgstr "Недійсний! Дані застарілі"
+msgstr "Недійсний! Дані неповні"
 
 #: shared/LoginHandler.php:343
 msgid ""
