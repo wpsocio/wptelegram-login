@@ -191,7 +191,7 @@ class LoginHandler extends BaseClass {
 	/**
 	 * Generate a hash for the incoming auth data.
 	 *
-	 * @since x.y.z
+	 * @since 1.10.0
 	 *
 	 * @param array  $auth_data The auth data received.
 	 * @param string $secret_key The secret key to use for HMAC hashing.
@@ -219,7 +219,7 @@ class LoginHandler extends BaseClass {
 	/**
 	 * Get the secret key for the data source.
 	 *
-	 * @since x.y.z
+	 * @since 1.10.0
 	 *
 	 * @param string $data_source The data source.
 	 * @param string $bot_token The bot token.
