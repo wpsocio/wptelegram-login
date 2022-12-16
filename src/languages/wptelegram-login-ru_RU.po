@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/wpsocio/wptelegram-login\n"
-"POT-Creation-Date: 2022-10-31 06:16:40+00:00\n"
+"POT-Creation-Date: 2022-12-16 08:30:39+00:00\n"
 "PO-Revision-Date: 2021-02-16 02:08+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
@@ -13,8 +13,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Poedit-KeywordsList: __;_e;_x;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: admin/settings\n"
@@ -491,15 +491,20 @@ msgstr ""
 msgid "Changes could not be saved."
 msgstr ""
 
-#: shared/LoginHandler.php:170
+#: shared/LoginHandler.php:175
 msgid "Unauthorized! Data is NOT from Telegram"
 msgstr "Несанкционированный! Данные НЕ из Telegram"
 
-#: shared/LoginHandler.php:174
+#: shared/LoginHandler.php:179
 msgid "Invalid! The data is outdated"
 msgstr "Ошибка! Данные устарели"
 
-#: shared/LoginHandler.php:261
+#: shared/LoginHandler.php:326
+#, fuzzy
+msgid "Invalid! The data is incomplete"
+msgstr "Ошибка! Данные устарели"
+
+#: shared/LoginHandler.php:343
 msgid ""
 "The Telegram User ID is already associated with another existing user. "
 "Please contact the admin"
@@ -507,7 +512,7 @@ msgstr ""
 "Идентификатор пользователя Telegram уже связан с другой существующей учетной "
 "записью. Пожалуйста, свяжитесь с администратором"
 
-#: shared/LoginHandler.php:279
+#: shared/LoginHandler.php:361
 msgid ""
 "Sign up via Telegram is disabled. You must first create an account and "
 "connect it to Telegram to be able to use Telegram Login"
@@ -516,7 +521,7 @@ msgstr ""
 "запись и подключить к ней Telegram, чтобы иметь возможность входа через "
 "Telegram"
 
-#: shared/LoginHandler.php:363 shared/LoginHandler.php:383
+#: shared/LoginHandler.php:445 shared/LoginHandler.php:465
 msgid "Telegram sign in could not be completed."
 msgstr "Не удалось выполнить вход через Telegram."
 

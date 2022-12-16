@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.10.0 - 2022-12-16](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.10.0)
+
+### Enhancements
+
+- Added support for Telegram Web App data authorization
+
 ## [1.9.17 - 2022-11-1](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.9.17)
 
 ### Bug fixes

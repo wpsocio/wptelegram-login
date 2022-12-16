@@ -268,13 +268,13 @@ $generated_i18n_strings = array(
 	// Reference: packages/services/src/apiFetch/index.ts:40
 	__( 'Error:', 'wptelegram-login' ),
 
-	// Reference: packages/services/src/telegram/TelegramUtils.ts:105
+	// Reference: packages/services/src/telegram/TelegramUtils.ts:108
 	__( 'A message will be sent to the Channel/Group/Chat. You can modify the text below', 'wptelegram-login' ),
 
-	// Reference: packages/services/src/telegram/TelegramUtils.ts:106
+	// Reference: packages/services/src/telegram/TelegramUtils.ts:109
 	__( 'This is a test message', 'wptelegram-login' ),
 
-	// Reference: packages/services/src/telegram/TelegramUtils.ts:124
+	// Reference: packages/services/src/telegram/TelegramUtils.ts:129
 	__( 'Success', 'wptelegram-login' ),
 
 	// Reference: packages/services/src/useDisplayFeedback.ts:62

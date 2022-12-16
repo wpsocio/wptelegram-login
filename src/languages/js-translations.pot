@@ -360,17 +360,17 @@ msgstr ""
 msgid "Error:"
 msgstr ""
 
-#: packages/services/src/telegram/TelegramUtils.ts:105
+#: packages/services/src/telegram/TelegramUtils.ts:108
 msgid ""
 "A message will be sent to the Channel/Group/Chat. You can modify the text "
 "below"
 msgstr ""
 
-#: packages/services/src/telegram/TelegramUtils.ts:106
+#: packages/services/src/telegram/TelegramUtils.ts:109
 msgid "This is a test message"
 msgstr ""
 
-#: packages/services/src/telegram/TelegramUtils.ts:124
+#: packages/services/src/telegram/TelegramUtils.ts:129
 msgid "Success"
 msgstr ""
 

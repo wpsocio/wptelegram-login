@@ -3,9 +3,9 @@ Contributors: wpsocio, irshadahmad21
 Donate link: https://wpsocio.com
 Tags: telegram, login, register, social, signup
 Requires at least: 5.8
-Tested up to: 6.0.3
+Tested up to: 6.1.1
 Requires PHP: 7.0
-Stable tag: 1.9.17
+Stable tag: 1.10.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,8 +18,8 @@ Let the users login to your website with their Telegram and make it simple for t
 
 **Join the Chat**
 
-We have a public group on Telegram to provide help setting up the plugin, discuss issues, features, translations etc. Join [@WPTelegramChat](https://t.me/WPTelegramChat)
-For rules, see the pinned message. No spam please.
+We have a public group on Telegram to help set up the plugin and discuss issues, features, translations, etc. Join [@WPTelegramChat](https://t.me/WPTelegramChat)
+For rules, see the pinned message. No spam, please.
 
 == Why Telegram Login? ==
 
@@ -34,7 +34,6 @@ For rules, see the pinned message. No spam please.
 *	Safe, secure and easy login method
 *	Relies upon SHA-256 hashed data strings 
 *	User data is trustworthy – verified by Telegram
-*	Users can remotely logout of the websites
 *	Can be used to prevent spam registrations
 *	Easy to install and set up for the admin
 *	Can be used to let new users sign up
@@ -46,7 +45,7 @@ For rules, see the pinned message. No spam please.
 ## Widget Info
 Goto **Appearance** > **Widgets** and click/drag **WP Telegram Login** and place it where you want it to be.
 
-Alternately, you can use the below shortcode.
+Alternatively, you can use the below shortcode.
 
 Inside page or post content:
 
@@ -75,6 +74,24 @@ or
 ?>
 ~~~
 
+## Telegram Web App data
+
+The plugin can also handle the data sent by the [Telegram Web App](https://core.telegram.org/bots/webapps). Simply send `window.Telegram.WebApp.initData` query string to this URL: 
+
+`http://<your-website.com>/?action=wptelegram_login&source=WebAppData`
+
+The final URL might look like this:
+
+`http://<your-website.com>/?action=wptelegram_login&source=WebAppData&query_id=XXXX&user=XXXX&auth_date=XXXX&hash=XXXX`
+
+The plugin will:
+
+- Validate the data for you
+- Create a user account for the user if it doesn't exist
+- Login the user to the website in the context of your Web App.
+
+**Note**: You need to use the same bot token for both the plugin and the Web App.
+
 **Get in touch**
 
 *	Website [wptelegram.com](https://wptelegram.com)
@@ -83,22 +100,23 @@ or
 *	Twitter [@WPTelegram](https://twitter.com/WPTelegram)
 
 **Contribution**
-Development occurs on [Github](https://github.com/wpsocio/wptelegram-login), and all contributions welcome.
+
+Development occurs on [Github](https://github.com/wpsocio/wptelegram-login), and all contributions are welcome.
 
 **Translations**
 
-Many thanks to the translators for the great job!
+Many thanks to the translators for doing a great job!
 
 * [Artem](https://profiles.wordpress.org/zzart/) (Russian)
 
-* Note: You can also contribute in translating this plugin into your local language. Join the Chat (above)
+* Note: You can also contribute to translating this plugin into your local language. Join the Chat (above)
 
 
 == Installation ==
 
 
 1. Upload the `wptelegram-login` folder to the `/wp-content/plugins/` directory
-2. Activate the plugin through the Plugins menu in WordPress. After activation, you should see the menu of this plugin the the admin
+2. Activate the plugin through the Plugins menu in WordPress. After activation, you should see the menu of this plugin the admin
 3. Configure the plugin.
 
 **Enjoy!**
@@ -111,7 +129,7 @@ Many thanks to the translators for the great job!
 
 = Can I display button more than once on a page =
 
-Sorry, that's not possible because Telegram allows only single button per page.
+Sorry, that's not possible because Telegram allows only a single button per page.
 
 = I see "Bot domain invalid" message =
 
@@ -130,65 +148,7 @@ Follow the instructions given on the settings page. You need to send `/setdomain
 
 == Changelog ==
 
-= 1.9.17 =
-- Fixed warnings in PHP 8.x
-
-= 1.9.16 =
-- Added a filter to allow disabling profile update for existing users.
-
-= 1.9.15 =
-- Updated options to load Bot Token from WP Telegram by default
-- Fixed failed login with emoji names when DB does not support multibyte characters
-
-= 1.9.14 =
-- Added filters for Telegram avatar usage
-
-= 1.9.13 =
-- Maintenance release
-
-= 1.9.12 =
-- Fixed PHP Fatal Error for Block Widgets
-
-= 1.9.11 =
-- Fixed PHP warning for `block_categories` deprecation
-
-= 1.9.10 =
-- Fixed the failed login when Telegram name has special characters
-
-= 1.9.9 =
-- Cleaned up the admin menu for single entry for WP Telegram
-
-= 1.9.8 =
-- Fixed the issue of settings not saved due to trailing slash redirects
-
-= 1.9.7 =
-- Improved user REST meta query for Telegram users
-- Fixed default settings for Gutenberg blocks
-
-= 1.9.6 =
-- Fixed Telegram login when login and register are on same page
-- Fixed the issue of custom redirect URL not saved
-
-= 1.9.5 =
-- Fixed the messed up last update
-
-= 1.9.4 =
-- Fixed the hidden login on WP registration page
-
-= 1.9.3 =
-- Fixed admin links on settings page
-- Fixed translation for plugin title
-
-= 1.9.2 =
--   Fixed the missing Telegram ID in user table
--   Fixed creation of new user on login
-
-= 1.9.1 =
--   Fixed i18n
-
-= 1.9.0 =
--   Fixed the syntax error for older PHP versions.
--   Refreshed the UI
--   Switched to PHP namespaces
+= 1.10.0 =
+- Added support for Telegram Web App data authorization
 
 == Upgrade Notice ==
