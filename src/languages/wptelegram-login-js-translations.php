@@ -13,22 +13,26 @@ $generated_i18n_strings = array(
 	// Reference: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:10
 	__( 'Small', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:48
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:50
 	__( 'Button Settings', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:50
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:52
 	// Reference: domains/wptelegram/login/main/src/services/fields.ts:10
 	__( 'Button Style', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:56
-	// Reference: domains/wptelegram/login/main/src/services/fields.ts:20
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:58
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:21
 	__( 'Show User Photo', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:61
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:63
 	// Reference: domains/wptelegram/login/main/src/services/fields.ts:11
 	__( 'Corner Radius', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:69
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:71
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:19
+	__( 'Language', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:77
 	// Reference: domains/wptelegram/login/main/src/services/fields.ts:18
 	__( 'Show if user is', 'wptelegram-login' ),
 
@@ -55,10 +59,10 @@ $generated_i18n_strings = array(
 	// Reference: domains/wptelegram/login/main/src/ui/LoginOptions.tsx:13
 	__( 'Custom URL', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/main/src/services/fields.ts:19
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:20
 	__( 'Show error message', 'wptelegram-login' ),
 
-	// Reference: domains/wptelegram/login/main/src/services/fields.ts:21
+	// Reference: domains/wptelegram/login/main/src/services/fields.ts:22
 	__( 'User Role', 'wptelegram-login' ),
 
 	// Reference: domains/wptelegram/login/main/src/services/fields.ts:7
@@ -81,9 +85,12 @@ $generated_i18n_strings = array(
 	__( 'Leave empty for default.', 'wptelegram-login' ),
 
 	// Reference: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:41
-	__( 'Who can see the login button.', 'wptelegram-login' ),
+	__( 'Language for the login button.', 'wptelegram-login' ),
 
 	// Reference: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:48
+	__( 'Who can see the login button.', 'wptelegram-login' ),
+
+	// Reference: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:55
 	__( 'Hide the button on default WordPress login/register page.', 'wptelegram-login' ),
 
 	// Reference: domains/wptelegram/login/main/src/ui/ErrorMessageOptions.tsx:17
