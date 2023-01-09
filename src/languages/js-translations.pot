@@ -18,26 +18,31 @@ msgstr ""
 msgid "Small"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:48
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:50
 msgid "Button Settings"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:50
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:52
 #: domains/wptelegram/login/main/src/services/fields.ts:10
 msgid "Button Style"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:56
-#: domains/wptelegram/login/main/src/services/fields.ts:20
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:58
+#: domains/wptelegram/login/main/src/services/fields.ts:21
 msgid "Show User Photo"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:61
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:63
 #: domains/wptelegram/login/main/src/services/fields.ts:11
 msgid "Corner Radius"
 msgstr ""
 
-#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:69
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:71
+#: domains/wptelegram/login/main/src/services/fields.ts:19
+msgid "Language"
+msgstr ""
+
+#: domains/wptelegram/login/blocks/src/telegram-login/Edit.tsx:77
 #: domains/wptelegram/login/main/src/services/fields.ts:18
 msgid "Show if user is"
 msgstr ""
@@ -72,11 +77,11 @@ msgstr ""
 msgid "Custom URL"
 msgstr ""
 
-#: domains/wptelegram/login/main/src/services/fields.ts:19
+#: domains/wptelegram/login/main/src/services/fields.ts:20
 msgid "Show error message"
 msgstr ""
 
-#: domains/wptelegram/login/main/src/services/fields.ts:21
+#: domains/wptelegram/login/main/src/services/fields.ts:22
 msgid "User Role"
 msgstr ""
 
@@ -106,10 +111,14 @@ msgid "Leave empty for default."
 msgstr ""
 
 #: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:41
-msgid "Who can see the login button."
+msgid "Language for the login button."
 msgstr ""
 
 #: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:48
+msgid "Who can see the login button."
+msgstr ""
+
+#: domains/wptelegram/login/main/src/ui/ButtonOptions.tsx:55
 msgid "Hide the button on default WordPress login/register page."
 msgstr ""
 

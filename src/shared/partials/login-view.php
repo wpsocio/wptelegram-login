@@ -10,6 +10,7 @@
  * 'button_style',
  * 'show_user_photo',
  * 'corner_radius',
+ * 'lang',
  * 'bot_username',
  * 'callback_url',
  * );
@@ -23,10 +24,13 @@
 
 $atts = '';
 if ( '' !== $login_options['corner_radius'] ) {
-	$atts .= ' data-radius="' . $login_options['corner_radius'] . '"';
+	$atts .= ' data-radius="' . esc_attr( $login_options['corner_radius'] ) . '"';
 }
 if ( empty( $login_options['show_user_photo'] ) ) {
 	$atts .= ' data-userpic="false"';
+}
+if ( ! empty( $login_options['lang'] ) ) {
+	$atts .= ' data-lang="' . esc_attr( $login_options['lang'] ) . '"';
 }
 
 $error_message = '';
