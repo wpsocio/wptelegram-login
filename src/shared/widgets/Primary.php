@@ -11,6 +11,8 @@
 
 namespace WPTelegram\Login\shared\widgets;
 
+use WPTelegram\Login\includes\AssetManager;
+
 defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
 /**
  * Adds WP Telegram Login widget
@@ -95,6 +97,8 @@ class Primary extends \WP_Widget {
 
 		$instance['show_if_user_is'] = isset( $new_instance['show_if_user_is'] ) ? sanitize_text_field( $new_instance['show_if_user_is'] ) : 'logged_out';
 
+		$instance['lang'] = isset( $new_instance['lang'] ) ? sanitize_text_field( $new_instance['lang'] ) : '';
+
 		$corner_radius = empty( $new_instance['corner_radius'] ) ? '' : sanitize_text_field( $new_instance['corner_radius'] );
 
 		if ( ! empty( $corner_radius ) ) {
@@ -126,6 +130,7 @@ class Primary extends \WP_Widget {
 			'title'           => '',
 			'button_style'    => 'large',
 			'show_user_photo' => true,
+			'lang'            => '',
 			'show_if_user_is' => '',
 			'corner_radius'   => '',
 		];
@@ -167,18 +172,19 @@ class Primary extends \WP_Widget {
 			<input type="number" value="<?php echo esc_attr( $instance['corner_radius'] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'corner_radius' ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( 'corner_radius' ) ); ?>" class="widefat" />
 		</p>
 		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'lang' ) ); ?>"><?php esc_html_e( 'Language', 'wptelegram-login' ); ?></label>
+			<select name="<?php echo esc_attr( $this->get_field_name( 'lang' ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( 'lang' ) ); ?>" class="widefat">
+			<?php foreach ( AssetManager::get_language_options() as $option ) : ?>
+				<option value="<?php echo esc_attr( $option['value'] ); ?>" <?php selected( $instance['lang'], $key ); ?>><?php echo esc_html( $option['label'] ); ?></option>
+			<?php endforeach; ?>
+			</select>
+		</p>
+		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'show_if_user_is' ) ); ?>"><?php esc_html_e( 'Show if user is', 'wptelegram-login' ); ?></label>
-			<?php $options = \WPTelegram\Login\includes\AssetManager::get_show_if_user_is_options(); ?>
 			<select name="<?php echo esc_attr( $this->get_field_name( 'show_if_user_is' ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( 'show_if_user_is' ) ); ?>" class="widefat">
-			<?php
-			$output = '';
-
-			foreach ( $options as $option ) {
-				$output .= '<option value="' . $option['value'] . '" ' . selected( $instance['show_if_user_is'], $option['value'], false ) . '>' . $option['label'] . '</option>';
-			}
-
-			echo $output; // phpcs:ignore WordPress.Security.EscapeOutput
-			?>
+			<?php foreach ( AssetManager::get_show_if_user_is_options() as $option ) : ?>
+				<option value="<?php echo esc_attr( $option['value'] ); ?>" <?php selected( $instance['show_if_user_is'], $option['value'] ); ?>><?php echo esc_html( $option['label'] ); ?></option>
+			<?php endforeach; ?>
 			</select>
 		</p>
 		<?php

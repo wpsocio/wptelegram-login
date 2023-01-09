@@ -162,6 +162,7 @@ class AssetManager extends BaseClass {
 			],
 			'uiData'     => [
 				'show_if_user_is'   => self::get_show_if_user_is_options(),
+				'lang'              => self::get_language_options(),
 				'wptelegram_active' => defined( 'WPTELEGRAM_LOADED' ),
 			],
 			'i18n'       => Utils::get_jed_locale_data( 'wptelegram-login' ),
@@ -246,6 +247,75 @@ class AssetManager extends BaseClass {
 		];
 
 		return array_merge( $data, self::user_role_options_cb() );
+	}
+
+	/**
+	 * Get options for lang dropdown.
+	 *
+	 * @return array
+	 */
+	public static function get_language_options() {
+
+		require_once ABSPATH . 'wp-admin/includes/translation-install.php';
+
+		$translations = wp_get_available_translations();
+
+		$langs = [];
+
+		foreach ( $translations as $translation ) {
+			$iso = current( $translation['iso'] );
+
+			if ( 'en' === $iso ) {
+				continue;
+			}
+
+			$total_pieces = count( explode( ' ', $translation['english_name'] ) );
+
+			$langs[ $iso ][ $total_pieces ] = $translation;
+		}
+
+		$data = [
+			[
+				'value' => 'en',
+				'label' => 'English (en)',
+			],
+		];
+
+		foreach ( $langs as $iso => $lang_list ) {
+			ksort( $lang_list );
+
+			$translation = array_shift( $lang_list );
+
+			// Remove everything inside the parentheses.
+			$name = preg_replace( '/\s+\(.+$/', '', $translation['english_name'] );
+
+			$label = sprintf( '%s (%s)', $name, $iso );
+
+			$data[] = [
+				'value' => $iso,
+				'label' => $label,
+			];
+		}
+
+		usort(
+			$data,
+			function( $a, $b ) {
+				return strcmp( $a['label'], $b['label'] );
+			}
+		);
+
+		array_unshift(
+			$data,
+			[
+				'value' => '',
+				'label' => __(
+					'Default',
+					'wptelegram-login'
+				),
+			]
+		);
+
+		return apply_filters( 'wptelegram_login_language_options', $data, $translations );
 	}
 
 	/**

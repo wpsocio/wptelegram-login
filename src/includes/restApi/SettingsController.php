@@ -214,6 +214,12 @@ class SettingsController extends RESTController {
 				'sanitize_callback' => 'sanitize_text_field',
 				'validate_callback' => [ __CLASS__, 'validate_param' ],
 			],
+			'lang'                  => [
+				'type'              => 'string',
+				'default'           => '',
+				'validate_callback' => 'rest_validate_request_arg',
+				'sanitize_callback' => 'sanitize_text_field',
+			],
 			'show_if_user_is'       => [
 				'type'              => 'string',
 				'default'           => 'logged_out',

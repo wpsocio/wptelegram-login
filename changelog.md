@@ -4,6 +4,10 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+### Enhancements
+
+- Added language option for the login widget
+
 ## [1.10.0 - 2022-12-16](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.10.0)
 
 ### Enhancements

@@ -81,6 +81,7 @@ class Shared extends BaseClass {
 			'button_style'    => 'large',
 			'show_user_photo' => '1',
 			'corner_radius'   => '',
+			'lang'            => '',
 			'show_if_user_is' => 'logged_out',
 			'bot_username'    => '',
 		];
@@ -132,6 +133,8 @@ class Shared extends BaseClass {
 
 		$corner_radius = $args['corner_radius'];
 
+		$lang = $args['lang'];
+
 		$bot_username = $args['bot_username'];
 
 		$args = [
@@ -150,6 +153,7 @@ class Shared extends BaseClass {
 			'button_style',
 			'show_user_photo',
 			'corner_radius',
+			'lang',
 			'bot_username',
 			'callback_url'
 		);
