@@ -1,24 +1,35 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ruleset name="WPTelegram">
 
-     <!-- Enable colors in report -->
-     <arg name="colors"/>
+	<!-- Enable colors in report -->
+	<arg name="colors" />
 
-     <!-- Add source codes in the report -->
-     <arg value="s"/>
+	<!-- Add source codes in the report -->
+	<arg value="s" />
 
-     <!-- Load WordPress Coding standards -->
-     <rule ref="WordPress"/>
+	<file>.</file>
+    <exclude-pattern>/.git/</exclude-pattern>
+	<exclude-pattern>*/src/assets/*</exclude-pattern>
+	<exclude-pattern>*/src/languages/*</exclude-pattern>
+	<exclude-pattern>*/bundles/*</exclude-pattern>
+	<exclude-pattern>*/temp/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/index.php</exclude-pattern>
 
-     <!-- Customize -->
-     <rule ref="WordPress">
-          <!-- Disable File Name warning -->
-          <exclude name="WordPress.Files.FileName" />
-          <!-- Disable short array syntax warning -->
-          <exclude name="Generic.Arrays.DisallowShortArraySyntax" />
-     </rule>
-     <!-- Disallow Long Array Syntax -->
-     <rule ref="Generic.Arrays.DisallowLongArraySyntax.Found">
-          <type>warning</type>
-     </rule>
+	<!-- Load WordPress Coding standards -->
+	<rule ref="WordPress" />
+
+	<!-- Customize -->
+	<rule ref="WordPress">
+		<!-- Disable File Name warning -->
+		<exclude name="WordPress.Files.FileName" />
+
+		<!-- Disable short array syntax warning -->
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax" />
+	</rule>
+
+	<!-- Disallow Long Array Syntax -->
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax.Found">
+		<type>warning</type>
+	</rule>
 </ruleset>
