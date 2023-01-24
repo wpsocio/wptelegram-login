@@ -3,8 +3,6 @@
 	"version": "1.10.1",
 	"description": "Let the users login to your website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram.",
 	"require-dev": {
-		"dealerdirect/phpcodesniffer-composer-installer": "*",
-		"phpcompatibility/php-compatibility": "*",
 		"wp-coding-standards/wpcs": "*"
 	},
 	"scripts": {
