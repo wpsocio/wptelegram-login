@@ -3,7 +3,7 @@
     "wptelegram-login--blocks.php": "/static/js/wptelegram-login--blocks.7ec99755.asset.php",
     "wptelegram-login--blocks.css": "/static/css/wptelegram-login--blocks.6b20b098.css",
     "wptelegram-login--blocks.js": "/static/js/wptelegram-login--blocks.a4e69f3c.js",
-    "wptelegram-login--main.php": "/static/js/wptelegram-login--main.e9610ee8.asset.php",
+    "wptelegram-login--main.php": "/static/js/wptelegram-login--main.4d52ecbe.asset.php",
     "wptelegram-login--main.css": "/static/css/wptelegram-login--main.dc5e4e86.css",
     "wptelegram-login--main.js": "/static/js/wptelegram-login--main.6bf3c8f2.js",
     "wptelegram-login--wp-login.php": "/static/js/wptelegram-login--wp-login.d16f045d.asset.php",
@@ -23,7 +23,7 @@
       "static/js/wptelegram-login--blocks.a4e69f3c.js"
     ],
     "wptelegram-login--main": [
-      "static/js/wptelegram-login--main.e9610ee8.asset.php",
+      "static/js/wptelegram-login--main.4d52ecbe.asset.php",
       "static/css/wptelegram-login--main.dc5e4e86.css",
       "static/js/wptelegram-login--main.6bf3c8f2.js"
     ],
