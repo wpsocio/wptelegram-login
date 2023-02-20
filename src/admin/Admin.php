@@ -184,6 +184,9 @@ class Admin extends BaseClass {
 	 * @since 1.5.0
 	 */
 	public function display_plugin_admin_page() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
 		?>
 			<div id="wptelegram-login-settings"></div>
 		<?php
