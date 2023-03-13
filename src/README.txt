@@ -1,6 +1,6 @@
 === WP Telegram Login & Register ===
 Contributors: wpsocio, irshadahmad21
-Donate link: https://wpsocio.com
+Donate link: https://wpsocio.com/donate
 Tags: telegram, login, register, social, signup
 Requires at least: 5.8
 Requires PHP: 7.0
