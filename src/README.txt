@@ -145,7 +145,7 @@ Follow the instructions given on the settings page. You need to send `/setdomain
 5. Widget View (front-end)
 6. Login and Register page
 7. User List Table (for admin)
-8. User Profile (w-admin)
+8. User Profile (wp-admin)
 9. WooCommerce Account Page
 
 == Changelog ==
