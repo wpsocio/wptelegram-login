@@ -317,13 +317,19 @@ class Main {
 
 		add_action( 'widgets_init', [ $plugin_admin, 'register_widgets' ] );
 
-		add_action( 'show_user_profile', [ $plugin_admin, 'add_user_profile_fields' ] );
-		add_action( 'edit_user_profile', [ $plugin_admin, 'add_user_profile_fields' ] );
-		add_filter( 'user_profile_update_errors', [ $plugin_admin, 'validate_user_profile_fields' ], 10, 3 );
+		// wp-admin user pages.
+		add_action( 'show_user_profile', [ Admin::class, 'wp_add_telegram_fields' ] );
+		add_action( 'edit_user_profile', [ Admin::class, 'wp_add_telegram_fields' ] );
+		add_filter( 'user_profile_update_errors', [ $plugin_admin, 'validate_user_profile_fields' ], 10, 1 );
 		add_action( 'personal_options_update', [ $plugin_admin, 'update_user_profile_fields' ] );
 		add_action( 'edit_user_profile_update', [ $plugin_admin, 'update_user_profile_fields' ] );
 		add_filter( 'manage_users_columns', [ $plugin_admin, 'register_custom_user_column' ] );
 		add_filter( 'manage_users_custom_column', [ $plugin_admin, 'register_custom_user_column_view' ], 10, 3 );
+
+		// Woocommerce account page.
+		add_action( 'woocommerce_edit_account_form', [ Admin::class, 'wc_add_telegram_fields' ] );
+		add_action( 'woocommerce_save_account_details_errors', [ $plugin_admin, 'validate_user_profile_fields' ], 10, 1 );
+		add_action( 'woocommerce_save_account_details', [ $plugin_admin, 'update_user_profile_fields' ], 10, 1 );
 
 		add_filter( 'block_categories_all', [ $plugin_admin, 'register_block_category' ], 10, 1 );
 

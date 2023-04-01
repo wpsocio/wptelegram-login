@@ -1,11 +1,11 @@
 === WP Telegram Login & Register ===
 Contributors: wpsocio, irshadahmad21
-Donate link: https://wpsocio.com
+Donate link: https://wpsocio.com/donate
 Tags: telegram, login, register, social, signup
-Requires at least: 5.8
-Tested up to: 6.1.1
+Requires at least: 5.9
 Requires PHP: 7.0
-Stable tag: 1.10.1
+Tested up to: 6.2
+Stable tag: 1.10.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -145,8 +145,13 @@ Follow the instructions given on the settings page. You need to send `/setdomain
 5. Widget View (front-end)
 6. Login and Register page
 7. User List Table (for admin)
+8. User Profile (w-admin)
+9. WooCommerce Account Page
 
 == Changelog ==
+
+= 1.10.2 =
+- Added Telegram user fields to WooCommerce Account page
 
 = 1.10.1 =
 - Added language option for the login widget

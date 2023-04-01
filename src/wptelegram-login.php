@@ -10,7 +10,9 @@
  * Plugin Name:       WP Telegram Login
  * Plugin URI:        https://t.me/WPTelegram
  * Description:       Let the users login to your WordPress website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram.
- * Version:           1.10.1
+ * Version:           1.10.2
+ * Requires at least: 5.9
+ * Requires PHP:      7.0
  * Author:            WP Socio
  * Author URI:        https://wpsocio.com
  * License:           GPL-2.0+
@@ -27,13 +29,15 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'WPTELEGRAM_LOGIN_VER', '1.10.1' );
+define( 'WPTELEGRAM_LOGIN_VER', '1.10.2' );
 
-define( 'WPTELEGRAM_LOGIN_BASENAME', plugin_basename( __FILE__ ) );
+defined( 'WPTELEGRAM_LOGIN_MAIN_FILE' ) || define( 'WPTELEGRAM_LOGIN_MAIN_FILE', __FILE__ );
+
+defined( 'WPTELEGRAM_LOGIN_BASENAME' ) || define( 'WPTELEGRAM_LOGIN_BASENAME', plugin_basename( WPTELEGRAM_LOGIN_MAIN_FILE ) );
 
 define( 'WPTELEGRAM_LOGIN_DIR', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 
-defined( 'WPTELEGRAM_LOGIN_URL' ) || define( 'WPTELEGRAM_LOGIN_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) );
+define( 'WPTELEGRAM_LOGIN_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) );
 
 // Telegram user ID meta key.
 if ( ! defined( 'WPTELEGRAM_USER_ID_META_KEY' ) ) {
@@ -85,7 +89,13 @@ function WPTG_Login() { // phpcs:ignore WordPress.NamingConventions.ValidFunctio
 	return \WPTelegram\Login\includes\Main::instance();
 }
 
-// Fire.
-WPTG_Login();
+use \WPTelegram\Login\includes\Requirements;
 
-define( 'WPTELEGRAM_LOGIN_LOADED', true );
+if ( Requirements::satisfied() ) {
+	// Fire.
+	WPTG_Login();
+
+	define( 'WPTELEGRAM_LOGIN_LOADED', true );
+} else {
+	add_filter( 'after_plugin_row_' . WPTELEGRAM_LOGIN_BASENAME, [ Requirements::class, 'display_requirements' ] );
+}

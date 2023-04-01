@@ -287,7 +287,7 @@ $generated_i18n_strings = array(
 	// Reference: packages/services/src/useDisplayFeedback.ts:62
 	__( 'Lets fix these errors first.', 'wptelegram-login' ),
 
-	// Reference: packages/services/src/useSubmitForm.ts:54
+	// Reference: packages/services/src/useSubmitForm.ts:62
 	__( 'Changes saved successfully.', 'wptelegram-login' ),
 
 	// Reference: packages/utilities/src/fields.ts:31

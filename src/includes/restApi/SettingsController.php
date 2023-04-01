@@ -11,6 +11,7 @@
 
 namespace WPTelegram\Login\includes\restApi;
 
+use WPTelegram\Login\includes\Options;
 use WPTelegram\Login\includes\Utils;
 
 /**
@@ -27,7 +28,7 @@ class SettingsController extends RESTController {
 	/**
 	 * The plugin settings/options.
 	 *
-	 * @var string
+	 * @var Options
 	 */
 	protected $settings;
 
