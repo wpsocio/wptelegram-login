@@ -202,19 +202,46 @@ class Admin extends BaseClass {
 	}
 
 	/**
+	 * Add Telegram user field to WooCommerce My Account page.
+	 *
+	 * @since x.y.z
+	 *
+	 * @return void
+	 */
+	public static function wc_add_telegram_fields() {
+		$bot_username = WPTG_Login()->options()->get( 'bot_username' );
+		if ( empty( $bot_username ) ) {
+			return;
+		}
+		$telegram_id = get_the_author_meta( WPTELEGRAM_USER_ID_META_KEY, get_current_user_id() );
+		$field_name  = WPTELEGRAM_USER_ID_META_KEY;
+		?>
+		<fieldset style="margin-top:1rem;margin-bottom:1rem;">
+			<legend><?php esc_html_e( 'Telegram Info', 'wptelegram-login' ); ?></legend>
+			<p class="description"><?php esc_html_e( 'Here you can connect this account to Telegram.', 'wptelegram-login' ); ?></p>
+			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+				<label for="<?php echo esc_attr( $field_name ); ?>"><?php esc_html_e( 'Telegram Chat ID', 'wptelegram-login' ); ?></label>
+				<input type="text" name="<?php echo esc_attr( $field_name ); ?>" id="<?php echo esc_attr( $field_name ); ?>" value="<?php echo esc_attr( $telegram_id ); ?>" class="input-text" />
+			</p>
+			<?php self::render_instructions(); ?>
+		</fieldset>
+		<?php
+	}
+
+	/**
 	 * Adds User Telegram ID field to user profile.
 	 *
 	 * @since    1.8.2
 	 * @param WP_User $user Currently-listed user.
 	 * @return void
 	 */
-	public function add_user_profile_fields( $user ) {
-		$telegram_id  = get_the_author_meta( WPTELEGRAM_USER_ID_META_KEY, $user->ID );
-		$field_name   = WPTELEGRAM_USER_ID_META_KEY;
+	public static function wp_add_telegram_fields( $user ) {
 		$bot_username = WPTG_Login()->options()->get( 'bot_username' );
 		if ( empty( $bot_username ) ) {
 			return;
 		}
+		$telegram_id     = get_the_author_meta( WPTELEGRAM_USER_ID_META_KEY, $user->ID );
+		$field_name      = WPTELEGRAM_USER_ID_META_KEY;
 		$is_current_user = get_current_user_id() === $user->ID;
 		?>
 		<h2><?php esc_html_e( 'Telegram Info', 'wptelegram-login' ); ?></h2>
@@ -226,36 +253,50 @@ class Admin extends BaseClass {
 				</th>
 				<td>
 					<input type="text" name="<?php echo esc_attr( $field_name ); ?>" id="<?php echo esc_attr( $field_name ); ?>" value="<?php echo esc_attr( $telegram_id ); ?>" class="regular-text" />
-					<p style="color:#f10e0e;"><b><?php esc_html_e( 'INSTRUCTIONS!', 'wptelegram-login' ); ?></b></p>
-					<ul style="list-style-type: disc;">
-						<li>
-							<?php
-								printf( // phpcs:ignore
-									/* translators: %s is bot username */
-									$is_current_user // phpcs:ignore
-									? __( 'Get your Chat ID from %s and enter it above.', 'wptelegram-login' ) // phpcs:ignore
-									/* translators: %s is bot username */
-									: __( 'Ask the user to get the Chat ID from %s and enter it above.', 'wptelegram-login' ), // phpcs:ignore
-									'<a href="https://t.me/MyChatInfoBot" target="_blank">@MyChatInfoBot</a>' // phpcs:ignore
-								);
-							?>
-						</li>
-						<li>
-							<?php
-								printf(
-									$is_current_user // phpcs:ignore
-									/* translators: %s is bot username */
-									? __( 'Start a conversation with %s to receive notifications.', 'wptelegram-login' ) // phpcs:ignore
-									/* translators: %s is bot username */
-									: __( 'Ask the user to start a conversation with %s to receive notifications.', 'wptelegram-login' ), // phpcs:ignore
-									'<a href="https://t.me/' . $bot_username . '"  target="_blank" rel="noreferrer noopener">@' . $bot_username . '</a>' // phpcs:ignore
-								);
-							?>
-						</li>
-					</ul>
+					<?php self::render_instructions( $is_current_user ); ?>
 				</td>
 			</tr>
 		</table>
+		<?php
+	}
+
+	/**
+	 * Render the instructions for Telegram integration.
+	 *
+	 * @since x.y.z
+	 *
+	 * @param bool $is_current_user Whether the instructions are for the current user or for an admin.
+	 */
+	public static function render_instructions( $is_current_user = true ) {
+		$bot_username = WPTG_Login()->options()->get( 'bot_username' );
+		?>
+		<p style="color:#f10e0e;"><b><?php esc_html_e( 'INSTRUCTIONS!', 'wptelegram-login' ); ?></b></p>
+		<ul style="list-style-type: disc;padding-inline-start:1rem;">
+			<li>
+				<?php
+					printf(
+						/* translators: %s is bot username */
+						$is_current_user // phpcs:ignore
+						? __( 'Get your Chat ID from %s and enter it above.', 'wptelegram-login' ) // phpcs:ignore
+						/* translators: %s is bot username */
+						: __( 'Ask the user to get the Chat ID from %s and enter it above.', 'wptelegram-login' ), // phpcs:ignore
+						'<a href="https://t.me/MyChatInfoBot" target="_blank" rel="noreferrer noopener">@MyChatInfoBot</a>' // phpcs:ignore
+					);
+				?>
+			</li>
+			<li>
+				<?php
+					printf(
+						$is_current_user // phpcs:ignore
+						/* translators: %s is bot username */
+						? __( 'Start a conversation with %s to receive notifications.', 'wptelegram-login' )
+						/* translators: %s is bot username */
+						: __( 'Ask the user to start a conversation with %s to receive notifications.', 'wptelegram-login' ), // phpcs:ignore
+						sprintf( '<a href="https://t.me/%1$s"  target="_blank" rel="noreferrer noopener">@%1$s</a>', esc_html( $bot_username ) )
+					);
+				?>
+			</li>
+		</ul>
 		<?php
 	}
 
@@ -264,14 +305,13 @@ class Admin extends BaseClass {
 	 *
 	 * @since   1.8.2
 	 * @param   \WP_Error $errors WP_Error object (passed by reference).
-	 * @param   bool      $update Whether this is a user update.
-	 * @param   \stdClass $user   User object (passed by reference).
 	 */
-	public function validate_user_profile_fields( &$errors, $update = null, &$user = null ) {
+	public function validate_user_profile_fields( &$errors ) {
 
 		if ( isset( $_POST[ WPTELEGRAM_USER_ID_META_KEY ] ) ) { // phpcs:ignore
 
-			$chat_id = sanitize_text_field( $_POST[ WPTELEGRAM_USER_ID_META_KEY ] ); // phpcs:ignore
+			// phpcs:ignore WordPress.Security.NonceVerification
+			$chat_id = sanitize_text_field( wp_unslash( $_POST[ WPTELEGRAM_USER_ID_META_KEY ] ) );
 
 			if ( $chat_id && ! self::is_valid_chat_id( $chat_id ) ) {
 
@@ -288,9 +328,10 @@ class Admin extends BaseClass {
 	 * @return void
 	 */
 	public function update_user_profile_fields( $user_id ) {
-		if ( current_user_can( 'edit_user', $user_id ) && isset( $_POST[ WPTELEGRAM_USER_ID_META_KEY ] ) ) { // phpcs:ignore
-			$chat_id = $_POST[ WPTELEGRAM_USER_ID_META_KEY ]; // phpcs:ignore
-			$chat_id = sanitize_text_field( $chat_id );
+		// phpcs:ignore WordPress.Security.NonceVerification
+		if ( current_user_can( 'edit_user', $user_id ) && isset( $_POST[ WPTELEGRAM_USER_ID_META_KEY ] ) ) {
+			// phpcs:ignore WordPress.Security.NonceVerification
+			$chat_id = sanitize_text_field( wp_unslash( $_POST[ WPTELEGRAM_USER_ID_META_KEY ] ) );
 
 			if ( empty( $chat_id ) ) {
 				delete_user_meta( $user_id, WPTELEGRAM_USER_ID_META_KEY );
@@ -307,7 +348,7 @@ class Admin extends BaseClass {
 	 * @return bool
 	 */
 	public static function is_valid_chat_id( $chat_id ) {
-		return (bool) preg_match( '/^\-?[^0\D]\d{6,51}$/', $chat_id );
+		return (bool) preg_match( '/^\-?[1-9][0-9]{6,51}$/', $chat_id );
 	}
 
 	/**
