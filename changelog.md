@@ -4,6 +4,8 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.10.2 - 2023-04-1](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.10.2)
+
 ### Enhancements
 
 - Added Telegram user fields to WooCommerce Account page

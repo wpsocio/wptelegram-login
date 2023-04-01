@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/wpsocio/wptelegram-login\n"
-"POT-Creation-Date: 2023-01-09 13:33:34+00:00\n"
+"POT-Creation-Date: 2023-04-01 08:38:02+00:00\n"
 "PO-Revision-Date: 2021-02-16 02:08+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
@@ -31,52 +31,52 @@ msgstr ""
 msgid "Telegram Login"
 msgstr "Telegram Login"
 
-#: admin/Admin.php:217
+#: admin/Admin.php:220 admin/Admin.php:247
 msgid "Telegram Info"
 msgstr ""
 
-#: admin/Admin.php:218
+#: admin/Admin.php:221 admin/Admin.php:248
 msgid "Here you can connect this account to Telegram."
 msgstr ""
 
-#: admin/Admin.php:222
+#: admin/Admin.php:223 admin/Admin.php:252
 msgid "Telegram Chat ID"
 msgstr ""
 
-#: admin/Admin.php:226 languages/wptelegram-login-js-translations.php:227
+#: admin/Admin.php:273 languages/wptelegram-login-js-translations.php:227
 msgid "INSTRUCTIONS!"
 msgstr "KONFIGURATIONSANLEITUNG"
 
 #. translators: %s is bot username
-#: admin/Admin.php:233
+#: admin/Admin.php:280
 msgid "Get your Chat ID from %s and enter it above."
 msgstr ""
 
 #. translators: %s is bot username
-#: admin/Admin.php:235
+#: admin/Admin.php:282
 msgid "Ask the user to get the Chat ID from %s and enter it above."
 msgstr ""
 
 #. translators: %s is bot username
-#: admin/Admin.php:245
+#: admin/Admin.php:292
 msgid "Start a conversation with %s to receive notifications."
 msgstr ""
 
 #. translators: %s is bot username
-#: admin/Admin.php:247
+#: admin/Admin.php:294
 msgid "Ask the user to start a conversation with %s to receive notifications."
 msgstr ""
 
-#: admin/Admin.php:275 languages/wptelegram-login-js-translations.php:276
+#: admin/Admin.php:318 languages/wptelegram-login-js-translations.php:276
 #: shared/LoginHandler.php:61
 msgid "Error:"
 msgstr "Fehler:"
 
-#: admin/Admin.php:275
+#: admin/Admin.php:318
 msgid "Please Enter a valid Chat ID"
 msgstr ""
 
-#: admin/Admin.php:318
+#: admin/Admin.php:362
 msgid "Telegram User ID"
 msgstr "Telegram User ID"
 
@@ -105,10 +105,34 @@ msgstr "eingeloggt"
 msgid "Default"
 msgstr "Standard"
 
-#: includes/Main.php:380 languages/wptelegram-login-js-translations.php:41
+#: includes/Main.php:386 languages/wptelegram-login-js-translations.php:41
 #: shared/widgets/Primary.php:28
 msgid "WP Telegram Login"
 msgstr "WP Telegram Einloggen"
+
+#: includes/Requirements.php:85
+msgid "This plugin is not compatible with your website configuration."
+msgstr ""
+
+#: includes/Requirements.php:87
+msgid "Missing requirements"
+msgstr ""
+
+#. translators: %s: Version number
+#: includes/Requirements.php:100
+msgid "Current version: %s"
+msgstr ""
+
+#. translators: %s: Version number
+#: includes/Requirements.php:108
+msgid "Minimum required version: %s"
+msgstr ""
+
+#: includes/Requirements.php:120
+msgid ""
+"Please contact your hosting provider to ensure the above requirements are "
+"met."
+msgstr ""
 
 #: languages/wptelegram-login-js-translations.php:6
 #: shared/widgets/Primary.php:156

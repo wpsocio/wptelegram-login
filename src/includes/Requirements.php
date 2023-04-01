@@ -3,7 +3,7 @@
  * Handles the plugin requirements.
  *
  * @link      https://wpsocio.com
- * @since     x.y.z
+ * @since     1.10.2
  *
  * @package WPTelegram
  * @subpackage WPTelegram\Login\includes
@@ -23,7 +23,7 @@ class Requirements {
 	/**
 	 * Check if the requirements are satisfied.
 	 *
-	 * @since x.y.z
+	 * @since 1.10.2
 	 *
 	 * @return bool Whether the requirements are satisfied.
 	 */
@@ -36,7 +36,7 @@ class Requirements {
 	/**
 	 * Get the environment details.
 	 *
-	 * @since x.y.z
+	 * @since 1.10.2
 	 *
 	 * @return array The environment details.
 	 */
@@ -73,7 +73,7 @@ class Requirements {
 	/**
 	 * Display the requirements.
 	 *
-	 * @since x.y.z
+	 * @since 1.10.2
 	 */
 	public static function display_requirements() {
 		$env_details = self::get_env_details();

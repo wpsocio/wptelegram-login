@@ -204,7 +204,7 @@ class Admin extends BaseClass {
 	/**
 	 * Add Telegram user field to WooCommerce My Account page.
 	 *
-	 * @since x.y.z
+	 * @since 1.10.2
 	 *
 	 * @return void
 	 */
@@ -263,7 +263,7 @@ class Admin extends BaseClass {
 	/**
 	 * Render the instructions for Telegram integration.
 	 *
-	 * @since x.y.z
+	 * @since 1.10.2
 	 *
 	 * @param bool $is_current_user Whether the instructions are for the current user or for an admin.
 	 */
