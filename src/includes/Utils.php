@@ -233,4 +233,27 @@ class Utils {
 
 		return $settings;
 	}
+
+	/**
+	 * Get the user by Telegram ID.
+	 *
+	 * @since x.y.z
+	 *
+	 * @param int $tg_user_id Telegram User ID.
+	 *
+	 * @return WP_User|false User object or false
+	 */
+	public static function get_user_by_telegram_id( $tg_user_id ) {
+		$args = [
+			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+			'meta_key'   => WPTELEGRAM_USER_ID_META_KEY,
+			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+			'meta_value' => $tg_user_id,
+			'number'     => 1,
+		];
+
+		$users = get_users( $args );
+
+		return reset( $users );
+	}
 }
