@@ -237,7 +237,7 @@ class Utils {
 	/**
 	 * Get the user by Telegram ID.
 	 *
-	 * @since x.y.z
+	 * @since 1.10.3
 	 *
 	 * @param int $tg_user_id Telegram User ID.
 	 *
