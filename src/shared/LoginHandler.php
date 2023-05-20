@@ -332,7 +332,7 @@ class LoginHandler extends BaseClass {
 		$cur_user = wp_get_current_user();
 
 		// Check if the user is signing in again.
-		$ret_user = $this->is_returning_user( $data['id'] );
+		$ret_user = Utils::get_user_by_telegram_id( $data['id'] );
 
 		$existing_user_id = null;
 
@@ -371,28 +371,6 @@ class LoginHandler extends BaseClass {
 		}
 
 		return $this->save_user_data( $data, $existing_user_id );
-	}
-
-	/**
-	 * Whether the user is a returning user.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param int $tg_user_id Telegram User ID.
-	 *
-	 * @return boolean|WP_User User object or false
-	 */
-	public function is_returning_user( $tg_user_id ) {
-		$args  = [
-			'meta_key'   => WPTELEGRAM_USER_ID_META_KEY, // phpcs:ignore
-			'meta_value' => $tg_user_id, // phpcs:ignore
-			'number'     => 1,
-		];
-		$users = get_users( $args );
-		if ( ! empty( $users ) ) {
-			return reset( $users );
-		}
-		return false;
 	}
 
 	/**

@@ -1,7 +1,7 @@
 {
 	"name": "wptelegram-login",
 	"title": "WP Telegram Login",
-	"version": "1.10.2",
+	"version": "1.10.3",
 	"description": "Let the users login to your website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram.",
 	"main": "Gruntfile.js",
 	"repository": {
@@ -28,9 +28,9 @@
 		"start": "npm run dev"
 	},
 	"devDependencies": {
-		"@wordpress/i18n": "4.22.0",
-		"eslint": "^8.28.0",
-		"eslint-config-prettier": "^8.5.0",
+		"@wordpress/i18n": "4.30.0",
+		"eslint": "^8.37.0",
+		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-prettier": "^4.2.1",
 		"esm": "^3.2.25",
 		"gulp": "^4.0.2",
@@ -43,7 +43,7 @@
 		"gulp-uglifycss": "^1.1.0",
 		"gulp-zip": "^5.1.0",
 		"node-wp-i18n": "^1.2.7",
-		"prettier": "^2.7.1",
+		"prettier": "^2.8.7",
 		"semver": "7.3.8"
 	}
 }

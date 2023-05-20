@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://github.com/wpsocio/wptelegram-login\n"
-"POT-Creation-Date: 2023-04-01 08:38:02+00:00\n"
+"POT-Creation-Date: 2023-05-20 09:04:17+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2023-04-1 8:380\n"
+"PO-Revision-Date: 2023-05-20 9:40\n"
 "Last-Translator: WP Telegram Login\n"
 "Language-Team: WP Telegram Login\n"
 "Language: en_US\n"
@@ -531,7 +531,7 @@ msgid ""
 "connect it to Telegram to be able to use Telegram Login"
 msgstr ""
 
-#: shared/LoginHandler.php:445 shared/LoginHandler.php:465
+#: shared/LoginHandler.php:423 shared/LoginHandler.php:443
 msgid "Telegram sign in could not be completed."
 msgstr ""
 
