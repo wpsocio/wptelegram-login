@@ -108,7 +108,6 @@ class Admin extends BaseClass {
 				],
 			]
 		);
-
 	}
 
 	/**

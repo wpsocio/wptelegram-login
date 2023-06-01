@@ -299,7 +299,7 @@ class LoginHandler extends BaseClass {
 		if ( is_null( $i ) ) {
 			$i = 1;
 		} else {
-			$i++;
+			++$i;
 		}
 		$email = sprintf( '%1$s@%2$s', $user, $host );
 		if ( ! email_exists( $email ) ) {
@@ -475,7 +475,7 @@ class LoginHandler extends BaseClass {
 		if ( is_null( $i ) ) {
 			$i = 1;
 		} else {
-			$i++;
+			++$i;
 		}
 		if ( ! username_exists( $username ) ) {
 			return $username;
