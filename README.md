@@ -2,9 +2,9 @@
 
 **Contributors:** [wpsocio](https://github.com/wpsocio), [irshadahmad21](https://github.com/irshadahmad21)
 **Tags:** telegram, login, register, social, signup  
-**Requires at least:** 5.9  
+**Requires at least:** 6.0  
 **Requires PHP:** 7.0  
-**Tested up to:** 6.2.2  
+**Tested up to:** 6.3.1  
 **Stable tag:** 1.10.3  
 **License:** GPLv2 or later  
 **License URI:** [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)  
