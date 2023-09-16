@@ -89,7 +89,7 @@ function WPTG_Login() { // phpcs:ignore WordPress.NamingConventions.ValidFunctio
 	return \WPTelegram\Login\includes\Main::instance();
 }
 
-use \WPTelegram\Login\includes\Requirements;
+use WPTelegram\Login\includes\Requirements;
 
 if ( Requirements::satisfied() ) {
 	// Fire.

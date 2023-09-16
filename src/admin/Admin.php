@@ -212,8 +212,8 @@ class Admin extends BaseClass {
 		if ( empty( $bot_username ) ) {
 			return;
 		}
-		$telegram_id = get_the_author_meta( WPTELEGRAM_USER_ID_META_KEY, get_current_user_id() );
 		$field_name  = WPTELEGRAM_USER_ID_META_KEY;
+		$telegram_id = get_the_author_meta( $field_name, get_current_user_id() );
 		?>
 		<fieldset style="margin-top:1rem;margin-bottom:1rem;">
 			<legend><?php esc_html_e( 'Telegram Info', 'wptelegram-login' ); ?></legend>
@@ -239,8 +239,8 @@ class Admin extends BaseClass {
 		if ( empty( $bot_username ) ) {
 			return;
 		}
-		$telegram_id     = get_the_author_meta( WPTELEGRAM_USER_ID_META_KEY, $user->ID );
 		$field_name      = WPTELEGRAM_USER_ID_META_KEY;
+		$telegram_id     = get_the_author_meta( $field_name, $user->ID );
 		$is_current_user = get_current_user_id() === $user->ID;
 		?>
 		<h2><?php esc_html_e( 'Telegram Info', 'wptelegram-login' ); ?></h2>
