@@ -14,9 +14,9 @@
 
 namespace WPTelegram\Login\includes;
 
-use \WPTelegram\Login\admin\Admin;
-use \WPTelegram\Login\shared\Shared;
-use \WPTelegram\Login\shared\LoginHandler;
+use WPTelegram\Login\admin\Admin;
+use WPTelegram\Login\shared\Shared;
+use WPTelegram\Login\shared\LoginHandler;
 
 /**
  * The core plugin class.
@@ -294,7 +294,6 @@ class Main {
 		$plugin_i18n = new I18n();
 
 		add_action( 'plugins_loaded', [ $plugin_i18n, 'load_plugin_textdomain' ] );
-
 	}
 
 	/**
@@ -359,11 +358,11 @@ class Main {
 
 		$login_handler = new LoginHandler( $this );
 
-		add_action( 'init', [ $login_handler, 'telegram_login' ] );
+		add_action( 'init', [ $login_handler, 'telegram_login' ], 1 );
 
 		$asset_manager = $this->asset_manager();
 
-		add_action( 'admin_init', [ $asset_manager, 'register_assets' ] );
+		add_action( 'init', [ $asset_manager, 'register_assets' ] );
 
 		add_action( 'admin_enqueue_scripts', [ $asset_manager, 'enqueue_admin_styles' ] );
 		add_action( 'admin_enqueue_scripts', [ $asset_manager, 'enqueue_admin_scripts' ] );
@@ -371,6 +370,8 @@ class Main {
 		add_action( 'enqueue_block_editor_assets', [ $asset_manager, 'enqueue_block_editor_assets' ] );
 
 		add_action( 'login_enqueue_scripts', [ $asset_manager, 'login_enqueue_scripts' ] );
+
+		add_action( 'wp_enqueue_scripts', [ $asset_manager, 'enqueue_public_scripts' ] );
 	}
 
 	/**

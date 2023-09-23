@@ -58,7 +58,7 @@ class LoginHandler extends BaseClass {
 
 		} catch ( Exception $e ) {
 			// phpcs:ignore WordPress.Security.EscapeOutput
-			wp_die( $e->getMessage(), __( 'Error:', 'wptelegram-login' ), [ 'back_link' => true ] );
+			wp_die( $e->getMessage(), esc_html__( 'Error:', 'wptelegram-login' ), [ 'back_link' => true ] );
 		}
 
 		$user = wp_get_current_user();
@@ -172,11 +172,11 @@ class LoginHandler extends BaseClass {
 		$generated_hash = self::hash_auth_data( $auth_data, $secret_key );
 
 		if ( ! hash_equals( $generated_hash, $incoming_hash ) ) {
-			throw new Exception( __( 'Unauthorized! Data is NOT from Telegram', 'wptelegram-login' ) );
+			throw new Exception( esc_html__( 'Unauthorized! Data is NOT from Telegram', 'wptelegram-login' ) );
 		}
 
 		if ( ( time() - intval( $auth_data['auth_date'] ) ) > DAY_IN_SECONDS ) {
-			throw new Exception( __( 'Invalid! The data is outdated', 'wptelegram-login' ) );
+			throw new Exception( esc_html__( 'Invalid! The data is outdated', 'wptelegram-login' ) );
 		}
 
 		$auth_data = Utils::sanitize( $auth_data );
@@ -299,7 +299,7 @@ class LoginHandler extends BaseClass {
 		if ( is_null( $i ) ) {
 			$i = 1;
 		} else {
-			$i++;
+			++$i;
 		}
 		$email = sprintf( '%1$s@%2$s', $user, $host );
 		if ( ! email_exists( $email ) ) {
@@ -323,7 +323,7 @@ class LoginHandler extends BaseClass {
 	public function save_telegram_user_data( $data ) {
 
 		if ( empty( $data['id'] ) || empty( $data['first_name'] ) ) {
-			throw new Exception( __( 'Invalid! The data is incomplete', 'wptelegram-login' ) );
+			throw new Exception( esc_html__( 'Invalid! The data is incomplete', 'wptelegram-login' ) );
 		}
 
 		$data = array_map( 'htmlspecialchars', $data );
@@ -340,7 +340,7 @@ class LoginHandler extends BaseClass {
 
 			// Signed in user and the Telegram user not same.
 			if ( $ret_user instanceof WP_User && $cur_user->ID !== $ret_user->ID ) {
-				throw new Exception( __( 'The Telegram User ID is already associated with another existing user. Please contact the admin', 'wptelegram-login' ) );
+				throw new Exception( esc_html__( 'The Telegram User ID is already associated with another existing user. Please contact the admin', 'wptelegram-login' ) );
 			}
 
 			$existing_user_id = $cur_user->ID;
@@ -358,7 +358,7 @@ class LoginHandler extends BaseClass {
 
 			if ( $disable_signup ) {
 
-				throw new Exception( __( 'Sign up via Telegram is disabled. You must first create an account and connect it to Telegram to be able to use Telegram Login', 'wptelegram-login' ) );
+				throw new Exception( esc_html__( 'Sign up via Telegram is disabled. You must first create an account and connect it to Telegram to be able to use Telegram Login', 'wptelegram-login' ) );
 
 			}
 		}
@@ -420,7 +420,7 @@ class LoginHandler extends BaseClass {
 			$wp_user_id = wp_insert_user( $userdata );
 
 			if ( is_wp_error( $wp_user_id ) ) {
-				throw new Exception( __( 'Telegram sign in could not be completed.', 'wptelegram-login' ) . ' ' . $wp_user_id->get_error_message() );
+				throw new Exception( esc_html__( 'Telegram sign in could not be completed.', 'wptelegram-login' ) . ' ' . esc_html( $wp_user_id->get_error_message() ) );
 			}
 
 			do_action( 'wptelegram_login_after_insert_user', $wp_user_id, $userdata );
@@ -440,7 +440,7 @@ class LoginHandler extends BaseClass {
 		do_action( 'wptelegram_login_after_update_user', $wp_user_id, $userdata );
 
 		if ( is_wp_error( $wp_user_id ) ) {
-			throw new Exception( __( 'Telegram sign in could not be completed.', 'wptelegram-login' ) . ' ' . $wp_user_id->get_error_message() );
+			throw new Exception( esc_html__( 'Telegram sign in could not be completed.', 'wptelegram-login' ) . ' ' . esc_html( $wp_user_id->get_error_message() ) );
 		}
 
 		// Save the telegram user ID and username.
@@ -475,7 +475,7 @@ class LoginHandler extends BaseClass {
 		if ( is_null( $i ) ) {
 			$i = 1;
 		} else {
-			$i++;
+			++$i;
 		}
 		if ( ! username_exists( $username ) ) {
 			return $username;

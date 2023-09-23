@@ -108,7 +108,6 @@ class Admin extends BaseClass {
 				],
 			]
 		);
-
 	}
 
 	/**
@@ -213,8 +212,8 @@ class Admin extends BaseClass {
 		if ( empty( $bot_username ) ) {
 			return;
 		}
-		$telegram_id = get_the_author_meta( WPTELEGRAM_USER_ID_META_KEY, get_current_user_id() );
 		$field_name  = WPTELEGRAM_USER_ID_META_KEY;
+		$telegram_id = get_the_author_meta( $field_name, get_current_user_id() );
 		?>
 		<fieldset style="margin-top:1rem;margin-bottom:1rem;">
 			<legend><?php esc_html_e( 'Telegram Info', 'wptelegram-login' ); ?></legend>
@@ -240,8 +239,8 @@ class Admin extends BaseClass {
 		if ( empty( $bot_username ) ) {
 			return;
 		}
-		$telegram_id     = get_the_author_meta( WPTELEGRAM_USER_ID_META_KEY, $user->ID );
 		$field_name      = WPTELEGRAM_USER_ID_META_KEY;
+		$telegram_id     = get_the_author_meta( $field_name, $user->ID );
 		$is_current_user = get_current_user_id() === $user->ID;
 		?>
 		<h2><?php esc_html_e( 'Telegram Info', 'wptelegram-login' ); ?></h2>
@@ -289,7 +288,7 @@ class Admin extends BaseClass {
 					printf(
 						$is_current_user // phpcs:ignore
 						/* translators: %s is bot username */
-						? __( 'Start a conversation with %s to receive notifications.', 'wptelegram-login' )
+						? __( 'Start a conversation with %s to receive notifications.', 'wptelegram-login' ) // phpcs:ignore
 						/* translators: %s is bot username */
 						: __( 'Ask the user to start a conversation with %s to receive notifications.', 'wptelegram-login' ), // phpcs:ignore
 						sprintf( '<a href="https://t.me/%1$s"  target="_blank" rel="noreferrer noopener">@%1$s</a>', esc_html( $bot_username ) )

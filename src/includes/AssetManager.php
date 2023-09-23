@@ -25,9 +25,10 @@ use ReflectionClass;
  */
 class AssetManager extends BaseClass {
 
-	const ADMIN_MAIN_JS_HANDLE = 'wptelegram-login--main';
-	const BLOCKS_JS_HANDLE     = 'wptelegram-login--blocks';
-	const WP_LOGIN_JS_HANDLE   = 'wptelegram-login--wp-login';
+	const ADMIN_MAIN_JS_HANDLE    = 'wptelegram-login--main';
+	const BLOCKS_JS_HANDLE        = 'wptelegram-login--blocks';
+	const WP_LOGIN_JS_HANDLE      = 'wptelegram-login--wp-login';
+	const WEB_APP_LOGIN_JS_HANDLE = 'wptelegram-login--web-app-login';
 
 	/**
 	 * Register the assets.
@@ -42,11 +43,29 @@ class AssetManager extends BaseClass {
 
 		$assets = $this->plugin()->assets();
 
+		wp_register_script(
+			self::WEB_APP_LOGIN_JS_HANDLE . '-js',
+			'https://telegram.org/js/telegram-web-app.js',
+			[],
+			$this->plugin()->version(),
+			true
+		);
+
+		$external_deps = [
+			self::WEB_APP_LOGIN_JS_HANDLE => [ self::WEB_APP_LOGIN_JS_HANDLE . '-js' ],
+		];
+
 		foreach ( $constants as $handle ) {
+			$dependencies = $assets->get_asset_dependencies( $handle );
+
+			if ( isset( $external_deps[ $handle ] ) ) {
+				$dependencies = array_merge( $dependencies, $external_deps[ $handle ] );
+			}
+
 			wp_register_script(
 				$handle,
 				$assets->get_asset_url( $handle ),
-				$assets->get_asset_dependencies( $handle ),
+				$dependencies,
 				$assets->get_asset_version( $handle ),
 				true
 			);
@@ -299,7 +318,7 @@ class AssetManager extends BaseClass {
 
 		usort(
 			$data,
-			function( $a, $b ) {
+			function ( $a, $b ) {
 				return strcmp( $a['label'], $b['label'] );
 			}
 		);
@@ -337,6 +356,62 @@ class AssetManager extends BaseClass {
 
 		if ( wp_style_is( $handle, 'registered' ) ) {
 			wp_enqueue_style( $handle );
+		}
+	}
+
+	/**
+	 * Register the scripts for public facing pages
+	 *
+	 * @since    1.10.4
+	 */
+	public function enqueue_public_scripts() {
+		$action = filter_input( INPUT_GET, 'action' );
+
+		if ( 'wptelegram_login_webapp' === $action ) {
+
+			$handle = self::WEB_APP_LOGIN_JS_HANDLE;
+
+			// This should not be needed, but it doesn't seem to work without loading the dependency.
+			wp_enqueue_script( $handle . '-js' );
+			wp_enqueue_script( $handle );
+
+			$redirect_to       = esc_url( filter_input( INPUT_GET, 'redirect_to' ) );
+			$confirm_login     = filter_input( INPUT_GET, 'confirm_login' );
+			$confirm_login     = null !== $confirm_login ? (bool) $confirm_login : true;
+			$is_user_logged_in = is_user_logged_in();
+			$login_auth_url    = add_query_arg(
+				[
+					'action'      => 'wptelegram_login',
+					'source'      => 'WebAppData',
+					'redirect_to' => $redirect_to,
+				],
+				site_url()
+			);
+
+			$i18n = [
+				'popup' => [
+					'title'   => __( 'Login with Telegram', 'wptelegram-login' ),
+					'message' => __( 'Do you want to login via Telegram for a better experience?', 'wptelegram-login' ),
+					'buttons' => [
+						[
+							'id'   => 'login',
+							'text' => __( 'Login', 'wptelegram-login' ),
+							'type' => 'default',
+						],
+						[
+							'id'   => 'cancel',
+							'text' => __( 'Cancel', 'wptelegram-login' ),
+							'type' => 'cancel',
+						],
+					],
+				],
+			];
+
+			$data = compact( 'is_user_logged_in', 'login_auth_url', 'confirm_login', 'i18n' );
+
+			$data = apply_filters( 'wptelegram_login_web_app_login_data', $data );
+
+			self::add_dom_data( $handle, $data, 'wptelegram_web_app_data' );
 		}
 	}
 
