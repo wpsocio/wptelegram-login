@@ -362,7 +362,7 @@ class AssetManager extends BaseClass {
 	/**
 	 * Register the scripts for public facing pages
 	 *
-	 * @since    x.y.z
+	 * @since    1.10.4
 	 */
 	public function enqueue_public_scripts() {
 		$action = filter_input( INPUT_GET, 'action' );
