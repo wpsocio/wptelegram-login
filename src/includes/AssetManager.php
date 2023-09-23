@@ -299,7 +299,7 @@ class AssetManager extends BaseClass {
 
 		usort(
 			$data,
-			function( $a, $b ) {
+			function ( $a, $b ) {
 				return strcmp( $a['label'], $b['label'] );
 			}
 		);

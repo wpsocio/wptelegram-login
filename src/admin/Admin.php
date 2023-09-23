@@ -288,7 +288,7 @@ class Admin extends BaseClass {
 					printf(
 						$is_current_user // phpcs:ignore
 						/* translators: %s is bot username */
-						? __( 'Start a conversation with %s to receive notifications.', 'wptelegram-login' )
+						? __( 'Start a conversation with %s to receive notifications.', 'wptelegram-login' ) // phpcs:ignore
 						/* translators: %s is bot username */
 						: __( 'Ask the user to start a conversation with %s to receive notifications.', 'wptelegram-login' ), // phpcs:ignore
 						sprintf( '<a href="https://t.me/%1$s"  target="_blank" rel="noreferrer noopener">@%1$s</a>', esc_html( $bot_username ) )

@@ -14,9 +14,9 @@
 
 namespace WPTelegram\Login\includes;
 
-use \WPTelegram\Login\admin\Admin;
-use \WPTelegram\Login\shared\Shared;
-use \WPTelegram\Login\shared\LoginHandler;
+use WPTelegram\Login\admin\Admin;
+use WPTelegram\Login\shared\Shared;
+use WPTelegram\Login\shared\LoginHandler;
 
 /**
  * The core plugin class.

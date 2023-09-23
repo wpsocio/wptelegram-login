@@ -121,7 +121,7 @@ class Assets {
 	public function set_manifest_filepath( $manifest_path = '' ) {
 		$manifest_path = $manifest_path ? $manifest_path : trailingslashit( $this->assets_path ) . self::FILE_NAME;
 		if ( ! is_readable( $manifest_path ) ) {
-			throw new \Exception( 'Manifest file not found or is not readable: ' . $manifest_path );
+			throw new \Exception( 'Manifest file not found or is not readable: ' . esc_html( $manifest_path ) );
 		}
 		$this->manifest_path = $manifest_path;
 	}
@@ -185,11 +185,10 @@ class Assets {
 	 * Get the dependencies of an asset.
 	 *
 	 * @param string $entry_point The entry point to get the asset dependencies for.
-	 * @param string $type        The type of asset - JS, PHP, CSS.
 	 *
 	 * @return array
 	 */
-	public function get_asset_dependencies( $entry_point, $type = self::ASSET_EXT_JS ) {
+	public function get_asset_dependencies( $entry_point ) {
 		$asset = $this->get_asset_details( $entry_point );
 		if ( ! isset( $asset[ self::KEY_DEPENDENCIES ] ) ) {
 			return [];
@@ -216,7 +215,7 @@ class Assets {
 		}
 		$full_path = $this->assets_path . $file_name;
 		if ( ! is_readable( $full_path ) ) {
-			throw new \Exception( 'Asset file not found or is not readable: ' . $full_path );
+			throw new \Exception( 'Asset file not found or is not readable: ' . esc_html( $full_path ) );
 		}
 		return require $full_path;
 	}

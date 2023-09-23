@@ -1,4 +1,12 @@
 <?php
+/**
+ * Autoloader.
+ *
+ * @link       https://wpsocio.com
+ * @since      1.0.0
+ *
+ * @package    WPTelegram\Login
+ */
 
 spl_autoload_register( 'wptelegram_login_autoloader' );
 
