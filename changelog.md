@@ -4,6 +4,10 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+### Enhancements
+
+- Added Telegram Mini App login support
+
 ## [1.10.3 - 2023-05-20](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.10.3)
 
 ### Bug fixes
