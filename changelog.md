@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.10.5 - 2023-10-8](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.10.5)
+
+### Bug fixes
+
+- Fixed validation for Direct Link Mini Apps
+
 ## [1.10.4 - 2023-09-23](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.10.4)
 
 ### Enhancements
