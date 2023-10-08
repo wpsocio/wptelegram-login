@@ -124,24 +124,28 @@ class LoginHandler extends BaseClass {
 	 */
 	public function filter_input_fields( $input ) {
 
-		$desired_fields = [
+		$query_params = [
 			// Shared fields.
-			'auth_date'  => '',
-			'hash'       => '',
+			'auth_date'     => '',
+			'hash'          => '',
 			// Normal login fields.
-			'id'         => '',
-			'first_name' => '',
-			'last_name'  => '',
-			'username'   => '',
-			'photo_url'  => '',
+			'id'            => '',
+			'first_name'    => '',
+			'last_name'     => '',
+			'username'      => '',
+			'photo_url'     => '',
 			// WebAppData fields.
-			'query_id'   => '',
-			'user'       => '',
+			'query_id'      => '',
+			'user'          => '',
+			'chat_instance' => '',
+			'chat_type'     => '',
 			// Misc.
-			'source'     => '',
+			'source'        => '',
 		];
 
-		return array_intersect_key( $input, $desired_fields );
+		$query_params = apply_filters( 'wptelegram_login_validation_query_params', $query_params, $input );
+
+		return array_intersect_key( $input, $query_params );
 	}
 
 	/**
