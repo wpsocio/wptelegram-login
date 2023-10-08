@@ -116,7 +116,7 @@ class LoginHandler extends BaseClass {
 	 * Filter the input by removing any unwanted fields
 	 * Especially in case of the query type permalinks.
 	 *
-	 * @since    x.y.z
+	 * @since    1.10.6
 	 *
 	 * @param array $input The data passed.
 	 *

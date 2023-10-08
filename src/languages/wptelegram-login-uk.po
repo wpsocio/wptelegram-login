@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/wpsocio/wptelegram-login\n"
-"POT-Creation-Date: 2023-10-08 07:45:52+00:00\n"
+"POT-Creation-Date: 2023-10-08 12:23:15+00:00\n"
 "PO-Revision-Date: 2021-02-16 02:09+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
@@ -528,19 +528,19 @@ msgstr "%s є обов'язковим."
 msgid "Changes could not be saved."
 msgstr "Не вдається зберегти зміни."
 
-#: shared/LoginHandler.php:179
+#: shared/LoginHandler.php:193
 msgid "Unauthorized! Data is NOT from Telegram"
 msgstr "Несанкціоновано! Дані НЕ від Telegram"
 
-#: shared/LoginHandler.php:183
+#: shared/LoginHandler.php:197
 msgid "Invalid! The data is outdated"
 msgstr "Недійсний! Дані застарілі"
 
-#: shared/LoginHandler.php:330
+#: shared/LoginHandler.php:344
 msgid "Invalid! The data is incomplete"
 msgstr "Недійсний! Дані неповні"
 
-#: shared/LoginHandler.php:347
+#: shared/LoginHandler.php:361
 msgid ""
 "The Telegram User ID is already associated with another existing user. "
 "Please contact the admin"
@@ -548,7 +548,7 @@ msgstr ""
 "Ідентифікатор користувача Telegram вже пов'язаний з іншим наявним "
 "користувачем. Будь ласка, зверніться до адміністратора"
 
-#: shared/LoginHandler.php:365
+#: shared/LoginHandler.php:379
 msgid ""
 "Sign up via Telegram is disabled. You must first create an account and "
 "connect it to Telegram to be able to use Telegram Login"
@@ -557,7 +557,7 @@ msgstr ""
 "запис і підключити його до Telegram, щоб мати можливість користуватися "
 "Telegram Вхід"
 
-#: shared/LoginHandler.php:427 shared/LoginHandler.php:447
+#: shared/LoginHandler.php:441 shared/LoginHandler.php:461
 msgid "Telegram sign in could not be completed."
 msgstr "Не вдалося увійти в Telegram."
 
