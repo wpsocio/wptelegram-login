@@ -45,7 +45,7 @@ class LoginHandler extends BaseClass {
 		$input = wp_unslash( $_GET ); // phpcs:disable WordPress.Security.NonceVerification.Recommended
 
 		// Remove any unwanted fields.
-		$input = $this->filter_input_fields( $input );
+		$input = $this->cleanup_input( $input );
 
 		try {
 			$auth_data = $this->validate_auth_data( $input );
@@ -116,36 +116,50 @@ class LoginHandler extends BaseClass {
 	 * Filter the input by removing any unwanted fields
 	 * Especially in case of the query type permalinks.
 	 *
-	 * @since    1.0.0
+	 * @since    1.10.6
 	 *
 	 * @param array $input The data passed.
 	 *
 	 * @return array
 	 */
-	public function filter_input_fields( $input ) {
+	private function cleanup_input( $input ) {
 
-		$query_params = [
-			// Shared fields.
-			'auth_date'     => '',
-			'hash'          => '',
-			// Normal login fields.
-			'id'            => '',
-			'first_name'    => '',
-			'last_name'     => '',
-			'username'      => '',
-			'photo_url'     => '',
-			// WebAppData fields.
-			'query_id'      => '',
-			'user'          => '',
-			'chat_instance' => '',
-			'chat_type'     => '',
+		$validation_query_params = [
+			// Common fields.
+			'auth_date',
+			'hash',
+			/**
+			 * Normal login fields.
+			 *
+			 * @link https://core.telegram.org/widgets/login#receiving-authorization-data
+			 */
+			'id',
+			'first_name',
+			'last_name',
+			'username',
+			'photo_url',
+			/**
+			 * WebAppInitData
+			 *
+			 * @link https://core.telegram.org/bots/webapps#webappinitdata
+			 */
+			'query_id',
+			'user',
+			'receiver',
+			'chat',
+			'chat_type',
+			'start_param',
+			'can_send_after',
+			'chat_instance',
 			// Misc.
-			'source'        => '',
+			'source',
 		];
 
-		$query_params = apply_filters( 'wptelegram_login_validation_query_params', $query_params, $input );
+		$validation_query_params = apply_filters( 'wptelegram_login_validation_query_params', $validation_query_params, $input );
 
-		return array_intersect_key( $input, $query_params );
+		$clean_input = array_intersect_key( $input, array_flip( $validation_query_params ) );
+
+		return apply_filters( 'wptelegram_login_clean_input', $clean_input, $input );
 	}
 
 	/**
