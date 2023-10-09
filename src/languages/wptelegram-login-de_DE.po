@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPTelegram Login 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/wpsocio/wptelegram-login\n"
-"POT-Creation-Date: 2023-10-08 12:23:15+00:00\n"
+"POT-Creation-Date: 2023-10-09 16:35:59+00:00\n"
 "PO-Revision-Date: 2021-02-16 02:08+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
@@ -105,19 +105,19 @@ msgstr "eingeloggt"
 msgid "Default"
 msgstr "Standard"
 
-#: includes/AssetManager.php:393
+#: includes/AssetManager.php:406
 msgid "Login with Telegram"
 msgstr ""
 
-#: includes/AssetManager.php:394
+#: includes/AssetManager.php:407
 msgid "Do you want to login via Telegram for a better experience?"
 msgstr ""
 
-#: includes/AssetManager.php:398
+#: includes/AssetManager.php:411
 msgid "Login"
 msgstr ""
 
-#: includes/AssetManager.php:403
+#: includes/AssetManager.php:416
 msgid "Cancel"
 msgstr ""
 

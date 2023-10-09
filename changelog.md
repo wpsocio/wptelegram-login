@@ -4,6 +4,8 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.10.7 - 2023-10-9](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.10.7)
+
 ### Bug fixes
 
 - Fixed the bug for Telegram Mini Apps which pass HTML encoded query string

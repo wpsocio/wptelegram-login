@@ -5,7 +5,7 @@ Tags: telegram, login, register, social, signup
 Requires at least: 6.0
 Requires PHP: 7.0
 Tested up to: 6.3.1
-Stable tag: 1.10.6
+Stable tag: 1.10.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -149,6 +149,9 @@ Follow the instructions given on the settings page. You need to send `/setdomain
 9. WooCommerce Account Page
 
 == Changelog ==
+
+= 1.10.7 =
+- Fixed the bug for Telegram Mini Apps which pass HTML encoded query string
 
 = 1.10.6 =
 - Fixed validation for Direct Link Mini Apps with start command
