@@ -365,9 +365,23 @@ class AssetManager extends BaseClass {
 	 * @since    1.10.4
 	 */
 	public function enqueue_public_scripts() {
-		$action = filter_input( INPUT_GET, 'action' );
+		if ( ! isset( $_SERVER['QUERY_STRING'] ) ) {
+			return;
+		}
 
-		if ( 'wptelegram_login_webapp' === $action ) {
+		// Using $_SERVER['QUERY_STRING'] to avoid a bug in Telegram Mini Apps which pass HTML encoded query string.
+		$query_string = html_entity_decode( sanitize_text_field( wp_unslash( $_SERVER['QUERY_STRING'] ) ) );
+
+		$query_params = wp_parse_args(
+			$query_string,
+			[
+				'action'        => '',
+				'confirm_login' => '1',
+				'redirect_to'   => '',
+			]
+		);
+
+		if ( 'wptelegram_login_webapp' === $query_params['action'] ) {
 
 			$handle = self::WEB_APP_LOGIN_JS_HANDLE;
 
@@ -375,9 +389,8 @@ class AssetManager extends BaseClass {
 			wp_enqueue_script( $handle . '-js' );
 			wp_enqueue_script( $handle );
 
-			$redirect_to       = esc_url( filter_input( INPUT_GET, 'redirect_to' ) );
-			$confirm_login     = filter_input( INPUT_GET, 'confirm_login' );
-			$confirm_login     = null !== $confirm_login ? (bool) $confirm_login : true;
+			$redirect_to       = esc_url( $query_params['redirect_to'] );
+			$confirm_login     = (bool) $query_params['confirm_login'];
 			$is_user_logged_in = is_user_logged_in();
 			$login_auth_url    = add_query_arg(
 				[
