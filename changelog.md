@@ -4,6 +4,10 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+### Bug fixes
+
+- Fixed the bug for Telegram Mini Apps which pass HTML encoded query string
+
 ## [1.10.6 - 2023-10-8](https://github.com/wpsocio/wptelegram-login/releases/tag/v1.10.6)
 
 ### Bug fixes
