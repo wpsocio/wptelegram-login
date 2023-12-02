@@ -453,12 +453,18 @@ class LoginHandler extends BaseClass {
 
 		$userdata = apply_filters( 'wptelegram_login_update_user_data', $userdata );
 
-		$wp_user_id = wp_update_user( $userdata );
+		if ( ! empty( $userdata ) ) {
 
-		do_action( 'wptelegram_login_after_update_user', $wp_user_id, $userdata );
+			// Ensure that ID is not removed.
+			$userdata['ID'] = $wp_user_id;
 
-		if ( is_wp_error( $wp_user_id ) ) {
-			throw new Exception( esc_html__( 'Telegram sign in could not be completed.', 'wptelegram-login' ) . ' ' . esc_html( $wp_user_id->get_error_message() ) );
+			$wp_user_id = wp_update_user( $userdata );
+
+			if ( is_wp_error( $wp_user_id ) ) {
+				throw new Exception( esc_html__( 'Telegram sign in could not be completed.', 'wptelegram-login' ) . ' ' . esc_html( $wp_user_id->get_error_message() ) );
+			}
+
+			do_action( 'wptelegram_login_after_update_user', $wp_user_id, $userdata );
 		}
 
 		// Save the telegram user ID and username.
