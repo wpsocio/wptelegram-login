@@ -1,0 +1,40 @@
+{
+  "_usePluginData-_w8zuHoQ.js": {
+    "file": "dist/usePluginData-_w8zuHoQ.js"
+  },
+  "js/blocks/index.ts": {
+    "css": [
+      "dist/blocks-8stdso84.css"
+    ],
+    "file": "dist/blocks-k_X30C-Y.js",
+    "imports": [
+      "_usePluginData-_w8zuHoQ.js"
+    ],
+    "isEntry": true,
+    "src": "js/blocks/index.ts"
+  },
+  "js/settings/index.ts": {
+    "css": [
+      "dist/settings-T1BGW3Dl.css"
+    ],
+    "file": "dist/settings-bpb734DH.js",
+    "imports": [
+      "_usePluginData-_w8zuHoQ.js"
+    ],
+    "isEntry": true,
+    "src": "js/settings/index.ts"
+  },
+  "js/web-app-login/index.ts": {
+    "file": "dist/web-app-login-wH9ROPjw.js",
+    "isEntry": true,
+    "src": "js/web-app-login/index.ts"
+  },
+  "js/wp-login/index.ts": {
+    "css": [
+      "dist/wp-login-8raL62Bk.css"
+    ],
+    "file": "dist/wp-login-sq1z-X9Q.js",
+    "isEntry": true,
+    "src": "js/wp-login/index.ts"
+  }
+}

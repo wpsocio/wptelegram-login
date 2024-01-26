@@ -1,0 +1,55 @@
+{
+    "packages": [
+        {
+            "name": "wpsocio/wp-utils",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "../../packages/php/wp-utils",
+                "reference": "5b5a69c7e81db920f6ee6dcac2281c721029d59e"
+            },
+            "require-dev": {
+                "pestphp/pest": "^1.22",
+                "wp-coding-standards/wpcs": "^3.0.1"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "WPSocio\\WPUtils\\": "src/"
+                }
+            },
+            "scripts": {
+                "lint": [
+                    "\"vendor/bin/phpcs\" --standard=../../../phpcs.xml --extensions=php ."
+                ],
+                "lint:skip-warnings": [
+                    "\"vendor/bin/phpcs\" --standard=../../../phpcs.xml --extensions=php -n ."
+                ],
+                "lint:fix": [
+                    "\"vendor/bin/phpcbf\" --standard=../../../phpcs.xml --extensions=php ."
+                ],
+                "test": [
+                    "\"vendor/bin/pest\""
+                ]
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "WP Socio"
+                }
+            ],
+            "description": "Utilities for WordPress plugins and themes",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            },
+            "install-path": "../wpsocio/wp-utils"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}
