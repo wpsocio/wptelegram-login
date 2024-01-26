@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.10.9
+
+### Patch Changes
+
+- [#63](https://github.com/wpsocio/wp-projects/pull/63) [`c1d022e`](https://github.com/wpsocio/wp-projects/commit/c1d022eefc2341bfd5cd6b9dcfe56641f0f5a874) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Fixed requirements in readme.txt
+
 ## 1.10.8
 
 ### Patch Changes

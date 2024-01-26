@@ -2,10 +2,10 @@
 Contributors: wpsocio, irshadahmad21
 Donate link: https://wpsocio.com/donate
 Tags: telegram, login, register, social, signup
-Requires at least: 6.0
-Requires PHP: 7.0
-Tested up to: 6.3.1
-Stable tag: 1.10.7
+Requires at least: 6.2
+Requires PHP: 8.0
+Tested up to: 6.4.1
+Stable tag: 1.10.9
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -154,9 +154,7 @@ Automatic updates should work smoothly, but we still recommend you back up your 
 
 == Changelog ==
 
-= 1.10.8 =
-- Fixed the error when there is no user data to update.
-- Fixed the block CSS not loaded in site editor
-- Updated minimum required PHP version to 8.0
+= 1.10.9 =
+- Fixed requirements in readme.txt
 
 [See full changelog](https://github.com/wpsocio/wptelegram-login/blob/main/CHANGELOG.md)
