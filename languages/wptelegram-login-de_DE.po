@@ -27,58 +27,58 @@ msgstr ""
 msgid "Telegram Login"
 msgstr "Telegram Login"
 
-#: admin/Admin.php:219
-#: admin/Admin.php:246
+#: admin/Admin.php:227
+#: admin/Admin.php:254
 msgid "Telegram Info"
 msgstr ""
 
-#: admin/Admin.php:220
-#: admin/Admin.php:247
+#: admin/Admin.php:228
+#: admin/Admin.php:255
 msgid "Here you can connect this account to Telegram."
 msgstr ""
 
-#: admin/Admin.php:222
-#: admin/Admin.php:251
+#: admin/Admin.php:230
+#: admin/Admin.php:259
 msgid "Telegram Chat ID"
 msgstr ""
 
 #: ../../packages/js/components/instructions/Instructions.tsx:20
-#: admin/Admin.php:272
+#: admin/Admin.php:280
 #: languages/wptelegram-login-js-translations.php:14
 msgid "INSTRUCTIONS!"
 msgstr "KONFIGURATIONSANLEITUNG"
 
-#: admin/Admin.php:279
+#: admin/Admin.php:287
 msgid "Get your Chat ID from %s and enter it above."
 msgstr ""
 
 #. translators: %s is bot username
-#: admin/Admin.php:281
+#: admin/Admin.php:289
 msgid "Ask the user to get the Chat ID from %s and enter it above."
 msgstr ""
 
 #. translators: %s is bot username
-#: admin/Admin.php:291
+#: admin/Admin.php:299
 msgid "Start a conversation with %s to receive notifications."
 msgstr ""
 
 #. translators: %s is bot username
-#: admin/Admin.php:293
+#: admin/Admin.php:301
 msgid "Ask the user to start a conversation with %s to receive notifications."
 msgstr ""
 
 #: ../../packages/js/services/apiFetch/index.ts:41
-#: admin/Admin.php:317
+#: admin/Admin.php:325
 #: languages/wptelegram-login-js-translations.php:103
 #: shared/LoginHandler.php:61
 msgid "Error:"
 msgstr "Fehler:"
 
-#: admin/Admin.php:317
+#: admin/Admin.php:325
 msgid "Please Enter a valid Chat ID"
 msgstr ""
 
-#: admin/Admin.php:361
+#: admin/Admin.php:369
 msgid "Telegram User ID"
 msgstr "Telegram User ID"
 
@@ -671,7 +671,7 @@ msgstr "Titel"
 #. Plugin Name of the plugin
 #: js/blocks/telegram-login/index.tsx:20
 #: js/settings/ui/WidgetInfoCard.tsx:35
-#: includes/Main.php:403
+#: includes/Main.php:417
 #: languages/wptelegram-login-js-translations.php:168
 #: shared/widgets/Primary.php:28
 #~ msgid "WP Telegram Login"
@@ -693,4 +693,12 @@ msgstr ""
 
 #. Author URI of the plugin
 msgid "https://wpsocio.com"
+msgstr ""
+
+#: admin/Admin.php:193
+msgid "Plugin data has been upgraded."
+msgstr ""
+
+#: admin/Admin.php:194
+msgid "Please reload the page."
 msgstr ""

@@ -3,18 +3,18 @@
     "react",
     "react-dom",
     "wp-i18n",
-    "wp-api-fetch",
-    "jquery"
+    "jquery",
+    "wp-api-fetch"
   ],
   "js/blocks/index.ts": [
     "wp-blocks",
-    "react",
     "wp-i18n",
-    "jquery",
+    "react",
     "wp-api-fetch",
+    "wp-element",
+    "jquery",
     "wp-block-editor",
     "wp-components",
-    "wp-element",
     "react-dom"
   ],
   "js/web-app-login/index.ts": [],

@@ -186,6 +186,14 @@ class Admin extends BaseClass {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
 		}
+
+		if ( $this->plugin()->doing_upgrade() ) {
+			return printf(
+				'<h1>%1$s %2$s</h1>',
+				esc_html__( 'Plugin data has been upgraded.', 'wptelegram-login' ),
+				esc_html__( 'Please reload the page.', 'wptelegram-login' )
+			);
+		}
 		?>
 			<div id="wptelegram-login-settings"></div>
 		<?php

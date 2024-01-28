@@ -169,7 +169,7 @@ class Main {
 		}
 		self::$initiated = true;
 
-		$plugin_upgrade = new Upgrade( $this );
+		$plugin_upgrade = Upgrade::instance();
 
 		// First lets do the upgrades, if needed.
 		add_action( 'plugins_loaded', [ $plugin_upgrade, 'do_upgrade' ], 10 );
@@ -179,14 +179,31 @@ class Main {
 	}
 
 	/**
+	 * Whether an upgrade is going on.
+	 *
+	 * @since 1.10.11
+	 *
+	 * @return bool
+	 */
+	public function doing_upgrade() {
+		return defined( 'WPTELEGRAM_LOGIN_DOING_UPGRADE' ) && WPTELEGRAM_LOGIN_DOING_UPGRADE;
+	}
+
+	/**
 	 * Registers the initial hooks.
 	 *
 	 * @since    1.9.7
 	 * @access   public
 	 */
 	public function hookup() {
-		// If an upgrade is going on.
-		if ( defined( 'WPTELEGRAM_LOGIN_DOING_UPGRADE' ) && WPTELEGRAM_LOGIN_DOING_UPGRADE ) {
+
+		$plugin_admin = Admin::instance();
+
+		// Ensure that the menu is always added.
+		add_action( 'admin_menu', [ $plugin_admin, 'add_plugin_admin_menu' ] );
+		add_action( 'admin_menu', [ Utils::class, 'update_menu_structure' ], 5 );
+
+		if ( $this->doing_upgrade() ) {
 			return;
 		}
 		$this->define_admin_hooks();
@@ -280,7 +297,7 @@ class Main {
 	 * @access   private
 	 */
 	private function set_asset_manager() {
-		$this->asset_manager = new AssetManager( $this );
+		$this->asset_manager = AssetManager::instance();
 	}
 
 	/**
@@ -321,10 +338,7 @@ class Main {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Admin( $this );
-
-		add_action( 'admin_menu', [ $plugin_admin, 'add_plugin_admin_menu' ] );
-		add_action( 'admin_menu', [ Utils::class, 'update_menu_structure' ], 5 );
+		$plugin_admin = Admin::instance();
 
 		add_action( 'rest_api_init', [ $plugin_admin, 'register_rest_routes' ] );
 
@@ -361,7 +375,7 @@ class Main {
 	 */
 	private function define_shared_hooks() {
 
-		$shared = new Shared( $this );
+		$shared = Shared::instance();
 
 		add_action( 'register_form', [ $shared, 'add_telegram_login_button' ] );
 		add_action( 'login_form', [ $shared, 'add_telegram_login_button' ] );
@@ -372,7 +386,7 @@ class Main {
 
 		add_filter( 'get_avatar_url', [ $shared, 'custom_avatar_url' ], 10, 2 );
 
-		$login_handler = new LoginHandler( $this );
+		$login_handler = LoginHandler::instance();
 
 		add_action( 'init', [ $login_handler, 'telegram_login' ], 1 );
 

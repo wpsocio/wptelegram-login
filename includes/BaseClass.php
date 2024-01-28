@@ -23,23 +23,47 @@ namespace WPTelegram\Login\includes;
 abstract class BaseClass {
 
 	/**
+	 * Instances of the class.
+	 *
+	 * @since  1.10.11
+	 * @access protected
+	 * @var    self $instances The instances.
+	 */
+	protected static $instances = [];
+
+	/**
 	 * The plugin class instance.
 	 *
 	 * @since    1.0.0
-	 * @access   private
+	 * @access   protected
 	 * @var      Main $plugin The plugin class instance.
 	 */
-	private $plugin;
+	protected $plugin;
+
+	/**
+	 * Base class Instance.
+	 *
+	 * Ensures only one instance of the class is loaded or can be loaded.
+	 *
+	 * @since 1.10.11
+	 *
+	 * @return static
+	 */
+	public static function instance() {
+		if ( ! isset( self::$instances[ static::class ] ) ) {
+			self::$instances[ static::class ] = new static();
+		}
+		return self::$instances[ static::class ];
+	}
 
 	/**
 	 * Initialize the class and set its properties.
 	 *
 	 * @since 1.0.0
-	 * @param Main $plugin The plugin class instance.
 	 */
-	public function __construct( $plugin ) {
+	protected function __construct() {
 
-		$this->plugin = $plugin;
+		$this->plugin = Main::instance();
 	}
 
 	/**

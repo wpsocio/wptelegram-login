@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.10.11
+
+### Patch Changes
+
+- [#79](https://github.com/wpsocio/wp-projects/pull/79) [`3791761`](https://github.com/wpsocio/wp-projects/commit/37917611443b65efc55224d1d932dc86fdfb9104) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Fixed plugin menu being hidden during upgrade
+
 ## 1.10.10
 
 ### Patch Changes

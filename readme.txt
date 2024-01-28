@@ -5,8 +5,8 @@ Tags: telegram, login, register, social, signup
 Requires at least: 6.2
 Requires PHP: 7.4
 Tested up to: 6.4.1
-Stable tag: 1.10.10
-License: GPLv3
+Stable tag: 1.10.11
+License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Let the users login to your website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram.
@@ -154,7 +154,7 @@ Automatic updates should work smoothly, but we still recommend you back up your 
 
 == Changelog ==
 
-= 1.10.10 =
-- Enabled support for PHP 7.4 after user feedback
+= 1.10.11 =
+- Fixed plugin menu being hidden during upgrade
 
 [See full changelog](https://github.com/wpsocio/wptelegram-login/blob/main/CHANGELOG.md)
