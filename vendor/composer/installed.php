@@ -1,8 +1,8 @@
 <?php return array(
     'root' => array(
         'name' => 'wpsocio/wptelegram-login',
-        'pretty_version' => '1.10.11',
-        'version' => '1.10.11.0',
+        'pretty_version' => '1.10.12',
+        'version' => '1.10.12.0',
         'reference' => NULL,
         'type' => 'library',
         'install_path' => __DIR__ . '/../../../',
@@ -20,8 +20,8 @@
             'dev_requirement' => false,
         ),
         'wpsocio/wptelegram-login' => array(
-            'pretty_version' => '1.10.11',
-            'version' => '1.10.11.0',
+            'pretty_version' => '1.10.12',
+            'version' => '1.10.12.0',
             'reference' => NULL,
             'type' => 'library',
             'install_path' => __DIR__ . '/../../../',

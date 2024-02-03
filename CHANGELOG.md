@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.10.12
+
+### Patch Changes
+
+- [#85](https://github.com/wpsocio/wp-projects/pull/85) [`bacb50a`](https://github.com/wpsocio/wp-projects/commit/bacb50a20b5cb84a18c1e9fa35263e0939ca572f) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Fixed the fatal error caused by other plugins on `init`
+
 ## 1.10.11
 
 ### Patch Changes

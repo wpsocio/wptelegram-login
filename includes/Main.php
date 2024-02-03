@@ -388,7 +388,7 @@ class Main {
 
 		$login_handler = LoginHandler::instance();
 
-		add_action( 'init', [ $login_handler, 'telegram_login' ], 1 );
+		add_action( 'parse_query', [ $login_handler, 'telegram_login' ] );
 
 		$asset_manager = $this->asset_manager();
 
