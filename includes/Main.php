@@ -388,7 +388,9 @@ class Main {
 
 		$login_handler = LoginHandler::instance();
 
-		add_action( 'parse_query', [ $login_handler, 'telegram_login' ] );
+		list( $login_intercept_hook, $priority ) = apply_filters( 'wptelegram_login_intercept_request_on', [ 'init', 5 ] );
+
+		add_action( $login_intercept_hook, [ $login_handler, 'telegram_login' ], $priority );
 
 		$asset_manager = $this->asset_manager();
 

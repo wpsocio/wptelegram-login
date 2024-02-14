@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.10.13
+
+### Patch Changes
+
+- [#97](https://github.com/wpsocio/wp-projects/pull/97) [`5b53b10`](https://github.com/wpsocio/wp-projects/commit/5b53b106bfec26d09ad9f317ee61a19487b0bf90) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Restored the login request intercept hook to `init`
+
 ## 1.10.12
 
 ### Patch Changes

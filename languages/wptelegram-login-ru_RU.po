@@ -671,7 +671,8 @@ msgstr "Заголовок"
 #. Plugin Name of the plugin
 #: js/blocks/telegram-login/index.tsx:20
 #: js/settings/ui/WidgetInfoCard.tsx:35
-#: includes/Main.php:417
+#: wptelegram-login.php
+#: includes/Main.php:419
 #: languages/wptelegram-login-js-translations.php:168
 #: shared/widgets/Primary.php:28
 #~ msgid "WP Telegram Login"
@@ -679,19 +680,23 @@ msgstr "Заголовок"
 
 #. Description of the plugin
 #: js/settings/ui/Sidebar.tsx:18
+#: wptelegram-login.php
 #: languages/wptelegram-login-js-translations.php:297
 #~ msgid "Let the users login to your WordPress website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram."
 #~ msgstr "С помощью этого плагина, вы можете сделать простую авторизацию для ваших пользователей через Telegram."
 
 #. Plugin URI of the plugin
+#: wptelegram-login.php
 msgid "https://t.me/WPTelegram"
 msgstr ""
 
 #. Author of the plugin
+#: wptelegram-login.php
 msgid "WP Socio"
 msgstr ""
 
 #. Author URI of the plugin
+#: wptelegram-login.php
 msgid "https://wpsocio.com"
 msgstr ""
 

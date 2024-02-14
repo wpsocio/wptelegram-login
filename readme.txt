@@ -5,7 +5,7 @@ Tags: telegram, login, register, social, signup
 Requires at least: 6.2
 Requires PHP: 7.4
 Tested up to: 6.4.3
-Stable tag: 1.10.12
+Stable tag: 1.10.13
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -101,7 +101,7 @@ For rules, see the pinned message. No spam, please.
 
 == Contribution ==
 
-Development occurs in our [Github monorepo](https://github.com/wpsocio/wp-projects), and all contributions welcome.
+Development takes place in our [Github monorepo](https://github.com/wpsocio/wp-projects), and all contributions welcome.
 
 == Frequently Asked Questions ==
 
@@ -154,7 +154,7 @@ Automatic updates should work smoothly, but we still recommend you back up your 
 
 == Changelog ==
 
-= 1.10.12 =
-- Fixed the fatal error caused by other plugins on `init`
+= 1.10.13 =
+- Restored the login request intercept hook to `init`
 
 [See full changelog](https://github.com/wpsocio/wptelegram-login/blob/main/CHANGELOG.md)
