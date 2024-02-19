@@ -468,7 +468,13 @@ class AssetManager extends BaseClass {
 	 */
 	public function enqueue_block_assets() {
 
-		$this->plugin()->assets()->enqueue( self::BLOCKS_ENTRY );
+		$is_block_editor = (bool) did_action( 'enqueue_block_editor_assets' );
+
+		$this->plugin()->assets()->enqueue(
+			self::BLOCKS_ENTRY,
+			// We need JS only for the block editor.
+			[ 'skip-script' => ! $is_block_editor ]
+		);
 		$this->add_inline_script( self::BLOCKS_ENTRY );
 	}
 }

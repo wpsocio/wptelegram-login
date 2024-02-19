@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.10.14
+
+### Patch Changes
+
+- [#103](https://github.com/wpsocio/wp-projects/pull/103) [`e12a25c`](https://github.com/wpsocio/wp-projects/commit/e12a25caf8ead7065b256d58aa74b64cc35cc947) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Updated minimum required WP version to 6.4
+
+- [#105](https://github.com/wpsocio/wp-projects/pull/105) [`7924c09`](https://github.com/wpsocio/wp-projects/commit/7924c09f0da9e1b54c9ca6fbc6e0e63c4792f591) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Fixed the warning "The block \* is registered with an invalid category"
+
 ## 1.10.13
 
 ### Patch Changes

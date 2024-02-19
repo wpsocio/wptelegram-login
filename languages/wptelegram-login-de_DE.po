@@ -17,68 +17,68 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: admin/settings\n"
 
-#: admin/Admin.php:49
+#: admin/Admin.php:47
 #: includes/Utils.php:35
 #: includes/Utils.php:36
 msgid "WP Telegram"
 msgstr ""
 
-#: admin/Admin.php:173
+#: admin/Admin.php:171
 msgid "Telegram Login"
 msgstr "Telegram Login"
 
-#: admin/Admin.php:227
-#: admin/Admin.php:254
+#: admin/Admin.php:225
+#: admin/Admin.php:252
 msgid "Telegram Info"
 msgstr ""
 
-#: admin/Admin.php:228
-#: admin/Admin.php:255
+#: admin/Admin.php:226
+#: admin/Admin.php:253
 msgid "Here you can connect this account to Telegram."
 msgstr ""
 
-#: admin/Admin.php:230
-#: admin/Admin.php:259
+#: admin/Admin.php:228
+#: admin/Admin.php:257
 msgid "Telegram Chat ID"
 msgstr ""
 
 #: ../../packages/js/components/instructions/Instructions.tsx:20
-#: admin/Admin.php:280
+#: admin/Admin.php:278
 #: languages/wptelegram-login-js-translations.php:14
 msgid "INSTRUCTIONS!"
 msgstr "KONFIGURATIONSANLEITUNG"
 
-#: admin/Admin.php:287
+#: admin/Admin.php:285
 msgid "Get your Chat ID from %s and enter it above."
 msgstr ""
 
 #. translators: %s is bot username
-#: admin/Admin.php:289
+#: admin/Admin.php:287
 msgid "Ask the user to get the Chat ID from %s and enter it above."
 msgstr ""
 
 #. translators: %s is bot username
-#: admin/Admin.php:299
+#: admin/Admin.php:297
 msgid "Start a conversation with %s to receive notifications."
 msgstr ""
 
 #. translators: %s is bot username
-#: admin/Admin.php:301
+#: admin/Admin.php:299
 msgid "Ask the user to start a conversation with %s to receive notifications."
 msgstr ""
 
 #: ../../packages/js/services/apiFetch/index.ts:41
-#: admin/Admin.php:325
+#: admin/Admin.php:323
 #: languages/wptelegram-login-js-translations.php:103
 #: shared/LoginHandler.php:61
 msgid "Error:"
 msgstr "Fehler:"
 
-#: admin/Admin.php:325
+#: admin/Admin.php:323
 msgid "Please Enter a valid Chat ID"
 msgstr ""
 
-#: admin/Admin.php:369
+#: admin/Admin.php:367
 msgid "Telegram User ID"
 msgstr "Telegram User ID"
 
@@ -700,10 +700,10 @@ msgstr ""
 msgid "https://wpsocio.com"
 msgstr ""
 
-#: admin/Admin.php:193
+#: admin/Admin.php:191
 msgid "Plugin data has been upgraded."
 msgstr ""
 
-#: admin/Admin.php:194
+#: admin/Admin.php:192
 msgid "Please reload the page."
 msgstr ""

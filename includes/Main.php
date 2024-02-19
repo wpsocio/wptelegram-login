@@ -360,7 +360,7 @@ class Main {
 		add_action( 'woocommerce_save_account_details_errors', [ $plugin_admin, 'validate_user_profile_fields' ], 10, 1 );
 		add_action( 'woocommerce_save_account_details', [ $plugin_admin, 'update_user_profile_fields' ], 10, 1 );
 
-		add_filter( 'block_categories_all', [ $plugin_admin, 'register_block_category' ], 10, 1 );
+		add_filter( 'block_categories_all', [ $plugin_admin, 'register_block_category' ], 5, 1 );
 
 		add_filter( 'rest_user_collection_params', [ $plugin_admin, 'rest_user_collection_params' ], 10, 1 );
 
