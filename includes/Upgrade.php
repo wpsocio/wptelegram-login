@@ -42,6 +42,11 @@ class Upgrade extends BaseClass {
 		$plugin_settings = WPTG_Login()->options()->get_data();
 		$is_new_install  = empty( $plugin_settings );
 
+		/**
+		 * Fires before the upgrade process.
+		 *
+		 * @ignore Nothing to see here.
+		 */
 		do_action( 'wptelegram_login_before_do_upgrade', $current_version );
 
 		$version_upgrades = [];
@@ -69,7 +74,11 @@ class Upgrade extends BaseClass {
 				$current_version = $target_version;
 			}
 		}
-
+		/**
+		 * Fires after the upgrade process.
+		 *
+		 * @ignore Nothing to see here.
+		 */
 		do_action( 'wptelegram_login_after_do_upgrade', $current_version );
 	}
 

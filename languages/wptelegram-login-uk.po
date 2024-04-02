@@ -70,7 +70,7 @@ msgstr ""
 #: ../../packages/js/services/apiFetch/index.ts:41
 #: admin/Admin.php:323
 #: languages/wptelegram-login-js-translations.php:103
-#: shared/LoginHandler.php:61
+#: shared/LoginHandler.php:75
 msgid "Error:"
 msgstr "Помилка:"
 
@@ -86,20 +86,20 @@ msgstr "Ідентифікатор користувача Telegram"
 msgid "With this plugin, you can let the users login to your website with their Telegram and make it simple for them to get connected."
 msgstr "За допомогою цього плагіна ви можете дозволити користувачам увійти на ваш веб-сайт за допомогою Telegram та спростити їх авторизацію."
 
-#: includes/AssetManager.php:311
+#: includes/AssetManager.php:327
 msgid "Any"
 msgstr "Будь-який"
 
-#: includes/AssetManager.php:315
+#: includes/AssetManager.php:331
 msgid "Logged out"
 msgstr "Вийшов"
 
-#: includes/AssetManager.php:319
+#: includes/AssetManager.php:335
 msgid "Logged in"
 msgstr "Увійшов"
 
 #: js/settings/ui/LoginOptions.tsx:10
-#: includes/AssetManager.php:385
+#: includes/AssetManager.php:401
 #: languages/wptelegram-login-js-translations.php:267
 msgid "Default"
 msgstr "За замовчуванням"
@@ -624,28 +624,28 @@ msgstr "%s є обов'язковим."
 msgid "Changes could not be saved."
 msgstr "Не вдається зберегти зміни."
 
-#: shared/LoginHandler.php:193
+#: shared/LoginHandler.php:250
 msgid "Unauthorized! Data is NOT from Telegram"
 msgstr "Несанкціоновано! Дані НЕ від Telegram"
 
-#: shared/LoginHandler.php:197
+#: shared/LoginHandler.php:254
 msgid "Invalid! The data is outdated"
 msgstr "Недійсний! Дані застарілі"
 
-#: shared/LoginHandler.php:344
+#: shared/LoginHandler.php:443
 msgid "Invalid! The data is incomplete"
 msgstr "Недійсний! Дані неповні"
 
-#: shared/LoginHandler.php:361
+#: shared/LoginHandler.php:460
 msgid "The Telegram User ID is already associated with another existing user. Please contact the admin"
 msgstr "Ідентифікатор користувача Telegram вже пов'язаний з іншим наявним користувачем. Будь ласка, зверніться до адміністратора"
 
-#: shared/LoginHandler.php:379
+#: shared/LoginHandler.php:486
 msgid "Sign up via Telegram is disabled. You must first create an account and connect it to Telegram to be able to use Telegram Login"
 msgstr "Реєстрація через Telegram вимкнена. Спочатку потрібно створити обліковий запис і підключити його до Telegram, щоб мати можливість користуватися Telegram Вхід"
 
-#: shared/LoginHandler.php:441
-#: shared/LoginHandler.php:464
+#: shared/LoginHandler.php:575
+#: shared/LoginHandler.php:611
 msgid "Telegram sign in could not be completed."
 msgstr "Не вдалося увійти в Telegram."
 
@@ -673,7 +673,7 @@ msgstr "Заголовок"
 #: js/blocks/telegram-login/index.tsx:20
 #: js/settings/ui/WidgetInfoCard.tsx:35
 #: wptelegram-login.php
-#: includes/Main.php:419
+#: includes/Main.php:427
 #: languages/wptelegram-login-js-translations.php:168
 #: shared/widgets/Primary.php:28
 #~ msgid "WP Telegram Login"

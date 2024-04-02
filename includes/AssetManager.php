@@ -269,11 +269,27 @@ class AssetManager extends BaseClass {
 
 			$data = compact( 'is_user_logged_in', 'login_auth_url', 'confirm_login', 'i18n' );
 
+			/**
+			 * Filters the data for the web app login.
+			 *
+			 * This can be used to customize the messages etc. for the web app login UI.
+			 *
+			 * @param array $data The data for the web app login.
+			 */
 			$data = apply_filters( 'wptelegram_login_web_app_login_data', $data );
 
 			$data = [ 'web_app_data' => $data ];
 		}
 
+		/**
+		 * Filters the inline script data for the settings page.
+		 *
+		 * @ignore Only used internally.
+		 *
+		 * @param array  $data The inline script data.
+		 * @param string $for  The JS entry point for which the data is needed.
+		 * @param object $this The plugin instance.
+		 */
 		return apply_filters( 'wptelegram_login_inline_script_data', $data, $for, $this->plugin() );
 	}
 
@@ -389,6 +405,12 @@ class AssetManager extends BaseClass {
 			]
 		);
 
+		/**
+		 * Filters the language options for the settings page.
+		 *
+		 * @param array $data         The language options.
+		 * @param array $translations The available translations.
+		 */
 		return apply_filters( 'wptelegram_login_language_options', $data, $translations );
 	}
 

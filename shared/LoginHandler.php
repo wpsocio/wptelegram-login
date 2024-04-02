@@ -40,6 +40,9 @@ class LoginHandler extends BaseClass {
 			return;
 		}
 
+		/**
+		 * Fires before the login process starts.
+		 */
 		do_action( 'wptelegram_login_init' );
 
 		$input = wp_unslash( $_GET ); // phpcs:disable WordPress.Security.NonceVerification.Recommended
@@ -50,10 +53,21 @@ class LoginHandler extends BaseClass {
 		try {
 			$auth_data = $this->validate_auth_data( $input );
 
+			/**
+			 * Fires before the user data is saved after validation.
+			 *
+			 * @param array $auth_data The authenticated user data.
+			 */
 			do_action( 'wptelegram_login_pre_save_user_data', $auth_data );
 
 			$wp_user_id = $this->save_telegram_user_data( $auth_data );
 
+			/**
+			 * Fires after the user data is authenticated and saved.
+			 *
+			 * @param int   $wp_user_id The WordPress user ID.
+			 * @param array $auth_data  The authenticated user data.
+			 */
 			do_action( 'wptelegram_login_after_save_user_data', $wp_user_id, $auth_data );
 
 		} catch ( Exception $e ) {
@@ -65,6 +79,11 @@ class LoginHandler extends BaseClass {
 
 		if ( ! $user->exists() ) { // ! is user logged in
 
+			/**
+			 * Fires before the user is logged in after the data is authenticated and saved.
+			 *
+			 * @param int $wp_user_id The WordPress user ID.
+			 */
 			do_action( 'wptelegram_login_before_user_login', $wp_user_id );
 
 			// Login the user.
@@ -72,8 +91,28 @@ class LoginHandler extends BaseClass {
 			$user = wp_set_current_user( $wp_user_id );
 			wp_set_auth_cookie( $wp_user_id, true );
 
+			/**
+			 * Fires after the user is successfully logged in.
+			 *
+			 * - [Examples](./examples/after_user_login.md)
+			 *
+			 * @param int $wp_user_id The WordPress user ID.
+			 */
 			do_action( 'wptelegram_login_after_user_login', $wp_user_id );
 
+			$user_login = $user->user_login;
+
+			/**
+			 * Fires after the user has successfully logged in.
+			 *
+			 * @since 1.3.4
+			 *
+			 * @ignore -- This action is documented in by WP Core.
+			 *
+			 * @param string  $user_login Username.
+			 * @param WP_User $user       WP_User object of the logged-in user.
+			 */
+			do_action( 'wp_login', $user_login, $user );
 			/**
 			 * Fires after the user has successfully logged in.
 			 *
@@ -82,8 +121,7 @@ class LoginHandler extends BaseClass {
 			 * @param string  $user_login Username.
 			 * @param WP_User $user       WP_User object of the logged-in user.
 			 */
-			do_action( 'wp_login', $user->user_login, $user );
-			do_action( 'wptelegram_login', $user->user_login, $user );
+			do_action( 'wptelegram_login', $user_login, $user );
 		}
 
 		$random_email = WPTG_Login()->options()->get( 'random_email' );
@@ -92,6 +130,13 @@ class LoginHandler extends BaseClass {
 			$this->may_be_generate_email( $user );
 		}
 
+		/**
+		 * Fires before the user is redirected after the login.
+		 *
+		 * - [Examples](./examples/before_redirect.md)
+		 *
+		 * @param WP_User $user The logged in user.
+		 */
 		do_action( 'wptelegram_login_before_redirect', $user );
 
 		$this->redirect( $user );
@@ -155,10 +200,22 @@ class LoginHandler extends BaseClass {
 			'source',
 		];
 
+		/**
+		 * Filter the validation query parameters that the plugin uses.
+		 *
+		 * @param array $validation_query_params The validation query parameters.
+		 * @param array $input                   The input data.
+		 */
 		$validation_query_params = apply_filters( 'wptelegram_login_validation_query_params', $validation_query_params, $input );
 
 		$clean_input = array_intersect_key( $input, array_flip( $validation_query_params ) );
 
+		/**
+		 * Filter the cleaned input from the login request.
+		 *
+		 * @param array $clean_input The cleaned input.
+		 * @param array $input       The input data.
+		 */
 		return apply_filters( 'wptelegram_login_clean_input', $clean_input, $input );
 	}
 
@@ -203,6 +260,12 @@ class LoginHandler extends BaseClass {
 			$auth_data = ! empty( $auth_data['user'] ) ? Utils::sanitize( json_decode( $auth_data['user'], true ) ) : [];
 		}
 
+		/**
+		 * Filter the validated auth data.
+		 *
+		 * @param array $auth_data    The valid auth data.
+		 * @param array $input_data   The input data.
+		 */
 		return apply_filters( 'wptelegram_login_valid_auth_data', $auth_data, $input_data );
 	}
 
@@ -231,6 +294,13 @@ class LoginHandler extends BaseClass {
 
 		$generated_hash = bin2hex( hash_hmac( 'sha256', $data_check_string, $secret_key, true ) );
 
+		/**
+		 * Filter the generated hash for the incoming auth data.
+		 *
+		 * @param string $generated_hash The generated hash.
+		 * @param array  $auth_data      The auth data received.
+		 * @param string $secret_key     The secret key.
+		 */
 		return apply_filters( 'wptelegram_login_hash_auth_data', $generated_hash, $auth_data, $secret_key );
 	}
 
@@ -270,6 +340,13 @@ class LoginHandler extends BaseClass {
 				break;
 		}
 
+		/**
+		 * Filter the secret key for the data source.
+		 *
+		 * @param string $secret_key  The secret key.
+		 * @param string $data_source The data source.
+		 * @param string $bot_token   The bot token.
+		 */
 		return apply_filters( 'wptelegram_login_get_secret_key', $secret_key, $data_source, $bot_token );
 	}
 
@@ -284,11 +361,33 @@ class LoginHandler extends BaseClass {
 
 		if ( $user->exists() && ! $user->user_email ) {
 			$host = wp_parse_url( get_site_url(), PHP_URL_HOST );
+			/**
+			 * Filter the host for the random email.
+			 *
+			 * @param string $host The host for the random email.
+			 * @param WP_User $user The current user.
+			 */
 			$host = apply_filters( 'wptelegram_login_random_email_host', $host, $user );
 
-			$random_user = apply_filters( 'wptelegram_login_random_email_user', 'auto-generated', $user );
+			$random_user = 'auto-generated';
+			/**
+			 * Filter the username for the random email.
+			 *
+			 * @param string $random_user The username for the random email.
+			 * @param WP_User $user       The current user.
+			 */
+			$random_user = apply_filters( 'wptelegram_login_random_email_user', $random_user, $user );
 
 			$random_email = $this->unique_email( $random_user, $host );
+
+			/**
+			 * Filter the randomly generated email.
+			 *
+			 * @param string $random_email The random email.
+			 * @param WP_User $user        The current user.
+			 * @param string  $random_user The username for the random email.
+			 * @param string  $host        The host for the random email.
+			 */
 			$random_email = apply_filters( 'wptelegram_login_random_email', $random_email, $user, $random_user, $host );
 
 			wp_update_user(
@@ -372,6 +471,14 @@ class LoginHandler extends BaseClass {
 			// Whether to allow create new account.
 			$disable_signup = WPTG_Login()->options()->get( 'disable_signup' );
 
+			/**
+			 * Filters whether to disable sign up via Telegram.
+			 *
+			 * It means that the user must first create an account and connect it to Telegram to be able to use Telegram Login.
+			 *
+			 * @param bool  $disable_signup Whether to disable sign up via Telegram.
+			 * @param array $data           The user details.
+			 */
 			$disable_signup = (bool) apply_filters( 'wptelegram_login_disable_signup', $disable_signup, $data );
 
 			if ( $disable_signup ) {
@@ -381,8 +488,19 @@ class LoginHandler extends BaseClass {
 			}
 		}
 
-		// Pass `false` if you do not want to update user profile for existing users.
-		$always_update_user_data = apply_filters( 'wptelegram_login_always_update_user_data', true, $data, $existing_user_id );
+		$always_update = true;
+		/**
+		 * Whether to always update the existing user data.
+		 *
+		 * Pass `false` if you do not want to update user profile for existing users.
+		 *
+		 * - [Examples](./examples/always_update_user_data.md)
+		 *
+		 * @param bool     $always_update    Whether to always update the user data.
+		 * @param array    $data             The user details.
+		 * @param int|NULL $existing_user_id Existing WP User ID.
+		 */
+		$always_update_user_data = apply_filters( 'wptelegram_login_always_update_user_data', $always_update, $data, $existing_user_id );
 
 		if ( $existing_user_id && ! $always_update_user_data ) {
 			return $existing_user_id;
@@ -405,6 +523,12 @@ class LoginHandler extends BaseClass {
 	 */
 	public function save_user_data( $data, $wp_user_id = null ) {
 
+		/**
+		 * Filter the user data before saving the user in the database.
+		 *
+		 * @param array    $data       The user details.
+		 * @param int|NULL $wp_user_id Existing WP User ID.
+		 */
 		$data = apply_filters( 'wptelegram_login_save_user_data', $data, $wp_user_id );
 
 		// The data fields received.
@@ -424,6 +548,11 @@ class LoginHandler extends BaseClass {
 
 			$unique_username = $this->unique_username( $username );
 
+			/**
+			 * Filter the unique username before creating the user.
+			 *
+			 * @param string $unique_username The unique username.
+			 */
 			$user_login = apply_filters( 'wptelegram_login_unique_username', $unique_username );
 
 			$user_pass = wp_generate_password();
@@ -433,6 +562,11 @@ class LoginHandler extends BaseClass {
 			// Create the user without first and last name to avoid wp_insert_user() failing on multi-byte characters.
 			$userdata = compact( 'user_pass', 'user_login', 'role' );
 
+			/**
+			 * Filter the user data before inserting the user into the database.
+			 *
+			 * @param array $userdata The user data.
+			 */
 			$userdata = apply_filters( 'wptelegram_login_insert_user_data', $userdata );
 
 			$wp_user_id = wp_insert_user( $userdata );
@@ -441,6 +575,12 @@ class LoginHandler extends BaseClass {
 				throw new Exception( esc_html__( 'Telegram sign in could not be completed.', 'wptelegram-login' ) . ' ' . esc_html( $wp_user_id->get_error_message() ) );
 			}
 
+			/**
+			 * Fires after the user is successfully inserted into the database.
+			 *
+			 * @param int   $wp_user_id The WordPress user ID.
+			 * @param array $userdata   The user data.
+			 */
 			do_action( 'wptelegram_login_after_insert_user', $wp_user_id, $userdata );
 
 		}
@@ -451,6 +591,13 @@ class LoginHandler extends BaseClass {
 
 		$userdata = compact( 'ID', 'first_name', 'last_name' );
 
+		/**
+		 * Filter the user data before updating the user in the database.
+		 *
+		 * - [Examples](./examples/update_user_data.md)
+		 *
+		 * @param array $userdata The user data.
+		 */
 		$userdata = apply_filters( 'wptelegram_login_update_user_data', $userdata );
 
 		if ( ! empty( $userdata ) ) {
@@ -464,6 +611,12 @@ class LoginHandler extends BaseClass {
 				throw new Exception( esc_html__( 'Telegram sign in could not be completed.', 'wptelegram-login' ) . ' ' . esc_html( $wp_user_id->get_error_message() ) );
 			}
 
+			/**
+			 * Fires after the user is successfully updated in the database.
+			 *
+			 * @param int   $wp_user_id The WordPress user ID.
+			 * @param array $userdata   The user data.
+			 */
 			do_action( 'wptelegram_login_after_update_user', $wp_user_id, $userdata );
 		}
 
@@ -478,6 +631,11 @@ class LoginHandler extends BaseClass {
 			}
 		}
 
+		/**
+		 * Fires after the user meta is updated.
+		 *
+		 * @param int $wp_user_id The WordPress user ID.
+		 */
 		do_action( 'wptelegram_login_after_update_user_meta', $wp_user_id );
 
 		return $wp_user_id;
@@ -521,7 +679,12 @@ class LoginHandler extends BaseClass {
 	private function redirect( $user ) {
 		$redirect_to = isset( $_REQUEST['redirect_to'] ) ? remove_query_arg( 'reauth', wp_unslash( $_REQUEST['redirect_to'] ) ) : ''; // phpcs:ignore
 
-		// Apply plugin specific filter.
+		/**
+		 * Filter the redirect URL after login.
+		 *
+		 * @param string  $redirect_to The redirect URL.
+		 * @param WP_User $user The logged in user.
+		 */
 		$redirect_to = apply_filters( 'wptelegram_login_user_redirect_to', $redirect_to, $user );
 
 		if ( ( empty( $redirect_to ) || 'wp-admin/' === $redirect_to || admin_url() === $redirect_to ) ) {

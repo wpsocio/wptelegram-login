@@ -125,8 +125,15 @@ class Shared extends BaseClass {
 				break;
 		}
 
-		// Can be used to fix the wrong URL in case
-		// the website is in subdirectory the URL is invalid.
+		/**
+		 * Filters the redirect URL for the login button
+		 *
+		 * It can be used to fix the wrong URL in case the website is in subdirectory and the URL is invalid.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param string $redirect_to The redirect URL.
+		 */
 		$redirect_to = apply_filters( 'wptelegram_login_redirect_to', $redirect_to );
 
 		$button_style = $args['button_style'];
@@ -147,8 +154,15 @@ class Shared extends BaseClass {
 		// The actual URL to be passed to Telegram as call back.
 		$callback_url = add_query_arg( $args, home_url() );
 
-		// can be used to fix the wrong URL in case
-		// the website is in subdirectory the URL is invalid.
+		/**
+		 * Filters the callback URL for the login button
+		 *
+		 * It can be used to fix the wrong URL in case the website is in subdirectory and the URL is invalid.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param string $callback_url The callback URL.
+		 */
 		$callback_url = apply_filters( 'wptelegram_login_telegram_callback_url', $callback_url );
 
 		$login_options = compact(
@@ -201,10 +215,20 @@ class Shared extends BaseClass {
 			return false;
 		}
 
-		// Whether to show the button if user is already connected.
-		$cur_user_telegram_id = wptelegram_login_user_id();
-		$show_if_connected    = apply_filters( 'wptelegram_login_show_if_user_connected', false, $cur_user_telegram_id );
-		if ( $cur_user_telegram_id && ! $show_if_connected ) {
+		$current_user_telegram_id = wptelegram_login_user_id();
+
+		$show_if_connected = false;
+		/**
+		 * Filters whether to show the button if user is already connected.
+		 *
+		 * - [Examples](./examples/show_if_user_connected.md)
+		 *
+		 * @param boolean $show_if_connected        Whether to show the button if user is already connected.
+		 * @param int     $current_user_telegram_id The current user's Telegram ID.
+		 */
+		$show_if_connected = apply_filters( 'wptelegram_login_show_if_user_connected', $show_if_connected, $current_user_telegram_id );
+
+		if ( $current_user_telegram_id && ! $show_if_connected ) {
 			return;
 		}
 
@@ -221,6 +245,8 @@ class Shared extends BaseClass {
 		 * for both logged in and logged out users
 		 *
 		 * @since 1.0.0
+		 *
+		 * @param string $show_if_user_is When to show the button.
 		 */
 		$show_if_user_is = apply_filters( 'wptelegram_login_show_if_user_is', $show_if_user_is );
 
@@ -281,8 +307,22 @@ class Shared extends BaseClass {
 	 */
 	public function custom_avatar_url( $url, $id_or_email ) {
 
-		// if short-circuited.
-		if ( ! apply_filters( 'wptelegram_login_use_telegram_avatar', true, $url, $id_or_email ) ) {
+		$use_telegram_avatar = true;
+
+		/**
+		 * Filters whether to use the Telegram avatar.
+		 *
+		 * Pass `false` to disable the Telegram avatar.
+		 *
+		 * - [Examples](./examples/use_telegram_avatar.md)
+		 *
+		 * @param boolean $use_telegram_avatar Whether to use the Telegram avatar.
+		 * @param string  $url                 Avatar URL.
+		 * @param mixed   $id_or_email         user id or email.
+		 */
+		$use_telegram_avatar = apply_filters( 'wptelegram_login_use_telegram_avatar', $use_telegram_avatar, $url, $id_or_email );
+
+		if ( ! $use_telegram_avatar ) {
 			return $url;
 		}
 
@@ -314,6 +354,13 @@ class Shared extends BaseClass {
 				$avatar_url = get_user_meta( $user->ID, $meta_key, true );
 
 				if ( ! empty( $avatar_url ) ) {
+					/**
+					 * Filters the custom avatar URL.
+					 *
+					 * @param string $avatar_url  The custom avatar URL.
+					 * @param string $url         Avatar URL.
+					 * @param mixed  $id_or_email user id or email.
+					 */
 					return apply_filters( 'wptelegram_login_custom_avatar_url', $avatar_url, $url, $id_or_email );
 				}
 			}
