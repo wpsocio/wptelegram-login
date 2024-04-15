@@ -1,14 +1,14 @@
 {
-  "_usePluginData-_w8zuHoQ.js": {
-    "file": "dist/usePluginData-_w8zuHoQ.js"
+  "_usePluginData-2p2pCtnU.js": {
+    "file": "dist/usePluginData-2p2pCtnU.js"
   },
   "js/blocks/index.ts": {
     "css": [
       "dist/blocks-8stdso84.css"
     ],
-    "file": "dist/blocks-k_X30C-Y.js",
+    "file": "dist/blocks-tHn_nRaP.js",
     "imports": [
-      "_usePluginData-_w8zuHoQ.js"
+      "_usePluginData-2p2pCtnU.js"
     ],
     "isEntry": true,
     "src": "js/blocks/index.ts"
@@ -17,9 +17,9 @@
     "css": [
       "dist/settings-T1BGW3Dl.css"
     ],
-    "file": "dist/settings-AG2qL7Xq.js",
+    "file": "dist/settings-LfuJW1DC.js",
     "imports": [
-      "_usePluginData-_w8zuHoQ.js"
+      "_usePluginData-2p2pCtnU.js"
     ],
     "isEntry": true,
     "src": "js/settings/index.ts"

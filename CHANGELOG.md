@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.10.16
+
+### Patch Changes
+
+- [#121](https://github.com/wpsocio/wp-projects/pull/121) [`c8f8d07`](https://github.com/wpsocio/wp-projects/commit/c8f8d077e775961a9533a286d6ee7870742be597) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Added blueprints for WP Playground
+
 ## 1.10.15
 
 ### Patch Changes
