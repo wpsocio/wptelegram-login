@@ -8,13 +8,13 @@
   ],
   "js/blocks/index.ts": [
     "wp-blocks",
-    "react",
     "wp-i18n",
+    "react",
     "jquery",
     "wp-api-fetch",
+    "wp-element",
     "wp-block-editor",
     "wp-components",
-    "wp-element",
     "react-dom"
   ],
   "js/web-app-login/index.ts": [],
