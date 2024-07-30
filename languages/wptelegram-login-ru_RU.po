@@ -17,12 +17,6 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: admin/settings\n"
 
-#: admin/Admin.php:47
-#: includes/Utils.php:35
-#: includes/Utils.php:36
-msgid "WP Telegram"
-msgstr "WP Telegram"
-
 #: admin/Admin.php:171
 msgid "Telegram Login"
 msgstr "Telegram Login"
@@ -431,7 +425,7 @@ msgstr "Настройки Telegram"
 msgid "Use %s above to set automatically."
 msgstr "Используйте %s выше для автоматического заполнения."
 
-#: ../../packages/js/form-components/useBotTokenTest.tsx:112
+#: ../../packages/js/form-components/useBotTokenTest.tsx:117
 #: js/settings/ui/TelegramOptions.tsx:28
 #: languages/wptelegram-login-js-translations.php:88
 msgid "Test Token"
@@ -553,7 +547,7 @@ msgstr ""
 msgid "Widget Info"
 msgstr "Вывод виджета кнопки"
 
-#: ../../packages/js/form-components/useBotTokenTest.tsx:111
+#: ../../packages/js/form-components/useBotTokenTest.tsx:116
 #: ../../packages/js/form-components/useChatWithTest.tsx:110
 #: languages/wptelegram-login-js-translations.php:84
 msgid "Please wait…"
@@ -564,7 +558,7 @@ msgstr ""
 msgid "Send Test"
 msgstr ""
 
-#: ../../packages/js/form/render/RenderRepeatable.tsx:122
+#: ../../packages/js/form/render/RenderRepeatable.tsx:124
 #: languages/wptelegram-login-js-translations.php:94
 msgid "Add"
 msgstr ""
@@ -594,7 +588,7 @@ msgstr ""
 msgid "Success"
 msgstr ""
 
-#: ../../packages/js/services/useDisplayFeedback.ts:65
+#: ../../packages/js/services/useDisplayFeedback.ts:68
 #: languages/wptelegram-login-js-translations.php:115
 msgid "Lets fix these errors first."
 msgstr ""

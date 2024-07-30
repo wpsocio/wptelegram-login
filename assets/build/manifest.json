@@ -1,40 +1,45 @@
 {
-  "_usePluginData-2p2pCtnU.js": {
-    "file": "dist/usePluginData-2p2pCtnU.js"
+  "_usePluginData-zNxooAz2.js": {
+    "file": "dist/usePluginData-zNxooAz2.js",
+    "name": "usePluginData"
   },
   "js/blocks/index.ts": {
-    "css": [
-      "dist/blocks-8stdso84.css"
-    ],
-    "file": "dist/blocks-tHn_nRaP.js",
-    "imports": [
-      "_usePluginData-2p2pCtnU.js"
-    ],
+    "file": "dist/blocks-BPdGwv-F.js",
+    "name": "blocks",
+    "src": "js/blocks/index.ts",
     "isEntry": true,
-    "src": "js/blocks/index.ts"
+    "imports": [
+      "_usePluginData-zNxooAz2.js"
+    ],
+    "css": [
+      "dist/blocks-Dyy12yjz.css"
+    ]
   },
   "js/settings/index.ts": {
-    "css": [
-      "dist/settings-T1BGW3Dl.css"
-    ],
-    "file": "dist/settings-LfuJW1DC.js",
-    "imports": [
-      "_usePluginData-2p2pCtnU.js"
-    ],
+    "file": "dist/settings-C7kJSpsc.js",
+    "name": "settings",
+    "src": "js/settings/index.ts",
     "isEntry": true,
-    "src": "js/settings/index.ts"
+    "imports": [
+      "_usePluginData-zNxooAz2.js"
+    ],
+    "css": [
+      "dist/settings-BPUEZbcO.css"
+    ]
   },
   "js/web-app-login/index.ts": {
-    "file": "dist/web-app-login-wH9ROPjw.js",
-    "isEntry": true,
-    "src": "js/web-app-login/index.ts"
+    "file": "dist/web-app-login-CXB-N4Hv.js",
+    "name": "web-app-login",
+    "src": "js/web-app-login/index.ts",
+    "isEntry": true
   },
   "js/wp-login/index.ts": {
-    "css": [
-      "dist/wp-login-8raL62Bk.css"
-    ],
-    "file": "dist/wp-login-sq1z-X9Q.js",
+    "file": "dist/wp-login-CLNOwpzk.js",
+    "name": "wp-login",
+    "src": "js/wp-login/index.ts",
     "isEntry": true,
-    "src": "js/wp-login/index.ts"
+    "css": [
+      "dist/wp-login-DytovrYG.css"
+    ]
   }
 }

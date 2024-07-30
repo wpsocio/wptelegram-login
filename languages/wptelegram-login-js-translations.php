@@ -79,18 +79,18 @@ $generated_i18n_strings = array(
 	// Reference: ../../packages/js/form-components/test-result/TestResult.tsx:17
 	__( 'Test Result:', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/form-components/useBotTokenTest.tsx:111
+	// Reference: ../../packages/js/form-components/useBotTokenTest.tsx:116
 	// Reference: ../../packages/js/form-components/useChatWithTest.tsx:110
 	__( 'Please wait…', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/form-components/useBotTokenTest.tsx:112
+	// Reference: ../../packages/js/form-components/useBotTokenTest.tsx:117
 	// Reference: js/settings/ui/TelegramOptions.tsx:28
 	__( 'Test Token', 'wptelegram-login' ),
 
 	// Reference: ../../packages/js/form-components/useChatWithTest.tsx:111
 	__( 'Send Test', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/form/render/RenderRepeatable.tsx:122
+	// Reference: ../../packages/js/form/render/RenderRepeatable.tsx:124
 	__( 'Add', 'wptelegram-login' ),
 
 	// Reference: ../../packages/js/services/apiFetch/index.ts:36
@@ -111,7 +111,7 @@ $generated_i18n_strings = array(
 	// Reference: ../../packages/js/services/telegram/TelegramUtils.ts:150
 	__( 'Success', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/services/useDisplayFeedback.ts:65
+	// Reference: ../../packages/js/services/useDisplayFeedback.ts:68
 	__( 'Lets fix these errors first.', 'wptelegram-login' ),
 
 	// Reference: ../../packages/js/services/useSubmitForm.ts:63

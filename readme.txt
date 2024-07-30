@@ -4,8 +4,8 @@ Donate link: https://wpsocio.com/donate
 Tags: telegram, login, register, social, signup
 Requires at least: 6.4
 Requires PHP: 7.4
-Tested up to: 6.6
-Stable tag: 1.10.18
+Tested up to: 6.6.1
+Stable tag: 1.10.19
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -154,7 +154,7 @@ Automatic updates should work smoothly, but we still recommend you back up your 
 
 == Changelog ==
 
-= 1.10.18 =
-- Maintenance release
+= 1.10.19 =
+- Removed translation for plugin title to ensure the menu item it not invisible
 
 [See full changelog](https://github.com/wpsocio/wptelegram-login/blob/main/CHANGELOG.md)

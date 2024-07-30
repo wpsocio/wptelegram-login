@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.10.19
+
+### Patch Changes
+
+- [#135](https://github.com/wpsocio/wp-projects/pull/135) [`38f4591`](https://github.com/wpsocio/wp-projects/commit/38f4591c18b9b044338e7e5f4a71090d6847bcab) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Removed translation for plugin title to ensure the menu item it not invisible
+
 ## 1.10.18
 
 ### Patch Changes
