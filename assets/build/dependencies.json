@@ -3,9 +3,9 @@
     "react",
     "react-dom",
     "wp-i18n",
-    "react-jsx-runtime",
+    "wp-api-fetch",
     "jquery",
-    "wp-api-fetch"
+    "react-jsx-runtime"
   ],
   "js/blocks/index.ts": [
     "wp-blocks",
