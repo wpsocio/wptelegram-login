@@ -3,9 +3,8 @@
     "react",
     "react-dom",
     "wp-i18n",
-    "wp-api-fetch",
     "jquery",
-    "react-jsx-runtime"
+    "wp-api-fetch"
   ],
   "js/blocks/index.ts": [
     "wp-blocks",
@@ -16,7 +15,6 @@
     "wp-element",
     "wp-block-editor",
     "wp-components",
-    "react-jsx-runtime",
     "react-dom"
   ],
   "js/web-app-login/index.ts": [],
