@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.10.22
+
+### Patch Changes
+
+- [#155](https://github.com/wpsocio/wp-projects/pull/155) [`669eedd`](https://github.com/wpsocio/wp-projects/commit/669eedd4639c206ad65cbdd312b1628c412ba090) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Fixed login shortcode attributes sanitization
+
 ## 1.10.21
 
 ### Patch Changes
