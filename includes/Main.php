@@ -382,7 +382,7 @@ class Main {
 
 		add_shortcode( 'wptelegram-login', [ Shared::class, 'login_shortcode' ] );
 
-		add_filter( 'render_block', [ $shared, 'render_login_block' ], 11, 2 );
+		add_filter( 'render_block_wptelegram/login', [ $shared, 'render_login_block' ], 11, 2 );
 
 		add_filter( 'get_avatar_url', [ $shared, 'custom_avatar_url' ], 10, 2 );
 

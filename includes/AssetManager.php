@@ -397,7 +397,7 @@ class AssetManager extends BaseClass {
 		array_unshift(
 			$data,
 			[
-				'value' => '',
+				'value' => '0',
 				'label' => __(
 					'Default',
 					'wptelegram-login'

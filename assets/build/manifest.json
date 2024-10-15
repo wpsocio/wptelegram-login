@@ -1,30 +1,30 @@
 {
-  "_usePluginData-Cec06u-v.js": {
-    "file": "dist/usePluginData-Cec06u-v.js",
-    "name": "usePluginData"
+  "_use-plugin-data-CEVveJse.js": {
+    "file": "dist/use-plugin-data-CEVveJse.js",
+    "name": "use-plugin-data"
   },
   "js/blocks/index.ts": {
-    "file": "dist/blocks-Bd5Sy_FD.js",
+    "file": "dist/blocks-B6GhD9wM.js",
     "name": "blocks",
     "src": "js/blocks/index.ts",
     "isEntry": true,
     "imports": [
-      "_usePluginData-Cec06u-v.js"
+      "_use-plugin-data-CEVveJse.js"
     ],
     "css": [
       "dist/blocks-Dyy12yjz.css"
     ]
   },
   "js/settings/index.ts": {
-    "file": "dist/settings-Bn7MWEVx.js",
+    "file": "dist/settings-CT_v5p74.js",
     "name": "settings",
     "src": "js/settings/index.ts",
     "isEntry": true,
     "imports": [
-      "_usePluginData-Cec06u-v.js"
+      "_use-plugin-data-CEVveJse.js"
     ],
     "css": [
-      "dist/settings-BPUEZbcO.css"
+      "dist/settings-D3KzxoPX.css"
     ]
   },
   "js/web-app-login/index.ts": {

@@ -2,20 +2,16 @@
   "js/settings/index.ts": [
     "react",
     "react-dom",
-    "wp-i18n",
     "jquery",
+    "wp-i18n",
     "wp-api-fetch"
   ],
   "js/blocks/index.ts": [
     "wp-blocks",
     "wp-i18n",
-    "react",
-    "jquery",
-    "wp-api-fetch",
     "wp-element",
     "wp-block-editor",
-    "wp-components",
-    "react-dom"
+    "wp-components"
   ],
   "js/web-app-login/index.ts": [],
   "js/wp-login/index.ts": [
