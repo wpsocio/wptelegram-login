@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../packages/js/shared-ui/components/instructions.tsx:17
 #: admin/Admin.php:278
-#: languages/wptelegram-login-js-translations.php:29
+#: languages/wptelegram-login-js-translations.php:32
 msgid "INSTRUCTIONS!"
 msgstr "ІНСТРУКЦІЇ!"
 
@@ -61,7 +61,7 @@ msgstr ""
 msgid "Ask the user to start a conversation with %s to receive notifications."
 msgstr ""
 
-#: ../../packages/js/services/apiFetch/index.ts:41
+#: ../../packages/js/services/api-fetch/index.ts:41
 #: admin/Admin.php:323
 #: languages/wptelegram-login-js-translations.php:11
 #: shared/LoginHandler.php:75
@@ -94,7 +94,7 @@ msgstr "Увійшов"
 
 #: js/settings/ui/LoginOptions.tsx:18
 #: includes/AssetManager.php:401
-#: languages/wptelegram-login-js-translations.php:225
+#: languages/wptelegram-login-js-translations.php:228
 msgid "Default"
 msgstr "За замовчуванням"
 
@@ -139,430 +139,430 @@ msgstr ""
 
 #: js/blocks/telegram-login/Edit.tsx:20
 #: js/settings/ui/ButtonOptions.tsx:17
-#: languages/wptelegram-login-js-translations.php:90
+#: languages/wptelegram-login-js-translations.php:93
 #: shared/widgets/Primary.php:156
 msgid "Large"
 msgstr "Велика"
 
 #: js/blocks/telegram-login/Edit.tsx:21
 #: js/settings/ui/ButtonOptions.tsx:18
-#: languages/wptelegram-login-js-translations.php:94
+#: languages/wptelegram-login-js-translations.php:97
 #: shared/widgets/Primary.php:159
 msgid "Medium"
 msgstr "Середня"
 
 #: js/blocks/telegram-login/Edit.tsx:22
 #: js/settings/ui/ButtonOptions.tsx:19
-#: languages/wptelegram-login-js-translations.php:98
+#: languages/wptelegram-login-js-translations.php:101
 #: shared/widgets/Primary.php:162
 msgid "Small"
 msgstr "Мала"
 
 #: js/blocks/telegram-login/Edit.tsx:77
-#: languages/wptelegram-login-js-translations.php:101
+#: languages/wptelegram-login-js-translations.php:104
 msgid "Button Settings"
 msgstr "Налаштування кнопки"
 
 #: js/blocks/telegram-login/Edit.tsx:80
 #: js/settings/services/fields.ts:16
-#: languages/wptelegram-login-js-translations.php:105
+#: languages/wptelegram-login-js-translations.php:108
 #: shared/widgets/Primary.php:153
 msgid "Button Style"
 msgstr "Стиль кнопки"
 
 #: js/blocks/telegram-login/Edit.tsx:86
 #: js/settings/services/fields.ts:27
-#: languages/wptelegram-login-js-translations.php:109
+#: languages/wptelegram-login-js-translations.php:112
 #: shared/widgets/Primary.php:167
 msgid "Show User Photo"
 msgstr "Показувати фото користувача"
 
 #: js/blocks/telegram-login/Edit.tsx:92
 #: js/settings/services/fields.ts:17
-#: languages/wptelegram-login-js-translations.php:113
+#: languages/wptelegram-login-js-translations.php:116
 #: shared/widgets/Primary.php:171
 msgid "Corner Radius"
 msgstr "Кутовий радіус"
 
 #: js/blocks/telegram-login/Edit.tsx:101
 #: js/settings/services/fields.ts:25
-#: languages/wptelegram-login-js-translations.php:82
+#: languages/wptelegram-login-js-translations.php:85
 #: shared/widgets/Primary.php:175
 msgid "Language"
 msgstr ""
 
 #: js/blocks/telegram-login/Edit.tsx:108
 #: js/settings/services/fields.ts:24
-#: languages/wptelegram-login-js-translations.php:86
+#: languages/wptelegram-login-js-translations.php:89
 #: shared/widgets/Primary.php:183
 msgid "Show if user is"
 msgstr "Показувати, якщо користувач"
 
 #: js/settings/services/fields.ts:18
-#: languages/wptelegram-login-js-translations.php:129
+#: languages/wptelegram-login-js-translations.php:132
 msgid "Error message text"
 msgstr "Текст повідомлення про помилку"
 
 #: js/settings/services/fields.ts:19
-#: languages/wptelegram-login-js-translations.php:132
+#: languages/wptelegram-login-js-translations.php:135
 msgid "Disable Sign up"
 msgstr "Вимкнути реєстрацію"
 
 #: js/settings/services/fields.ts:20
-#: languages/wptelegram-login-js-translations.php:135
+#: languages/wptelegram-login-js-translations.php:138
 msgid "Hide on default login"
 msgstr "Приховати на вході WordPress за замовчуванням"
 
 #: js/settings/services/fields.ts:21
-#: languages/wptelegram-login-js-translations.php:138
+#: languages/wptelegram-login-js-translations.php:141
 msgid "Random Email"
 msgstr ""
 
 #: js/settings/services/fields.ts:22
-#: languages/wptelegram-login-js-translations.php:141
+#: languages/wptelegram-login-js-translations.php:144
 msgid "Redirect to"
 msgstr "Перенаправити на"
 
 #: js/settings/services/fields.ts:23
 #: js/settings/ui/LoginOptions.tsx:21
-#: languages/wptelegram-login-js-translations.php:145
+#: languages/wptelegram-login-js-translations.php:148
 msgid "Custom URL"
 msgstr "Користувацький URL"
 
 #: js/settings/services/fields.ts:26
-#: languages/wptelegram-login-js-translations.php:148
+#: languages/wptelegram-login-js-translations.php:151
 msgid "Show error message"
 msgstr "Показувати повідомлення про помилку"
 
 #: js/settings/services/fields.ts:28
-#: languages/wptelegram-login-js-translations.php:151
+#: languages/wptelegram-login-js-translations.php:154
 msgid "User Role"
 msgstr "Роль користувача"
 
 #: js/settings/services/fields.ts:13
-#: languages/wptelegram-login-js-translations.php:120
+#: languages/wptelegram-login-js-translations.php:123
 msgid "Avatar URL Meta Key"
 msgstr "Мета-ключ URL-адреси аватара"
 
 #: js/settings/services/fields.ts:14
-#: languages/wptelegram-login-js-translations.php:123
+#: languages/wptelegram-login-js-translations.php:126
 msgid "Bot Token"
 msgstr "Токен Бота"
 
 #: js/settings/services/fields.ts:15
-#: languages/wptelegram-login-js-translations.php:126
+#: languages/wptelegram-login-js-translations.php:129
 msgid "Bot Username"
 msgstr "Користувацьке ім'я Бота"
 
 #: js/settings/ui/ButtonOptions.tsx:28
-#: languages/wptelegram-login-js-translations.php:160
+#: languages/wptelegram-login-js-translations.php:163
 msgid "Button Options"
 msgstr "Параметри кнопки"
 
 #: js/settings/ui/ButtonOptions.tsx:54
-#: languages/wptelegram-login-js-translations.php:163
+#: languages/wptelegram-login-js-translations.php:166
 msgid "Display Telegram user profile photo beside button."
 msgstr "Показувати фото профілю користувача Telegram біля кнопки."
 
 #: js/settings/ui/ButtonOptions.tsx:75
 #: js/settings/ui/ErrorMessageOptions.tsx:51
-#: languages/wptelegram-login-js-translations.php:167
+#: languages/wptelegram-login-js-translations.php:170
 msgid "Leave empty for default."
 msgstr "Залишити порожнім за замовчуванням."
 
 #: js/settings/ui/ButtonOptions.tsx:90
-#: languages/wptelegram-login-js-translations.php:170
+#: languages/wptelegram-login-js-translations.php:173
 #, fuzzy
 msgid "Language for the login button."
 msgstr "Хто може бачити кнопку входу."
 
 #: js/settings/ui/ButtonOptions.tsx:111
-#: languages/wptelegram-login-js-translations.php:154
+#: languages/wptelegram-login-js-translations.php:157
 msgid "Who can see the login button."
 msgstr "Хто може бачити кнопку входу."
 
 #: js/settings/ui/ButtonOptions.tsx:131
-#: languages/wptelegram-login-js-translations.php:157
+#: languages/wptelegram-login-js-translations.php:160
 msgid "Hide the button on default WordPress login/register page."
 msgstr "Приховати кнопку на сторінці входу/реєстрації WordPress за замовчуванням."
 
 #: js/settings/ui/ErrorMessageOptions.tsx:21
-#: languages/wptelegram-login-js-translations.php:173
+#: languages/wptelegram-login-js-translations.php:176
 msgid "Error Message"
 msgstr ""
 
 #: js/settings/ui/ErrorMessageOptions.tsx:29
-#: languages/wptelegram-login-js-translations.php:176
+#: languages/wptelegram-login-js-translations.php:179
 msgid "Display an error message if Telegram is blocked by user's ISP."
 msgstr "Показувати повідомлення про помилку, якщо Telegram заблокований провайдером користувача."
 
 #: js/settings/ui/Instructions.tsx:16
-#: languages/wptelegram-login-js-translations.php:188
+#: languages/wptelegram-login-js-translations.php:191
 msgid "Note:"
 msgstr ""
 
 #: js/settings/ui/Instructions.tsx:18
-#: languages/wptelegram-login-js-translations.php:191
+#: languages/wptelegram-login-js-translations.php:194
 msgid "You can use the same bot for all the WP Telegram plugins."
 msgstr ""
 
 #. 1 command name, 2 bot name
 #. translators: 1 command name, 2 bot name
 #: js/settings/ui/Instructions.tsx:27
-#: languages/wptelegram-login-js-translations.php:195
+#: languages/wptelegram-login-js-translations.php:198
 msgid "Create a Bot by sending %1$s command to %2$s."
 msgstr "Створіть Бота, відправивши команду %1$s  до %2$s."
 
 #. %s bot name
 #. translators: %s bot name
 #: js/settings/ui/Instructions.tsx:48
-#: languages/wptelegram-login-js-translations.php:199
+#: languages/wptelegram-login-js-translations.php:202
 msgid "After completing the steps %s will provide you the Bot Token."
 msgstr "Після виконання кроків %s надасть вам Токен Бота."
 
 #: js/settings/ui/Instructions.tsx:54
-#: languages/wptelegram-login-js-translations.php:202
+#: languages/wptelegram-login-js-translations.php:205
 msgid "Copy the token and paste into the Bot Token field below."
 msgstr "Скопіюйте Токен і вставте в поле Токен Бота нижче."
 
 #. %s application name
 #. translators: %s application name
 #: js/settings/ui/Instructions.tsx:58
-#: languages/wptelegram-login-js-translations.php:206
+#: languages/wptelegram-login-js-translations.php:209
 msgid "For ease, use %s"
 msgstr "Для зручності використовуйте %s"
 
 #: js/settings/ui/Instructions.tsx:64
-#: languages/wptelegram-login-js-translations.php:209
+#: languages/wptelegram-login-js-translations.php:212
 msgid "Telegram Desktop"
 msgstr ""
 
 #. 1 command name, 2 bot name, 3 site url
 #. translators: 1 command name, 2 bot name, 3 site url
 #: js/settings/ui/Instructions.tsx:74
-#: languages/wptelegram-login-js-translations.php:213
+#: languages/wptelegram-login-js-translations.php:216
 msgid "Send %1$s command to %2$s, select your bot and then send %3$s"
 msgstr "Надішліть команду %1$s до %2$s, виберіть свого Бота і відправте %3$s"
 
 #: js/settings/ui/Instructions.tsx:101
-#: languages/wptelegram-login-js-translations.php:179
+#: languages/wptelegram-login-js-translations.php:182
 msgid "Test your bot token below and fill in the bot username if not filled automatically."
 msgstr "Перевірте свій Токен Бота нижче та заповніть користувацьке ім'я Бота, якщо воно не заповнилось автоматично."
 
 #: js/settings/ui/Instructions.tsx:105
-#: languages/wptelegram-login-js-translations.php:182
+#: languages/wptelegram-login-js-translations.php:185
 msgid "Hit %s below"
 msgstr "Натисніть %s нижче"
 
 #: ../../packages/js/shared-ui/form/submit/submit-button.tsx:12
 #: js/settings/ui/Instructions.tsx:105
-#: languages/wptelegram-login-js-translations.php:57
+#: languages/wptelegram-login-js-translations.php:60
 msgid "Save Changes"
 msgstr "Зберегти зміни"
 
 #: js/settings/ui/Instructions.tsx:106
-#: languages/wptelegram-login-js-translations.php:185
+#: languages/wptelegram-login-js-translations.php:188
 msgid "That's it. You are ready to rock :)"
 msgstr "Це воно. Ви готові запалювати :)"
 
 #: js/settings/ui/LoginOptions.tsx:19
-#: languages/wptelegram-login-js-translations.php:228
+#: languages/wptelegram-login-js-translations.php:231
 msgid "Homepage"
 msgstr "Домашня сторінка"
 
 #: js/settings/ui/LoginOptions.tsx:20
-#: languages/wptelegram-login-js-translations.php:231
+#: languages/wptelegram-login-js-translations.php:234
 msgid "Current page"
 msgstr "Поточна сторінка"
 
 #: js/settings/ui/LoginOptions.tsx:41
-#: languages/wptelegram-login-js-translations.php:234
+#: languages/wptelegram-login-js-translations.php:237
 msgid "Login Options"
 msgstr "Параметри входу"
 
 #: js/settings/ui/LoginOptions.tsx:49
-#: languages/wptelegram-login-js-translations.php:237
+#: languages/wptelegram-login-js-translations.php:240
 msgid "If enabled, only the existing users who have connected their Telegram will be able to login."
 msgstr "Якщо встановлено прапорець, лише існуючі користувачі, які підключили Telegram, зможуть увійти."
 
 #: js/settings/ui/LoginOptions.tsx:70
-#: languages/wptelegram-login-js-translations.php:240
+#: languages/wptelegram-login-js-translations.php:243
 msgid "The default role to assign for the new users."
 msgstr "Роль за замовчуванням для нових користувачів."
 
 #: js/settings/ui/LoginOptions.tsx:91
-#: languages/wptelegram-login-js-translations.php:243
+#: languages/wptelegram-login-js-translations.php:246
 msgid "Redirect location after login."
 msgstr "Місце перенаправлення після входу."
 
 #: js/settings/ui/LoginOptions.tsx:126
-#: languages/wptelegram-login-js-translations.php:216
+#: languages/wptelegram-login-js-translations.php:219
 msgid "The user meta key to be used to save Telegram photo URL."
 msgstr "Мета-ключ користувача, який використовується для збереження URL-адреси фото Telegram."
 
 #: js/settings/ui/LoginOptions.tsx:148
-#: languages/wptelegram-login-js-translations.php:219
+#: languages/wptelegram-login-js-translations.php:222
 msgid "If enabled, a random email address will be generated for new user accounts."
 msgstr ""
 
 #: js/settings/ui/LoginOptions.tsx:150
-#: languages/wptelegram-login-js-translations.php:222
+#: languages/wptelegram-login-js-translations.php:225
 msgid "Useful when you want the users to be able to receive private notifications."
 msgstr ""
 
 #: js/settings/ui/TelegramOptions.tsx:24
-#: languages/wptelegram-login-js-translations.php:255
+#: languages/wptelegram-login-js-translations.php:258
 msgid "Telegram Options"
 msgstr "Параметри Telegram "
 
 #: js/settings/ui/TelegramOptions.tsx:40
-#: languages/wptelegram-login-js-translations.php:258
+#: languages/wptelegram-login-js-translations.php:261
 msgid "Use %s above to set automatically."
 msgstr "Використовуйте %s вище для автоматичного встановлення."
 
-#: ../../packages/js/shared-ui/form/use-bot-token-test.tsx:122
+#: ../../packages/js/shared-ui/form/use-bot-token-test.tsx:67
 #: js/settings/ui/TelegramOptions.tsx:41
-#: languages/wptelegram-login-js-translations.php:67
+#: languages/wptelegram-login-js-translations.php:70
 msgid "Test Token"
 msgstr "Перевірити Токен"
 
 #. 1, 2 Menu names
 #. translators: 1, 2 Menu names
 #: js/settings/ui/WidgetInfoCard.tsx:19
-#: languages/wptelegram-login-js-translations.php:262
+#: languages/wptelegram-login-js-translations.php:265
 msgid "Goto %1$s and click/drag %2$s and place it where you want it to be."
 msgstr "Перейдіть на %1$s і натисніть/перетягніть %2$s та розмістіть його там, де ви хочете."
 
 #: js/settings/ui/WidgetInfoCard.tsx:28
-#: languages/wptelegram-login-js-translations.php:265
+#: languages/wptelegram-login-js-translations.php:268
 msgid "Appearance"
 msgstr "Вигляд"
 
 #: js/settings/ui/WidgetInfoCard.tsx:29
-#: languages/wptelegram-login-js-translations.php:268
+#: languages/wptelegram-login-js-translations.php:271
 msgid "Widgets"
 msgstr "Віджети"
 
 #: js/settings/ui/WidgetInfoCard.tsx:37
-#: languages/wptelegram-login-js-translations.php:271
+#: languages/wptelegram-login-js-translations.php:274
 msgid "Alternately, you can use the below shortcode or the block available in block editor."
 msgstr "Крім того, ви можете скористатись шорткодом нижче або блоком, доступним у редакторі блоків."
 
 #: js/settings/ui/WidgetInfoCard.tsx:41
-#: languages/wptelegram-login-js-translations.php:274
+#: languages/wptelegram-login-js-translations.php:277
 msgid "Inside page or post content:"
 msgstr "Всередині вмісту сторінки або публікації:"
 
 #: js/settings/ui/WidgetInfoCard.tsx:49
-#: languages/wptelegram-login-js-translations.php:277
+#: languages/wptelegram-login-js-translations.php:280
 msgid "Inside the theme templates"
 msgstr "Всередині шаблонів тем"
 
 #: js/settings/ui/WidgetInfoCard.tsx:57
-#: languages/wptelegram-login-js-translations.php:280
+#: languages/wptelegram-login-js-translations.php:283
 msgid "or"
 msgstr "або"
 
 #: ../../packages/js/shared-ui/form/bot-token-field.tsx:45
-#: languages/wptelegram-login-js-translations.php:53
+#: languages/wptelegram-login-js-translations.php:56
 msgid "Please read the instructions above."
 msgstr "Будь ласка, прочитайте інструкції вище."
 
 #. %s: plugin name
 #. translators: %s: plugin name
 #: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:57
-#: languages/wptelegram-login-js-translations.php:33
+#: languages/wptelegram-login-js-translations.php:36
 msgid "Do you like %s?"
 msgstr "Вам подобається %s?"
 
 #: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:69
-#: languages/wptelegram-login-js-translations.php:36
+#: languages/wptelegram-login-js-translations.php:39
 msgid "Write a review"
 msgstr ""
 
 #: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:85
-#: languages/wptelegram-login-js-translations.php:39
+#: languages/wptelegram-login-js-translations.php:42
 msgid "Need help?"
 msgstr "Потрібна допомога?"
 
-#: ../../packages/js/shared-ui/form/test-result/render-test-result.tsx:17
-#: languages/wptelegram-login-js-translations.php:60
+#: ../../packages/js/shared-ui/form/test-result/render-test-result.tsx:39
+#: languages/wptelegram-login-js-translations.php:63
 msgid "Test Result:"
 msgstr "Результати тесту:"
 
 #. %s: social handle
 #. translators: %s: social handle
 #: ../../packages/js/shared-ui/components/wptg-social-icons.tsx:42
-#: languages/wptelegram-login-js-translations.php:46
+#: languages/wptelegram-login-js-translations.php:49
 msgid "Follow %s"
 msgstr "Слідкуйте за %s"
 
 #. %s: channel name
 #. translators: %s: channel name
 #: ../../packages/js/shared-ui/components/wptg-social-icons.tsx:62
-#: languages/wptelegram-login-js-translations.php:50
+#: languages/wptelegram-login-js-translations.php:53
 msgid "Join %s"
 msgstr "Приєднуйтесь до %s"
 
 #: ../../packages/js/shared-ui/components/widget-info/widget-info-card.tsx:24
-#: languages/wptelegram-login-js-translations.php:42
+#: languages/wptelegram-login-js-translations.php:45
 msgid "Widget Info"
 msgstr "Інформація віджета"
 
-#: ../../packages/js/shared-ui/form/use-bot-token-test.tsx:121
-#: languages/wptelegram-login-js-translations.php:63
+#: ../../packages/js/shared-ui/form/use-bot-token-test.tsx:66
+#: languages/wptelegram-login-js-translations.php:66
 msgid "Please wait…"
 msgstr "Будь ласка, зачекайте..."
 
-#: ../../packages/js/services/apiFetch/index.ts:36
+#: ../../packages/js/services/api-fetch/index.ts:36
 #: languages/wptelegram-login-js-translations.php:5
 msgid "Something went wrong"
 msgstr ""
 
-#: ../../packages/js/services/apiFetch/index.ts:38
+#: ../../packages/js/services/api-fetch/index.ts:38
 #: languages/wptelegram-login-js-translations.php:8
 msgid "Could not connect"
 msgstr "Не вдається підключитися"
 
-#: ../../packages/js/services/telegram/TelegramUtils.ts:128
+#: ../../packages/js/services/telegram/telegram-utils.ts:126
 #: languages/wptelegram-login-js-translations.php:14
 msgid "A message will be sent to the Channel/Group/Chat. You can modify the text below"
 msgstr ""
 
-#: ../../packages/js/services/telegram/TelegramUtils.ts:131
+#: ../../packages/js/services/telegram/telegram-utils.ts:129
 #: languages/wptelegram-login-js-translations.php:17
 msgid "This is a test message"
 msgstr ""
 
-#: ../../packages/js/services/telegram/TelegramUtils.ts:153
-#: languages/wptelegram-login-js-translations.php:20
+#: ../../packages/js/services/telegram/telegram-utils.ts:152
+#: languages/wptelegram-login-js-translations.php:23
 msgid "Success"
 msgstr ""
 
 #: ../../packages/js/services/use-display-feedback.ts:68
-#: languages/wptelegram-login-js-translations.php:23
+#: languages/wptelegram-login-js-translations.php:26
 msgid "Lets fix these errors first."
 msgstr ""
 
 #: ../../packages/js/services/use-submit-form.ts:64
-#: languages/wptelegram-login-js-translations.php:26
+#: languages/wptelegram-login-js-translations.php:29
 msgid "Changes saved successfully."
 msgstr "Зміни успішно збережено."
 
 #: ../../packages/js/utilities/fields.ts:35
 #: js/settings/services/fields.ts:70
-#: languages/wptelegram-login-js-translations.php:71
+#: languages/wptelegram-login-js-translations.php:74
 msgid "Invalid %s"
 msgstr "Невірний %s"
 
 #: ../../packages/js/utilities/fields.ts:39
 #: js/settings/services/fields.ts:57
-#: languages/wptelegram-login-js-translations.php:75
+#: languages/wptelegram-login-js-translations.php:78
 msgid "%s required."
 msgstr "%s є обов'язковим."
 
 #: ../../packages/js/utilities/fields.ts:42
-#: languages/wptelegram-login-js-translations.php:78
+#: languages/wptelegram-login-js-translations.php:81
 msgid "Changes could not be saved."
 msgstr "Не вдається зберегти зміни."
 
@@ -616,7 +616,7 @@ msgstr "Заголовок"
 #: js/settings/ui/WidgetInfoCard.tsx:32
 #: wptelegram-login.php
 #: includes/Main.php:427
-#: languages/wptelegram-login-js-translations.php:117
+#: languages/wptelegram-login-js-translations.php:120
 #: shared/widgets/Primary.php:28
 #~ msgid "WP Telegram Login"
 #~ msgstr "WP Telegram Вхід"
@@ -624,7 +624,7 @@ msgstr "Заголовок"
 #. Description of the plugin
 #: js/settings/ui/Sidebar.tsx:18
 #: wptelegram-login.php
-#: languages/wptelegram-login-js-translations.php:246
+#: languages/wptelegram-login-js-translations.php:249
 #~ msgid "Let the users login to your WordPress website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram."
 #~ msgstr "Дозвольте користувачам увійти на ваш веб-сайт WordPress за допомогою Telegram, спростіть авторизацію та дозвольте отримувати сповіщення електронною поштою у Telegram."
 
@@ -658,11 +658,16 @@ msgid "WP Telegram"
 msgstr ""
 
 #: js/settings/ui/Sidebar.tsx:21
-#: languages/wptelegram-login-js-translations.php:249
+#: languages/wptelegram-login-js-translations.php:252
 msgid "Join our public chat on Telegram"
 msgstr ""
 
 #: js/settings/ui/Sidebar.tsx:26
-#: languages/wptelegram-login-js-translations.php:252
+#: languages/wptelegram-login-js-translations.php:255
 msgid "Support"
+msgstr ""
+
+#: ../../packages/js/services/telegram/telegram-utils.ts:133
+#: languages/wptelegram-login-js-translations.php:20
+msgid "Message is empty"
 msgstr ""

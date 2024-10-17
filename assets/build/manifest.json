@@ -16,7 +16,7 @@
     ]
   },
   "js/settings/index.ts": {
-    "file": "dist/settings-CT_v5p74.js",
+    "file": "dist/settings-CbVxUEXw.js",
     "name": "settings",
     "src": "js/settings/index.ts",
     "isEntry": true,
@@ -24,7 +24,7 @@
       "_use-plugin-data-CEVveJse.js"
     ],
     "css": [
-      "dist/settings-D3KzxoPX.css"
+      "dist/settings-NSwfeoNy.css"
     ]
   },
   "js/web-app-login/index.ts": {

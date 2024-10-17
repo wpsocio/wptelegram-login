@@ -1,22 +1,25 @@
 <?php
 /* THIS IS A GENERATED FILE. DO NOT EDIT DIRECTLY. */
 $generated_i18n_strings = array(
-	// Reference: ../../packages/js/services/apiFetch/index.ts:36
+	// Reference: ../../packages/js/services/api-fetch/index.ts:36
 	__( 'Something went wrong', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/services/apiFetch/index.ts:38
+	// Reference: ../../packages/js/services/api-fetch/index.ts:38
 	__( 'Could not connect', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/services/apiFetch/index.ts:41
+	// Reference: ../../packages/js/services/api-fetch/index.ts:41
 	__( 'Error:', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/services/telegram/TelegramUtils.ts:128
+	// Reference: ../../packages/js/services/telegram/telegram-utils.ts:126
 	__( 'A message will be sent to the Channel/Group/Chat. You can modify the text below', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/services/telegram/TelegramUtils.ts:131
+	// Reference: ../../packages/js/services/telegram/telegram-utils.ts:129
 	__( 'This is a test message', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/services/telegram/TelegramUtils.ts:153
+	// Reference: ../../packages/js/services/telegram/telegram-utils.ts:133
+	__( 'Message is empty', 'wptelegram-login' ),
+
+	// Reference: ../../packages/js/services/telegram/telegram-utils.ts:152
 	__( 'Success', 'wptelegram-login' ),
 
 	// Reference: ../../packages/js/services/use-display-feedback.ts:68
@@ -56,13 +59,13 @@ $generated_i18n_strings = array(
 	// Reference: js/settings/ui/Instructions.tsx:105
 	__( 'Save Changes', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/shared-ui/form/test-result/render-test-result.tsx:17
+	// Reference: ../../packages/js/shared-ui/form/test-result/render-test-result.tsx:39
 	__( 'Test Result:', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/shared-ui/form/use-bot-token-test.tsx:121
+	// Reference: ../../packages/js/shared-ui/form/use-bot-token-test.tsx:66
 	__( 'Please wait…', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/shared-ui/form/use-bot-token-test.tsx:122
+	// Reference: ../../packages/js/shared-ui/form/use-bot-token-test.tsx:67
 	// Reference: js/settings/ui/TelegramOptions.tsx:41
 	__( 'Test Token', 'wptelegram-login' ),
 
