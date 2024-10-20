@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.11.3
+
+### Patch Changes
+
+- [#184](https://github.com/wpsocio/wp-projects/pull/184) [`97ad3cd`](https://github.com/wpsocio/wp-projects/commit/97ad3cdca071bab580779a49240cee064f1b1957) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Fixed the messed up query params passed by Telegram Mini Apps
+
 ## 1.11.2
 
 ### Patch Changes

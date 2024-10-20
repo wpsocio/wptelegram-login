@@ -80,38 +80,38 @@ msgstr "Ідентифікатор користувача Telegram"
 msgid "With this plugin, you can let the users login to your website with their Telegram and make it simple for them to get connected."
 msgstr "За допомогою цього плагіна ви можете дозволити користувачам увійти на ваш веб-сайт за допомогою Telegram та спростити їх авторизацію."
 
-#: includes/AssetManager.php:327
+#: includes/AssetManager.php:329
 msgid "Any"
 msgstr "Будь-який"
 
-#: includes/AssetManager.php:331
+#: includes/AssetManager.php:333
 msgid "Logged out"
 msgstr "Вийшов"
 
-#: includes/AssetManager.php:335
+#: includes/AssetManager.php:337
 msgid "Logged in"
 msgstr "Увійшов"
 
 #: js/settings/ui/LoginOptions.tsx:18
-#: includes/AssetManager.php:401
+#: includes/AssetManager.php:403
 #: languages/wptelegram-login-js-translations.php:228
 msgid "Default"
 msgstr "За замовчуванням"
 
-#: includes/AssetManager.php:253
+#: includes/AssetManager.php:255
 #, fuzzy
 msgid "Login with Telegram"
 msgstr "WP Telegram"
 
-#: includes/AssetManager.php:254
+#: includes/AssetManager.php:256
 msgid "Do you want to login via Telegram for a better experience?"
 msgstr ""
 
-#: includes/AssetManager.php:258
+#: includes/AssetManager.php:260
 msgid "Login"
 msgstr ""
 
-#: includes/AssetManager.php:263
+#: includes/AssetManager.php:265
 msgid "Cancel"
 msgstr ""
 

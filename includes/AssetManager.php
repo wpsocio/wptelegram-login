@@ -240,11 +240,13 @@ class AssetManager extends BaseClass {
 			$confirm_login     = (bool) $query_params['confirm_login'];
 			$is_user_logged_in = is_user_logged_in();
 			$login_auth_url    = add_query_arg(
-				[
-					'action'      => 'wptelegram_login',
-					'source'      => 'WebAppData',
-					'redirect_to' => $redirect_to,
-				],
+				array_filter(
+					[
+						'action'      => 'wptelegram_login',
+						'source'      => 'WebAppData',
+						'redirect_to' => $redirect_to,
+					]
+				),
 				site_url()
 			);
 
@@ -437,10 +439,18 @@ class AssetManager extends BaseClass {
 	 */
 	private function get_webapp_login_params() {
 
-		// Using $_SERVER['QUERY_STRING'] to avoid a bug in Telegram Mini Apps which pass HTML encoded query string.
+		// Using $_SERVER['QUERY_STRING'] to avoid a bug in Telegram Mini Apps which pass HTML/URL encoded query string ¯\_(ツ)_/¯.
+
 		$query_string = ! empty( $_SERVER['QUERY_STRING'] )
-			? html_entity_decode( sanitize_text_field( wp_unslash( $_SERVER['QUERY_STRING'] ) ) )
+			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- We are sanitizing the input below.
+			? wp_unslash( $_SERVER['QUERY_STRING'] )
 			: '';
+
+		$query_string = html_entity_decode(
+			sanitize_text_field(
+				str_replace( [ '&amp%3B', '&amp;' ], '&', $query_string )
+			)
+		);
 
 		return wp_parse_args(
 			$query_string,
