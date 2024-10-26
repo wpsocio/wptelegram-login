@@ -1,30 +1,30 @@
 {
-  "_use-plugin-data-CEVveJse.js": {
-    "file": "dist/use-plugin-data-CEVveJse.js",
-    "name": "use-plugin-data"
+  "_get-plugin-data-CUiZS_nG.js": {
+    "file": "dist/get-plugin-data-CUiZS_nG.js",
+    "name": "get-plugin-data"
   },
   "js/blocks/index.ts": {
-    "file": "dist/blocks-B6GhD9wM.js",
+    "file": "dist/blocks-DsQs4ahR.js",
     "name": "blocks",
     "src": "js/blocks/index.ts",
     "isEntry": true,
     "imports": [
-      "_use-plugin-data-CEVveJse.js"
+      "_get-plugin-data-CUiZS_nG.js"
     ],
     "css": [
       "dist/blocks-Dyy12yjz.css"
     ]
   },
   "js/settings/index.ts": {
-    "file": "dist/settings-CNKtgVA3.js",
+    "file": "dist/settings-BfgT4Azk.js",
     "name": "settings",
     "src": "js/settings/index.ts",
     "isEntry": true,
     "imports": [
-      "_use-plugin-data-CEVveJse.js"
+      "_get-plugin-data-CUiZS_nG.js"
     ],
     "css": [
-      "dist/settings-aBaZgHYY.css"
+      "dist/settings-B9prBJmz.css"
     ]
   },
   "js/web-app-login/index.ts": {

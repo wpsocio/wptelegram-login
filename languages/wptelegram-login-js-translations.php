@@ -48,7 +48,7 @@ $generated_i18n_strings = array(
 	/* translators: %s: social handle */
 	__( 'Follow %s', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/shared-ui/components/wptg-social-icons.tsx:62
+	// Reference: ../../packages/js/shared-ui/components/wptg-social-icons.tsx:57
 	/* translators: %s: channel name */
 	__( 'Join %s', 'wptelegram-login' ),
 
@@ -56,7 +56,7 @@ $generated_i18n_strings = array(
 	__( 'Please read the instructions above.', 'wptelegram-login' ),
 
 	// Reference: ../../packages/js/shared-ui/form/submit/submit-button.tsx:12
-	// Reference: js/settings/ui/Instructions.tsx:105
+	// Reference: js/settings/ui/Instructions.tsx:106
 	__( 'Save Changes', 'wptelegram-login' ),
 
 	// Reference: ../../packages/js/shared-ui/form/test-result/render-test-result.tsx:39
@@ -178,40 +178,40 @@ $generated_i18n_strings = array(
 	// Reference: js/settings/ui/ErrorMessageOptions.tsx:29
 	__( 'Display an error message if Telegram is blocked by user\'s ISP.', 'wptelegram-login' ),
 
-	// Reference: js/settings/ui/Instructions.tsx:101
+	// Reference: js/settings/ui/Instructions.tsx:102
 	__( 'Test your bot token below and fill in the bot username if not filled automatically.', 'wptelegram-login' ),
 
-	// Reference: js/settings/ui/Instructions.tsx:105
+	// Reference: js/settings/ui/Instructions.tsx:106
 	__( 'Hit %s below', 'wptelegram-login' ),
 
-	// Reference: js/settings/ui/Instructions.tsx:106
+	// Reference: js/settings/ui/Instructions.tsx:107
 	__( 'That\'s it. You are ready to rock :)', 'wptelegram-login' ),
 
-	// Reference: js/settings/ui/Instructions.tsx:16
+	// Reference: js/settings/ui/Instructions.tsx:17
 	__( 'Note:', 'wptelegram-login' ),
 
-	// Reference: js/settings/ui/Instructions.tsx:18
+	// Reference: js/settings/ui/Instructions.tsx:19
 	__( 'You can use the same bot for all the WP Telegram plugins.', 'wptelegram-login' ),
 
-	// Reference: js/settings/ui/Instructions.tsx:27
+	// Reference: js/settings/ui/Instructions.tsx:28
 	/* translators: 1 command name, 2 bot name */
 	__( 'Create a Bot by sending %1$s command to %2$s.', 'wptelegram-login' ),
 
-	// Reference: js/settings/ui/Instructions.tsx:48
+	// Reference: js/settings/ui/Instructions.tsx:49
 	/* translators: %s bot name */
 	__( 'After completing the steps %s will provide you the Bot Token.', 'wptelegram-login' ),
 
-	// Reference: js/settings/ui/Instructions.tsx:54
+	// Reference: js/settings/ui/Instructions.tsx:55
 	__( 'Copy the token and paste into the Bot Token field below.', 'wptelegram-login' ),
 
-	// Reference: js/settings/ui/Instructions.tsx:58
+	// Reference: js/settings/ui/Instructions.tsx:59
 	/* translators: %s application name */
 	__( 'For ease, use %s', 'wptelegram-login' ),
 
-	// Reference: js/settings/ui/Instructions.tsx:64
+	// Reference: js/settings/ui/Instructions.tsx:65
 	__( 'Telegram Desktop', 'wptelegram-login' ),
 
-	// Reference: js/settings/ui/Instructions.tsx:74
+	// Reference: js/settings/ui/Instructions.tsx:75
 	/* translators: 1 command name, 2 bot name, 3 site url */
 	__( 'Send %1$s command to %2$s, select your bot and then send %3$s', 'wptelegram-login' ),
 
@@ -245,13 +245,13 @@ $generated_i18n_strings = array(
 	// Reference: js/settings/ui/LoginOptions.tsx:91
 	__( 'Redirect location after login.', 'wptelegram-login' ),
 
-	// Reference: js/settings/ui/Sidebar.tsx:18
+	// Reference: js/settings/ui/Sidebar.tsx:19
 	__( 'Let the users login to your WordPress website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram.', 'wptelegram-login' ),
 
-	// Reference: js/settings/ui/Sidebar.tsx:21
+	// Reference: js/settings/ui/Sidebar.tsx:22
 	__( 'Join our public chat on Telegram', 'wptelegram-login' ),
 
-	// Reference: js/settings/ui/Sidebar.tsx:26
+	// Reference: js/settings/ui/Sidebar.tsx:27
 	__( 'Support', 'wptelegram-login' ),
 
 	// Reference: js/settings/ui/TelegramOptions.tsx:24

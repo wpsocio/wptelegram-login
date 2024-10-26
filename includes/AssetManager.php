@@ -236,7 +236,7 @@ class AssetManager extends BaseClass {
 
 			$query_params = $this->get_webapp_login_params();
 
-			$redirect_to       = esc_url( $query_params['redirect_to'] );
+			$redirect_to       = rawurlencode( $query_params['redirect_to'] );
 			$confirm_login     = (bool) $query_params['confirm_login'];
 			$is_user_logged_in = is_user_logged_in();
 			$login_auth_url    = add_query_arg(
@@ -439,6 +439,12 @@ class AssetManager extends BaseClass {
 	 */
 	private function get_webapp_login_params() {
 
+		$defaults = [
+			'action'        => '',
+			'confirm_login' => '1',
+			'redirect_to'   => '',
+		];
+
 		// Using $_SERVER['QUERY_STRING'] to avoid a bug in Telegram Mini Apps which pass HTML/URL encoded query string ¯\_(ツ)_/¯.
 
 		$query_string = ! empty( $_SERVER['QUERY_STRING'] )
@@ -447,19 +453,13 @@ class AssetManager extends BaseClass {
 			: '';
 
 		$query_string = html_entity_decode(
-			sanitize_text_field(
-				str_replace( [ '&amp%3B', '&amp;' ], '&', $query_string )
-			)
+			str_replace( [ '&amp%3B', '&amp;' ], '&', $query_string )
 		);
 
-		return wp_parse_args(
-			$query_string,
-			[
-				'action'        => '',
-				'confirm_login' => '1',
-				'redirect_to'   => '',
-			]
-		);
+		$args = wp_parse_args( $query_string, $defaults );
+
+		// Sanitize each value.
+		return array_map( 'sanitize_text_field', $args );
 	}
 
 	/**
