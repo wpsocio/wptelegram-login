@@ -4,7 +4,7 @@
     "name": "get-plugin-data"
   },
   "js/blocks/index.ts": {
-    "file": "dist/blocks-DsQs4ahR.js",
+    "file": "dist/blocks-Df2N3Dwr.js",
     "name": "blocks",
     "src": "js/blocks/index.ts",
     "isEntry": true,
@@ -12,11 +12,11 @@
       "_get-plugin-data-CUiZS_nG.js"
     ],
     "css": [
-      "dist/blocks-Dyy12yjz.css"
+      "dist/blocks-Cg1mExvO.css"
     ]
   },
   "js/settings/index.ts": {
-    "file": "dist/settings-BfgT4Azk.js",
+    "file": "dist/settings-CpIpabpu.js",
     "name": "settings",
     "src": "js/settings/index.ts",
     "isEntry": true,
@@ -24,7 +24,7 @@
       "_get-plugin-data-CUiZS_nG.js"
     ],
     "css": [
-      "dist/settings-B9prBJmz.css"
+      "dist/settings-C6KOf-oo.css"
     ]
   },
   "js/web-app-login/index.ts": {
@@ -34,12 +34,12 @@
     "isEntry": true
   },
   "js/wp-login/index.ts": {
-    "file": "dist/wp-login-CLNOwpzk.js",
+    "file": "dist/wp-login-BSMe5SLf.js",
     "name": "wp-login",
     "src": "js/wp-login/index.ts",
     "isEntry": true,
     "css": [
-      "dist/wp-login-DytovrYG.css"
+      "dist/wp-login-Be4DD3nf.css"
     ]
   }
 }

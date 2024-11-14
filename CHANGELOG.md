@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.11.5
+
+### Patch Changes
+
+- [#204](https://github.com/wpsocio/wp-projects/pull/204) [`f193093`](https://github.com/wpsocio/wp-projects/commit/f19309316f3553956b15236d41f4c411977f7342) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Fixed the issue of block editor Zoom out not being visible when the plugin is active
+
 ## 1.11.4
 
 ### Patch Changes

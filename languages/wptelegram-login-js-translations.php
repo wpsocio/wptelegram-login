@@ -80,11 +80,11 @@ $generated_i18n_strings = array(
 	// Reference: ../../packages/js/utilities/fields.ts:42
 	__( 'Changes could not be saved.', 'wptelegram-login' ),
 
-	// Reference: js/blocks/telegram-login/Edit.tsx:101
+	// Reference: js/blocks/telegram-login/Edit.tsx:102
 	// Reference: js/settings/services/fields.ts:25
 	__( 'Language', 'wptelegram-login' ),
 
-	// Reference: js/blocks/telegram-login/Edit.tsx:108
+	// Reference: js/blocks/telegram-login/Edit.tsx:109
 	// Reference: js/settings/services/fields.ts:24
 	__( 'Show if user is', 'wptelegram-login' ),
 
@@ -100,22 +100,22 @@ $generated_i18n_strings = array(
 	// Reference: js/settings/ui/ButtonOptions.tsx:19
 	__( 'Small', 'wptelegram-login' ),
 
-	// Reference: js/blocks/telegram-login/Edit.tsx:77
+	// Reference: js/blocks/telegram-login/Edit.tsx:78
 	__( 'Button Settings', 'wptelegram-login' ),
 
-	// Reference: js/blocks/telegram-login/Edit.tsx:80
+	// Reference: js/blocks/telegram-login/Edit.tsx:81
 	// Reference: js/settings/services/fields.ts:16
 	__( 'Button Style', 'wptelegram-login' ),
 
-	// Reference: js/blocks/telegram-login/Edit.tsx:86
+	// Reference: js/blocks/telegram-login/Edit.tsx:87
 	// Reference: js/settings/services/fields.ts:27
 	__( 'Show User Photo', 'wptelegram-login' ),
 
-	// Reference: js/blocks/telegram-login/Edit.tsx:92
+	// Reference: js/blocks/telegram-login/Edit.tsx:93
 	// Reference: js/settings/services/fields.ts:17
 	__( 'Corner Radius', 'wptelegram-login' ),
 
-	// Reference: js/blocks/telegram-login/index.tsx:20
+	// Reference: js/blocks/telegram-login/index.tsx:21
 	// Reference: js/settings/ui/WidgetInfoCard.tsx:32
 	__( 'WP Telegram Login', 'wptelegram-login' ),
 

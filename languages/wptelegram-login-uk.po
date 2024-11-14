@@ -158,40 +158,40 @@ msgstr "Середня"
 msgid "Small"
 msgstr "Мала"
 
-#: js/blocks/telegram-login/Edit.tsx:77
+#: js/blocks/telegram-login/Edit.tsx:78
 #: languages/wptelegram-login-js-translations.php:104
 msgid "Button Settings"
 msgstr "Налаштування кнопки"
 
-#: js/blocks/telegram-login/Edit.tsx:80
+#: js/blocks/telegram-login/Edit.tsx:81
 #: js/settings/services/fields.ts:16
 #: languages/wptelegram-login-js-translations.php:108
 #: shared/widgets/Primary.php:153
 msgid "Button Style"
 msgstr "Стиль кнопки"
 
-#: js/blocks/telegram-login/Edit.tsx:86
+#: js/blocks/telegram-login/Edit.tsx:87
 #: js/settings/services/fields.ts:27
 #: languages/wptelegram-login-js-translations.php:112
 #: shared/widgets/Primary.php:167
 msgid "Show User Photo"
 msgstr "Показувати фото користувача"
 
-#: js/blocks/telegram-login/Edit.tsx:92
+#: js/blocks/telegram-login/Edit.tsx:93
 #: js/settings/services/fields.ts:17
 #: languages/wptelegram-login-js-translations.php:116
 #: shared/widgets/Primary.php:171
 msgid "Corner Radius"
 msgstr "Кутовий радіус"
 
-#: js/blocks/telegram-login/Edit.tsx:101
+#: js/blocks/telegram-login/Edit.tsx:102
 #: js/settings/services/fields.ts:25
 #: languages/wptelegram-login-js-translations.php:85
 #: shared/widgets/Primary.php:175
 msgid "Language"
 msgstr ""
 
-#: js/blocks/telegram-login/Edit.tsx:108
+#: js/blocks/telegram-login/Edit.tsx:109
 #: js/settings/services/fields.ts:24
 #: languages/wptelegram-login-js-translations.php:89
 #: shared/widgets/Primary.php:183
@@ -612,7 +612,7 @@ msgid "Title"
 msgstr "Заголовок"
 
 #. Plugin Name of the plugin
-#: js/blocks/telegram-login/index.tsx:20
+#: js/blocks/telegram-login/index.tsx:21
 #: js/settings/ui/WidgetInfoCard.tsx:32
 #: wptelegram-login.php
 #: includes/Main.php:427
