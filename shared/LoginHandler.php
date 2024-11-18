@@ -196,6 +196,7 @@ class LoginHandler extends BaseClass {
 			'start_param',
 			'can_send_after',
 			'chat_instance',
+			'signature',
 			// Misc.
 			'source',
 		];

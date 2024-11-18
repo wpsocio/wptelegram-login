@@ -5,7 +5,7 @@ Tags: telegram, login, register, social, signup
 Requires at least: 6.4
 Requires PHP: 7.4
 Tested up to: 6.7
-Stable tag: 1.11.5
+Stable tag: 1.11.6
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -154,7 +154,7 @@ Automatic updates should work smoothly, but we still recommend you back up your 
 
 == Changelog ==
 
-= 1.11.5 =
-- Fixed the issue of block editor Zoom out not being visible when the plugin is active
+= 1.11.6 =
+- Fixed login for Web Apps after recent Telegram update to Bot API.
 
 [See full changelog](https://github.com/wpsocio/wptelegram-login/blob/main/CHANGELOG.md)

@@ -566,28 +566,28 @@ msgstr "%s є обов'язковим."
 msgid "Changes could not be saved."
 msgstr "Не вдається зберегти зміни."
 
-#: shared/LoginHandler.php:250
+#: shared/LoginHandler.php:251
 msgid "Unauthorized! Data is NOT from Telegram"
 msgstr "Несанкціоновано! Дані НЕ від Telegram"
 
-#: shared/LoginHandler.php:254
+#: shared/LoginHandler.php:255
 msgid "Invalid! The data is outdated"
 msgstr "Недійсний! Дані застарілі"
 
-#: shared/LoginHandler.php:443
+#: shared/LoginHandler.php:444
 msgid "Invalid! The data is incomplete"
 msgstr "Недійсний! Дані неповні"
 
-#: shared/LoginHandler.php:460
+#: shared/LoginHandler.php:461
 msgid "The Telegram User ID is already associated with another existing user. Please contact the admin"
 msgstr "Ідентифікатор користувача Telegram вже пов'язаний з іншим наявним користувачем. Будь ласка, зверніться до адміністратора"
 
-#: shared/LoginHandler.php:486
+#: shared/LoginHandler.php:487
 msgid "Sign up via Telegram is disabled. You must first create an account and connect it to Telegram to be able to use Telegram Login"
 msgstr "Реєстрація через Telegram вимкнена. Спочатку потрібно створити обліковий запис і підключити його до Telegram, щоб мати можливість користуватися Telegram Вхід"
 
-#: shared/LoginHandler.php:575
-#: shared/LoginHandler.php:611
+#: shared/LoginHandler.php:576
+#: shared/LoginHandler.php:612
 msgid "Telegram sign in could not be completed."
 msgstr "Не вдалося увійти в Telegram."
 

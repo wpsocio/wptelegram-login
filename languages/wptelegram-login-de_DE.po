@@ -565,28 +565,28 @@ msgstr "%s wird benötigt."
 msgid "Changes could not be saved."
 msgstr "Die Änderungen konnten nicht gespeichert werden."
 
-#: shared/LoginHandler.php:250
+#: shared/LoginHandler.php:251
 msgid "Unauthorized! Data is NOT from Telegram"
 msgstr "Unautorisiert! Diese Daten stammen NICHT von Telegram"
 
-#: shared/LoginHandler.php:254
+#: shared/LoginHandler.php:255
 msgid "Invalid! The data is outdated"
 msgstr "Ungültig! Die Daten sind abgelaufen/veraltet"
 
-#: shared/LoginHandler.php:443
+#: shared/LoginHandler.php:444
 msgid "Invalid! The data is incomplete"
 msgstr "Ungültig! Die Daten sind unvollständig"
 
-#: shared/LoginHandler.php:460
+#: shared/LoginHandler.php:461
 msgid "The Telegram User ID is already associated with another existing user. Please contact the admin"
 msgstr "Diese Telegram User ID ist bereits mit einem anderen existierenden Benutzer verbunden. Bitte den Administrator kontaktieren"
 
-#: shared/LoginHandler.php:486
+#: shared/LoginHandler.php:487
 msgid "Sign up via Telegram is disabled. You must first create an account and connect it to Telegram to be able to use Telegram Login"
 msgstr "Anmelden über Telegram ist deaktiviert. Du musst zuerst einen Account anlegen und mit Telegram verbinden, um Telegram Login verwenden zu können."
 
-#: shared/LoginHandler.php:575
-#: shared/LoginHandler.php:611
+#: shared/LoginHandler.php:576
+#: shared/LoginHandler.php:612
 msgid "Telegram sign in could not be completed."
 msgstr "Die Telegram-Anmeldung konnte nicht erfolgreich durchgeführt werden."
 

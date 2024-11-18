@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.11.6
+
+### Patch Changes
+
+- [#207](https://github.com/wpsocio/wp-projects/pull/207) [`3e78a6d`](https://github.com/wpsocio/wp-projects/commit/3e78a6dacfd61e875c5187427d777e9f653f2c99) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Fixed login for Web Apps after recent Telegram update to Bot API.
+
 ## 1.11.5
 
 ### Patch Changes
