@@ -1,30 +1,30 @@
 {
-  "_get-plugin-data-CUiZS_nG.js": {
-    "file": "dist/get-plugin-data-CUiZS_nG.js",
+  "_get-plugin-data-CnqUp-qg.js": {
+    "file": "dist/get-plugin-data-CnqUp-qg.js",
     "name": "get-plugin-data"
   },
   "js/blocks/index.ts": {
-    "file": "dist/blocks-Df2N3Dwr.js",
+    "file": "dist/blocks-DeOg16_m.js",
     "name": "blocks",
     "src": "js/blocks/index.ts",
     "isEntry": true,
     "imports": [
-      "_get-plugin-data-CUiZS_nG.js"
+      "_get-plugin-data-CnqUp-qg.js"
     ],
     "css": [
       "dist/blocks-Cg1mExvO.css"
     ]
   },
   "js/settings/index.ts": {
-    "file": "dist/settings-CpIpabpu.js",
+    "file": "dist/settings-Bdp3s_Il.js",
     "name": "settings",
     "src": "js/settings/index.ts",
     "isEntry": true,
     "imports": [
-      "_get-plugin-data-CUiZS_nG.js"
+      "_get-plugin-data-CnqUp-qg.js"
     ],
     "css": [
-      "dist/settings-C6KOf-oo.css"
+      "dist/settings-Dp7vo4aF.css"
     ]
   },
   "js/web-app-login/index.ts": {

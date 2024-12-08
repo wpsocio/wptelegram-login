@@ -154,7 +154,8 @@ class Admin extends BaseClass {
 			$meta_query[] = $prepared_args['meta_query'];
 		}
 
-		$prepared_args['meta_query'] = $meta_query; // phpcs:ignore
+		// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+		$prepared_args['meta_query'] = $meta_query;
 
 		return $prepared_args;
 	}
@@ -198,12 +199,12 @@ class Admin extends BaseClass {
 	}
 
 	/**
-	 * Create our widget.
+	 * Register widgets.
 	 *
 	 * @since    1.0.0
 	 */
 	public function register_widgets() {
-		register_widget( '\WPTelegram\Login\shared\widgets\Primary' );
+		register_widget( \WPTelegram\Login\shared\widgets\Primary::class );
 	}
 
 	/**
@@ -281,22 +282,24 @@ class Admin extends BaseClass {
 				<?php
 					printf(
 						/* translators: %s is bot username */
-						$is_current_user // phpcs:ignore
-						? __( 'Get your Chat ID from %s and enter it above.', 'wptelegram-login' ) // phpcs:ignore
-						/* translators: %s is bot username */
-						: __( 'Ask the user to get the Chat ID from %s and enter it above.', 'wptelegram-login' ), // phpcs:ignore
-						'<a href="https://t.me/MyChatInfoBot" target="_blank" rel="noreferrer noopener">@MyChatInfoBot</a>' // phpcs:ignore
+						$is_current_user
+						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped, WordPress.WP.I18n.MissingTranslatorsComment
+						? __( 'Get your Chat ID from %s and enter it above.', 'wptelegram-login' )
+						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped, WordPress.WP.I18n.MissingTranslatorsComment
+						: __( 'Ask the user to get the Chat ID from %s and enter it above.', 'wptelegram-login' ),
+						'<a href="https://t.me/MyChatInfoBot" target="_blank" rel="noreferrer noopener">@MyChatInfoBot</a>'
 					);
 				?>
 			</li>
 			<li>
 				<?php
 					printf(
-						$is_current_user // phpcs:ignore
 						/* translators: %s is bot username */
-						? __( 'Start a conversation with %s to receive notifications.', 'wptelegram-login' ) // phpcs:ignore
-						/* translators: %s is bot username */
-						: __( 'Ask the user to start a conversation with %s to receive notifications.', 'wptelegram-login' ), // phpcs:ignore
+						$is_current_user
+						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped, WordPress.WP.I18n.MissingTranslatorsComment
+						? __( 'Start a conversation with %s to receive notifications.', 'wptelegram-login' )
+						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped, WordPress.WP.I18n.MissingTranslatorsComment
+						: __( 'Ask the user to start a conversation with %s to receive notifications.', 'wptelegram-login' ),
 						sprintf( '<a href="https://t.me/%1$s"  target="_blank" rel="noreferrer noopener">@%1$s</a>', esc_html( $bot_username ) )
 					);
 				?>
@@ -313,7 +316,8 @@ class Admin extends BaseClass {
 	 */
 	public function validate_user_profile_fields( &$errors ) {
 
-		if ( isset( $_POST[ WPTELEGRAM_USER_ID_META_KEY ] ) ) { // phpcs:ignore
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing
+		if ( isset( $_POST[ WPTELEGRAM_USER_ID_META_KEY ] ) ) {
 
 			// phpcs:ignore WordPress.Security.NonceVerification
 			$chat_id = sanitize_text_field( wp_unslash( $_POST[ WPTELEGRAM_USER_ID_META_KEY ] ) );
@@ -379,14 +383,32 @@ class Admin extends BaseClass {
 	 */
 	public function register_custom_user_column_view( $output, $column_name, $user_id ) {
 
-		if ( WPTELEGRAM_USER_ID_META_KEY === $column_name ) {
+		if ( WPTELEGRAM_USER_ID_META_KEY !== $column_name ) {
+			return $output;
+		}
 
-			$user = get_user_by( 'id', $user_id );
+		$telegram_id = get_user_meta( $user_id, WPTELEGRAM_USER_ID_META_KEY, true );
 
-			if ( $user && $user instanceof WP_User ) {
+		if ( ! $telegram_id ) {
+			return $output;
+		}
 
-				return $user->{WPTELEGRAM_USER_ID_META_KEY};
-			}
+		// By default, the output is the Telegram user ID.
+		$output = sprintf(
+			'<a href="%1$s" target="_blank" rel="noreferrer noopener">%2$s</a>',
+			esc_url( 'tg://user?id=' . $telegram_id, [ 'tg' ] ),
+			esc_html( $telegram_id )
+		);
+
+		$telegram_username = get_user_meta( $user_id, WPTELEGRAM_USERNAME_META_KEY, true );
+
+		// If the user has a Telegram username, append it to the output.
+		if ( $telegram_username ) {
+			$output .= sprintf(
+				' (<a href="%1$s" target="_blank" rel="noreferrer noopener">@%2$s</a>)',
+				esc_url( 'https://t.me/' . $telegram_username ),
+				esc_html( $telegram_username )
+			);
 		}
 		return $output;
 	}

@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.11.7
+
+### Patch Changes
+
+- [#224](https://github.com/wpsocio/wp-projects/pull/224) [`d179cce`](https://github.com/wpsocio/wp-projects/commit/d179ccea6d9d24fdac9f863351ad6dd826a741c4) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Improved login handler to add more actions and filters
+
+- [#219](https://github.com/wpsocio/wp-projects/pull/219) [`93f3cbd`](https://github.com/wpsocio/wp-projects/commit/93f3cbd9ea8123a42cec3bee2731503a78f7aca4) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Updated user ID column to make it clickable with ID and username
+
+- [#218](https://github.com/wpsocio/wp-projects/pull/218) [`06fbeea`](https://github.com/wpsocio/wp-projects/commit/06fbeea2962b53c760f05824e0437a5fe0dda72c) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Fixed a race condition to prevent duplicate Mini App users
+
 ## 1.11.6
 
 ### Patch Changes

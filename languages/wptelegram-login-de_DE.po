@@ -17,62 +17,59 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: admin/settings\n"
 
-#: admin/Admin.php:171
+#: admin/Admin.php:172
 msgid "Telegram Login"
 msgstr "Telegram Login"
 
-#: admin/Admin.php:225
-#: admin/Admin.php:252
+#: admin/Admin.php:226
+#: admin/Admin.php:253
 msgid "Telegram Info"
 msgstr ""
 
-#: admin/Admin.php:226
-#: admin/Admin.php:253
+#: admin/Admin.php:227
+#: admin/Admin.php:254
 msgid "Here you can connect this account to Telegram."
 msgstr ""
 
-#: admin/Admin.php:228
-#: admin/Admin.php:257
+#: admin/Admin.php:229
+#: admin/Admin.php:258
 msgid "Telegram Chat ID"
 msgstr ""
 
 #: ../../packages/js/shared-ui/components/instructions.tsx:17
-#: admin/Admin.php:278
+#: admin/Admin.php:279
 #: languages/wptelegram-login-js-translations.php:32
 msgid "INSTRUCTIONS!"
 msgstr "KONFIGURATIONSANLEITUNG"
 
-#: admin/Admin.php:285
+#: admin/Admin.php:287
 msgid "Get your Chat ID from %s and enter it above."
 msgstr ""
 
-#. translators: %s is bot username
-#: admin/Admin.php:287
+#: admin/Admin.php:289
 msgid "Ask the user to get the Chat ID from %s and enter it above."
 msgstr ""
 
-#. translators: %s is bot username
-#: admin/Admin.php:297
+#: admin/Admin.php:300
 msgid "Start a conversation with %s to receive notifications."
 msgstr ""
 
-#. translators: %s is bot username
-#: admin/Admin.php:299
+#: admin/Admin.php:302
 msgid "Ask the user to start a conversation with %s to receive notifications."
 msgstr ""
 
 #: ../../packages/js/services/api-fetch/index.ts:41
-#: admin/Admin.php:323
+#: admin/Admin.php:327
 #: languages/wptelegram-login-js-translations.php:11
-#: shared/LoginHandler.php:75
+#: shared/LoginHandler.php:89
 msgid "Error:"
 msgstr "Fehler:"
 
-#: admin/Admin.php:323
+#: admin/Admin.php:327
 msgid "Please Enter a valid Chat ID"
 msgstr ""
 
-#: admin/Admin.php:367
+#: admin/Admin.php:371
 msgid "Telegram User ID"
 msgstr "Telegram User ID"
 
@@ -565,28 +562,28 @@ msgstr "%s wird benötigt."
 msgid "Changes could not be saved."
 msgstr "Die Änderungen konnten nicht gespeichert werden."
 
-#: shared/LoginHandler.php:251
+#: shared/LoginHandler.php:265
 msgid "Unauthorized! Data is NOT from Telegram"
 msgstr "Unautorisiert! Diese Daten stammen NICHT von Telegram"
 
-#: shared/LoginHandler.php:255
+#: shared/LoginHandler.php:269
 msgid "Invalid! The data is outdated"
 msgstr "Ungültig! Die Daten sind abgelaufen/veraltet"
 
-#: shared/LoginHandler.php:444
+#: shared/LoginHandler.php:279
 msgid "Invalid! The data is incomplete"
 msgstr "Ungültig! Die Daten sind unvollständig"
 
-#: shared/LoginHandler.php:461
+#: shared/LoginHandler.php:473
 msgid "The Telegram User ID is already associated with another existing user. Please contact the admin"
 msgstr "Diese Telegram User ID ist bereits mit einem anderen existierenden Benutzer verbunden. Bitte den Administrator kontaktieren"
 
-#: shared/LoginHandler.php:487
+#: shared/LoginHandler.php:499
 msgid "Sign up via Telegram is disabled. You must first create an account and connect it to Telegram to be able to use Telegram Login"
 msgstr "Anmelden über Telegram ist deaktiviert. Du musst zuerst einen Account anlegen und mit Telegram verbinden, um Telegram Login verwenden zu können."
 
-#: shared/LoginHandler.php:576
-#: shared/LoginHandler.php:612
+#: shared/LoginHandler.php:597
+#: shared/LoginHandler.php:635
 msgid "Telegram sign in could not be completed."
 msgstr "Die Telegram-Anmeldung konnte nicht erfolgreich durchgeführt werden."
 
@@ -642,11 +639,11 @@ msgstr ""
 msgid "https://wpsocio.com"
 msgstr ""
 
-#: admin/Admin.php:191
+#: admin/Admin.php:192
 msgid "Plugin data has been upgraded."
 msgstr ""
 
-#: admin/Admin.php:192
+#: admin/Admin.php:193
 msgid "Please reload the page."
 msgstr ""
 

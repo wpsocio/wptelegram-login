@@ -138,7 +138,8 @@ class Upgrade extends BaseClass {
 
 		$args  = [
 			'fields'       => 'ID',
-			'meta_key'     => $old_meta_key, // phpcs:ignore
+			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+			'meta_key'     => $old_meta_key,
 			'meta_compare' => 'EXISTS',
 			'number'       => -1,
 		];

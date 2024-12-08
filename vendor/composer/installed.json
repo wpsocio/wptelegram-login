@@ -7,11 +7,11 @@
             "dist": {
                 "type": "path",
                 "url": "../../packages/php/wp-utils",
-                "reference": "b071b3faa1787b0a761ff5808467ef6967d189d9"
+                "reference": "bcf7c54c0b2cea258490bcb1fe7b23740f9e505c"
             },
             "require-dev": {
-                "pestphp/pest": "^1.22",
-                "wp-coding-standards/wpcs": "^3.0.1"
+                "pestphp/pest": "^1.23",
+                "wp-coding-standards/wpcs": "^3.1"
             },
             "type": "library",
             "installation-source": "dist",

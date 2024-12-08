@@ -98,8 +98,8 @@ class Shared extends BaseClass {
 			return '';
 		}
 
-		// Default.
-		$redirect_to = isset( $_REQUEST['redirect_to'] ) ? $_REQUEST['redirect_to'] : home_url(); // phpcs:ignore
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$redirect_to = isset( $_REQUEST['redirect_to'] ) ? sanitize_url( wp_unslash( $_REQUEST['redirect_to'] ) ) : home_url();
 
 		switch ( WPTG_Login()->options()->get( 'redirect_to' ) ) {
 			case 'homepage':

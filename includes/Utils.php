@@ -91,7 +91,7 @@ class Utils extends \WPSocio\WPUtils\Helpers {
 	 *
 	 * @since 1.10.3
 	 *
-	 * @param int $tg_user_id Telegram User ID.
+	 * @param int|string $tg_user_id Telegram User ID.
 	 *
 	 * @return WP_User|false User object or false
 	 */
@@ -106,6 +106,14 @@ class Utils extends \WPSocio\WPUtils\Helpers {
 
 		$users = get_users( $args );
 
-		return reset( $users );
+		$user = reset( $users );
+
+		/**
+		 * Filter the user found by its Telegram ID.
+		 *
+		 * @param WP_User|false $user       The user object or false.
+		 * @param int|string    $tg_user_id Telegram User ID.
+		 */
+		return apply_filters( 'wptelegram_login_get_user_by_telegram_id', $user, $tg_user_id );
 	}
 }
