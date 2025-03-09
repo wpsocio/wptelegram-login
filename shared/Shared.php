@@ -115,7 +115,6 @@ class Shared extends BaseClass {
 				break;
 
 			case 'custom_url':
-				// Prevent redirect to login page.
 				if ( filter_var( WPTG_Login()->options()->get( 'redirect_url' ), FILTER_VALIDATE_URL ) ) {
 					$redirect_to = WPTG_Login()->options()->get( 'redirect_url' );
 				}

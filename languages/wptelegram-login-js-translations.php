@@ -22,7 +22,7 @@ $generated_i18n_strings = array(
 	// Reference: ../../packages/js/services/telegram/telegram-utils.ts:152
 	__( 'Success', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/services/use-display-feedback.ts:68
+	// Reference: ../../packages/js/services/use-display-feedback.ts:71
 	__( 'Lets fix these errors first.', 'wptelegram-login' ),
 
 	// Reference: ../../packages/js/services/use-submit-form.ts:64

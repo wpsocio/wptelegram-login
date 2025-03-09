@@ -535,7 +535,7 @@ msgstr ""
 msgid "Success"
 msgstr ""
 
-#: ../../packages/js/services/use-display-feedback.ts:68
+#: ../../packages/js/services/use-display-feedback.ts:71
 #: languages/wptelegram-login-js-translations.php:26
 msgid "Lets fix these errors first."
 msgstr ""
