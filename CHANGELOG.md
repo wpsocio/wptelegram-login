@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.11.9
+
+### Patch Changes
+
+- [#238](https://github.com/wpsocio/wp-projects/pull/238) [`13f32ee`](https://github.com/wpsocio/wp-projects/commit/13f32ee6f65f406104fad0c2617b504c529f4788) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Fix warnings for TextControl and SelectControl for WP 6.8
+
 ## 1.11.8
 
 ### Patch Changes

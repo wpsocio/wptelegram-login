@@ -4,7 +4,7 @@
     "name": "get-plugin-data"
   },
   "js/blocks/index.ts": {
-    "file": "dist/blocks-CN7sVWKm.js",
+    "file": "dist/blocks-DYFTI_g1.js",
     "name": "blocks",
     "src": "js/blocks/index.ts",
     "isEntry": true,
@@ -16,7 +16,7 @@
     ]
   },
   "js/settings/index.ts": {
-    "file": "dist/settings-4raLeNI6.js",
+    "file": "dist/settings-gUsQXJiW.js",
     "name": "settings",
     "src": "js/settings/index.ts",
     "isEntry": true,
@@ -24,7 +24,7 @@
       "_get-plugin-data-C3t3oqxd.js"
     ],
     "css": [
-      "dist/settings-BXm2l4QJ.css"
+      "dist/settings-DUtG0rx6.css"
     ]
   },
   "js/web-app-login/index.ts": {
