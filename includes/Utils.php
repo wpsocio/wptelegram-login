@@ -116,4 +116,30 @@ class Utils extends \WPSocio\WPUtils\Helpers {
 		 */
 		return apply_filters( 'wptelegram_login_get_user_by_telegram_id', $user, $tg_user_id );
 	}
+
+	/**
+	 * Get the hook details to use for intercepting the login.
+	 *
+	 * @since 1.11.10
+	 *
+	 * @return array Hook and priority.
+	 */
+	public static function get_intercept_details() {
+
+		$hook_and_priority = [ 'wp_loaded', 20 ];
+
+		/**
+		 * Filter the hook and priority to use for intercepting the login request.
+		 *
+		 * - [Examples](./examples/intercept_request_on.md)
+		 *
+		 * @param array $hook_and_priority A tuple containing the hook name and priority.
+		 */
+		$details = apply_filters( 'wptelegram_login_intercept_request_on', $hook_and_priority );
+
+		return [
+			'hook'     => is_string( $details[0] ?? null ) ? $details[0] : $hook_and_priority[0],
+			'priority' => is_int( $details[1] ?? null ) ? $details[1] : $hook_and_priority[1],
+		];
+	}
 }

@@ -611,7 +611,7 @@ msgstr "Titel"
 #: js/blocks/telegram-login/index.tsx:21
 #: js/settings/ui/WidgetInfoCard.tsx:32
 #: wptelegram-login.php
-#: includes/Main.php:427
+#: includes/Main.php:419
 #: languages/wptelegram-login-js-translations.php:120
 #: shared/widgets/Primary.php:28
 #~ msgid "WP Telegram Login"

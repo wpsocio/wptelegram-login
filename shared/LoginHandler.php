@@ -157,7 +157,7 @@ class LoginHandler extends BaseClass {
 	}
 
 	/**
-	 * Check if the Telegram Login request is valid
+	 * Check if the request is for a valid Telegram Login
 	 *
 	 * @since    1.0.0
 	 *

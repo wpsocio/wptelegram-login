@@ -32,3 +32,4 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) || ! WP_UNINSTALL_PLUGIN || dirname( WP_
 }
 
 delete_option( 'wptelegram_login' );
+delete_option( 'wptelegram_login_ver' );

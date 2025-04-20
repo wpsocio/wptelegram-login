@@ -388,17 +388,9 @@ class Main {
 
 		$login_handler = LoginHandler::instance();
 
-		$hook_and_priority = [ 'init', 5 ];
-		/**
-		 * Filter the hook and priority to use for intercepting the login request.
-		 *
-		 * - [Examples](./examples/intercept_request_on.md)
-		 *
-		 * @param array $hook_and_priority The hook and priority.
-		 */
-		list( $login_intercept_hook, $priority ) = apply_filters( 'wptelegram_login_intercept_request_on', $hook_and_priority );
+		$login_intercept = Utils::get_intercept_details();
 
-		add_action( $login_intercept_hook, [ $login_handler, 'telegram_login' ], $priority );
+		add_action( $login_intercept['hook'], [ $login_handler, 'telegram_login' ], $login_intercept['priority'] );
 
 		$asset_manager = $this->asset_manager();
 

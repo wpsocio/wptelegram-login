@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.11.10
+
+### Patch Changes
+
+- [#248](https://github.com/wpsocio/wp-projects/pull/248) [`3b97611`](https://github.com/wpsocio/wp-projects/commit/3b97611b83c693f995a6294257321a56bca5f3f4) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Improved form field spacing for small screens
+
+- [#243](https://github.com/wpsocio/wp-projects/pull/243) [`b15b82d`](https://github.com/wpsocio/wp-projects/commit/b15b82d4f6ae817f531ca9ed2ca42de6862b3e9f) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Fixed clean up logic on uninstall
+
+- [#250](https://github.com/wpsocio/wp-projects/pull/250) [`e04100d`](https://github.com/wpsocio/wp-projects/commit/e04100daa38359aac105807d41c7fae6a7f43cc8) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Delay request intercept to fix fatal error caused by Buddypress
+
 ## 1.11.9
 
 ### Patch Changes
