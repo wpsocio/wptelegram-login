@@ -5,7 +5,7 @@ Tags: telegram, login, register, social, signup
 Requires at least: 6.5
 Requires PHP: 7.4
 Tested up to: 6.8
-Stable tag: 1.11.10
+Stable tag: 1.11.11
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -154,9 +154,8 @@ Automatic updates should work smoothly, but we still recommend you back up your 
 
 == Changelog ==
 
-= 1.11.10 =
-- Improved form field spacing for small screens
-- Fixed clean up logic on uninstall
-- Delay request intercept to fix fatal error caused by Buddypress
+= 1.11.11 =
+- Fixed Bot Token and Message tests not working for lowercase URLs
+- Fixed background color for the setting page
 
 [See full changelog](https://github.com/wpsocio/wptelegram-login/blob/main/CHANGELOG.md)
