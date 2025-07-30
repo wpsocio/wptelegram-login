@@ -7,7 +7,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../packages/php/wp-utils",
-                "reference": "bcf7c54c0b2cea258490bcb1fe7b23740f9e505c"
+                "reference": "f96967230d969e4a86210db22d73c65790e1327d"
             },
             "require-dev": {
                 "pestphp/pest": "^1.23",
@@ -44,7 +44,6 @@
             ],
             "description": "Utilities for WordPress plugins and themes",
             "transport-options": {
-                "symlink": false,
                 "relative": true
             },
             "install-path": "../wpsocio/wp-utils"

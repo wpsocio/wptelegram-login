@@ -31,7 +31,7 @@
     ]
   },
   "js/settings/index.ts": {
-    "file": "dist/settings-BpdD1tu3.js",
+    "file": "dist/settings-Dr-gPOVv.js",
     "name": "settings",
     "src": "js/settings/index.ts",
     "isEntry": true,
@@ -41,7 +41,7 @@
       "__commonjsHelpers-CqkleIqs.js"
     ],
     "css": [
-      "dist/settings-CDKN9cus.css"
+      "dist/settings-2OBAsyi2.css"
     ]
   },
   "js/web-app-login/index.ts": {

@@ -31,14 +31,14 @@ $generated_i18n_strings = array(
 	// Reference: ../../packages/js/shared-ui/components/instructions.tsx:17
 	__( 'INSTRUCTIONS!', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:57
+	// Reference: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:59
 	/* translators: %s: plugin name */
 	__( 'Do you like %s?', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:69
+	// Reference: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:71
 	__( 'Write a review', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:85
+	// Reference: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:87
 	__( 'Need help?', 'wptelegram-login' ),
 
 	// Reference: ../../packages/js/shared-ui/components/widget-info/widget-info-card.tsx:24
@@ -245,13 +245,13 @@ $generated_i18n_strings = array(
 	// Reference: js/settings/ui/LoginOptions.tsx:88
 	__( 'Redirect location after login.', 'wptelegram-login' ),
 
-	// Reference: js/settings/ui/Sidebar.tsx:19
+	// Reference: js/settings/ui/Sidebar.tsx:20
 	__( 'Let the users login to your WordPress website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram.', 'wptelegram-login' ),
 
-	// Reference: js/settings/ui/Sidebar.tsx:22
+	// Reference: js/settings/ui/Sidebar.tsx:23
 	__( 'Join our public chat on Telegram', 'wptelegram-login' ),
 
-	// Reference: js/settings/ui/Sidebar.tsx:27
+	// Reference: js/settings/ui/Sidebar.tsx:28
 	__( 'Support', 'wptelegram-login' ),
 
 	// Reference: js/settings/ui/TelegramOptions.tsx:21

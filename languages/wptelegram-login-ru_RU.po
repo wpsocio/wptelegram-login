@@ -43,18 +43,22 @@ msgid "INSTRUCTIONS!"
 msgstr "ИНСТРУКЦИЯ!"
 
 #: admin/Admin.php:287
+#, php-format
 msgid "Get your Chat ID from %s and enter it above."
 msgstr ""
 
 #: admin/Admin.php:289
+#, php-format
 msgid "Ask the user to get the Chat ID from %s and enter it above."
 msgstr ""
 
 #: admin/Admin.php:300
+#, php-format
 msgid "Start a conversation with %s to receive notifications."
 msgstr ""
 
 #: admin/Admin.php:302
+#, php-format
 msgid "Ask the user to start a conversation with %s to receive notifications."
 msgstr ""
 
@@ -122,11 +126,13 @@ msgstr ""
 
 #. translators: %s: Version number
 #: includes/Requirements.php:50
+#, php-format
 msgid "Current version: %s"
 msgstr ""
 
 #. translators: %s: Version number
 #: includes/Requirements.php:58
+#, php-format
 msgid "Minimum required version: %s"
 msgstr ""
 
@@ -307,6 +313,7 @@ msgstr ""
 #. translators: 1 command name, 2 bot name
 #: js/settings/ui/Instructions.tsx:28
 #: languages/wptelegram-login-js-translations.php:198
+#, php-format
 msgid "Create a Bot by sending %1$s command to %2$s."
 msgstr "Создание бота командой %1$s в чате с %2$s"
 
@@ -314,6 +321,7 @@ msgstr "Создание бота командой %1$s в чате с %2$s"
 #. translators: %s bot name
 #: js/settings/ui/Instructions.tsx:49
 #: languages/wptelegram-login-js-translations.php:202
+#, php-format
 msgid "After completing the steps %s will provide you the Bot Token."
 msgstr "После выполнения команд, %s пришлет токен вашего бота."
 
@@ -326,6 +334,7 @@ msgstr "Скопируйте токен и вставьте его в поле '
 #. translators: %s application name
 #: js/settings/ui/Instructions.tsx:59
 #: languages/wptelegram-login-js-translations.php:209
+#, php-format
 msgid "For ease, use %s"
 msgstr "Для удобства используйте %s"
 
@@ -338,6 +347,7 @@ msgstr ""
 #. translators: 1 command name, 2 bot name, 3 site url
 #: js/settings/ui/Instructions.tsx:75
 #: languages/wptelegram-login-js-translations.php:216
+#, php-format
 msgid "Send %1$s command to %2$s, select your bot and then send %3$s"
 msgstr "Свяжите ваш домен (сайта) с ботом, для этого отправьте команду %1$s в чате с %2$s и укажите %3$s"
 
@@ -348,6 +358,7 @@ msgstr "Протестируйте токен нажав кнопку рядом
 
 #: js/settings/ui/Instructions.tsx:106
 #: languages/wptelegram-login-js-translations.php:185
+#, php-format
 msgid "Hit %s below"
 msgstr "Нажмите кнопку %s"
 
@@ -414,6 +425,7 @@ msgstr "Настройки Telegram"
 
 #: js/settings/ui/TelegramOptions.tsx:37
 #: languages/wptelegram-login-js-translations.php:261
+#, php-format
 msgid "Use %s above to set automatically."
 msgstr "Используйте %s выше для автоматического заполнения."
 
@@ -427,6 +439,7 @@ msgstr "Проверить токен"
 #. translators: 1, 2 Menu names
 #: js/settings/ui/WidgetInfoCard.tsx:19
 #: languages/wptelegram-login-js-translations.php:265
+#, php-format
 msgid "Goto %1$s and click/drag %2$s and place it where you want it to be."
 msgstr "Перейдите в %1$s, нажмите / перетащите %2$s и поместите его там, где вы хотите."
 
@@ -467,17 +480,18 @@ msgstr "Пожалуйста, ознакомьтесь с инструкциям
 
 #. %s: plugin name
 #. translators: %s: plugin name
-#: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:57
+#: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:59
 #: languages/wptelegram-login-js-translations.php:36
+#, php-format
 msgid "Do you like %s?"
 msgstr ""
 
-#: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:69
+#: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:71
 #: languages/wptelegram-login-js-translations.php:39
 msgid "Write a review"
 msgstr ""
 
-#: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:85
+#: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:87
 #: languages/wptelegram-login-js-translations.php:42
 msgid "Need help?"
 msgstr "Нужна помощь?"
@@ -491,6 +505,7 @@ msgstr ""
 #. translators: %s: social handle
 #: ../../packages/js/shared-ui/components/wptg-social-icons.tsx:42
 #: languages/wptelegram-login-js-translations.php:49
+#, php-format
 msgid "Follow %s"
 msgstr ""
 
@@ -498,6 +513,7 @@ msgstr ""
 #. translators: %s: channel name
 #: ../../packages/js/shared-ui/components/wptg-social-icons.tsx:57
 #: languages/wptelegram-login-js-translations.php:53
+#, php-format
 msgid "Join %s"
 msgstr ""
 
@@ -549,12 +565,14 @@ msgstr ""
 #: ../../packages/js/utilities/fields.ts:35
 #: js/settings/services/fields.ts:70
 #: languages/wptelegram-login-js-translations.php:74
+#, php-format
 msgid "Invalid %s"
 msgstr "Некорректный %s"
 
 #: ../../packages/js/utilities/fields.ts:39
 #: js/settings/services/fields.ts:57
 #: languages/wptelegram-login-js-translations.php:78
+#, php-format
 msgid "%s required."
 msgstr ""
 
@@ -619,7 +637,7 @@ msgstr "Заголовок"
 #~ msgstr "WP Telegram Login"
 
 #. Description of the plugin
-#: js/settings/ui/Sidebar.tsx:19
+#: js/settings/ui/Sidebar.tsx:20
 #: wptelegram-login.php
 #: languages/wptelegram-login-js-translations.php:249
 #~ msgid "Let the users login to your WordPress website with their Telegram and make it simple for them to get connected and let them receive their email notifications on Telegram."
@@ -654,12 +672,12 @@ msgstr ""
 msgid "WP Telegram"
 msgstr ""
 
-#: js/settings/ui/Sidebar.tsx:22
+#: js/settings/ui/Sidebar.tsx:23
 #: languages/wptelegram-login-js-translations.php:252
 msgid "Join our public chat on Telegram"
 msgstr ""
 
-#: js/settings/ui/Sidebar.tsx:27
+#: js/settings/ui/Sidebar.tsx:28
 #: languages/wptelegram-login-js-translations.php:255
 msgid "Support"
 msgstr ""

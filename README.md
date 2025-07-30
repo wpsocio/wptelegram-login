@@ -4,8 +4,8 @@
 **Tags:** telegram, login, register, social, signup  
 **Requires at least:** 6.5  
 **Requires PHP:** 7.4  
-**Tested up to:** 6.8  
-**Stable tag:** 1.11.11  
+**Tested up to:** 6.8.2  
+**Stable tag:** 1.11.12  
 **License:** GPL-3.0-or-later  
 **License URI:** [https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)  
 **Donate link:** [wpsocio.com/donate](https://wpsocio.com/donate)
