@@ -83,6 +83,7 @@ class Shared extends BaseClass {
 			'lang'            => '',
 			'show_if_user_is' => 'logged_out',
 			'bot_username'    => '',
+			'redirect_to'     => '',
 		];
 
 		// Use global options.
@@ -98,27 +99,35 @@ class Shared extends BaseClass {
 			return '';
 		}
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		$redirect_to = isset( $_REQUEST['redirect_to'] ) ? sanitize_url( wp_unslash( $_REQUEST['redirect_to'] ) ) : home_url();
+		$redirect_to = sanitize_url(
+			wp_unslash(
+				// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				$_REQUEST['redirect_to'] ?? $args['redirect_to'] ?? ''
+			)
+		);
 
-		switch ( WPTG_Login()->options()->get( 'redirect_to' ) ) {
-			case 'homepage':
-				$redirect_to = home_url();
-				break;
+		if ( empty( $redirect_to ) ) {
 
-			case 'current_page':
-				global $pagenow;
-				// Prevent redirect to login page.
-				if ( 'wp-login.php' !== $pagenow ) {
-					$redirect_to = Utils::wp_get_current_url();
-				}
-				break;
+			switch ( WPTG_Login()->options()->get( 'redirect_to' ) ) {
 
-			case 'custom_url':
-				if ( filter_var( WPTG_Login()->options()->get( 'redirect_url' ), FILTER_VALIDATE_URL ) ) {
-					$redirect_to = WPTG_Login()->options()->get( 'redirect_url' );
-				}
-				break;
+				case 'current_page':
+					global $pagenow;
+					// Prevent redirect to login page.
+					if ( 'wp-login.php' !== $pagenow ) {
+						$redirect_to = Utils::wp_get_current_url();
+					}
+					break;
+
+				case 'custom_url':
+					if ( filter_var( WPTG_Login()->options()->get( 'redirect_url' ), FILTER_VALIDATE_URL ) ) {
+						$redirect_to = WPTG_Login()->options()->get( 'redirect_url' );
+					}
+					break;
+				case 'homepage':
+				default:
+					$redirect_to = home_url();
+					break;
+			}
 		}
 
 		/**

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.11.13
+
+### Patch Changes
+
+- [#293](https://github.com/wpsocio/wp-projects/pull/293) [`daa7f61`](https://github.com/wpsocio/wp-projects/commit/daa7f6115bcef51b88aa6c7d86097f5635788b0c) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Allow passing redirect URL via shortcode.
+
 ## 1.11.12
 
 ### Patch Changes

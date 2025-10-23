@@ -10,8 +10,8 @@
   "js/blocks/index.ts": [
     "wp-blocks",
     "wp-i18n",
-    "wp-block-editor",
     "wp-element",
+    "wp-block-editor",
     "wp-components"
   ],
   "js/web-app-login/index.ts": [],
