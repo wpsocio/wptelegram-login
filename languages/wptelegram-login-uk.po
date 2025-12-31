@@ -73,7 +73,7 @@ msgstr "Помилка:"
 msgid "Please Enter a valid Chat ID"
 msgstr ""
 
-#: admin/Admin.php:371
+#: admin/Admin.php:378
 msgid "Telegram User ID"
 msgstr "Ідентифікатор користувача Telegram"
 
@@ -486,12 +486,12 @@ msgstr "Будь ласка, прочитайте інструкції вище.
 msgid "Do you like %s?"
 msgstr "Вам подобається %s?"
 
-#: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:71
+#: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:69
 #: languages/wptelegram-login-js-translations.php:39
 msgid "Write a review"
 msgstr ""
 
-#: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:87
+#: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:85
 #: languages/wptelegram-login-js-translations.php:42
 msgid "Need help?"
 msgstr "Потрібна допомога?"
@@ -537,22 +537,22 @@ msgstr ""
 msgid "Could not connect"
 msgstr "Не вдається підключитися"
 
-#: ../../packages/js/services/telegram/telegram-utils.ts:126
+#: ../../packages/js/services/telegram/telegram-utils.ts:122
 #: languages/wptelegram-login-js-translations.php:14
 msgid "A message will be sent to the Channel/Group/Chat. You can modify the text below"
 msgstr ""
 
-#: ../../packages/js/services/telegram/telegram-utils.ts:129
+#: ../../packages/js/services/telegram/telegram-utils.ts:125
 #: languages/wptelegram-login-js-translations.php:17
 msgid "This is a test message"
 msgstr ""
 
-#: ../../packages/js/services/telegram/telegram-utils.ts:152
+#: ../../packages/js/services/telegram/telegram-utils.ts:148
 #: languages/wptelegram-login-js-translations.php:23
 msgid "Success"
 msgstr ""
 
-#: ../../packages/js/services/use-display-feedback.ts:61
+#: ../../packages/js/services/use-display-feedback.ts:60
 #: languages/wptelegram-login-js-translations.php:26
 msgid "Lets fix these errors first."
 msgstr ""
@@ -682,7 +682,7 @@ msgstr ""
 msgid "Support"
 msgstr ""
 
-#: ../../packages/js/services/telegram/telegram-utils.ts:133
+#: ../../packages/js/services/telegram/telegram-utils.ts:129
 #: languages/wptelegram-login-js-translations.php:20
 msgid "Message is empty"
 msgstr ""

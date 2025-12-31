@@ -10,19 +10,19 @@ $generated_i18n_strings = array(
 	// Reference: ../../packages/js/services/api-fetch/index.ts:41
 	__( 'Error:', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/services/telegram/telegram-utils.ts:126
+	// Reference: ../../packages/js/services/telegram/telegram-utils.ts:122
 	__( 'A message will be sent to the Channel/Group/Chat. You can modify the text below', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/services/telegram/telegram-utils.ts:129
+	// Reference: ../../packages/js/services/telegram/telegram-utils.ts:125
 	__( 'This is a test message', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/services/telegram/telegram-utils.ts:133
+	// Reference: ../../packages/js/services/telegram/telegram-utils.ts:129
 	__( 'Message is empty', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/services/telegram/telegram-utils.ts:152
+	// Reference: ../../packages/js/services/telegram/telegram-utils.ts:148
 	__( 'Success', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/services/use-display-feedback.ts:61
+	// Reference: ../../packages/js/services/use-display-feedback.ts:60
 	__( 'Lets fix these errors first.', 'wptelegram-login' ),
 
 	// Reference: ../../packages/js/services/use-submit-form.ts:64
@@ -35,10 +35,10 @@ $generated_i18n_strings = array(
 	/* translators: %s: plugin name */
 	__( 'Do you like %s?', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:71
+	// Reference: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:69
 	__( 'Write a review', 'wptelegram-login' ),
 
-	// Reference: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:87
+	// Reference: ../../packages/js/shared-ui/components/plugin-info/plugin-info-card.tsx:85
 	__( 'Need help?', 'wptelegram-login' ),
 
 	// Reference: ../../packages/js/shared-ui/components/widget-info/widget-info-card.tsx:24

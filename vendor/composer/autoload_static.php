@@ -7,14 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInita82326f786a0b44edaf756b0662d8ac8
 {
     public static $prefixLengthsPsr4 = array (
-        'W' => 
+        'W' =>
         array (
             'WPSocio\\WPUtils\\' => 16,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'WPSocio\\WPUtils\\' => 
+        'WPSocio\\WPUtils\\' =>
         array (
             0 => __DIR__ . '/..' . '/wpsocio/wp-utils/src',
         ),

@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.11.14
+
+### Patch Changes
+
+- [#294](https://github.com/wpsocio/wp-projects/pull/294) [`8728a26`](https://github.com/wpsocio/wp-projects/commit/8728a263f54817a061996426cc385aaa4da0cdc2) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Clean up user meta when user ID is cleared.
+
+- [#298](https://github.com/wpsocio/wp-projects/pull/298) [`5490279`](https://github.com/wpsocio/wp-projects/commit/549027918a6585dded8e40dc46c23a2948bca88c) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Drop support for PHP 7.x, making PHP 8 the minimum required version.
+
 ## 1.11.13
 
 ### Patch Changes

@@ -344,6 +344,13 @@ class Admin extends BaseClass {
 
 			if ( empty( $chat_id ) ) {
 				delete_user_meta( $user_id, WPTELEGRAM_USER_ID_META_KEY );
+				delete_user_meta( $user_id, WPTELEGRAM_USERNAME_META_KEY );
+
+				$avatar_meta_key = WPTG_Login()->options()->get( 'avatar_meta_key' );
+
+				if ( $avatar_meta_key ) {
+					delete_user_meta( $user_id, $avatar_meta_key );
+				}
 			} elseif ( self::is_valid_chat_id( $chat_id ) ) {
 				update_user_meta( $user_id, WPTELEGRAM_USER_ID_META_KEY, $chat_id );
 			}

@@ -2,10 +2,10 @@
 Contributors: wpsocio, irshadahmad21
 Donate link: https://wpsocio.com/donate
 Tags: telegram, login, register, social, signup
-Requires at least: 6.5
-Requires PHP: 7.4
-Tested up to: 6.8.3
-Stable tag: 1.11.13
+Requires at least: 6.6
+Requires PHP: 8.0
+Tested up to: 6.9
+Stable tag: 1.11.14
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -154,7 +154,8 @@ Automatic updates should work smoothly, but we still recommend you back up your 
 
 == Changelog ==
 
-= 1.11.13 =
-- Allow passing redirect URL via shortcode.
+= 1.11.14 =
+- Clean up user meta when user ID is cleared.
+- Drop support for PHP 7.x, making PHP 8 the minimum required version.
 
 [See full changelog](https://github.com/wpsocio/wptelegram-login/blob/main/CHANGELOG.md)
