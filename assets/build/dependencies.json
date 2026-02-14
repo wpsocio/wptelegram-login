@@ -1,7 +1,7 @@
 {
   "js/settings/index.ts": [
-    "react-dom",
     "react",
+    "react-dom",
     "jquery",
     "wp-i18n",
     "react-dom",
