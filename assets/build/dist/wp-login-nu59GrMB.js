@@ -1,2 +1,0 @@
-import{$ as n}from"./jquery-BNSPwlrv.js";import"./_commonjsHelpers-CqkleIqs.js";n(()=>{n('form[name="loginform"],form[name="registerform"]').each(function(){const o=n(this),e=n('<div class="wptelegram-login-clear"></div>'),t=o.find("p.forgetmenot"),r=o.find("p.submit");o.css({position:"relative"}),o.append(e),e.append(t,r);const i=o.find("#wptelegram-login-wrap");i.css("display","block"),o.append(i)})});
-//# sourceMappingURL=wp-login-nu59GrMB.js.map

@@ -51,7 +51,7 @@
     "isEntry": true
   },
   "js/wp-login/index.ts": {
-    "file": "dist/wp-login-nu59GrMB.js",
+    "file": "dist/wp-login-BVIKcc32.js",
     "name": "wp-login",
     "src": "js/wp-login/index.ts",
     "isEntry": true,
@@ -60,7 +60,7 @@
       "__commonjsHelpers-CqkleIqs.js"
     ],
     "css": [
-      "dist/wp-login-Be4DD3nf.css"
+      "dist/wp-login-B7Vv4LyP.css"
     ]
   }
 }

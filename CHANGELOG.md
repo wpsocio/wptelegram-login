@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.11.16
+
+### Patch Changes
+
+- [#314](https://github.com/wpsocio/wp-projects/pull/314) [`51237ed`](https://github.com/wpsocio/wp-projects/commit/51237ed2c12163f3831b58039a6c33dae38eebef) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Fix login form not visible when using Loginpress.
+
 ## 1.11.15
 
 ### Patch Changes

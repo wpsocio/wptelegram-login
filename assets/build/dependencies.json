@@ -11,8 +11,8 @@
     "wp-blocks",
     "wp-i18n",
     "wp-element",
-    "wp-block-editor",
-    "wp-components"
+    "wp-components",
+    "wp-block-editor"
   ],
   "js/web-app-login/index.ts": [],
   "js/wp-login/index.ts": [
