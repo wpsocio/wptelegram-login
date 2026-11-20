@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.11.17
+
+### Patch Changes
+
+- [#324](https://github.com/wpsocio/wp-projects/pull/324) [`72e894b`](https://github.com/wpsocio/wp-projects/commit/72e894bc591f0c8f56a9e5fdb1737854c561f485) Thanks [@irshadahmad21](https://github.com/irshadahmad21)! - Fix other conflicting plugins breaking the settings page UI.
+
 ## 1.11.16
 
 ### Patch Changes

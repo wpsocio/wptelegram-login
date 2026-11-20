@@ -1,66 +1,66 @@
 {
-  "__commonjsHelpers-CqkleIqs.js": {
-    "file": "dist/_commonjsHelpers-CqkleIqs.js",
-    "name": "_commonjsHelpers"
-  },
-  "_get-plugin-data-CQBhaGcS.js": {
-    "file": "dist/get-plugin-data-CQBhaGcS.js",
+  "_get-plugin-data-DeGaf6EQ.js": {
+    "file": "dist/get-plugin-data-DeGaf6EQ.js",
     "name": "get-plugin-data",
     "imports": [
-      "__commonjsHelpers-CqkleIqs.js"
+      "_rolldown-runtime-CbXtAM7H.js"
     ]
   },
-  "_jquery-BNSPwlrv.js": {
-    "file": "dist/jquery-BNSPwlrv.js",
+  "_jquery-BHLndRnx.js": {
+    "file": "dist/jquery-BHLndRnx.js",
     "name": "jquery",
     "imports": [
-      "__commonjsHelpers-CqkleIqs.js"
+      "_rolldown-runtime-CbXtAM7H.js"
     ]
   },
+  "_rolldown-runtime-CbXtAM7H.js": {
+    "file": "dist/rolldown-runtime-CbXtAM7H.js",
+    "name": "rolldown-runtime"
+  },
   "js/blocks/index.ts": {
-    "file": "dist/blocks-CmyeYCxq.js",
+    "file": "dist/blocks-BLmmBCNY.js",
     "name": "blocks",
     "src": "js/blocks/index.ts",
     "isEntry": true,
     "imports": [
-      "_get-plugin-data-CQBhaGcS.js",
-      "__commonjsHelpers-CqkleIqs.js"
+      "_rolldown-runtime-CbXtAM7H.js",
+      "_get-plugin-data-DeGaf6EQ.js"
     ],
     "css": [
-      "dist/blocks-Cg1mExvO.css"
+      "dist/blocks-Cp_4LMMr.css"
     ]
   },
   "js/settings/index.ts": {
-    "file": "dist/settings-DAMFAiS9.js",
+    "file": "dist/settings-CrcLZftj.js",
     "name": "settings",
     "src": "js/settings/index.ts",
     "isEntry": true,
     "imports": [
-      "_get-plugin-data-CQBhaGcS.js",
-      "_jquery-BNSPwlrv.js",
-      "__commonjsHelpers-CqkleIqs.js"
+      "_rolldown-runtime-CbXtAM7H.js",
+      "_jquery-BHLndRnx.js",
+      "_get-plugin-data-DeGaf6EQ.js"
     ],
     "css": [
-      "dist/settings-B4NYByKA.css"
+      "dist/settings-PF3Nov6x.css"
     ]
   },
   "js/web-app-login/index.ts": {
-    "file": "dist/web-app-login-CXB-N4Hv.js",
+    "file": "dist/web-app-login-DJBc6ALQ.js",
     "name": "web-app-login",
     "src": "js/web-app-login/index.ts",
     "isEntry": true
   },
   "js/wp-login/index.ts": {
-    "file": "dist/wp-login-BVIKcc32.js",
+    "file": "dist/wp-login-BQ2PfGsc.js",
     "name": "wp-login",
     "src": "js/wp-login/index.ts",
     "isEntry": true,
     "imports": [
-      "_jquery-BNSPwlrv.js",
-      "__commonjsHelpers-CqkleIqs.js"
+      "_rolldown-runtime-CbXtAM7H.js",
+      "_jquery-BHLndRnx.js"
     ],
     "css": [
-      "dist/wp-login-B7Vv4LyP.css"
+      "dist/wp-login-DCcCh5kS.css"
     ]
   }
 }

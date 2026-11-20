@@ -1,0 +1,2 @@
+import{n as e}from"./rolldown-runtime-CbXtAM7H.js";import{t}from"./jquery-BHLndRnx.js";var n=e(t(),1);(0,n.default)(()=>{(0,n.default)(`form[name="loginform"],form[name="registerform"]`).each(function(){let e=(0,n.default)(this),t=(0,n.default)(`<div class="wptelegram-login-clear"></div>`),r=e.find(`p.forgetmenot`),i=e.find(`p.submit`);e.css({position:`relative`,visibility:`visible`}),e.append(t),t.append(r,i);let a=e.find(`#wptelegram-login-wrap`);a.css(`display`,`block`),e.append(a)})});
+//# sourceMappingURL=wp-login-BQ2PfGsc.js.map
